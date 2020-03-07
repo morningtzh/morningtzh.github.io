@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>回归 | 瑟瑟和你说早安</title>
-    <link>/tags/%E5%9B%9E%E5%BD%92/</link>
-      <atom:link href="/tags/%E5%9B%9E%E5%BD%92/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://blog.morningtzh.com/tags/%E5%9B%9E%E5%BD%92/</link>
+      <atom:link href="https://blog.morningtzh.com/tags/%E5%9B%9E%E5%BD%92/index.xml" rel="self" type="application/rss+xml" />
     <description>回归</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sun, 01 Dec 2019 09:59:04 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>回归</title>
-      <link>/tags/%E5%9B%9E%E5%BD%92/</link>
+      <link>https://blog.morningtzh.com/tags/%E5%9B%9E%E5%BD%92/</link>
     </image>
     
     <item>
       <title>线性回归及实现</title>
-      <link>/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://blog.morningtzh.com/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Sun, 01 Dec 2019 09:59:04 +0800</pubDate>
-      <guid>/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://blog.morningtzh.com/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0/</guid>
       <description>&lt;h1 id=&#34;线性回归及实现&#34;&gt;线性回归及实现&lt;/h1&gt;
 &lt;p&gt;[TOC]&lt;/p&gt;
 &lt;p&gt;一年多前，《修真聊天群》更新看完了，在书荒引发的无聊情绪推动下学习了 Keras，用 LSTM 生成了大段无法看的《伪*修真聊天群》，没有耐心好好炼丹就没有再接触过深度学习的知识点，偶尔无聊看看聚宽上的文章也都是&lt;code&gt;随机森林&lt;/code&gt;和&lt;code&gt;隐马尔科夫模型&lt;/code&gt;等传统机器学习算法。

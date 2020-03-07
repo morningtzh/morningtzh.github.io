@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>openstack | 瑟瑟和你说早安</title>
-    <link>/tags/openstack/</link>
-      <atom:link href="/tags/openstack/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://blog.morningtzh.com/tags/openstack/</link>
+      <atom:link href="https://blog.morningtzh.com/tags/openstack/index.xml" rel="self" type="application/rss+xml" />
     <description>openstack</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Tue, 20 Sep 2016 19:30:14 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>openstack</title>
-      <link>/tags/openstack/</link>
+      <link>https://blog.morningtzh.com/tags/openstack/</link>
     </image>
     
     <item>
       <title>devstack安装镜像</title>
-      <link>/post/devstack-install-tips/</link>
+      <link>https://blog.morningtzh.com/post/devstack-install-tips/</link>
       <pubDate>Tue, 20 Sep 2016 19:30:14 +0000</pubDate>
-      <guid>/post/devstack-install-tips/</guid>
+      <guid>https://blog.morningtzh.com/post/devstack-install-tips/</guid>
       <description>&lt;h1 id=&#34;devstack安装镜像&#34;&gt;devstack安装镜像&lt;/h1&gt;
 &lt;h2 id=&#34;pip镜像&#34;&gt;pip镜像：&lt;/h2&gt;
 &lt;p&gt;pip 镜像我使用清华大学的，在可信列表（

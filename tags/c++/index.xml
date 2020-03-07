@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C&#43;&#43; | 瑟瑟和你说早安</title>
-    <link>/tags/c&#43;&#43;/</link>
-      <atom:link href="/tags/c++/index.xml" rel="self" type="application/rss+xml" />
-    <description>C&#43;&#43;</description>
+    <title>c&#43;&#43; | 瑟瑟和你说早安</title>
+    <link>https://blog.morningtzh.com/tags/c&#43;&#43;/</link>
+      <atom:link href="https://blog.morningtzh.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <description>c&#43;&#43;</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Wed, 30 Oct 2019 09:50:48 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>C&#43;&#43;</title>
-      <link>/tags/c&#43;&#43;/</link>
+      <title>c&#43;&#43;</title>
+      <link>https://blog.morningtzh.com/tags/c&#43;&#43;/</link>
     </image>
     
     <item>
       <title>我这么大个io_service去哪里了</title>
-      <link>/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</link>
+      <link>https://blog.morningtzh.com/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</link>
       <pubDate>Wed, 30 Oct 2019 09:50:48 +0800</pubDate>
-      <guid>/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</guid>
+      <guid>https://blog.morningtzh.com/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</guid>
       <description>&lt;h1 id=&#34;我这么大个io_service去哪里了&#34;&gt;我这么大个io_service去哪里了&lt;/h1&gt;
 &lt;p&gt;[TOC]&lt;/p&gt;
 &lt;p&gt;最近稍微闲了下来，开始debug &lt;code&gt;Boost.Asio&lt;/code&gt; 析构时崩溃的问题。在目前代码中，使用到了&lt;code&gt;deadline_timer&lt;/code&gt;作定时器。&lt;/p&gt;
 &lt;p&gt;由于早期仅用简单的定时器，也就没多了解&lt;code&gt;io_service&lt;/code&gt;的用法，简单地在每个短周期业务实例中各开了一组&lt;code&gt;thread&lt;/code&gt;和&lt;code&gt;io_service&lt;/code&gt;来挂&lt;code&gt;deadline_timer&lt;/code&gt;。后来出现了一个问题，运行时发现在析构业务实例时delete &lt;code&gt;io_service&lt;/code&gt;偶尔会崩溃（具体定位过程就不在这边展开了），就去看了源代码和reference。&lt;/p&gt;
 &lt;p&gt;想着这么大的库api应该不会有太大的变化，点开boost最新版（1.71）reference，咦 O__O 我这么大个&lt;code&gt;io_service&lt;/code&gt;去哪里了？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86.assets/image-20191030105005556.png&#34; alt=&#34;image-20191030105005556&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;image-20191030105005556.png&#34; alt=&#34;image-20191030105005556&#34;&gt;&lt;/p&gt;
 &lt;div style=&#34;color:grey;text-alian:center&#34;&gt;Legend 1:Boost 1.71 Asio Reference&lt;/div&gt;
 接下来从1.71版本往回翻，在1.66更新信息里发现一句话：
 &lt;blockquote&gt;
@@ -167,9 +167,9 @@
     
     <item>
       <title>boost.asio核心浅析</title>
-      <link>/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</link>
+      <link>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</link>
       <pubDate>Tue, 29 Oct 2019 15:50:50 +0800</pubDate>
-      <guid>/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</guid>
+      <guid>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</guid>
       <description>&lt;h1 id=&#34;boostasio核心浅析&#34;&gt;boost.asio核心浅析&lt;/h1&gt;
 &lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
 </description>
@@ -177,9 +177,9 @@
     
     <item>
       <title>C&#43;&#43;公共模块回调函数实现方式</title>
-      <link>/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</link>
+      <link>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</link>
       <pubDate>Thu, 05 Sep 2019 11:40:07 +0800</pubDate>
-      <guid>/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</guid>
+      <guid>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</guid>
       <description>&lt;h1 id=&#34;c公共模块回调函数实现方式&#34;&gt;C++公共模块回调函数实现方式&lt;/h1&gt;
 &lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
 &lt;p&gt;在代码实现时，常常会遇到模块间函数调用的问题。对于一个公共模块，会有明确的public方法来作为接口，但是当需要发送消息（此处仅讨论回调函数）到外部业务模块的时候就很难去定义回调函数的类型。通常在命令式编程中会采用函数指针的方法，但在OO中调用者是一个类的话很难将类成员函数发给基础模块做回调函数。&lt;/p&gt;

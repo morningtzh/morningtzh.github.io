@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>reading | 瑟瑟和你说早安</title>
-    <link>/tags/reading/</link>
-      <atom:link href="/tags/reading/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://blog.morningtzh.com/tags/reading/</link>
+      <atom:link href="https://blog.morningtzh.com/tags/reading/index.xml" rel="self" type="application/rss+xml" />
     <description>reading</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>reading</title>
-      <link>/tags/reading/</link>
+      <link>https://blog.morningtzh.com/tags/reading/</link>
     </image>
     
     <item>
       <title>最近的阅读方式</title>
-      <link>/post/reading-mode/</link>
+      <link>https://blog.morningtzh.com/post/reading-mode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/post/reading-mode/</guid>
+      <guid>https://blog.morningtzh.com/post/reading-mode/</guid>
       <description>&lt;p&gt;以前一直在看各种技术相关的书籍或是信息，无聊中也点了django，go，cocos这些类似的技能点。也不知从哪一天开始，越来越厌倦这样技术性的阅读了，技能树越分散其实真正学到的也越少。那既然类似消遣的在学习着，倒也不如看看其他方面的书籍，无论陶冶情操还是看清世界都比技术书籍有用处吧。&lt;/p&gt;
 &lt;p&gt;还记得去年这时候也非常迷茫，不知道自己在社会上到底是在一个什么样的层次活着，买了本 
 &lt;a href=&#34;http://baike.baidu.com/view/1081693.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;戴维·波普诺&lt;/a&gt; 的

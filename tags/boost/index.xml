@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>boost | 瑟瑟和你说早安</title>
-    <link>/tags/boost/</link>
-      <atom:link href="/tags/boost/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://blog.morningtzh.com/tags/boost/</link>
+      <atom:link href="https://blog.morningtzh.com/tags/boost/index.xml" rel="self" type="application/rss+xml" />
     <description>boost</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Tue, 29 Oct 2019 15:50:50 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>boost</title>
-      <link>/tags/boost/</link>
+      <link>https://blog.morningtzh.com/tags/boost/</link>
     </image>
     
     <item>
       <title>boost.asio核心浅析</title>
-      <link>/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</link>
+      <link>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</link>
       <pubDate>Tue, 29 Oct 2019 15:50:50 +0800</pubDate>
-      <guid>/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</guid>
+      <guid>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</guid>
       <description>&lt;h1 id=&#34;boostasio核心浅析&#34;&gt;boost.asio核心浅析&lt;/h1&gt;
 &lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
 </description>

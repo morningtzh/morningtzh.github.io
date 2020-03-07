@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python | 瑟瑟和你说早安</title>
-    <link>/tags/python/</link>
-      <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://blog.morningtzh.com/tags/python/</link>
+      <atom:link href="https://blog.morningtzh.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <description>python</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Tue, 20 Sep 2016 19:30:14 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>python</title>
-      <link>/tags/python/</link>
+      <link>https://blog.morningtzh.com/tags/python/</link>
     </image>
     
     <item>
       <title>devstack安装镜像</title>
-      <link>/post/devstack-install-tips/</link>
+      <link>https://blog.morningtzh.com/post/devstack-install-tips/</link>
       <pubDate>Tue, 20 Sep 2016 19:30:14 +0000</pubDate>
-      <guid>/post/devstack-install-tips/</guid>
+      <guid>https://blog.morningtzh.com/post/devstack-install-tips/</guid>
       <description>&lt;h1 id=&#34;devstack安装镜像&#34;&gt;devstack安装镜像&lt;/h1&gt;
 &lt;h2 id=&#34;pip镜像&#34;&gt;pip镜像：&lt;/h2&gt;
 &lt;p&gt;pip 镜像我使用清华大学的，在可信列表（
@@ -91,9 +91,9 @@ pypi 包更新的时候（~/devstack/file/get-pip.py文件）很容易断，我�
     
     <item>
       <title>Brainfuck解释器[on python]</title>
-      <link>/post/brainfuck-interpreter/</link>
+      <link>https://blog.morningtzh.com/post/brainfuck-interpreter/</link>
       <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
-      <guid>/post/brainfuck-interpreter/</guid>
+      <guid>https://blog.morningtzh.com/post/brainfuck-interpreter/</guid>
       <description>&lt;p&gt;阿婆主脑容量不够，ぜんぜん不能在大脑中运行 &lt;strong&gt;Brainfuck&lt;/strong&gt; 程序，而且发现连运行过程都想不出来啊，
 然而就这么几个字符完全可以自己写解释器嘛，并且可以打印出运行过程，而且可以试试看做成playground
 的形式呢，想想还是挺有趣的。&lt;/p&gt;

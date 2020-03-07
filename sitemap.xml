@@ -3,220 +3,224 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://blog.morningtzh.com/categories/</loc>
     <lastmod>2019-12-03T18:30:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>https://blog.morningtzh.com/post/</loc>
     <lastmod>2019-12-03T18:30:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://blog.morningtzh.com/tags/</loc>
     <lastmod>2019-12-03T18:30:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E7%BB%8F%E5%8E%86/</loc>
+    <loc>https://blog.morningtzh.com/post/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E7%BB%8F%E5%8E%86/</loc>
     <lastmod>2019-12-03T18:30:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/%E5%B7%A5%E4%BD%9C/</loc>
+    <loc>https://blog.morningtzh.com/tags/%E5%B7%A5%E4%BD%9C/</loc>
     <lastmod>2019-12-03T18:30:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://blog.morningtzh.com/</loc>
     <lastmod>2019-12-03T18:30:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/%E8%81%8C%E5%9C%BA/</loc>
+    <loc>https://blog.morningtzh.com/categories/%E8%81%8C%E5%9C%BA/</loc>
     <lastmod>2019-12-03T18:30:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/%E5%9B%9E%E5%BD%92/</loc>
+    <loc>https://blog.morningtzh.com/tags/%E5%9B%9E%E5%BD%92/</loc>
     <lastmod>2019-12-01T09:59:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://blog.morningtzh.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-12-01T09:59:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0/</loc>
+    <loc>https://blog.morningtzh.com/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0/</loc>
     <lastmod>2019-12-01T09:59:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/c&#43;&#43;/</loc>
+    <loc>https://blog.morningtzh.com/tags/c&#43;&#43;/</loc>
     <lastmod>2019-10-30T09:50:48+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</loc>
+    <loc>https://blog.morningtzh.com/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</loc>
     <lastmod>2019-10-30T09:50:48+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://blog.morningtzh.com/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2019-10-30T09:50:48+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/boost/</loc>
+    <loc>https://blog.morningtzh.com/tags/boost/</loc>
     <lastmod>2019-10-29T15:50:50+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</loc>
+    <loc>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</loc>
     <lastmod>2019-10-29T15:50:50+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/coding/</loc>
+    <loc>https://blog.morningtzh.com/categories/coding/</loc>
     <lastmod>2019-10-29T15:50:50+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</loc>
+    <loc>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</loc>
     <lastmod>2019-09-05T11:40:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/coding/</loc>
+    <loc>https://blog.morningtzh.com/tags/coding/</loc>
     <lastmod>2019-09-05T11:40:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/git%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <loc>https://blog.morningtzh.com/post/git%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2019-07-05T10:07:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/windows%E4%B8%8B-c&#43;&#43;-%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/</loc>
+    <loc>https://blog.morningtzh.com/post/windows%E4%B8%8B-c&#43;&#43;-%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2019-05-20T15:52:09+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9C%80%E6%B1%82%E5%9C%A8%E5%93%AA%E9%87%8C/</loc>
+    <loc>https://blog.morningtzh.com/post/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9C%80%E6%B1%82%E5%9C%A8%E5%93%AA%E9%87%8C/</loc>
     <lastmod>2018-10-12T12:23:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/devstack-install-tips/</loc>
+    <loc>https://blog.morningtzh.com/post/devstack-install-tips/</loc>
     <lastmod>2016-09-20T19:30:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/openstack/</loc>
+    <loc>https://blog.morningtzh.com/tags/openstack/</loc>
     <lastmod>2016-09-20T19:30:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/python/</loc>
+    <loc>https://blog.morningtzh.com/tags/python/</loc>
     <lastmod>2016-09-20T19:30:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/brainfuck/</loc>
+    <loc>https://blog.morningtzh.com/tags/brainfuck/</loc>
     <lastmod>2015-12-05T21:43:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/brainfuck-interpreter/</loc>
+    <loc>https://blog.morningtzh.com/post/brainfuck-interpreter/</loc>
     <lastmod>2015-12-05T21:43:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/cabal/</loc>
+    <loc>https://blog.morningtzh.com/tags/cabal/</loc>
     <lastmod>2015-12-05T21:43:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/el-capitan/</loc>
+    <loc>https://blog.morningtzh.com/tags/el-capitan/</loc>
     <lastmod>2015-12-05T21:43:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/haskell/</loc>
+    <loc>https://blog.morningtzh.com/tags/haskell/</loc>
     <lastmod>2015-12-05T21:43:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/install-ghc-on-mac/</loc>
+    <loc>https://blog.morningtzh.com/post/install-ghc-on-mac/</loc>
     <lastmod>2015-12-05T21:43:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/currying/</loc>
+    <loc>https://blog.morningtzh.com/tags/currying/</loc>
     <lastmod>2015-11-07T23:22:35+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/functional-programming/</loc>
+    <loc>https://blog.morningtzh.com/tags/functional-programming/</loc>
     <lastmod>2015-11-07T23:22:35+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/about-haskell-1/</loc>
+    <loc>https://blog.morningtzh.com/post/about-haskell-1/</loc>
     <lastmod>2015-11-07T23:22:35+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/morningtzh/</loc>
+    <loc>https://blog.morningtzh.com/authors/morningtzh/</loc>
   </url>
   
   <url>
-    <loc>/authors/tardis/</loc>
+    <loc>https://blog.morningtzh.com/authors/tardis/</loc>
   </url>
   
   <url>
-    <loc>/authors/yunxia/</loc>
+    <loc>https://blog.morningtzh.com/authors/yunxia/</loc>
   </url>
   
   <url>
-    <loc>/authors/</loc>
+    <loc>https://blog.morningtzh.com/authors/</loc>
   </url>
   
   <url>
-    <loc>/publication_types/</loc>
+    <loc>https://blog.morningtzh.com/publication_types/</loc>
   </url>
   
   <url>
-    <loc>/publication/</loc>
+    <loc>https://blog.morningtzh.com/publication/</loc>
   </url>
   
   <url>
-    <loc>/categories/reading/</loc>
+    <loc>https://blog.morningtzh.com/tags/reading/</loc>
   </url>
   
   <url>
-    <loc>/tags/reading/</loc>
+    <loc>https://blog.morningtzh.com/categories/reading/</loc>
   </url>
   
   <url>
-    <loc>/talk/</loc>
+    <loc>https://blog.morningtzh.com/talk/</loc>
   </url>
   
   <url>
-    <loc>/tags/whisky/</loc>
+    <loc>https://blog.morningtzh.com/ua-145734135-1/</loc>
   </url>
   
   <url>
-    <loc>/categories/wine/</loc>
+    <loc>https://blog.morningtzh.com/tags/whisky/</loc>
   </url>
   
   <url>
-    <loc>/post/suntoryballantines/</loc>
+    <loc>https://blog.morningtzh.com/categories/wine/</loc>
   </url>
   
   <url>
-    <loc>/post/reading-mode/</loc>
+    <loc>https://blog.morningtzh.com/post/suntoryballantines/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.morningtzh.com/post/reading-mode/</loc>
   </url>
   
 </urlset>
