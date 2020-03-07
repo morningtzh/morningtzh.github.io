@@ -5,12 +5,76 @@
     <link>/tags/</link>
       <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Tue, 03 Dec 2019 18:30:07 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
       <link>/tags/</link>
     </image>
+    
+    <item>
+      <title>工作</title>
+      <link>/tags/%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Tue, 03 Dec 2019 18:30:07 +0800</pubDate>
+      <guid>/tags/%E5%B7%A5%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>回归</title>
+      <link>/tags/%E5%9B%9E%E5%BD%92/</link>
+      <pubDate>Sun, 01 Dec 2019 09:59:04 +0800</pubDate>
+      <guid>/tags/%E5%9B%9E%E5%BD%92/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>/tags/c&#43;&#43;/</link>
+      <pubDate>Wed, 30 Oct 2019 09:50:48 +0800</pubDate>
+      <guid>/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boost</title>
+      <link>/tags/boost/</link>
+      <pubDate>Tue, 29 Oct 2019 15:50:50 +0800</pubDate>
+      <guid>/tags/boost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding</title>
+      <link>/tags/coding/</link>
+      <pubDate>Thu, 05 Sep 2019 11:40:07 +0800</pubDate>
+      <guid>/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>currying</title>
+      <link>/tags/currying/</link>
+      <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
+      <guid>/tags/currying/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>functional programming</title>
+      <link>/tags/functional-programming/</link>
+      <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
+      <guid>/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>haskell</title>
+      <link>/tags/haskell/</link>
+      <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
+      <guid>/tags/haskell/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

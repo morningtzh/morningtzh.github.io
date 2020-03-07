@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="MorningTZH">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="C&#43;&#43; 开发环境指引 C&#43;&#43; 开发环境指引 操作系统建议 Windows Subsystem for Linux 命令行环境参考 Windows PowerShell 插件: Windows下命令行软件安装: Linux 命令行软件 C&#43;&#43; 代码规范 Google C&#43;&#43; Style Guide Lint 编辑">
+
+  
+  <link rel="alternate" hreflang="zh-Hans" href="/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/">
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="瑟瑟和你说早安">
+  <meta property="og:url" content="/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/">
+  <meta property="og:title" content="C&#43;&#43; 开发环境指引 | 瑟瑟和你说早安">
+  <meta property="og:description" content="C&#43;&#43; 开发环境指引 C&#43;&#43; 开发环境指引 操作系统建议 Windows Subsystem for Linux 命令行环境参考 Windows PowerShell 插件: Windows下命令行软件安装: Linux 命令行软件 C&#43;&#43; 代码规范 Google C&#43;&#43; Style Guide Lint 编辑"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="zh-Hans">
+  
+    
+      <meta property="article:published_time" content="2019-05-20T10:10:54&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-05-20T10:10:54&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/c++%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/"
+  },
+  "headline": "C++ 开发环境指引",
+  
+  "datePublished": "2019-05-20T10:10:54Z",
+  "dateModified": "2019-05-20T10:10:54Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "MorningTZH"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "瑟瑟和你说早安",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "C++ 开发环境指引 C++ 开发环境指引 操作系统建议 Windows Subsystem for Linux 命令行环境参考 Windows PowerShell 插件: Windows下命令行软件安装: Linux 命令行软件 C++ 代码规范 Google C++ Style Guide Lint 编辑"
+}
+</script>
+
+  
+
+  
+
+
+  
+  
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin="anonymous">
+  
+  <script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "hsl(339, 90%, 68%)",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "hsl(339, 90%, 68%)"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "本网站使用cookies来确保您在本网站上获得最佳体验。",
+        "dismiss": "知道了!",
+        "link": "了解更多",
+        "href": "/privacy/"
+      }
+    })});
+  </script>
+
+
+
+  
+
+
+
+
+
+  <title>C&#43;&#43; 开发环境指引 | 瑟瑟和你说早安</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>搜索</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">瑟瑟和你说早安</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="切换导航">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">瑟瑟和你说早安</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>C&#43;&#43; 开发环境指引</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 20, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 分钟阅读时长
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="c-开发环境指引">C++ 开发环境指引</h1>
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+<ul>
+<li>
+<a href="#c-%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e6%8c%87%e5%bc%95">C++ 开发环境指引</a>
+<ul>
+<li>
+<a href="#%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e5%bb%ba%e8%ae%ae">操作系统建议</a></li>
+<li>
+<a href="#windows-subsystem-for-linux">Windows Subsystem for Linux</a></li>
+<li>
+<a href="#%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%8e%af%e5%a2%83%e5%8f%82%e8%80%83">命令行环境参考</a>
+<ul>
+<li>
+<a href="#windows">Windows</a>
+<ul>
+<li>
+<a href="#powershell-%e6%8f%92%e4%bb%b6">PowerShell 插件:</a></li>
+<li>
+<a href="#windows%e4%b8%8b%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%bd%af%e4%bb%b6%e5%ae%89%e8%a3%85">Windows下命令行软件安装:</a></li>
+</ul>
+</li>
+<li>
+<a href="#linux">Linux</a></li>
+<li>
+<a href="#%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%bd%af%e4%bb%b6">命令行软件</a></li>
+</ul>
+</li>
+<li>
+<a href="#c-%e4%bb%a3%e7%a0%81%e8%a7%84%e8%8c%83">C++ 代码规范</a>
+<ul>
+<li>
+<a href="#google-c-style-guide">Google C++ Style Guide</a></li>
+<li>
+<a href="#lint">Lint</a></li>
+</ul>
+</li>
+<li>
+<a href="#%e7%bc%96%e8%be%91%e5%99%a8%e6%8c%87%e5%bc%95">编辑器指引</a>
+<ul>
+<li>
+<a href="#clion%e9%85%8d%e7%bd%ae">Clion配置</a>
+<ul>
+<li>
+<a href="#%e6%b3%a8%e5%86%8c%e7%a0%81">注册码</a></li>
+<li>
+<a href="#wsl%e8%bf%9e%e6%8e%a5">WSL连接</a></li>
+<li>
+<a href="#google-c-style-guide-1">Google C++ Style Guide</a></li>
+</ul>
+</li>
+<li>
+<a href="#vscode%e9%85%8d%e7%bd%ae">VSCode配置</a>
+<ul>
+<li>
+<a href="#%e5%bc%ba%e7%83%88%e5%bb%ba%e8%ae%ae%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6">强烈建议安装插件</a></li>
+<li>
+<a href="#%e5%bb%ba%e8%ae%ae%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6">建议安装插件:</a></li>
+<li>
+<a href="#%e5%8f%af%e7%94%a8sync%e9%85%8d%e7%bd%ae">可用Sync配置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#%e6%97%a5%e6%8a%a5">日报</a></li>
+<li>
+<a href="#git%e6%8c%87%e5%bc%95">Git指引</a></li>
+</ul>
+</li>
+</ul>
+<!-- /code_chunk_output -->
+<h2 id="操作系统建议">操作系统建议</h2>
+<p>建议采用 Windows 10 作为工作的操作系统, 并安装WSL作为编译环境(详见下文).</p>
+<p>服务器使用 Ubuntu 或 CentOS. 当前为同一WSL环境, 使用Ubuntu作为上线系统.</p>
+<h2 id="windows-subsystem-for-linux">Windows Subsystem for Linux</h2>
+<p>
+<a href="https://docs.microsoft.com/zh-cn/windows/wsl/about" target="_blank" rel="noopener">Windows Subsystem for Linux（简称WSL）</a>是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的 Ubuntu 映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。</p>
+<p>安装指引请查看Microsoft官网:
+
+<a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" target="_blank" rel="noopener">Linux 安装指南适用于 Windows 10 的 Windows 子系统</a></p>
+<h2 id="命令行环境参考">命令行环境参考</h2>
+<h3 id="windows">Windows</h3>
+<p>主要采用PowerShell, 详情参考
+<a href="https://docs.microsoft.com/zh-cn/powershell/scripting/overview?view=powershell-6" target="_blank" rel="noopener">PowerShell官网</a>.</p>
+<h4 id="powershell-插件">PowerShell 插件:</h4>
+<p>PowerShell插件主要位于
+<a href="https://www.powershellgallery.com/packages" target="_blank" rel="noopener">PowerShell Gallery</a>, 可安装oh-my-posh, posh-git等插件</p>
+<h4 id="windows下命令行软件安装">Windows下命令行软件安装:</h4>
+<p>Windows下包管理器主要采用
+<a href="https://chocolatey.org/" target="_blank" rel="noopener">Choco</a>, 可像Linux下包管理器一样使用.</p>
+<h3 id="linux">Linux</h3>
+<p>Linux下命令行建议采用zsh, 并加装
+<a href="https://ohmyz.sh/" target="_blank" rel="noopener">Oh-my-zsh</a>.</p>
+<p>以下为安利贴:
+
+<a href="https://www.zhihu.com/question/21418449" target="_blank" rel="noopener">为什么说 zsh 是 shell 中的极品？</a></p>
+<h3 id="命令行软件">命令行软件</h3>
+<p>Windows下命令行软件建议采用
+<a href="https://github.com/felixse/FluentTerminal" target="_blank" rel="noopener">FluentTerminal</a>, 使用Choco安装 <code>choco install fluent-terminal</code>. 在设置中可选择WSL/PowerShell/CMD 作为默认命令行, 建议采用WSL.</p>
+<h2 id="c-代码规范">C++ 代码规范</h2>
+<h3 id="google-c-style-guide">Google C++ Style Guide</h3>
+<p>C++代码规范目前采用
+<a href="https://google.github.io/styleguide/cppguide.html" target="_blank" rel="noopener">Google C++ Style Guide</a> 也可参考
+<a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/" target="_blank" rel="noopener">此中文版教程</a>.</p>
+<p>后续会有微调, 将会详细写出.</p>
+<h3 id="lint">Lint</h3>
+<p>Lint采用
+<a href="http://clang.llvm.org/extra/clang-tidy/" target="_blank" rel="noopener">Clang-tidy</a>做静态分析, 目前项目根目录有<code>clang-tidy.py</code> 文件来做批量Lint. 可采用命令行 <code>./clang-tidy.py -checks &quot;google-*&quot; -fix  -p ./build ./src/*</code> 做检查.</p>
+<h2 id="编辑器指引">编辑器指引</h2>
+<p>编辑器采用
+<a href="https://www.jetbrains.com/clion/" target="_blank" rel="noopener">Clion</a>作为C++开发编辑器, 
+<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a> 作为辅助编辑器使用.</p>
+<h3 id="clion配置">Clion配置</h3>
+<h4 id="注册码">注册码</h4>
+<p>
+<a href="https://note.youdao.com/ynoteshare1/index.html?id=2e038d709a368b5d5c36c8f065aaecac&amp;type=note" target="_blank" rel="noopener">Clion注册码</a></p>
+<h4 id="wsl连接">WSL连接</h4>
+<p>请参考Clion官方文档: 
+<a href="https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-clion.html" target="_blank" rel="noopener">How to use wsl development environment in clion</a></p>
+<h4 id="google-c-style-guide-1">Google C++ Style Guide</h4>
+<p>请参考Clion官方文档: 
+<a href="https://www.jetbrains.com/help/clion/code-style-c-c.html" target="_blank" rel="noopener">Code Style. C/C++ #Set From</a></p>
+<p>在Set From 中选择 Google.</p>
+<h3 id="vscode配置">VSCode配置</h3>
+<h4 id="强烈建议安装插件">强烈建议安装插件</h4>
+<ul>
+<li>配置同步
+<ul>
+<li>settings sync</li>
+</ul>
+</li>
+<li>Git相关
+<ul>
+<li>gitblame v2.7.0</li>
+<li>githistory v0.4.6</li>
+<li>gitlens v9.7.4</li>
+</ul>
+</li>
+<li>C++相关
+<ul>
+<li>cmake v0.0.17</li>
+<li>cmake-tools v1.1.3</li>
+<li>cpptools v0.23.1</li>
+<li>include-autocomplete v0.0.4</li>
+</ul>
+</li>
+<li>Markdown及UML相关
+<ul>
+<li>markdown-all-in-one v2.3.1</li>
+<li>markdown-preview-enhanced v0.3.13</li>
+<li>plantuml v2.11.0</li>
+<li>vscode-markdownlint v0.26.0</li>
+</ul>
+</li>
+<li>方便编辑
+<ul>
+<li>beautify v1.5.0</li>
+<li>indent-rainbow v7.4.0</li>
+<li>output-colorizer v0.1.2</li>
+<li>path-intellisense v1.4.2</li>
+<li>rainbow-csv v1.0.0</li>
+</ul>
+</li>
+</ul>
+<h4 id="建议安装插件">建议安装插件:</h4>
+<p>可能有点多&hellip;可自行筛选, 覆盖了一些常用语言</p>
+<pre><code>  auto-close-tag v0.5.6
+  auto-rename-tag v0.0.15
+  background v1.1.19
+  beautify v1.5.0
+  better-toml v0.3.2
+  bracket-pair-colorizer v1.0.61
+  change-case v1.0.0
+  cmake v0.0.17
+  cmake-tools v1.1.3
+  code-runner v0.9.9
+  code-settings-sync v3.2.9
+  code-spell-checker v1.7.10
+  copilot-vscode v1.3.0
+  cpptools v0.23.1
+  gc-excelviewer v2.1.32
+  gitblame v2.7.0
+  githistory v0.4.6
+  gitlens v9.7.4
+  Go v0.10.2
+  include-autocomplete v0.0.4
+  indent-rainbow v7.4.0
+  iris v0.0.4
+  JavaScriptSnippets v1.7.2
+  markdown-all-in-one v2.3.1
+  markdown-pdf v1.2.0
+  markdown-preview-enhanced v0.3.13
+  mssql v1.6.0
+  nbpreviewer v1.2.2
+  nodejs-docs v0.2.2
+  output-colorizer v0.1.2
+  path-intellisense v1.4.2
+  plantuml v2.11.0
+  powershell v1.12.1
+  pyqt-integration v0.2.0
+  python v2019.4.12954
+  quicktype v12.0.46
+  rainbow-csv v1.0.0
+  react-native-react-redux v2.0.3
+  rest-client v0.21.3
+  theme-dracula v2.18.0
+  tslint v1.0.43
+  vs-color-picker v1.0.0
+  vscode-babel-coloring v0.0.4
+  vscode-clang v0.2.3
+  vscode-database v2.1.5
+  vscode-eslint v1.9.0
+  vscode-filesize v2.1.2
+  vscode-hexdump v1.7.2
+  vscode-hexo v1.0.1
+  vscode-import-cost v2.12.0
+  vscode-insertdatestring v2.2.4
+  vscode-language-babel v0.0.22
+  vscode-language-pack-zh-hans v1.33.2
+  vscode-leetcode v0.14.3
+  vscode-markdownlint v0.26.0
+  vscode-mysql v0.4.0
+  vscode-power-mode v2.2.0
+  vscode-qt-for-python v0.3.0
+  vscode-styled-components v0.0.26
+  vscode-svgviewer v2.0.0
+  vscode-text-pastry v1.2.0
+  vscode-yaml v0.4.0
+  webpack v2.1.3
+</code></pre>
+<h4 id="可用sync配置">可用Sync配置</h4>
+<p>首先安装settings sync插件, 选择同步公开gist: <code>7b4026c4de4f3170fb1770945dbdf52e</code></p>
+<h2 id="日报">日报</h2>
+<p>
+<a href="http://192.168.99.30:9999/rdc/dailyreport" target="_blank" rel="noopener">研发部日报Git</a></p>
+<h2 id="git指引">Git指引</h2>
+<p>
+<a href="https://github.com/521xueweihan/git-tips" target="_blank" rel="noopener">Git的奇技淫巧</a></p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/&amp;text=C&#43;&#43;%20%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e6%8c%87%e5%bc%95" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/&amp;t=C&#43;&#43;%20%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e6%8c%87%e5%bc%95" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=C&#43;&#43;%20%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e6%8c%87%e5%bc%95&amp;body=/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/&amp;title=C&#43;&#43;%20%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e6%8c%87%e5%bc%95" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=C&#43;&#43;%20%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e6%8c%87%e5%bc%95%20/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/&amp;title=C&#43;&#43;%20%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e6%8c%87%e5%bc%95" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/morningtzh/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">MorningTZH</a></h5>
+      
+      <p class="card-text">喵？</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/morningtzh" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+<section id="comments">
+  
+    <div id="commento"></div>
+
+<script src="https://cdn.commento.io/js/commento.js" defer></script>
+
+  
+</section>
+
+
+
+
+<div class="article-widget">
+  
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">下一页</div>
+    <a href="/post/windows%E4%B8%8B-c&#43;&#43;-%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/" rel="next">Windows 下 C&#43;&#43; 编程环境</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">上一页</div>
+    <a href="/post/vision%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1/" rel="prev">vision详细设计</a>
+  </div>
+  
+</div>
+
+</div>
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.4/mermaid.min.js" integrity="sha256-JEqEejGt4tR35L0a1zodzsV0/PJ6GIf7J4yDtywdrH8=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/c&#43;&#43;.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/javascript.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/go.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"没有找到结果","placeholder":"搜索...","results":"搜索结果"};
+      const content_type = {
+        'post': "文章",
+        'project': "项目",
+        'publication' : "出版物",
+        'talk' : "演讲"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+  </p>
+  
+
+  <p class="powered-by">
+    ©MorningTZH &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">引用</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> 复制
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> 下载
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

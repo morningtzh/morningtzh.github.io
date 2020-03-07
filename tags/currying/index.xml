@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>currying | 瑟瑟和你说早安</title>
+    <link>/tags/currying/</link>
+      <atom:link href="/tags/currying/index.xml" rel="self" type="application/rss+xml" />
+    <description>currying</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sat, 07 Nov 2015 23:22:35 +0800</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>currying</title>
+      <link>/tags/currying/</link>
+    </image>
+    
+    <item>
+      <title>关于haskell随便写点什么1</title>
+      <link>/post/about-haskell-1/</link>
+      <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
+      <guid>/post/about-haskell-1/</guid>
+      <description>&lt;h1 id=&#34;lyah字典查询函数理解指南&#34;&gt;LYAH字典查询函数理解指南&lt;/h1&gt;
+&lt;h3 id=&#34;for-what-&#34;&gt;for what&lt;/h3&gt;
+&lt;p&gt;最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看
+&lt;a href=&#34;http://learnyouahaskell.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《Learn You a Haskell for Great Good》&lt;/a&gt;恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。&lt;/p&gt;
+&lt;h3 id=&#34;那个函数&#34;&gt;那个函数&lt;/h3&gt;
+&lt;p&gt;这是一个从字典中找值的函数&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;findKey :: (Eq k) =&amp;gt; k -&amp;gt; [(k,v)] -&amp;gt; v&lt;br&gt;
+findKey key xs = snd . head . filter (\(k,v) -&amp;gt; key == k) $ xs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;举个栗子&#34;&gt;举个栗子&lt;/h3&gt;
+&lt;p&gt;这个例子同样是从LYAH中搞出来的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;phoneBook = [(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;) ,
+      (&amp;ldquo;bonnie&amp;rdquo;,&amp;ldquo;452-2928&amp;rdquo;) , &lt;br&gt;
+      (&amp;ldquo;patsy&amp;rdquo;,&amp;ldquo;493-2928&amp;rdquo;) ,&lt;br&gt;
+      (&amp;ldquo;lucille&amp;rdquo;,&amp;ldquo;205-2928&amp;rdquo;) ,&lt;br&gt;
+      (&amp;ldquo;wendy&amp;rdquo;,&amp;ldquo;939-8282&amp;rdquo;) ,&lt;br&gt;
+      (&amp;ldquo;penny&amp;rdquo;,&amp;ldquo;853-2492&amp;rdquo;) ]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;函数申明&#34;&gt;函数申明&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;findKey :: (Eq k) =&amp;gt; k -&amp;gt; [(k,v)] -&amp;gt; v&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在函数中，首先第一行是函数申明，他和其他语言一样表明了输入输出。&lt;br&gt;
+在haskell中函数仅支持一个返回值，支持多个入参。在上面的申明中 &lt;strong&gt;findKey&lt;/strong&gt; 是函数名，以 &amp;ldquo;&lt;strong&gt;::&lt;/strong&gt;&amp;ldquo;来标明函数，后面一共有四个东西，&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(Eq k) =&amp;gt; k -&amp;gt; [(k,v)] -&amp;gt; v&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先可以仅理解后三个：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;k -&amp;gt; [(k,v)] -&amp;gt; v&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是函数参数和返回值，这个函数中一共有两个参数和一个返回值，函数申明中的最后一个箭头&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;是一定指向返回值的，当然&amp;rdquo;&lt;strong&gt;k v&lt;/strong&gt;&amp;ldquo;这两个字母一定会让人觉得很疑惑，在haskell中函数声明中的字母其实只代表一个&lt;del&gt;变量类型&lt;/del&gt;哦 sorry，haskell中没有变量，他只有常量，所有都是静态参数，所以这个字母代表了一种模糊的参数类型，这仅表示上面两个k需要是同样的类型，而两个v也需要是同样的类型，随便用abcd也可以。所以：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;rdquo;&lt;strong&gt;k&lt;/strong&gt;&amp;rdquo; &amp;ldquo;&lt;strong&gt;[(k,v)]&lt;/strong&gt;&amp;rdquo; 是两个入参，第一个参数是k类型的参数，第二个参数是一个list，list中是一个有两个类型为k v为成员的tuple&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;&lt;strong&gt;v&lt;/strong&gt;&amp;rdquo; 是函数的返回值，它的类型需要和入参list中tuple第二个元素一样。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后我们来说一说&amp;rdquo;&lt;strong&gt;(Eq k) =&amp;gt;&lt;/strong&gt;&amp;quot;, &amp;ldquo;&lt;strong&gt;=&amp;gt;&lt;/strong&gt;&amp;ldquo;是对后面参数的约束条件，&amp;quot;&lt;strong&gt;(Eq k)&lt;/strong&gt;&amp;ldquo;说明后面的 &amp;ldquo;&lt;strong&gt;k&lt;/strong&gt;&amp;rdquo; 类型的参数必须是一个Eq的派生类型，这种类型是可以比较的，比如int，char。&lt;/p&gt;
+&lt;p&gt;在事例中我们可以按照&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;betty&amp;rdquo; phoneBook&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;的方式进行调用，其中phoneBook可扩展成的[(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;)&amp;hellip;]，看起来形式就差不多了。&lt;/p&gt;
+&lt;h3 id=&#34;函数实体&#34;&gt;函数实体&lt;/h3&gt;
+&lt;h4 id=&#34;函数调用&#34;&gt;函数调用&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;findKey key xs = snd . head . filter (\(k,v) -&amp;gt; key == k) $ xs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是函数体，在等号左边的是函数调用的方式，在这个函数中，调用方式是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;findKey key xs&lt;br&gt;
+example:&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;betty&amp;rdquo; phoneBook&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当然也可以是中序，这个就另讲了。这个函数调用方式也是一种模式匹配，这边的&amp;rdquo;&lt;strong&gt;key&lt;/strong&gt;&amp;quot;、&amp;quot;&lt;strong&gt;xs&lt;/strong&gt;&amp;ldquo;匹配了函数的两个入参&amp;rdquo;&lt;strong&gt;k&lt;/strong&gt;&amp;quot;、&amp;quot;&lt;strong&gt;[(k,v)]&lt;/strong&gt;&amp;rdquo;&lt;/p&gt;
+&lt;h4 id=&#34;filter&#34;&gt;filter&lt;/h4&gt;
+&lt;p&gt;接下来对这两个入参进行操作(先忽略&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;ldquo;符号)：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;filter (\(k,v) -&amp;gt; key == k) xs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先是filter，这个是对一个list的过滤器，是&amp;rdquo;&lt;strong&gt;filter &lt;em&gt;f&lt;/em&gt; list&lt;/strong&gt;&amp;rdquo; 这样的模式，对list的每一个元素使用函数&lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/em&gt;进行匹配。在此例中&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(\(k,v) -&amp;gt; key == k)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就是filter中的 &lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/em&gt; ，haskell中使用 \做lambda，lambda就是一个隐式函数。&lt;br&gt;
+在lambda中&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;是用来区分参数和lambda函数本体的，在&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;左边是函数参数，可做模式匹配。在此lambda函数中，用&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;来匹配list成员tuple的成员。第一个&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此lambda用来匹配 xs 这个list取出来的每一个元组，并且判断此元组中的键值 k 是否能匹配入参的 key。并且filter会将符合条件的元素==重新组合==成一个新的list，在此例中，filter结果就是&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;[(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;)]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;后面键值不为***&amp;ldquo;betty&amp;rdquo;***的元组就会被舍弃，这是仅有一个元素的list。&lt;/p&gt;
+&lt;h4 id=&#34;snd-head&#34;&gt;snd head&lt;/h4&gt;
+&lt;p&gt;接下来这个是head，这个函数用来取list的头部，取出来就是第一个元素，例如&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;***head [3,2,5,3,6,3,4,3,7]***的结果就是3&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在此例中结果大致是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;是的，你会发现，这仅仅是去掉了中括号，这代表着这不再是一个list了。&lt;/p&gt;
+&lt;p&gt;接下来snd用来取tuple中的第二个元素，就是字典中的value，也就是&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&amp;ldquo;555-2938&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就能得出函数返回值了。这边需要注意的是，snd的参数只能是二元tuple。&lt;/p&gt;
+&lt;h4 id=&#34;函数组合&#34;&gt;函数组合&lt;/h4&gt;
+&lt;p&gt;snd . head . filter 这个是函数组合，相当于一下子调用了三个函数。这个可以用数学公式来表示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(f.g)(x) = f(g(x))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在此处&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;snd.head.filter f $ list = snd(head(filter f list)))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在haskell中，函数组合是一个让代码简洁明了的手段，但是他也有它的局限性，就是说他的参数只能唯一，函数组合仅能包含一个参数。但是此处柯里化使得组合函数使用多参成为可能。&lt;/p&gt;
+&lt;h4 id=&#34;柯里化currying&#34;&gt;柯里化（Currying）&lt;/h4&gt;
+&lt;p&gt;柯里化是现代化语言中包含的一个非常有趣的特性之一，在js、swift中也支持柯里化（非常遗憾swift仅在Language Reference中提到了一点）。&lt;br&gt;
+Currying是指函数可以不完全调用，他可以将多参函数转化为单参函数来求解。例如&amp;rdquo;&lt;strong&gt;+&lt;/strong&gt;&amp;ldquo;函数（对，在haskell中&amp;rdquo;&lt;strong&gt;+&lt;/strong&gt;&amp;ldquo;也是一个函数）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;5+4&lt;/strong&gt;&lt;/em&gt;   =======&amp;gt;  &lt;em&gt;&lt;strong&gt;9&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其可以转化为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;let plusFive = (+5)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这样一来我们就多了一个新的函数叫做&lt;em&gt;&lt;strong&gt;plusFive&lt;/strong&gt;&lt;/em&gt;，我们来调用它：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;plusFive 4&lt;/strong&gt;&lt;/em&gt;   =======&amp;gt;   &lt;em&gt;&lt;strong&gt;9&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;plusFive 167&lt;/strong&gt;&lt;/em&gt; =======&amp;gt;   &lt;em&gt;&lt;strong&gt;172&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ok，Currying就是这样一个好玩的特性，我自己认为，这个和惰性有关，因为Curried Function切切实实要在有完整入参时才会调用。&lt;/p&gt;
+&lt;p&gt;对于本例来说，我们将&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;filter (\(k,v) -&amp;gt; key == k) xs&lt;/strong&gt;&lt;/em&gt; Currying成
+***(filter (\(k,v) -&amp;gt; key == k)) xs***&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在组合函数中其实是组合成了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;***(snd . head . filter (\(k,v) -&amp;gt; key == k)) xs***&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在原函数中，少了&amp;rdquo;&lt;strong&gt;()&lt;/strong&gt;&amp;quot;,多了&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) $ xs&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这边用到了的&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;,如果缺少&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;rdquo;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) xs&lt;/strong&gt;&lt;/em&gt; 会被理解成&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;snd . head . (filter (\(k,v) -&amp;gt; key == k) xs)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而这绝对是会被编译器理解不能的句子，会报错，&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;ldquo;改变了&lt;em&gt;&lt;strong&gt;filter&lt;/strong&gt;&lt;/em&gt;函数的匹配方式，在haskell中&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;ldquo;是拥有最低优先级的函数调用符，相当于一个函数，所以会变成&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) ($ xs)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;函数组合的优先级大于&lt;em&gt;&lt;strong&gt;$ xs&lt;/strong&gt;&lt;/em&gt;的优先级，就会前面线组合起来。&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;ldquo;是一个非常节约括号的函数调用符.&lt;/p&gt;
+&lt;h3 id=&#34;函数结论&#34;&gt;函数结论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;betty&amp;rdquo; phoneBook&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+***&amp;ldquo;555-2938&amp;rdquo;***&lt;br&gt;
+***findKey &amp;ldquo;patsy&amp;rdquo; phoneBook***&lt;br&gt;
+***&amp;ldquo;493-2928&amp;rdquo;***&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就此结束吧，心血来潮谢谢，先打上个标签1，说不定还有2，3，4&amp;hellip;呢，也或许会太监了呢。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,12 +5,1061 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Tue, 03 Dec 2019 18:30:07 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>创业公司经历</title>
+      <link>/post/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E7%BB%8F%E5%8E%86/</link>
+      <pubDate>Tue, 03 Dec 2019 18:30:07 +0800</pubDate>
+      <guid>/post/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E7%BB%8F%E5%8E%86/</guid>
+      <description>&lt;h1 id=&#34;创业公司经历&#34;&gt;创业公司经历&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;在初创企业工作，是一件在职业道路中有正式规划的事情，也是一件意料之外的事情。没想到这段经历来的如此之快，但仔细一想这短短的经历几乎占据了我工龄的一半时间。&lt;/p&gt;
+&lt;p&gt;在初创企业工作会面临比大厂更广泛的挑战。也能推动着学习更多的知识——大部分只会在自己成立公司时会用到，这些知识在符合个人发展需求时会飞快的融入到自身素养当中。&lt;/p&gt;
+&lt;h2 id=&#34;独当一面的技术&#34;&gt;独当一面的技术&lt;/h2&gt;
+&lt;p&gt;在最初建立技术积累时会发现是完全从零开始的，得益于在原先公司业余时的技术积累，能快速理解，并选择当前状况下最好的技术方案。初创公司的基础决定了无法有健全的技术体系，需要根据业务做即时的调整，并且需要有前瞻性来保证做好了应对未来需求变化时不需要做较大的改动。每个新增功能尽量做增量型改动，这需要基本模块做到『低耦合高内聚』和『小而美』。&lt;/p&gt;
+&lt;p&gt;研发人员需要对前沿技术有更多地了解，对不同技术领域的知识均有涉猎。虽然我是做 C 语言发开的，但是对前后端开发人员都能进行一些基本知识的指导，能讨论相应的技术解决方案。这个技能来源于用心学习，一个是自己做过相应技术的项目（无论是工作中或是业余项目），能 cover 住需求所需的技术要点即可；第二点是在实操中了解技术原理，从官方文档中去学习，反复推敲实现方案；第三点挺重要的，需要知道大家平时遇见的问题，并知道解决过程，即使是别人解决掉的问题也成为了自己的经验。&lt;/p&gt;
+&lt;p&gt;最后被人的评价就是&amp;hellip;怎么什么都懂。当然啦，太多深入的技术知识我也能就不太了解了。&lt;/p&gt;
+&lt;h2 id=&#34;管理知识&#34;&gt;管理知识&lt;/h2&gt;
+&lt;p&gt;在我的观点中，进入初创公司，就需要把自己当成主人，如此才能获得更多经验来支撑未来的发展。在初创企业中，公司为了节约成本往往会将职能部门的hc预算放的很低（有时候技术部门都未免其难），行政、人力资源会招非专业的人员以降低成本。但企业实际的需求是需要更专业的人员来为企业量身制定规则，非专业人员无法有效的开展工作，会变成打杂人员。&lt;/p&gt;
+&lt;p&gt;在这一矛盾下，企业实际管理者就需要有较高的素养了，对行政、管理、人力资源、财务等方面有一定的知识积累，才能带领公司发展。抛开预算和专业性的矛盾来说，如果管理者缺乏相关知识，即使招到了专家，也无法将其很好的利用起来。此处分两面说，当老板放权的情况下，专家缺乏对公司的了解，老板需要用一定的专业术语来描述公司状况，否则将会迎来很长的震荡阶段；另一方面老板不放权，那更需要通过一定的专业知识来指导专家做执行工作，否则可能导致南辕北辙。&lt;/p&gt;
+&lt;h2 id=&#34;股权及一级市场投资&#34;&gt;股权及一级市场投资&lt;/h2&gt;
+&lt;p&gt;初创企业不可避免的会涉及到股权方面的问题，这是在初创企业打工所必备的知识，直接关系到劳动者的利益。这也是在进入初创企业时老板画的大饼。&lt;/p&gt;
+&lt;p&gt;需要了解到的大致有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注册资金&lt;/li&gt;
+&lt;li&gt;实缴和认缴&lt;/li&gt;
+&lt;li&gt;货币出资和非货币出资（技术入股）&lt;/li&gt;
+&lt;li&gt;股权转让方式&lt;/li&gt;
+&lt;li&gt;一级市场和二级市场&lt;/li&gt;
+&lt;li&gt;资本公积&lt;/li&gt;
+&lt;li&gt;股权溢价&lt;/li&gt;
+&lt;li&gt;公司类型（有限责任公司、合伙公司、股份公司）&lt;/li&gt;
+&lt;li&gt;合伙公司中的 GP、LP&lt;/li&gt;
+&lt;li&gt;AB 股&lt;/li&gt;
+&lt;li&gt;破产清算&lt;/li&gt;
+&lt;li&gt;退出机制&lt;/li&gt;
+&lt;li&gt;VC/PE/FOF&lt;/li&gt;
+&lt;li&gt;股份变现方式和阶段&lt;/li&gt;
+&lt;li&gt;IPO（&amp;lt;&amp;ndash;太高级了，一点不懂）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些知识了解后就会发现一些公司给出的股份可能有坑。例如公司在未实缴注册资金的情况下股权转让给员工，而后进行了天使轮投资，此时资方会要求所有股东实缴注册资金，那员工可能需要按比例出钱哦~&lt;/p&gt;
+&lt;p&gt;这里面的门门道道太多了，以至于离职是老板面谈四五次用股份来挽留我也被我拒绝了。有空的时候可以将之前了解到的知识整理出来。&lt;/p&gt;
+&lt;h2 id=&#34;管理者必备的素质&#34;&gt;管理者必备的素质&lt;/h2&gt;
+&lt;p&gt;在工作过程中，体会到了创业如履薄冰，需要考究的事项太多。&lt;/p&gt;
+&lt;h3 id=&#34;创始人的人格将会引导公司文化&#34;&gt;创始人的人格将会引导公司文化&lt;/h3&gt;
+&lt;p&gt;首先要说明的是在和一些资方及高管交流的过程中，我们得出了一个结论：『创始人的人格会极大的影响公司文化』，这也应证了『小公司的发展看老板，中型公司发展看制度，大公司发展看文化』这句话。小公司的文化即老板个人人格的外显，会深刻的影响整个公司的发展。&lt;/p&gt;
+&lt;p&gt;我们也曾私下讨论过一些问题，诸如当创始人能力不佳时资本方会逐渐加入管理，但是否能彻底将创始人边缘化的问题。对于这个问题我认为创始人在前期是无法被边缘化的，除了利益方面的问题，还有文化方面的。当创始人被边缘化后，消除其能力不佳对公司造成的影响的同时也会将公司的整个文化和所有的理念清洗掉，这将会从根本上泯灭一家公司的灵魂。&lt;/p&gt;
+&lt;p&gt;因此创始人需要有一定的高度后创办一家公司的幸存率才会高。&lt;/p&gt;
+&lt;h3 id=&#34;创始团队与社招&#34;&gt;创始团队与社招&lt;/h3&gt;
+&lt;p&gt;在公司经历一定发展后，将不满足于现有的规模，开始进行社招。初创团队往往会不舍得去招人，尤其在技术公司中，人员成本是公司开支的大头。当公司决定以低于市场价的标准招人，且没有其他吸引人的优势时就会引发一系列严重的问题。&lt;/p&gt;
+&lt;p&gt;初创公司在招人方面往往有以下一些劣势：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;工资没有吸引力&lt;/li&gt;
+&lt;li&gt;公司无行业影响力，甚至无人知晓&lt;/li&gt;
+&lt;li&gt;福利待遇低于相对成熟的公司&lt;/li&gt;
+&lt;li&gt;制度不完善&lt;/li&gt;
+&lt;li&gt;招聘方式不佳&lt;/li&gt;
+&lt;li&gt;招聘投入过低&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这导致了初创公司只能在沙子中筛选金子，这个成本是巨大的，而且很难淘到金子，只会获得一团散沙。水向低处流，人往高处走，除非是一起参与公司创立的创始团队，很少会有精英选择加入一家短期收益低微，长期收益渺茫的初创公司。这也是创始团队和社招的区别所在。&lt;/p&gt;
+&lt;p&gt;创始团队不易得，在我所经历的公司中，创始团队是创始人多次邀请邀请来的，其中的沟通成本是非常大的。创始团队的维持依托于后续公司良好的发展及获得长期收益的希望。经历过成熟企业和精英训练的创始团队拥有一定的见识和知识水平，能在一定程度上分辨公司的靠谱程度，以画饼招募到的创始团队无法以画饼维持，需要创始人通过务实的努力来维持创始团队的信心。&lt;/p&gt;
+&lt;p&gt;社招不易得。创始团队可以通过创始人人格魅力来获得较高的性价比，但社招应聘人员往往考量的是实际获得的收入，在面试短短的一小时内，人格的吸引力还无法发挥作用。因此上文提到了获得创始团队的沟通成本是巨大的，这包含了展现人格魅力的时间。在实际收入较低时，便很难招到优秀的人，甚至很难找到优秀的应届生。同样在招到优秀的人才后如果降低人员流失率就是和创始团队一样的问题了。&lt;/p&gt;
+&lt;p&gt;以上总总难处导致了初创企业人员配置不佳，&lt;/p&gt;
+&lt;h3 id=&#34;信守承诺&#34;&gt;信守承诺&lt;/h3&gt;
+&lt;h3 id=&#34;完善流程制度&#34;&gt;完善流程制度&lt;/h3&gt;
+&lt;h3 id=&#34;精细控制对公司负责&#34;&gt;精细控制，对公司负责&lt;/h3&gt;
+&lt;h3 id=&#34;信息控制&#34;&gt;信息控制&lt;/h3&gt;
+&lt;h3 id=&#34;逻辑自洽&#34;&gt;逻辑自洽&lt;/h3&gt;
+&lt;h3 id=&#34;换位思考&#34;&gt;换位思考&lt;/h3&gt;
+&lt;h3 id=&#34;员工情绪&#34;&gt;员工情绪&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>线性回归及实现</title>
+      <link>/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Sun, 01 Dec 2019 09:59:04 +0800</pubDate>
+      <guid>/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0/</guid>
+      <description>&lt;h1 id=&#34;线性回归及实现&#34;&gt;线性回归及实现&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;一年多前，《修真聊天群》更新看完了，在书荒引发的无聊情绪推动下学习了 Keras，用 LSTM 生成了大段无法看的《伪*修真聊天群》，没有耐心好好炼丹就没有再接触过深度学习的知识点，偶尔无聊看看聚宽上的文章也都是&lt;code&gt;随机森林&lt;/code&gt;和&lt;code&gt;隐马尔科夫模型&lt;/code&gt;等传统机器学习算法。
+近期 gayhub 上榜了一个
+&lt;a href=&#34;https://github.com/dragen1860/Deep-Learning-with-TensorFlow-book&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《TensorFlow 2.0深度学习开源书》&lt;/a&gt;，正巧之后的新工作也与 TensorFlow 有些许关联，就趁机学习一下。&lt;/p&gt;
+&lt;p&gt;看了教程打算手撸下公式推导及函数实现。（ &amp;lt;&amp;ndash; 抄袭狗 ）&lt;/p&gt;
+&lt;h2 id=&#34;1线性回归&#34;&gt;1.线性回归&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;线性回归是利用数理统计中回归分析，来确定两种或两种以上变量间相互依赖的定量关系的一种统计分析方法，运用十分广泛。其表达形式为y = w&amp;rsquo;x+e，e为误差服从均值为0的正态分布。 &amp;mdash;- 百度百科&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;11-二元一次方程&#34;&gt;1.1 二元一次方程&lt;/h3&gt;
+&lt;p&gt;当我们有个函数为 $y=wx+b$ 并且知道本函数穿过的两个点时我们可以轻易的算出函数中的常数$w$和$b$。&lt;/p&gt;
+&lt;p&gt;假设有两点：
+$$
+x_1=3,y_1=7 \&lt;br&gt;
+x_2=4,y_2=6 \&lt;br&gt;
+$$&lt;/p&gt;
+&lt;p&gt;则其解为：
+$$
+7=3w+b \&lt;br&gt;
+6=4w+b \&lt;br&gt;
+w=-1,b=10
+$$&lt;/p&gt;
+&lt;p&gt;其曲线为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import matplotlib.pyplot as plt
+plt.plot([3,4],[7,6])
+plt.show() # show figure
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;12-观测误差&#34;&gt;1.2 观测误差&lt;/h3&gt;
+&lt;p&gt;但是当我们的观测点存在误差时，公式变为了 $y=wx+b+\epsilon,\epsilon\in\mathcal{N}(\mu,\sigma^2)$. 此时我们无法用过之前的解法解出$w$和$b$的值。代码中采用&lt;code&gt;random.random()-0.5&lt;/code&gt;模拟$\epsilon$，我们会发现无论取哪两点去计算$w$和$b$都会导致函数存在巨大的偏离。我们只能通过回归分析去计算最佳的$w$和$b$。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import matplotlib.pyplot as plt
+import random
+x=range(0, 10)
+plt.plot(x,[-1*i+10+random.random()-0.5 for i in x], &#39;o&#39;)
+plt.plot(x,[-1*i+10 for i in x])
+plt.show() # show figure
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;13-损失函数loss&#34;&gt;1.3 损失函数（loss）&lt;/h3&gt;
+&lt;p&gt;此时我们引入了损失函数来计算$w$和$b$的好坏，在此例中采用均方误差(MSE)来评判：
+$$
+\mathscr{L}=\frac{\sum_{i=1}^{n}(wx_i+b-y_i)^2}n
+$$&lt;/p&gt;
+&lt;p&gt;我们接下来的工作就是找到使$\mathscr{L}$最小的$w$和$b$。&lt;/p&gt;
+&lt;h3 id=&#34;14-梯度下降及优化函数&#34;&gt;1.4 梯度下降及优化函数&lt;/h3&gt;
+&lt;p&gt;我们通过寻找$\mathscr{L}$最小值来确定最佳的$w$和$b$，此时可通过求极值的方式来寻找损失函数的极小值。损失函数为三元方程，其偏导数即为梯度，我们用&lt;code&gt;学习率(lr)&lt;/code&gt;来缩放梯度，通过不断的减去梯度来计算$w$和$b$，将其优化到最佳。
+$$
+w&#39;=w-\eta\frac{\partial \mathscr{L}}{\partial w} \&lt;br&gt;
+b&#39;=b-\eta\frac{\partial \mathscr{L}}{\partial b} \&lt;br&gt;
+\eta\text{为学习率 lr}
+$$&lt;/p&gt;
+&lt;p&gt;解开偏导数以备后用：
+$$
+\begin{align}
+\frac{\partial \mathscr{L}}{\partial w} &amp;amp; = \frac{\partial \frac{\sum_{i=1}^{n}(wx_i+b-y_i)^2}n}{\partial w} \&lt;br&gt;
+&amp;amp; = \frac{2}{n}\sum_{i=1}^{n} (wx_i+b-y_i)\frac{\partial (wx_i+b-y_i)}{\partial w} \&lt;br&gt;
+&amp;amp; = \frac{2}{n}\sum_{i=1}^{n} (wx_i+b-y_i)x_i
+\end{align}
+$$
+$$
+\begin{align}
+\frac{\partial \mathscr{L}}{\partial b} &amp;amp; = \frac{\partial \frac{\sum_{i=1}^{n}(bx_i+b-y_i)^2}n}{\partial b} \&lt;br&gt;
+&amp;amp; = \frac{2}{n}\sum_{i=1}^{n} (bx_i+b-y_i)\frac{\partial (bx_i+b-y_i)}{\partial b} \&lt;br&gt;
+&amp;amp; = \frac{2}{n}\sum_{i=1}^{n} (bx_i+b-y_i)
+\end{align}
+$$&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>我这么大个io_service去哪里了</title>
+      <link>/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</link>
+      <pubDate>Wed, 30 Oct 2019 09:50:48 +0800</pubDate>
+      <guid>/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</guid>
+      <description>&lt;h1 id=&#34;我这么大个io_service去哪里了&#34;&gt;我这么大个io_service去哪里了&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;最近稍微闲了下来，开始debug &lt;code&gt;Boost.Asio&lt;/code&gt; 析构时崩溃的问题。在目前代码中，使用到了&lt;code&gt;deadline_timer&lt;/code&gt;作定时器。&lt;/p&gt;
+&lt;p&gt;由于早期仅用简单的定时器，也就没多了解&lt;code&gt;io_service&lt;/code&gt;的用法，简单地在每个短周期业务实例中各开了一组&lt;code&gt;thread&lt;/code&gt;和&lt;code&gt;io_service&lt;/code&gt;来挂&lt;code&gt;deadline_timer&lt;/code&gt;。后来出现了一个问题，运行时发现在析构业务实例时delete &lt;code&gt;io_service&lt;/code&gt;偶尔会崩溃（具体定位过程就不在这边展开了），就去看了源代码和reference。&lt;/p&gt;
+&lt;p&gt;想着这么大的库api应该不会有太大的变化，点开boost最新版（1.71）reference，咦 O__O 我这么大个&lt;code&gt;io_service&lt;/code&gt;去哪里了？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86.assets/image-20191030105005556.png&#34; alt=&#34;image-20191030105005556&#34;&gt;&lt;/p&gt;
+&lt;div style=&#34;color:grey;text-alian:center&#34;&gt;Legend 1:Boost 1.71 Asio Reference&lt;/div&gt;
+接下来从1.71版本往回翻，在1.66更新信息里发现一句话：
+&lt;blockquote&gt;
+&lt;p&gt;Implemented interface changes to reflect the Networking TS (
+&lt;a href=&#34;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4656.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;N4656&lt;/a&gt;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;See the 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/net_ts.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;list&lt;/a&gt; of new interfaces and, where applicable, the corresponding old interfaces that have been superseded.&lt;/li&gt;
+&lt;li&gt;The service template parameters, and the corresponding classes, are disabled by default. For example, instead of &lt;code&gt;basic_socket&lt;/code&gt; we now have simply &lt;code&gt;basic_socket&lt;/code&gt;. The old interface can be enabled by defining the &lt;code&gt;BOOST_ASIO_ENABLE_OLD_SERVICES&lt;/code&gt; macro.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;为了迎合C++ Networking TS的标准将接口改了，但是旧的接口依然还在支持。但一些service模板和相应的类默认不支持老版本，不过可以打开&lt;code&gt;BOOST_ASIO_ENABLE_OLD_SERVICES&lt;/code&gt;宏来支持老版本service。&lt;/p&gt;
+&lt;p&gt;以下仅列了一些我感兴趣的修改，完整版可以看上文的list链接。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;New interface&lt;/th&gt;
+&lt;th&gt;Old interface&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_service.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The name &lt;code&gt;io_service&lt;/code&gt; is retained as a typedef.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/dispatch.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/dispatch.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::dispatch&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;dispatch&lt;/code&gt; free function can be used to submit functions to any 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/Executor1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Executor&lt;/a&gt; or 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/ExecutionContext.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ExecutionContext&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/dispatch.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;post&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/post.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::post&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;dispatch&lt;/code&gt; free function can be used to submit functions to any 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/Executor1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Executor&lt;/a&gt; or 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/ExecutionContext.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ExecutionContext&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/dispatch.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;defer&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/post.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::post&lt;/code&gt;&lt;/a&gt; when the 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/asio_handler_is_continuation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;asio_handler_is_continuation&lt;/code&gt;&lt;/a&gt; hook returns true&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;defer&lt;/code&gt; free function can be used to submit functions to any 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/Executor1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Executor&lt;/a&gt; or 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/ExecutionContext.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ExecutionContext&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/poll.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::poll&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/poll.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::poll&lt;/code&gt;&lt;/a&gt; overload that takes &lt;code&gt;error_code&amp;amp;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;error_code&lt;/code&gt; overload is not required.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/poll_one.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::poll_one&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/poll_one.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::poll_one&lt;/code&gt;&lt;/a&gt; overload that takes &lt;code&gt;error_code&amp;amp;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;error_code&lt;/code&gt; overload is not required.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::run&lt;/code&gt;&lt;/a&gt; overload that takes &lt;code&gt;error_code&amp;amp;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;error_code&lt;/code&gt; overload is not required.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_one.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run_one&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_one.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::run_one&lt;/code&gt;&lt;/a&gt; overload that takes &lt;code&gt;error_code&amp;amp;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;error_code&lt;/code&gt; overload is not required.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_for.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run_for&lt;/code&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_until.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run_until&lt;/code&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_one_for.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run_one_for&lt;/code&gt;&lt;/a&gt;, and 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_one_until.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run_one_until&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;These functions add the ability to run an &lt;code&gt;io_context&lt;/code&gt; for a limited time.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/restart.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::restart&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/reset.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::reset&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;execution_context&lt;/code&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context__service.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;execution_context::service&lt;/code&gt;&lt;/a&gt;, and 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context__id.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;execution_context::id&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service&lt;/code&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context__service.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::service&lt;/code&gt;&lt;/a&gt;, and 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context__id.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::id&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The service-related functionality has been moved to the &lt;code&gt;execution_context&lt;/code&gt; base class. This may also be used as a base for creating custom execution contexts.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context/make_service.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;make_service&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context/add_service.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;add_service&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/strand.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;strand&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context__strand.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::strand&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;This template works with any valid executor, and is itself a valid executor.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/executor_work_guard.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;executor_work_guard&lt;/code&gt;&lt;/a&gt; and 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/make_work_guard.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;make_work_guard&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context__work.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::work&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Work tracking is now covered by the 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/Executor1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Executor&lt;/a&gt; requirements. These templates work with any valid executor.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div style=&#34;color:grey;text-alian:center&#34;&gt;Legend 2:Boost 1.71 Asio Interface Change List&lt;/div&gt;  
+在新接口表中我们可以看到`io_service`已经换成了`io_context`，且在1.66的[io_service](https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_service.html) reference中可以发现最上面就写了
+</description>
+    </item>
+    
+    <item>
+      <title>boost.asio核心浅析</title>
+      <link>/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</link>
+      <pubDate>Tue, 29 Oct 2019 15:50:50 +0800</pubDate>
+      <guid>/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</guid>
+      <description>&lt;h1 id=&#34;boostasio核心浅析&#34;&gt;boost.asio核心浅析&lt;/h1&gt;
+&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;公共模块回调函数实现方式</title>
+      <link>/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Thu, 05 Sep 2019 11:40:07 +0800</pubDate>
+      <guid>/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</guid>
+      <description>&lt;h1 id=&#34;c公共模块回调函数实现方式&#34;&gt;C++公共模块回调函数实现方式&lt;/h1&gt;
+&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
+&lt;p&gt;在代码实现时，常常会遇到模块间函数调用的问题。对于一个公共模块，会有明确的public方法来作为接口，但是当需要发送消息（此处仅讨论回调函数）到外部业务模块的时候就很难去定义回调函数的类型。通常在命令式编程中会采用函数指针的方法，但在OO中调用者是一个类的话很难将类成员函数发给基础模块做回调函数。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;1-传统函数指针回调&#34;&gt;1. 传统函数指针回调&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Git分支使用方法</title>
+      <link>/post/git%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Fri, 05 Jul 2019 10:07:27 +0000</pubDate>
+      <guid>/post/git%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>&lt;h1 id=&#34;git分支使用方法&#34;&gt;Git分支使用方法&lt;/h1&gt;
+&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
+&lt;h2 id=&#34;分支概要&#34;&gt;分支概要&lt;/h2&gt;
+&lt;p&gt;分支使用tip:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;设三个分支, master/release/develop&lt;/li&gt;
+&lt;li&gt;master和release 设置为只能管理员merge&lt;/li&gt;
+&lt;li&gt;可以把develop设置为默认分支&lt;/li&gt;
+&lt;li&gt;未来在网页端merge选上 &lt;code&gt;Squash commits when merge request is accepted.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;merge到master分支上需要打上tag&lt;/li&gt;
+&lt;li&gt;feature分支大家可自由创建~ 命名为 &lt;code&gt;feature/xxx&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;feature分支合并至develop时, 和以上一样选择. 最后次合入时同时选上 &lt;code&gt;Delete source branch when merge request is accepted.&lt;/code&gt; 以删除feature分支&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;后续我会写一篇文档.&lt;/p&gt;
+&lt;h2 id=&#34;参考文献&#34;&gt;参考文献&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://nvie.com/posts/a-successful-git-branching-model/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A successful Git branching model&lt;/a&gt;
+
+&lt;a href=&#34;https://blog.csdn.net/iprettydeveloper/article/details/53944125&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Git仓库分支(Branch)和标签(Tag)&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Windows 下 C&#43;&#43; 编程环境</title>
+      <link>/post/windows%E4%B8%8B-c&#43;&#43;-%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Mon, 20 May 2019 15:52:09 +0000</pubDate>
+      <guid>/post/windows%E4%B8%8B-c&#43;&#43;-%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/</guid>
+      <description>&lt;h1 id=&#34;windows-下-c-编程环境指导&#34;&gt;Windows 下 C++ 编程环境指导&lt;/h1&gt;
+&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
+&lt;!-- code_chunk_output --&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#windows-%e4%b8%8b-c-%e7%bc%96%e7%a8%8b%e7%8e%af%e5%a2%83%e6%8c%87%e5%af%bc&#34;&gt;Windows 下 C++ 编程环境指导&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e8%83%8c%e6%99%af%e4%bb%8b%e7%bb%8d&#34;&gt;背景介绍&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e5%bb%ba%e8%ae%ae&#34;&gt;操作系统建议&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#windows-subsystem-for-linux&#34;&gt;Windows Subsystem for Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%8e%af%e5%a2%83%e5%8f%82%e8%80%83&#34;&gt;命令行环境参考&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#windows&#34;&gt;Windows&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#powershell-%e6%8f%92%e4%bb%b6&#34;&gt;PowerShell 插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#windows%e4%b8%8b%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%bd%af%e4%bb%b6%e5%ae%89%e8%a3%85&#34;&gt;Windows下命令行软件安装&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#linux&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%bd%af%e4%bb%b6&#34;&gt;命令行软件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#c-%e4%bb%a3%e7%a0%81%e8%a7%84%e8%8c%83&#34;&gt;C++ 代码规范&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#google-c-style-guide&#34;&gt;Google C++ Style Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#lint&#34;&gt;Lint&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e7%bc%96%e8%be%91%e5%99%a8%e6%8c%87%e5%bc%95&#34;&gt;编辑器指引&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#clion%e9%85%8d%e7%bd%ae&#34;&gt;Clion配置&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e6%b3%a8%e5%86%8c%e7%a0%81&#34;&gt;注册码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#wsl%e8%bf%9e%e6%8e%a5&#34;&gt;WSL连接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#google-c-style-guide-%e9%85%8d%e7%bd%ae&#34;&gt;Google C++ Style Guide 配置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#vscode%e9%85%8d%e7%bd%ae&#34;&gt;VSCode配置&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e5%bc%ba%e7%83%88%e5%bb%ba%e8%ae%ae%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6&#34;&gt;强烈建议安装插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e5%bb%ba%e8%ae%ae%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6&#34;&gt;建议安装插件:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e5%8f%af%e7%94%a8sync%e9%85%8d%e7%bd%ae&#34;&gt;可用Sync配置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /code_chunk_output --&gt;
+&lt;h2 id=&#34;背景介绍&#34;&gt;背景介绍&lt;/h2&gt;
+&lt;p&gt;最近安装了 Windows 系统，从来没有在 Windows 下面做过 Unix C++ 开发的我略有些懵逼（为什么在 windows 下开发是 Unix？因为我主要还是用 macOS 和 linux）。在经过一段时间的适应后，总结下Windows下开发的经验，供后续查看。&lt;/p&gt;
+&lt;h2 id=&#34;操作系统建议&#34;&gt;操作系统建议&lt;/h2&gt;
+&lt;p&gt;建议采用 Windows 10 作为工作的操作系统, 并安装WSL作为编译环境(详见下文).&lt;/p&gt;
+&lt;p&gt;服务器使用 Ubuntu / CentOS / Manjaro.&lt;/p&gt;
+&lt;p&gt;我个人服务器使用 Manjaro，这是一个滚动式更新的系统，是在Arch Linux基础上修改的更加易用的发行版。软件众多，同时社区维护的 aur 也支持直接从github上获取源代码编译安装。&lt;/p&gt;
+&lt;h2 id=&#34;windows-subsystem-for-linux&#34;&gt;Windows Subsystem for Linux&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://docs.microsoft.com/zh-cn/windows/wsl/about&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Windows Subsystem for Linux（简称WSL）&lt;/a&gt;是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的 Ubuntu 映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。&lt;/p&gt;
+&lt;p&gt;安装指引请查看Microsoft官网:
+
+&lt;a href=&#34;https://docs.microsoft.com/zh-cn/windows/wsl/install-win10&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Linux 安装指南适用于 Windows 10 的 Windows 子系统&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;后续 WSL2 发行后，本段再做修改。考虑到 WSL 和 WSL2 是不冲突的两种功能，届时再看使用哪一种。&lt;/p&gt;
+&lt;h2 id=&#34;命令行环境参考&#34;&gt;命令行环境参考&lt;/h2&gt;
+&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
+&lt;p&gt;主要采用PowerShell, 详情参考
+&lt;a href=&#34;https://docs.microsoft.com/zh-cn/powershell/scripting/overview?view=powershell-6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PowerShell官网&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;powershell-插件&#34;&gt;PowerShell 插件&lt;/h4&gt;
+&lt;p&gt;PowerShell插件主要位于
+&lt;a href=&#34;https://www.powershellgallery.com/packages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PowerShell Gallery&lt;/a&gt;, 可安装oh-my-posh, posh-git等插件&lt;/p&gt;
+&lt;h4 id=&#34;windows下命令行软件安装&#34;&gt;Windows下命令行软件安装&lt;/h4&gt;
+&lt;p&gt;Windows下包管理器主要采用
+&lt;a href=&#34;https://chocolatey.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choco&lt;/a&gt;, 可像Linux下包管理器一样使用.&lt;/p&gt;
+&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
+&lt;p&gt;Linux 下命令行建议采用 zsh, 并加装
+&lt;a href=&#34;https://ohmyz.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Oh-my-zsh&lt;/a&gt;. （WSL自然也包括在其中）&lt;/p&gt;
+&lt;p&gt;以下为安利贴:
+
+&lt;a href=&#34;https://www.zhihu.com/question/21418449&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;为什么说 zsh 是 shell 中的极品？&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;命令行软件&#34;&gt;命令行软件&lt;/h3&gt;
+&lt;p&gt;Windows下命令行软件建议采用
+&lt;a href=&#34;https://github.com/felixse/FluentTerminal&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FluentTerminal&lt;/a&gt;, 使用Choco安装 &lt;code&gt;choco install fluent-terminal&lt;/code&gt;. 在设置中可选择WSL/PowerShell/CMD 作为默认命令行, 建议采用WSL.&lt;/p&gt;
+&lt;h2 id=&#34;c-代码规范&#34;&gt;C++ 代码规范&lt;/h2&gt;
+&lt;h3 id=&#34;google-c-style-guide&#34;&gt;Google C++ Style Guide&lt;/h3&gt;
+&lt;p&gt;C++代码规范目前采用
+&lt;a href=&#34;https://google.github.io/styleguide/cppguide.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google C++ Style Guide&lt;/a&gt; 也可参考
+&lt;a href=&#34;https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;此中文版教程&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;后续会有微调, 将会详细写出.&lt;/p&gt;
+&lt;h3 id=&#34;lint&#34;&gt;Lint&lt;/h3&gt;
+&lt;p&gt;Lint采用
+&lt;a href=&#34;http://clang.llvm.org/extra/clang-tidy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Clang-tidy&lt;/a&gt;做静态分析, 目前项目根目录有&lt;code&gt;clang-tidy.py&lt;/code&gt; 文件来做批量Lint. 可采用命令行 &lt;code&gt;./clang-tidy.py -checks &amp;quot;google-*&amp;quot; -fix  -p ./build ./src/*&lt;/code&gt; 做检查.&lt;/p&gt;
+&lt;h2 id=&#34;编辑器指引&#34;&gt;编辑器指引&lt;/h2&gt;
+&lt;p&gt;编辑器采用
+&lt;a href=&#34;https://www.jetbrains.com/clion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Clion&lt;/a&gt;作为C++开发编辑器, 
+&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Visual Studio Code&lt;/a&gt; 作为辅助编辑器使用.&lt;/p&gt;
+&lt;h3 id=&#34;clion配置&#34;&gt;Clion配置&lt;/h3&gt;
+&lt;h4 id=&#34;注册码&#34;&gt;注册码&lt;/h4&gt;
+&lt;p&gt;Clion注册码可以去淘宝购买，2018-02版本后授权服务器已失效。&lt;/p&gt;
+&lt;h4 id=&#34;wsl连接&#34;&gt;WSL连接&lt;/h4&gt;
+&lt;p&gt;请参考Clion官方文档: 
+&lt;a href=&#34;https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-clion.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How to use wsl development environment in clion&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;google-c-style-guide-配置&#34;&gt;Google C++ Style Guide 配置&lt;/h4&gt;
+&lt;p&gt;请参考Clion官方文档: 
+&lt;a href=&#34;https://www.jetbrains.com/help/clion/code-style-c-c.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code Style. C/C++ #Set From&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在Set From 中选择 Google.&lt;/p&gt;
+&lt;h3 id=&#34;vscode配置&#34;&gt;VSCode配置&lt;/h3&gt;
+&lt;h4 id=&#34;强烈建议安装插件&#34;&gt;强烈建议安装插件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;配置同步
+&lt;ul&gt;
+&lt;li&gt;settings sync&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Git相关
+&lt;ul&gt;
+&lt;li&gt;gitblame&lt;/li&gt;
+&lt;li&gt;githistory&lt;/li&gt;
+&lt;li&gt;gitlens&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;C++相关
+&lt;ul&gt;
+&lt;li&gt;cmake&lt;/li&gt;
+&lt;li&gt;cmake-tools&lt;/li&gt;
+&lt;li&gt;cpptools&lt;/li&gt;
+&lt;li&gt;include-autocomplete&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Markdown及UML相关
+&lt;ul&gt;
+&lt;li&gt;markdown-all-in-one&lt;/li&gt;
+&lt;li&gt;markdown-preview-enhanced&lt;/li&gt;
+&lt;li&gt;plantuml&lt;/li&gt;
+&lt;li&gt;vscode-markdownlint&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;方便编辑
+&lt;ul&gt;
+&lt;li&gt;beautify&lt;/li&gt;
+&lt;li&gt;indent-rainbow&lt;/li&gt;
+&lt;li&gt;output-colorizer&lt;/li&gt;
+&lt;li&gt;path-intellisense&lt;/li&gt;
+&lt;li&gt;rainbow-csv&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;建议安装插件&#34;&gt;建议安装插件:&lt;/h4&gt;
+&lt;p&gt;可能有点多&amp;hellip;可自行筛选, 覆盖了一些常用语言&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  auto-close-tag
+  auto-rename-tag
+  background
+  beautify
+  better-toml
+  bracket-pair-colorizer
+  change-case
+  cmake
+  cmake-tools
+  code-runner
+  code-settings-sync
+  code-spell-checker
+  copilot-vscode
+  cpptools
+  gc-excelviewer
+  gitblame
+  githistory
+  gitlens
+  Go
+  include-autocomplete
+  indent-rainbow
+  iris
+  JavaScriptSnippets
+  markdown-all-in-one
+  markdown-pdf
+  markdown-preview-enhanced
+  mssql
+  nbpreviewer
+  nodejs-docs
+  output-colorizer
+  path-intellisense
+  plantuml
+  powershell
+  pyqt-integration
+  python
+  quicktype
+  rainbow-csv
+  react-native-react-redux
+  rest-client
+  theme-dracula
+  tslint
+  vs-color-picker
+  vscode-babel-coloring
+  vscode-clang
+  vscode-database
+  vscode-eslint
+  vscode-filesize
+  vscode-hexdump
+  vscode-hexo
+  vscode-import-cost
+  vscode-insertdatestring
+  vscode-language-babel
+  vscode-language-pack-zh-hans
+  vscode-leetcode
+  vscode-markdownlint
+  vscode-mysql
+  vscode-power-mode
+  vscode-qt-for-python
+  vscode-styled-components
+  vscode-svgviewer
+  vscode-text-pastry
+  vscode-yaml
+  webpack
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;可用sync配置&#34;&gt;可用Sync配置&lt;/h4&gt;
+&lt;p&gt;首先安装settings sync插件, 选择同步公开gist: &lt;code&gt;7b4026c4de4f3170fb1770945dbdf52e&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 开发环境指引</title>
+      <link>/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/</link>
+      <pubDate>Mon, 20 May 2019 10:10:54 +0000</pubDate>
+      <guid>/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/</guid>
+      <description>&lt;h1 id=&#34;c-开发环境指引&#34;&gt;C++ 开发环境指引&lt;/h1&gt;
+&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
+&lt;!-- code_chunk_output --&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#c-%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e6%8c%87%e5%bc%95&#34;&gt;C++ 开发环境指引&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e5%bb%ba%e8%ae%ae&#34;&gt;操作系统建议&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#windows-subsystem-for-linux&#34;&gt;Windows Subsystem for Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%8e%af%e5%a2%83%e5%8f%82%e8%80%83&#34;&gt;命令行环境参考&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#windows&#34;&gt;Windows&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#powershell-%e6%8f%92%e4%bb%b6&#34;&gt;PowerShell 插件:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#windows%e4%b8%8b%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%bd%af%e4%bb%b6%e5%ae%89%e8%a3%85&#34;&gt;Windows下命令行软件安装:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#linux&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%bd%af%e4%bb%b6&#34;&gt;命令行软件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#c-%e4%bb%a3%e7%a0%81%e8%a7%84%e8%8c%83&#34;&gt;C++ 代码规范&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#google-c-style-guide&#34;&gt;Google C++ Style Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#lint&#34;&gt;Lint&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e7%bc%96%e8%be%91%e5%99%a8%e6%8c%87%e5%bc%95&#34;&gt;编辑器指引&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#clion%e9%85%8d%e7%bd%ae&#34;&gt;Clion配置&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e6%b3%a8%e5%86%8c%e7%a0%81&#34;&gt;注册码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#wsl%e8%bf%9e%e6%8e%a5&#34;&gt;WSL连接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#google-c-style-guide-1&#34;&gt;Google C++ Style Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#vscode%e9%85%8d%e7%bd%ae&#34;&gt;VSCode配置&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e5%bc%ba%e7%83%88%e5%bb%ba%e8%ae%ae%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6&#34;&gt;强烈建议安装插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e5%bb%ba%e8%ae%ae%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6&#34;&gt;建议安装插件:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e5%8f%af%e7%94%a8sync%e9%85%8d%e7%bd%ae&#34;&gt;可用Sync配置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#%e6%97%a5%e6%8a%a5&#34;&gt;日报&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#git%e6%8c%87%e5%bc%95&#34;&gt;Git指引&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /code_chunk_output --&gt;
+&lt;h2 id=&#34;操作系统建议&#34;&gt;操作系统建议&lt;/h2&gt;
+&lt;p&gt;建议采用 Windows 10 作为工作的操作系统, 并安装WSL作为编译环境(详见下文).&lt;/p&gt;
+&lt;p&gt;服务器使用 Ubuntu 或 CentOS. 当前为同一WSL环境, 使用Ubuntu作为上线系统.&lt;/p&gt;
+&lt;h2 id=&#34;windows-subsystem-for-linux&#34;&gt;Windows Subsystem for Linux&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://docs.microsoft.com/zh-cn/windows/wsl/about&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Windows Subsystem for Linux（简称WSL）&lt;/a&gt;是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的 Ubuntu 映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。&lt;/p&gt;
+&lt;p&gt;安装指引请查看Microsoft官网:
+
+&lt;a href=&#34;https://docs.microsoft.com/zh-cn/windows/wsl/install-win10&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Linux 安装指南适用于 Windows 10 的 Windows 子系统&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;命令行环境参考&#34;&gt;命令行环境参考&lt;/h2&gt;
+&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
+&lt;p&gt;主要采用PowerShell, 详情参考
+&lt;a href=&#34;https://docs.microsoft.com/zh-cn/powershell/scripting/overview?view=powershell-6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PowerShell官网&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;powershell-插件&#34;&gt;PowerShell 插件:&lt;/h4&gt;
+&lt;p&gt;PowerShell插件主要位于
+&lt;a href=&#34;https://www.powershellgallery.com/packages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PowerShell Gallery&lt;/a&gt;, 可安装oh-my-posh, posh-git等插件&lt;/p&gt;
+&lt;h4 id=&#34;windows下命令行软件安装&#34;&gt;Windows下命令行软件安装:&lt;/h4&gt;
+&lt;p&gt;Windows下包管理器主要采用
+&lt;a href=&#34;https://chocolatey.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choco&lt;/a&gt;, 可像Linux下包管理器一样使用.&lt;/p&gt;
+&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
+&lt;p&gt;Linux下命令行建议采用zsh, 并加装
+&lt;a href=&#34;https://ohmyz.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Oh-my-zsh&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;以下为安利贴:
+
+&lt;a href=&#34;https://www.zhihu.com/question/21418449&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;为什么说 zsh 是 shell 中的极品？&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;命令行软件&#34;&gt;命令行软件&lt;/h3&gt;
+&lt;p&gt;Windows下命令行软件建议采用
+&lt;a href=&#34;https://github.com/felixse/FluentTerminal&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FluentTerminal&lt;/a&gt;, 使用Choco安装 &lt;code&gt;choco install fluent-terminal&lt;/code&gt;. 在设置中可选择WSL/PowerShell/CMD 作为默认命令行, 建议采用WSL.&lt;/p&gt;
+&lt;h2 id=&#34;c-代码规范&#34;&gt;C++ 代码规范&lt;/h2&gt;
+&lt;h3 id=&#34;google-c-style-guide&#34;&gt;Google C++ Style Guide&lt;/h3&gt;
+&lt;p&gt;C++代码规范目前采用
+&lt;a href=&#34;https://google.github.io/styleguide/cppguide.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google C++ Style Guide&lt;/a&gt; 也可参考
+&lt;a href=&#34;https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;此中文版教程&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;后续会有微调, 将会详细写出.&lt;/p&gt;
+&lt;h3 id=&#34;lint&#34;&gt;Lint&lt;/h3&gt;
+&lt;p&gt;Lint采用
+&lt;a href=&#34;http://clang.llvm.org/extra/clang-tidy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Clang-tidy&lt;/a&gt;做静态分析, 目前项目根目录有&lt;code&gt;clang-tidy.py&lt;/code&gt; 文件来做批量Lint. 可采用命令行 &lt;code&gt;./clang-tidy.py -checks &amp;quot;google-*&amp;quot; -fix  -p ./build ./src/*&lt;/code&gt; 做检查.&lt;/p&gt;
+&lt;h2 id=&#34;编辑器指引&#34;&gt;编辑器指引&lt;/h2&gt;
+&lt;p&gt;编辑器采用
+&lt;a href=&#34;https://www.jetbrains.com/clion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Clion&lt;/a&gt;作为C++开发编辑器, 
+&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Visual Studio Code&lt;/a&gt; 作为辅助编辑器使用.&lt;/p&gt;
+&lt;h3 id=&#34;clion配置&#34;&gt;Clion配置&lt;/h3&gt;
+&lt;h4 id=&#34;注册码&#34;&gt;注册码&lt;/h4&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://note.youdao.com/ynoteshare1/index.html?id=2e038d709a368b5d5c36c8f065aaecac&amp;amp;type=note&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Clion注册码&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;wsl连接&#34;&gt;WSL连接&lt;/h4&gt;
+&lt;p&gt;请参考Clion官方文档: 
+&lt;a href=&#34;https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-clion.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How to use wsl development environment in clion&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;google-c-style-guide-1&#34;&gt;Google C++ Style Guide&lt;/h4&gt;
+&lt;p&gt;请参考Clion官方文档: 
+&lt;a href=&#34;https://www.jetbrains.com/help/clion/code-style-c-c.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code Style. C/C++ #Set From&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在Set From 中选择 Google.&lt;/p&gt;
+&lt;h3 id=&#34;vscode配置&#34;&gt;VSCode配置&lt;/h3&gt;
+&lt;h4 id=&#34;强烈建议安装插件&#34;&gt;强烈建议安装插件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;配置同步
+&lt;ul&gt;
+&lt;li&gt;settings sync&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Git相关
+&lt;ul&gt;
+&lt;li&gt;gitblame v2.7.0&lt;/li&gt;
+&lt;li&gt;githistory v0.4.6&lt;/li&gt;
+&lt;li&gt;gitlens v9.7.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;C++相关
+&lt;ul&gt;
+&lt;li&gt;cmake v0.0.17&lt;/li&gt;
+&lt;li&gt;cmake-tools v1.1.3&lt;/li&gt;
+&lt;li&gt;cpptools v0.23.1&lt;/li&gt;
+&lt;li&gt;include-autocomplete v0.0.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Markdown及UML相关
+&lt;ul&gt;
+&lt;li&gt;markdown-all-in-one v2.3.1&lt;/li&gt;
+&lt;li&gt;markdown-preview-enhanced v0.3.13&lt;/li&gt;
+&lt;li&gt;plantuml v2.11.0&lt;/li&gt;
+&lt;li&gt;vscode-markdownlint v0.26.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;方便编辑
+&lt;ul&gt;
+&lt;li&gt;beautify v1.5.0&lt;/li&gt;
+&lt;li&gt;indent-rainbow v7.4.0&lt;/li&gt;
+&lt;li&gt;output-colorizer v0.1.2&lt;/li&gt;
+&lt;li&gt;path-intellisense v1.4.2&lt;/li&gt;
+&lt;li&gt;rainbow-csv v1.0.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;建议安装插件&#34;&gt;建议安装插件:&lt;/h4&gt;
+&lt;p&gt;可能有点多&amp;hellip;可自行筛选, 覆盖了一些常用语言&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  auto-close-tag v0.5.6
+  auto-rename-tag v0.0.15
+  background v1.1.19
+  beautify v1.5.0
+  better-toml v0.3.2
+  bracket-pair-colorizer v1.0.61
+  change-case v1.0.0
+  cmake v0.0.17
+  cmake-tools v1.1.3
+  code-runner v0.9.9
+  code-settings-sync v3.2.9
+  code-spell-checker v1.7.10
+  copilot-vscode v1.3.0
+  cpptools v0.23.1
+  gc-excelviewer v2.1.32
+  gitblame v2.7.0
+  githistory v0.4.6
+  gitlens v9.7.4
+  Go v0.10.2
+  include-autocomplete v0.0.4
+  indent-rainbow v7.4.0
+  iris v0.0.4
+  JavaScriptSnippets v1.7.2
+  markdown-all-in-one v2.3.1
+  markdown-pdf v1.2.0
+  markdown-preview-enhanced v0.3.13
+  mssql v1.6.0
+  nbpreviewer v1.2.2
+  nodejs-docs v0.2.2
+  output-colorizer v0.1.2
+  path-intellisense v1.4.2
+  plantuml v2.11.0
+  powershell v1.12.1
+  pyqt-integration v0.2.0
+  python v2019.4.12954
+  quicktype v12.0.46
+  rainbow-csv v1.0.0
+  react-native-react-redux v2.0.3
+  rest-client v0.21.3
+  theme-dracula v2.18.0
+  tslint v1.0.43
+  vs-color-picker v1.0.0
+  vscode-babel-coloring v0.0.4
+  vscode-clang v0.2.3
+  vscode-database v2.1.5
+  vscode-eslint v1.9.0
+  vscode-filesize v2.1.2
+  vscode-hexdump v1.7.2
+  vscode-hexo v1.0.1
+  vscode-import-cost v2.12.0
+  vscode-insertdatestring v2.2.4
+  vscode-language-babel v0.0.22
+  vscode-language-pack-zh-hans v1.33.2
+  vscode-leetcode v0.14.3
+  vscode-markdownlint v0.26.0
+  vscode-mysql v0.4.0
+  vscode-power-mode v2.2.0
+  vscode-qt-for-python v0.3.0
+  vscode-styled-components v0.0.26
+  vscode-svgviewer v2.0.0
+  vscode-text-pastry v1.2.0
+  vscode-yaml v0.4.0
+  webpack v2.1.3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;可用sync配置&#34;&gt;可用Sync配置&lt;/h4&gt;
+&lt;p&gt;首先安装settings sync插件, 选择同步公开gist: &lt;code&gt;7b4026c4de4f3170fb1770945dbdf52e&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;日报&#34;&gt;日报&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://192.168.99.30:9999/rdc/dailyreport&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;研发部日报Git&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;git指引&#34;&gt;Git指引&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/521xueweihan/git-tips&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Git的奇技淫巧&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>vision详细设计</title>
+      <link>/post/vision%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Sat, 12 Jan 2019 12:52:23 +0000</pubDate>
+      <guid>/post/vision%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1/</guid>
+      <description>&lt;h1 id=&#34;vision详细设计&#34;&gt;vision详细设计&lt;/h1&gt;
+&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
+&lt;!-- code_chunk_output --&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#vision%e8%af%a6%e7%bb%86%e8%ae%be%e8%ae%a1&#34;&gt;vision详细设计&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#1-%e8%83%8c%e6%99%af%e4%bb%8b%e7%bb%8d&#34;&gt;1 背景介绍&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /code_chunk_output --&gt;
+&lt;h2 id=&#34;1-背景介绍&#34;&gt;1 背景介绍&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://blogdata.morningtzh.com/image/other/head.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blogdata.morningtzh.com/image/other/head.jpg?imageView2/1/w/200/h/200/interlace/1/q/75%7Cwatermark/2/text/TW9ybmluZ1RaSA==/font/YW5kYWx1cw==/fontsize/240/fill/I0NCRTFFOQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10%7Cimageslim&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blogdata.morningtzh.com/image/other/head.jpg?imageView2/1/w/200/h/200/interlace/1/q/75%7Cwatermark/2/text/TW9ybmluZ1RaSA==/font/YW5kYWx1cw==/fontsize/240/fill/I0NCRTFFOQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>博客系统的需求在哪里</title>
+      <link>/post/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9C%80%E6%B1%82%E5%9C%A8%E5%93%AA%E9%87%8C/</link>
+      <pubDate>Fri, 12 Oct 2018 12:23:17 +0000</pubDate>
+      <guid>/post/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9C%80%E6%B1%82%E5%9C%A8%E5%93%AA%E9%87%8C/</guid>
+      <description>&lt;h1 id=&#34;博客系统的需求在哪里&#34;&gt;博客系统的需求在哪里&lt;/h1&gt;
+&lt;p&gt;半年前，有了更多对前端的思考便打算将自研博客系统落地。这个想法由来已久，从大学时期的 wordpress、dokuwiki到毕业后搭建的 hexo 静态博客，折腾了系统、捣鼓了插件，最终写的文章寥寥，后来也兴致缺缺。渐渐就期望有一个亲手建立的博客系统，删减复杂的功能，保留最精要的功能即可。&lt;/p&gt;
+&lt;p&gt;差不多花了一个月时间写出了博客主要的功能，采用了 Twitter 的页面风格，前端架构主要使用 react + mobx + antd，后端使用 flask。Feature 包括了人脸识别登陆、markdown在线编辑、moment 和博客差异化显示、支持 hashtag 等等。&lt;/p&gt;
+&lt;p&gt;闲来也写了点东西，功能确实精简也舒适，无需手动登录，允许网页使用摄像头就能开始在任何地方写作了。但慢慢发现使用起来又回到了最初的问题，似乎又懒得写作了。画图需要先画，再截图，然后上传到七牛，最后把地址丢在文章中，图片一多（人）就崩溃了，即使用了一些手段图片自动上传七牛，流程依然复杂。即使后面做下去我做到最好也就是现有博客系统的层次，对我来说依然是鸡肋的。&lt;/p&gt;
+&lt;p&gt;最近想了想，无论是 wp、hexo 还是自研博客说到底是工具不称手了，没有系统化的思考过写作到底是什么，用发布工具来当做写作平台，自然有些南橘北枳的感觉。遵循接口设计的一系列原则，我们应该将模块功能做到尽可能单一、对外暴露尽可能小，就这两点去思考之前的写作流程，便会发现我做错了，博客网站功能依然太多了，需要再进行功能的划分。&lt;/p&gt;
+&lt;p&gt;我们首先将写作一整个流程进行拆分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;灵感&lt;/li&gt;
+&lt;li&gt;腹稿&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;大纲(暂时我随性写)&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;写作&lt;/li&gt;
+&lt;li&gt;发布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;之前的错误在于混淆了写作与发布流程，糅杂在了一起。虽然在线的富文本编辑器非常好用，方便做排版之类的工作，但是终究是功能不完善的，而且不能做到本地软件这样的方便。&lt;/p&gt;
+&lt;p&gt;考虑了半天，还是写作和发布分离吧，其中最复杂的地方可能是所见即所得，因此要求网页后台 markdown 渲染和编辑器 markdown 采用同一套渲染方案。这样再编辑器上写的东西就能保证和网页上显示的一样了。&lt;/p&gt;
+&lt;p&gt;这部分找了些资料，例如 marked、highlight、simplemde等前端 md 渲染或是富文本编辑器，似乎效果都会有出入。最终准备从 vscode 入手，发现 &lt;em&gt;markdown preview exhance&lt;/em&gt; 的作者有在 github 开源其插件，从插件的代码中不难找到他使用的 markdown 渲染方式。&lt;/p&gt;
+&lt;p&gt;最终在其另一个开源项目『
+&lt;a href=&#34;https://github.com/shd101wyy/mume&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mume&lt;/a&gt;』中找到了解决方案，其调用非常简单，在 vscode 中的插件配置项几乎源于这一项目的配置。在做新的博客页面时直接用mume渲染即可~ 当然这样就相当于是另外做一套静态网页了。（这个想法倒是可以和原作者交流呢~ hhh）&lt;/p&gt;
+&lt;p&gt;新博客系统其实并不类似静态网页，依然会有前后端交互，只是将文章部分的渲染交给了后端的mume，前端的 marked 渲染依旧会继续使用，用于渲染出摘要。&lt;/p&gt;
+&lt;p&gt;这样的新设计，抛弃了原有的一堆功能，在新方案中，将会有四个成员来完成一整套博客系统：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;撰写工具：vscode+mpe&lt;/li&gt;
+&lt;li&gt;发布工具：nodejs+mume 将和mpe 使用同一份配置，保证所见即所得&lt;/li&gt;
+&lt;li&gt;后端：仅用于读取数据库&lt;/li&gt;
+&lt;li&gt;前端：依然采用之前的展示方式，删去渲染部分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样的方案，写作流程就会变得更简单，对于 markdown 来说比较麻烦的图床也可以通过 mpe 中的图片管理来解决。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>关于haskell随便写点什么1</title>
+      <link>/post/about-haskell-1/</link>
+      <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
+      <guid>/post/about-haskell-1/</guid>
+      <description>&lt;h1 id=&#34;lyah字典查询函数理解指南&#34;&gt;LYAH字典查询函数理解指南&lt;/h1&gt;
+&lt;h3 id=&#34;for-what-&#34;&gt;for what&lt;/h3&gt;
+&lt;p&gt;最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看
+&lt;a href=&#34;http://learnyouahaskell.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《Learn You a Haskell for Great Good》&lt;/a&gt;恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。&lt;/p&gt;
+&lt;h3 id=&#34;那个函数&#34;&gt;那个函数&lt;/h3&gt;
+&lt;p&gt;这是一个从字典中找值的函数&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;findKey :: (Eq k) =&amp;gt; k -&amp;gt; [(k,v)] -&amp;gt; v&lt;br&gt;
+findKey key xs = snd . head . filter (\(k,v) -&amp;gt; key == k) $ xs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;举个栗子&#34;&gt;举个栗子&lt;/h3&gt;
+&lt;p&gt;这个例子同样是从LYAH中搞出来的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;phoneBook = [(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;) ,
+      (&amp;ldquo;bonnie&amp;rdquo;,&amp;ldquo;452-2928&amp;rdquo;) , &lt;br&gt;
+      (&amp;ldquo;patsy&amp;rdquo;,&amp;ldquo;493-2928&amp;rdquo;) ,&lt;br&gt;
+      (&amp;ldquo;lucille&amp;rdquo;,&amp;ldquo;205-2928&amp;rdquo;) ,&lt;br&gt;
+      (&amp;ldquo;wendy&amp;rdquo;,&amp;ldquo;939-8282&amp;rdquo;) ,&lt;br&gt;
+      (&amp;ldquo;penny&amp;rdquo;,&amp;ldquo;853-2492&amp;rdquo;) ]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;函数申明&#34;&gt;函数申明&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;findKey :: (Eq k) =&amp;gt; k -&amp;gt; [(k,v)] -&amp;gt; v&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在函数中，首先第一行是函数申明，他和其他语言一样表明了输入输出。&lt;br&gt;
+在haskell中函数仅支持一个返回值，支持多个入参。在上面的申明中 &lt;strong&gt;findKey&lt;/strong&gt; 是函数名，以 &amp;ldquo;&lt;strong&gt;::&lt;/strong&gt;&amp;ldquo;来标明函数，后面一共有四个东西，&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(Eq k) =&amp;gt; k -&amp;gt; [(k,v)] -&amp;gt; v&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先可以仅理解后三个：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;k -&amp;gt; [(k,v)] -&amp;gt; v&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是函数参数和返回值，这个函数中一共有两个参数和一个返回值，函数申明中的最后一个箭头&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;是一定指向返回值的，当然&amp;rdquo;&lt;strong&gt;k v&lt;/strong&gt;&amp;ldquo;这两个字母一定会让人觉得很疑惑，在haskell中函数声明中的字母其实只代表一个&lt;del&gt;变量类型&lt;/del&gt;哦 sorry，haskell中没有变量，他只有常量，所有都是静态参数，所以这个字母代表了一种模糊的参数类型，这仅表示上面两个k需要是同样的类型，而两个v也需要是同样的类型，随便用abcd也可以。所以：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;rdquo;&lt;strong&gt;k&lt;/strong&gt;&amp;rdquo; &amp;ldquo;&lt;strong&gt;[(k,v)]&lt;/strong&gt;&amp;rdquo; 是两个入参，第一个参数是k类型的参数，第二个参数是一个list，list中是一个有两个类型为k v为成员的tuple&lt;/p&gt;
+&lt;p&gt;&amp;rdquo;&lt;strong&gt;v&lt;/strong&gt;&amp;rdquo; 是函数的返回值，它的类型需要和入参list中tuple第二个元素一样。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后我们来说一说&amp;rdquo;&lt;strong&gt;(Eq k) =&amp;gt;&lt;/strong&gt;&amp;quot;, &amp;ldquo;&lt;strong&gt;=&amp;gt;&lt;/strong&gt;&amp;ldquo;是对后面参数的约束条件，&amp;quot;&lt;strong&gt;(Eq k)&lt;/strong&gt;&amp;ldquo;说明后面的 &amp;ldquo;&lt;strong&gt;k&lt;/strong&gt;&amp;rdquo; 类型的参数必须是一个Eq的派生类型，这种类型是可以比较的，比如int，char。&lt;/p&gt;
+&lt;p&gt;在事例中我们可以按照&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;betty&amp;rdquo; phoneBook&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;的方式进行调用，其中phoneBook可扩展成的[(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;)&amp;hellip;]，看起来形式就差不多了。&lt;/p&gt;
+&lt;h3 id=&#34;函数实体&#34;&gt;函数实体&lt;/h3&gt;
+&lt;h4 id=&#34;函数调用&#34;&gt;函数调用&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;findKey key xs = snd . head . filter (\(k,v) -&amp;gt; key == k) $ xs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是函数体，在等号左边的是函数调用的方式，在这个函数中，调用方式是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;findKey key xs&lt;br&gt;
+example:&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;betty&amp;rdquo; phoneBook&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当然也可以是中序，这个就另讲了。这个函数调用方式也是一种模式匹配，这边的&amp;rdquo;&lt;strong&gt;key&lt;/strong&gt;&amp;quot;、&amp;quot;&lt;strong&gt;xs&lt;/strong&gt;&amp;ldquo;匹配了函数的两个入参&amp;rdquo;&lt;strong&gt;k&lt;/strong&gt;&amp;quot;、&amp;quot;&lt;strong&gt;[(k,v)]&lt;/strong&gt;&amp;rdquo;&lt;/p&gt;
+&lt;h4 id=&#34;filter&#34;&gt;filter&lt;/h4&gt;
+&lt;p&gt;接下来对这两个入参进行操作(先忽略&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;ldquo;符号)：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;filter (\(k,v) -&amp;gt; key == k) xs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先是filter，这个是对一个list的过滤器，是&amp;rdquo;&lt;strong&gt;filter &lt;em&gt;f&lt;/em&gt; list&lt;/strong&gt;&amp;rdquo; 这样的模式，对list的每一个元素使用函数&lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/em&gt;进行匹配。在此例中&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(\(k,v) -&amp;gt; key == k)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就是filter中的 &lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/em&gt; ，haskell中使用 \做lambda，lambda就是一个隐式函数。&lt;br&gt;
+在lambda中&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;是用来区分参数和lambda函数本体的，在&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;左边是函数参数，可做模式匹配。在此lambda函数中，用&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;来匹配list成员tuple的成员。第一个&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此lambda用来匹配 xs 这个list取出来的每一个元组，并且判断此元组中的键值 k 是否能匹配入参的 key。并且filter会将符合条件的元素==重新组合==成一个新的list，在此例中，filter结果就是&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;[(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;)]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;后面键值不为***&amp;ldquo;betty&amp;rdquo;***的元组就会被舍弃，这是仅有一个元素的list。&lt;/p&gt;
+&lt;h4 id=&#34;snd-head&#34;&gt;snd head&lt;/h4&gt;
+&lt;p&gt;接下来这个是head，这个函数用来取list的头部，取出来就是第一个元素，例如&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;***head [3,2,5,3,6,3,4,3,7]***的结果就是3&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在此例中结果大致是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;是的，你会发现，这仅仅是去掉了中括号，这代表着这不再是一个list了。&lt;/p&gt;
+&lt;p&gt;接下来snd用来取tuple中的第二个元素，就是字典中的value，也就是&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&amp;ldquo;555-2938&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就能得出函数返回值了。这边需要注意的是，snd的参数只能是二元tuple。&lt;/p&gt;
+&lt;h4 id=&#34;函数组合&#34;&gt;函数组合&lt;/h4&gt;
+&lt;p&gt;snd . head . filter 这个是函数组合，相当于一下子调用了三个函数。这个可以用数学公式来表示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(f.g)(x) = f(g(x))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在此处&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;snd.head.filter f $ list = snd(head(filter f list)))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在haskell中，函数组合是一个让代码简洁明了的手段，但是他也有它的局限性，就是说他的参数只能唯一，函数组合仅能包含一个参数。但是此处柯里化使得组合函数使用多参成为可能。&lt;/p&gt;
+&lt;h4 id=&#34;柯里化currying&#34;&gt;柯里化（Currying）&lt;/h4&gt;
+&lt;p&gt;柯里化是现代化语言中包含的一个非常有趣的特性之一，在js、swift中也支持柯里化（非常遗憾swift仅在Language Reference中提到了一点）。&lt;br&gt;
+Currying是指函数可以不完全调用，他可以将多参函数转化为单参函数来求解。例如&amp;rdquo;&lt;strong&gt;+&lt;/strong&gt;&amp;ldquo;函数（对，在haskell中&amp;rdquo;&lt;strong&gt;+&lt;/strong&gt;&amp;ldquo;也是一个函数）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;5+4&lt;/strong&gt;&lt;/em&gt;   =======&amp;gt;  &lt;em&gt;&lt;strong&gt;9&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其可以转化为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;let plusFive = (+5)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这样一来我们就多了一个新的函数叫做&lt;em&gt;&lt;strong&gt;plusFive&lt;/strong&gt;&lt;/em&gt;，我们来调用它：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;plusFive 4&lt;/strong&gt;&lt;/em&gt;   =======&amp;gt;   &lt;em&gt;&lt;strong&gt;9&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;plusFive 167&lt;/strong&gt;&lt;/em&gt; =======&amp;gt;   &lt;em&gt;&lt;strong&gt;172&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ok，Currying就是这样一个好玩的特性，我自己认为，这个和惰性有关，因为Curried Function切切实实要在有完整入参时才会调用。&lt;/p&gt;
+&lt;p&gt;对于本例来说，我们将&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;filter (\(k,v) -&amp;gt; key == k) xs&lt;/strong&gt;&lt;/em&gt; Currying成
+***(filter (\(k,v) -&amp;gt; key == k)) xs***&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在组合函数中其实是组合成了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;***(snd . head . filter (\(k,v) -&amp;gt; key == k)) xs***&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在原函数中，少了&amp;rdquo;&lt;strong&gt;()&lt;/strong&gt;&amp;quot;,多了&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) $ xs&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这边用到了的&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;,如果缺少&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;rdquo;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) xs&lt;/strong&gt;&lt;/em&gt; 会被理解成&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;snd . head . (filter (\(k,v) -&amp;gt; key == k) xs)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而这绝对是会被编译器理解不能的句子，会报错，&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;ldquo;改变了&lt;em&gt;&lt;strong&gt;filter&lt;/strong&gt;&lt;/em&gt;函数的匹配方式，在haskell中&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;ldquo;是拥有最低优先级的函数调用符，相当于一个函数，所以会变成&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) ($ xs)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;函数组合的优先级大于&lt;em&gt;&lt;strong&gt;$ xs&lt;/strong&gt;&lt;/em&gt;的优先级，就会前面线组合起来。&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;ldquo;是一个非常节约括号的函数调用符.&lt;/p&gt;
+&lt;h3 id=&#34;函数结论&#34;&gt;函数结论&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;betty&amp;rdquo; phoneBook&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+***&amp;ldquo;555-2938&amp;rdquo;***&lt;br&gt;
+***findKey &amp;ldquo;patsy&amp;rdquo; phoneBook***&lt;br&gt;
+***&amp;ldquo;493-2928&amp;rdquo;***&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就此结束吧，心血来潮谢谢，先打上个标签1，说不定还有2，3，4&amp;hellip;呢，也或许会太监了呢。&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

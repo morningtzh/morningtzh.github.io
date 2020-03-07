@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c&#43;&#43; | 瑟瑟和你说早安</title>
+    <link>/tags/c&#43;&#43;/</link>
+      <atom:link href="/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <description>c&#43;&#43;</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Wed, 30 Oct 2019 09:50:48 +0800</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>c&#43;&#43;</title>
+      <link>/tags/c&#43;&#43;/</link>
+    </image>
+    
+    <item>
+      <title>我这么大个io_service去哪里了</title>
+      <link>/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</link>
+      <pubDate>Wed, 30 Oct 2019 09:50:48 +0800</pubDate>
+      <guid>/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</guid>
+      <description>&lt;h1 id=&#34;我这么大个io_service去哪里了&#34;&gt;我这么大个io_service去哪里了&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;最近稍微闲了下来，开始debug &lt;code&gt;Boost.Asio&lt;/code&gt; 析构时崩溃的问题。在目前代码中，使用到了&lt;code&gt;deadline_timer&lt;/code&gt;作定时器。&lt;/p&gt;
+&lt;p&gt;由于早期仅用简单的定时器，也就没多了解&lt;code&gt;io_service&lt;/code&gt;的用法，简单地在每个短周期业务实例中各开了一组&lt;code&gt;thread&lt;/code&gt;和&lt;code&gt;io_service&lt;/code&gt;来挂&lt;code&gt;deadline_timer&lt;/code&gt;。后来出现了一个问题，运行时发现在析构业务实例时delete &lt;code&gt;io_service&lt;/code&gt;偶尔会崩溃（具体定位过程就不在这边展开了），就去看了源代码和reference。&lt;/p&gt;
+&lt;p&gt;想着这么大的库api应该不会有太大的变化，点开boost最新版（1.71）reference，咦 O__O 我这么大个&lt;code&gt;io_service&lt;/code&gt;去哪里了？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86.assets/image-20191030105005556.png&#34; alt=&#34;image-20191030105005556&#34;&gt;&lt;/p&gt;
+&lt;div style=&#34;color:grey;text-alian:center&#34;&gt;Legend 1:Boost 1.71 Asio Reference&lt;/div&gt;
+接下来从1.71版本往回翻，在1.66更新信息里发现一句话：
+&lt;blockquote&gt;
+&lt;p&gt;Implemented interface changes to reflect the Networking TS (
+&lt;a href=&#34;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4656.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;N4656&lt;/a&gt;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;See the 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/net_ts.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;list&lt;/a&gt; of new interfaces and, where applicable, the corresponding old interfaces that have been superseded.&lt;/li&gt;
+&lt;li&gt;The service template parameters, and the corresponding classes, are disabled by default. For example, instead of &lt;code&gt;basic_socket&lt;/code&gt; we now have simply &lt;code&gt;basic_socket&lt;/code&gt;. The old interface can be enabled by defining the &lt;code&gt;BOOST_ASIO_ENABLE_OLD_SERVICES&lt;/code&gt; macro.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;为了迎合C++ Networking TS的标准将接口改了，但是旧的接口依然还在支持。但一些service模板和相应的类默认不支持老版本，不过可以打开&lt;code&gt;BOOST_ASIO_ENABLE_OLD_SERVICES&lt;/code&gt;宏来支持老版本service。&lt;/p&gt;
+&lt;p&gt;以下仅列了一些我感兴趣的修改，完整版可以看上文的list链接。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;New interface&lt;/th&gt;
+&lt;th&gt;Old interface&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_service.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The name &lt;code&gt;io_service&lt;/code&gt; is retained as a typedef.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/dispatch.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/dispatch.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::dispatch&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;dispatch&lt;/code&gt; free function can be used to submit functions to any 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/Executor1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Executor&lt;/a&gt; or 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/ExecutionContext.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ExecutionContext&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/dispatch.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;post&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/post.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::post&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;dispatch&lt;/code&gt; free function can be used to submit functions to any 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/Executor1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Executor&lt;/a&gt; or 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/ExecutionContext.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ExecutionContext&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/dispatch.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;defer&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/post.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::post&lt;/code&gt;&lt;/a&gt; when the 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/asio_handler_is_continuation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;asio_handler_is_continuation&lt;/code&gt;&lt;/a&gt; hook returns true&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;defer&lt;/code&gt; free function can be used to submit functions to any 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/Executor1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Executor&lt;/a&gt; or 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/ExecutionContext.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ExecutionContext&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/poll.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::poll&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/poll.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::poll&lt;/code&gt;&lt;/a&gt; overload that takes &lt;code&gt;error_code&amp;amp;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;error_code&lt;/code&gt; overload is not required.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/poll_one.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::poll_one&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/poll_one.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::poll_one&lt;/code&gt;&lt;/a&gt; overload that takes &lt;code&gt;error_code&amp;amp;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;error_code&lt;/code&gt; overload is not required.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::run&lt;/code&gt;&lt;/a&gt; overload that takes &lt;code&gt;error_code&amp;amp;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;error_code&lt;/code&gt; overload is not required.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_one.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run_one&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_one.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::run_one&lt;/code&gt;&lt;/a&gt; overload that takes &lt;code&gt;error_code&amp;amp;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;code&gt;error_code&lt;/code&gt; overload is not required.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_for.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run_for&lt;/code&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_until.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run_until&lt;/code&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_one_for.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run_one_for&lt;/code&gt;&lt;/a&gt;, and 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/run_one_until.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::run_one_until&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;These functions add the ability to run an &lt;code&gt;io_context&lt;/code&gt; for a limited time.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/restart.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_context::restart&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context/reset.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::reset&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;execution_context&lt;/code&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context__service.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;execution_context::service&lt;/code&gt;&lt;/a&gt;, and 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context__id.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;execution_context::id&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service&lt;/code&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context__service.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::service&lt;/code&gt;&lt;/a&gt;, and 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context__id.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::id&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The service-related functionality has been moved to the &lt;code&gt;execution_context&lt;/code&gt; base class. This may also be used as a base for creating custom execution contexts.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context/make_service.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;make_service&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/execution_context/add_service.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;add_service&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/strand.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;strand&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context__strand.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::strand&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;This template works with any valid executor, and is itself a valid executor.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/executor_work_guard.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;executor_work_guard&lt;/code&gt;&lt;/a&gt; and 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/make_work_guard.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;make_work_guard&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_context__work.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;io_service::work&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Work tracking is now covered by the 
+&lt;a href=&#34;https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/Executor1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Executor&lt;/a&gt; requirements. These templates work with any valid executor.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div style=&#34;color:grey;text-alian:center&#34;&gt;Legend 2:Boost 1.71 Asio Interface Change List&lt;/div&gt;  
+在新接口表中我们可以看到`io_service`已经换成了`io_context`，且在1.66的[io_service](https://www.boost.org/doc/libs/1_66_0/doc/html/boost_asio/reference/io_service.html) reference中可以发现最上面就写了
+</description>
+    </item>
+    
+    <item>
+      <title>boost.asio核心浅析</title>
+      <link>/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</link>
+      <pubDate>Tue, 29 Oct 2019 15:50:50 +0800</pubDate>
+      <guid>/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</guid>
+      <description>&lt;h1 id=&#34;boostasio核心浅析&#34;&gt;boost.asio核心浅析&lt;/h1&gt;
+&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;公共模块回调函数实现方式</title>
+      <link>/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Thu, 05 Sep 2019 11:40:07 +0800</pubDate>
+      <guid>/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</guid>
+      <description>&lt;h1 id=&#34;c公共模块回调函数实现方式&#34;&gt;C++公共模块回调函数实现方式&lt;/h1&gt;
+&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
+&lt;p&gt;在代码实现时，常常会遇到模块间函数调用的问题。对于一个公共模块，会有明确的public方法来作为接口，但是当需要发送消息（此处仅讨论回调函数）到外部业务模块的时候就很难去定义回调函数的类型。通常在命令式编程中会采用函数指针的方法，但在OO中调用者是一个类的话很难将类成员函数发给基础模块做回调函数。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;1-传统函数指针回调&#34;&gt;1. 传统函数指针回调&lt;/h2&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

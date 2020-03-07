@@ -14,11 +14,29 @@
     
     <item>
       <title></title>
-      <link>/authors/admin/</link>
+      <link>/authors/morningtzh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.&lt;/p&gt;
+      <guid>/authors/morningtzh/</guid>
+      <description>&lt;p&gt;叮！这是一个非常混乱的站点，全是 XJB 乱写的文章（没错！很多都只写了一半！&lt;/p&gt;
+&lt;p&gt;甚至连主题都还没设定好。哦！我太菜了！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/tardis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/tardis/</guid>
+      <description>&lt;p&gt;Never give up!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/yunxia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/yunxia/</guid>
+      <description>&lt;p&gt;一个瞎折腾活在楚门世界的小菜鸡&lt;/p&gt;
 </description>
     </item>
     
