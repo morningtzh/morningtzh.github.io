@@ -29,7 +29,7 @@
     </item>
     
     <item>
-      <title>c&#43;&#43;</title>
+      <title>C&#43;&#43;</title>
       <link>/tags/c&#43;&#43;/</link>
       <pubDate>Wed, 30 Oct 2019 09:50:48 +0800</pubDate>
       <guid>/tags/c&#43;&#43;/</guid>
@@ -53,6 +53,54 @@
     </item>
     
     <item>
+      <title>openstack</title>
+      <link>/tags/openstack/</link>
+      <pubDate>Tue, 20 Sep 2016 19:30:14 +0000</pubDate>
+      <guid>/tags/openstack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Tue, 20 Sep 2016 19:30:14 +0000</pubDate>
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Brainfuck</title>
+      <link>/tags/brainfuck/</link>
+      <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
+      <guid>/tags/brainfuck/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cabal</title>
+      <link>/tags/cabal/</link>
+      <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
+      <guid>/tags/cabal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>El Capitan</title>
+      <link>/tags/el-capitan/</link>
+      <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
+      <guid>/tags/el-capitan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>haskell</title>
+      <link>/tags/haskell/</link>
+      <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
+      <guid>/tags/haskell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>currying</title>
       <link>/tags/currying/</link>
       <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
@@ -69,10 +117,18 @@
     </item>
     
     <item>
-      <title>haskell</title>
-      <link>/tags/haskell/</link>
-      <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
-      <guid>/tags/haskell/</guid>
+      <title>reading</title>
+      <link>/tags/reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/tags/reading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>whisky</title>
+      <link>/tags/whisky/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/tags/whisky/</guid>
       <description></description>
     </item>
     

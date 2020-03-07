@@ -44,5 +44,21 @@
       <description></description>
     </item>
     
+    <item>
+      <title>reading</title>
+      <link>/categories/reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/categories/reading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wine</title>
+      <link>/categories/wine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/categories/wine/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

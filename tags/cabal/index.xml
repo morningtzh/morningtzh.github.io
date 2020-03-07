@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cabal | 瑟瑟和你说早安</title>
+    <link>/tags/cabal/</link>
+      <atom:link href="/tags/cabal/index.xml" rel="self" type="application/rss+xml" />
+    <description>cabal</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sat, 05 Dec 2015 21:43:14 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>cabal</title>
+      <link>/tags/cabal/</link>
+    </image>
+    
+    <item>
+      <title>Install GHC on El Capitan</title>
+      <link>/post/install-ghc-on-mac/</link>
+      <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
+      <guid>/post/install-ghc-on-mac/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;最近因为在学Haskell，所以需要在电脑上安装GHC，然而遇到了一些困难，所以需要做一下记录。&lt;/p&gt;
+&lt;p&gt;##安装GHC##
+首先GHC安装，其实这并不需要从brew安装的，我们可以从
+&lt;a href=&#34;https://ghcformacosx.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官网&lt;/a&gt;找到OSX的app，下载就好.当然上面很坑爹的写了一句：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;br&gt;
+Only tested on 64-bit Mac OS X 10.10&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;好吧好吧，这个免责协议我认。。。&lt;/p&gt;
+&lt;p&gt;下载下来就按照官网上的提示安装就好，拖到 &lt;em&gt;&lt;strong&gt;/Application&lt;/strong&gt;&lt;/em&gt;&amp;hellip;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and unzip ghc-7.10.2-r0.zip (193MB)&lt;/li&gt;
+&lt;li&gt;Move it to a stable location such as /Applications&lt;/li&gt;
+&lt;li&gt;Double-click for instructions to install Xcode and add it to your Terminal&amp;rsquo;s $PATH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第一个坑爹的来了，app会说建立 &lt;em&gt;&lt;strong&gt;~/.zshenv&lt;/strong&gt;&lt;/em&gt; 并将环境变量脚本自动拷贝进去，然而在实际使用中似乎 &lt;em&gt;&lt;strong&gt;~/.zshenv&lt;/strong&gt;&lt;/em&gt; 并没有在使用，我并不是很了解zsh还有这个文件，并且实际操作无效，所以我还是将它放进了 &lt;em&gt;&lt;strong&gt;~/.zshrc&lt;/strong&gt;&lt;/em&gt; 中，当然是有效的。&lt;/p&gt;
+&lt;p&gt;##使用cabal##
+在El Capitan中使用&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;➜  Haskell git:(master) ✗ cabal install cabal-install&lt;br&gt;
+cabal: /usr/bin/ar: permission denied&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;会发现 &lt;em&gt;&lt;strong&gt;权限不够！！！！&lt;/strong&gt;&lt;/em&gt; WTF&lt;/p&gt;
+&lt;p&gt;好吧。。。找了半天。好吧我找的有错误。。。在
+&lt;a href=&#34;http://stackoverflow.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stack Overflow&lt;/a&gt;中找 &lt;em&gt;&lt;strong&gt;[haskell]el capitan&lt;/strong&gt;&lt;/em&gt; 才能完美的找到解决方案！！！（好吧，其实我也知道是El Capitan的Rootless模式，只是在寻找其他解决方案而已）
+在 
+&lt;a href=&#34;http://stackoverflow.com/questions/33452396/haskell-for-mac-el-capitan&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Haskell for Mac (El Capitan)&lt;/a&gt;中指出，需要关闭 &lt;em&gt;&lt;strong&gt;Rootless&lt;/strong&gt;&lt;/em&gt; ：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重启，使用 &lt;em&gt;&lt;strong&gt;CMD+R&lt;/strong&gt;&lt;/em&gt; 进入recover模式&lt;br&gt;
+在终端中输入 &lt;em&gt;&lt;strong&gt;csrutil disable&lt;/strong&gt;&lt;/em&gt; 关闭Rootless模式，并重启&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这样再使用cabal install就不会有权限问题了~&lt;/p&gt;
+&lt;p&gt;当然El Capitan的Rootless是新开发的强有力对抗入侵的方式，Rootless使能后，即使root用户也无权对核心文件进行修改和执行。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

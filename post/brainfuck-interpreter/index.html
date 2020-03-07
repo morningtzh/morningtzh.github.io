@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="MorningTZH">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="阿婆主脑容量不够，ぜんぜん不能在大脑中运行 Brainfuck 程序，而且发现连运行过程都想不出来啊，
+然而就这么几个字符完全可以自己写解释器嘛，并且可以打印出运行过程，而且可以试试看做成playground
+的形式呢，想想还是挺有趣的。">
+
+  
+  <link rel="alternate" hreflang="zh-Hans" href="/post/brainfuck-interpreter/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/brainfuck-interpreter/">
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="瑟瑟和你说早安">
+  <meta property="og:url" content="/post/brainfuck-interpreter/">
+  <meta property="og:title" content="Brainfuck解释器[on python] | 瑟瑟和你说早安">
+  <meta property="og:description" content="阿婆主脑容量不够，ぜんぜん不能在大脑中运行 Brainfuck 程序，而且发现连运行过程都想不出来啊，
+然而就这么几个字符完全可以自己写解释器嘛，并且可以打印出运行过程，而且可以试试看做成playground
+的形式呢，想想还是挺有趣的。"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="zh-Hans">
+  
+    
+      <meta property="article:published_time" content="2015-12-05T21:43:14&#43;00:00">
+    
+    <meta property="article:modified_time" content="2015-12-05T21:43:14&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/brainfuck-interpreter/"
+  },
+  "headline": "Brainfuck解释器[on python]",
+  
+  "datePublished": "2015-12-05T21:43:14Z",
+  "dateModified": "2015-12-05T21:43:14Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "MorningTZH"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "瑟瑟和你说早安",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "\u003cp\u003e阿婆主脑容量不够，ぜんぜん不能在大脑中运行 \u003cstrong\u003eBrainfuck\u003c/strong\u003e 程序，而且发现连运行过程都想不出来啊，\n然而就这么几个字符完全可以自己写解释器嘛，并且可以打印出运行过程，而且可以试试看做成playground\n的形式呢，想想还是挺有趣的。\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+
+  
+  
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin="anonymous">
+  
+  <script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "hsl(339, 90%, 68%)",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "hsl(339, 90%, 68%)"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "本网站使用cookies来确保您在本网站上获得最佳体验。",
+        "dismiss": "知道了!",
+        "link": "了解更多",
+        "href": "https://www.cookiesandyou.com"
+      }
+    })});
+  </script>
+
+
+
+  
+
+
+
+
+
+  <title>Brainfuck解释器[on python] | 瑟瑟和你说早安</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>搜索</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">瑟瑟和你说早安</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="切换导航">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">瑟瑟和你说早安</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Brainfuck解释器[on python]</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 5, 2015
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 分钟阅读时长
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/coding/">coding</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>阿婆主脑容量不够，ぜんぜん不能在大脑中运行 <strong>Brainfuck</strong> 程序，而且发现连运行过程都想不出来啊，
+然而就这么几个字符完全可以自己写解释器嘛，并且可以打印出运行过程，而且可以试试看做成playground
+的形式呢，想想还是挺有趣的。</p>
+<p>项目地址：
+<a href="https://code.csdn.net/u012822586/brainfuck_interpreter" target="_blank" rel="noopener">Code CSDN</a></p>
+<p>Git地址：
+<a href="git://code.csdn.net/u012822586/brainfuck_interpreter.git">Git on CSDN</a></p>
+<h2 id="brainfuck">Brainfuck</h2>
+<p>Brainfuck是一种图灵完备的语言，他可以做到任何事情，他的编译器是世界上最小的，他共有8个操作符：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Operator</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">&gt;</td>
+<td>increment the data pointer (to point to the next cell to the right).</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td>decrement the data pointer (to point to the next cell to the left).</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td>increment (increase by one) the byte at the data pointer.</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td>decrement (decrease by one) the byte at the data pointer.</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td>output the byte at the data pointer.</td>
+</tr>
+<tr>
+<td align="center">,</td>
+<td>accept one byte of input, storing its value in the byte at the data pointer.</td>
+</tr>
+<tr>
+<td align="center">[</td>
+<td>if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching <strong>]</strong> command.</td>
+</tr>
+<tr>
+<td align="center">]</td>
+<td>if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching <strong>[</strong> command.</td>
+</tr>
+</tbody>
+</table>
+<p>基本就是对内存直接操作的语言，他的『Hello World!』是这样的：</p>
+<blockquote>
+<p>&ldquo;++++++++[&gt;++++[&gt;++&gt;+++&gt;+++&gt;+&laquo;&laquo;-]&gt;+&gt;+&gt;-&raquo;+[&lt;]&lt;-]&raquo;.&gt;&mdash;.+++++++..+++.&raquo;.&lt;-.&lt;.+++.&mdash;&mdash;.&mdash;&mdash;&ndash;.&raquo;+.&gt;++.&rdquo;</p>
+</blockquote>
+<p><strong>WTF!!!!!!</strong></p>
+<h2 id="需求点">需求点</h2>
+<ul>
+<li>
+<p>1、基本功能</p>
+<ul>
+<li>解释裸BF程序</li>
+<li>打印内存信息</li>
+<li>分开输出以及集体输出</li>
+</ul>
+</li>
+<li>
+<p>2、调试功能</p>
+<ul>
+<li>设置断点</li>
+<li>单步执行</li>
+<li>查看内存</li>
+</ul>
+</li>
+<li>
+<p>3、playground功能</p>
+<ul>
+<li>做命令行模式（加参数可选）</li>
+<li>窗口分割</li>
+<li>实时解释</li>
+</ul>
+</li>
+</ul>
+<h2 id="基本功能实现">基本功能实现</h2>
+<p>Brainfuck基本解释使用class BF()来实现</p>
+<h3 id="数据部分">数据部分</h3>
+<p>class BF()中数据由两部分组成：</p>
+<ul>
+<li>Brainfuck程序</li>
+<li>内存</li>
+</ul>
+<p>BF直接对内存进行操作，所以这边可以很简单的用list模拟出来，这样我们就有了一个无限长的内存，并用<em><strong>BF.position</strong></em>来指明正在操作的内存，相当于一个指针（实际是list index）。另外一个就是代码存储区，代码由<strong>string</strong>类型的<em><strong>BF.code</strong></em>保存，同样有个代码指针<em><strong>BF.codePosition</strong></em>指明目前正在解释的操作符.</p>
+<pre><code class="language-python">def __init__(self):
+	self.codeInit()
+	self.ifRuntime = True
+	
+def memoryInit(self):
+	self.dirty = False     # if memory have been wroten
+	self.memory = [0]      # memory
+	self.position = 0      # pointer to memory which byte now operating
+	self.codePosition = 0  # pointer to code which operator now parsing
+	self.result = ''       # store whole program output
+	
+def codeInit(self, code = None):
+	if None == code:       # for object init without BF code
+	    self.code = ''
+	
+	self.code = code
+	self.memoryInit()
+
+</code></pre>
+<h3 id="操作符动作">操作符动作</h3>
+<p>操作符没有一点难度,按照wiki来解释。</p>
+<pre><code class="language-python">def getChar(self):
+    return self.memory[self.position]
+
+'''operators'''
+def printChar(self):
+    print &quot;echo: &quot;,
+    print chr(self.memory[self.position])    # turn to ASCII char
+    self.result += chr(self.memory[self.position])  # store output
+def inputChar(self):
+    print &quot;put in: &quot;,
+    self.memory[self.position] = ord(sys.stdin.read(1))
+def increment(self):
+    self.memory[self.position] += 1
+def decrement(self):
+    self.memory[self.position] -= 1
+def next(self):
+    self.position += 1
+    if len(self.memory) &lt;= self.position:
+        self.memory.append(0)
+def previous(self):
+    self.position -= 1
+    if 0 &gt; self.position:
+        print 'error: position is %d'%self.position
+        print printMemory()
+</code></pre>
+<h3 id="循环实现">循环实现</h3>
+<p>循环实现比较麻烦，本来只简单地想到一对括号的情况，后面发现了多对括号的问题，就先使用<strong>direction</strong>来保存括号在代码中的位子。并且用<strong>stack</strong>来先记录左括号。</p>
+<p>首先在<strong><em>loopParser()<em><strong>中记录成对的括号位置，同时意味着循环开始结束地址也被记录了下来。在这个函数中，首先使用</strong>stack</em></em>来登记未配对左括号地址，并在出现右括号时，弹出一个左括号地址，与右括号地址配对，写入</strong><em>loopMap</em><strong>这个</strong>direction**中，同样这个地址配对记录需要返回给主解析流程的。</p>
+<p>在主流程中，通过<em><strong>loopParser()<em><strong>获得</strong></em>loopMap</strong></em>后,就开始对整个BF代码进行解释。此时根据wiki中的操作符作用，遇到**[**时检查当前指针内容是否为0，为0则不进入循环，直接跳到对应的**]**地址上，遇到**]**时，当前指针内容不为0，则跳回到对应**[**代码地址，继续循环。</p>
+<pre><code>def loopParser(self, code):
+    '''parse loop operator, recode the position of code'''
+    loopMap = {}
+    leftStack = []
+    codePosition = 0
+    leftNum = 0
+    rightNum = 0
+    for operator in code:
+        if operator == '[':
+            leftStack.append(codePosition)
+            leftNum += 1
+        elif operator == ']':
+            leftPosition = leftStack.pop()
+            rightPosition = codePosition
+            loopMap[leftPosition] = rightPosition
+            loopMap[rightPosition] = leftPosition
+            rightNum += 1
+        codePosition += 1
+
+    if 0 != len(leftStack):
+        print &quot;error: there are %d '[' but %d ']'&quot;
+        loopMap = None
+
+    return loopMap
+
+
+def parser(self, code = None):
+    '''parse code'''
+    if None == code:
+        code = self.code
+        self.memoryInit()
+
+    loopMap = self.loopParser(code)
+    if None == loopMap:
+        return
+
+    if None == code:
+        code = self.code
+
+    while self.codePosition &lt; len(code):
+        operator = code[self.codePosition]
+        if operator == &quot;&gt;&quot;:
+            self.next()
+        elif operator == &quot;&lt;&quot;:
+            self.previous()
+        elif operator == &quot;+&quot;:
+            self.increment()
+        elif operator == &quot;-&quot;:
+            self.decrement()
+        elif operator == &quot;.&quot;:
+            self.printChar()
+        elif operator == &quot;,&quot;:
+            self.inputChar()
+        elif operator == &quot;[&quot; and self.getChar() == 0:
+            self.codePosition = loopMap[self.codePosition]
+        elif operator == &quot;]&quot; and self.getChar() != 0:
+            self.codePosition = loopMap[self.codePosition]
+        self.runtime()
+        self.codePosition += 1
+</code></pre>
+<h3 id="打印runtime">打印runtime</h3>
+<p>做这个解释器的主要原因就是，看不懂Brainfuck每一步为什么要这样做，所以解释器的重点就在于打印每一步的数据内存和代码内存，并且标出目前运行到哪里了。</p>
+<pre><code>Global function:
+
+	def printChar(char, point = False):
+		if point:
+		    char = '\033[31m%s\033[0m' %char  # print red chars on Unix
+		
+		sys.stdout.write(char + ' ')
+
+
+BF() method:
+
+    def printData(self, data, position):
+        '''print linear data and point the position now point'''
+        point = False
+        for nowPosition in xrange(0, len(data)):
+            if nowPosition == position:
+                point = True
+
+            printChar(str(data[nowPosition]), point)
+            point = False
+        print &quot;&quot;                 # printChar don't print '\n'
+
+    def runtime(self):
+        '''print runtime memory and code'''
+        if self.ifRuntime:
+            self.printData(self.code, self.codePosition)
+            self.printData(self.memory, self.position)
+</code></pre>
+<h3 id="基本功能运行结果">基本功能运行结果</h3>
+<p><img src="http://7xrczi.com1.z0.glb.clouddn.com/image/BFinterpreter/brainfuck_interpreter.jpg.tiff" alt="BFinterpreter运行结果"></p>
+<p>未完待续。。。或者。。。</p>
+    </div>
+
+    
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/python/">python</a>
+  
+  <a class="badge badge-light" href="/tags/brainfuck/">Brainfuck</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/brainfuck-interpreter/&amp;text=Brainfuck%e8%a7%a3%e9%87%8a%e5%99%a8[on%20python]" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/brainfuck-interpreter/&amp;t=Brainfuck%e8%a7%a3%e9%87%8a%e5%99%a8[on%20python]" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Brainfuck%e8%a7%a3%e9%87%8a%e5%99%a8[on%20python]&amp;body=/post/brainfuck-interpreter/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/brainfuck-interpreter/&amp;title=Brainfuck%e8%a7%a3%e9%87%8a%e5%99%a8[on%20python]" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Brainfuck%e8%a7%a3%e9%87%8a%e5%99%a8[on%20python]%20/post/brainfuck-interpreter/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/brainfuck-interpreter/&amp;title=Brainfuck%e8%a7%a3%e9%87%8a%e5%99%a8[on%20python]" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/morningtzh/avatar_hu6d03ace990a63acb769e531abea584b3_407134_270x270_fill_q90_lanczos_center.jpeg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">MorningTZH</a></h5>
+      
+      <p class="card-text">喵？</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/morningtzh" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+<section id="comments">
+  
+    <div id="commento"></div>
+
+<script src="https://cdn.commento.io/js/commento.js" defer></script>
+
+  
+</section>
+
+
+
+
+<div class="article-widget">
+  
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">下一页</div>
+    <a href="/post/devstack-install-tips/" rel="next">devstack安装镜像</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">上一页</div>
+    <a href="/post/install-ghc-on-mac/" rel="prev">Install GHC on El Capitan</a>
+  </div>
+  
+</div>
+
+</div>
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" integrity="sha256-lyWCDMnMeZiXRi7Zl54sZGKYmgQs4izcT7+tKc+KUBk=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/c&#43;&#43;.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/javascript.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/go.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"没有找到结果","placeholder":"搜索...","results":"搜索结果"};
+      const content_type = {
+        'post': "文章",
+        'project': "项目",
+        'publication' : "出版物",
+        'talk' : "演讲"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.c816d323c3a55093dae0829b44ea1ca8.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    ©MorningTZH &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">引用</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> 复制
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> 下载
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

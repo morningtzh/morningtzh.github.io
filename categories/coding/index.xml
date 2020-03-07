@@ -36,6 +36,368 @@
     </item>
     
     <item>
+      <title>devstack安装镜像</title>
+      <link>/post/devstack-install-tips/</link>
+      <pubDate>Tue, 20 Sep 2016 19:30:14 +0000</pubDate>
+      <guid>/post/devstack-install-tips/</guid>
+      <description>&lt;h1 id=&#34;devstack安装镜像&#34;&gt;devstack安装镜像&lt;/h1&gt;
+&lt;h2 id=&#34;pip镜像&#34;&gt;pip镜像：&lt;/h2&gt;
+&lt;p&gt;pip 镜像我使用清华大学的，在可信列表（
+&lt;a href=&#34;www.douban.com&#34;&gt;豆瓣&lt;/a&gt;的可坑死啦，不在信任列表，安装会跳问题：豆瓣源『http://pypi.douban.com/simple』）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In file &amp;ldquo;~/.pip/pip.conf&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;[global] index-url = https://pypi.tuna.tsinghua.edu.cn/simple&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ubuntu-apt-镜像&#34;&gt;Ubuntu Apt 镜像&lt;/h2&gt;
+&lt;p&gt;apt镜像反正看你喜欢咯！！！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In file &amp;ldquo;/etc/apt/sources.list&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;openstack@openstack
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty main restricted universe multiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-security main restricted universe m
+ultiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-updates main restricted universe mu
+ltiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-proposed main restricted universe m
+ultiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-backports main restricted universe
+multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty main restricted universe multiv
+erse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-security main restricted univer
+se multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-updates main restricted univers
+e multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-proposed main restricted univer
+se multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-backports main restricted unive
+rse multiverse&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+## openstack git 镜像
+
+In file ?/local.conf (官网并没说丢在哪里。。。我就 devstack 文件夹和用户主目录都丢了个)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;[[local|localrc]]
+ADMIN_PASSWORD=openstack
+DATABASE_PASSWORD=$ADMIN_PASSWORD
+RABBIT_PASSWORD=$ADMIN_PASSWORD
+SERVICE_PASSWORD=$ADMIN_PASSWORD&lt;/p&gt;
+&lt;p&gt;# Define images to be automatically downloaded during the DevStack built process.
+DOWNLOAD_DEFAULT_IMAGES=False
+IMAGE_URLS=&amp;quot;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;#change github to trystack
+GIT_BASE=${GIT_BASE:-http://git.trystack.cn}
+NOVNC_REPO=${NOVNC_REPO:-http://git.trystack.cn/kanaka/noVNC.git}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+这个镜像下载速度我家 20M 水管，下载速度为600+kiB/s
+
+## 小问题
+pypi 包更新的时候（~/devstack/file/get-pip.py文件）很容易断，我直接手机[GoodReader](https://itunes.apple.com/us/app/goodreader/id777310222?mt=8)下载好后，再电脑用 GoodReader 上的地址下的，速度很快。
+
+虚拟机内存1G 不够！！！会报错！！！
+
+哇靠。。。我电脑反正玩不来了，虚拟机给了2g 交换空间1g 全部占满，难怪听说要4g 内存。我还是光看看代码吧
+
+其他的安装就按 devstack 官网就行了
+
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Brainfuck解释器[on python]</title>
+      <link>/post/brainfuck-interpreter/</link>
+      <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
+      <guid>/post/brainfuck-interpreter/</guid>
+      <description>&lt;p&gt;阿婆主脑容量不够，ぜんぜん不能在大脑中运行 &lt;strong&gt;Brainfuck&lt;/strong&gt; 程序，而且发现连运行过程都想不出来啊，
+然而就这么几个字符完全可以自己写解释器嘛，并且可以打印出运行过程，而且可以试试看做成playground
+的形式呢，想想还是挺有趣的。&lt;/p&gt;
+&lt;p&gt;项目地址：
+&lt;a href=&#34;https://code.csdn.net/u012822586/brainfuck_interpreter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code CSDN&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Git地址：
+&lt;a href=&#34;git://code.csdn.net/u012822586/brainfuck_interpreter.git&#34;&gt;Git on CSDN&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;brainfuck&#34;&gt;Brainfuck&lt;/h2&gt;
+&lt;p&gt;Brainfuck是一种图灵完备的语言，他可以做到任何事情，他的编译器是世界上最小的，他共有8个操作符：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Operator&lt;/th&gt;
+&lt;th&gt;Function&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;td&gt;increment the data pointer (to point to the next cell to the right).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;td&gt;decrement the data pointer (to point to the next cell to the left).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;+&lt;/td&gt;
+&lt;td&gt;increment (increase by one) the byte at the data pointer.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;-&lt;/td&gt;
+&lt;td&gt;decrement (decrease by one) the byte at the data pointer.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;.&lt;/td&gt;
+&lt;td&gt;output the byte at the data pointer.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;,&lt;/td&gt;
+&lt;td&gt;accept one byte of input, storing its value in the byte at the data pointer.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;[&lt;/td&gt;
+&lt;td&gt;if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching &lt;strong&gt;]&lt;/strong&gt; command.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;]&lt;/td&gt;
+&lt;td&gt;if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching &lt;strong&gt;[&lt;/strong&gt; command.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;基本就是对内存直接操作的语言，他的『Hello World!』是这样的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;++++++++[&amp;gt;++++[&amp;gt;++&amp;gt;+++&amp;gt;+++&amp;gt;+&amp;laquo;&amp;laquo;-]&amp;gt;+&amp;gt;+&amp;gt;-&amp;raquo;+[&amp;lt;]&amp;lt;-]&amp;raquo;.&amp;gt;&amp;mdash;.+++++++..+++.&amp;raquo;.&amp;lt;-.&amp;lt;.+++.&amp;mdash;&amp;mdash;.&amp;mdash;&amp;mdash;&amp;ndash;.&amp;raquo;+.&amp;gt;++.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;WTF!!!!!!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;需求点&#34;&gt;需求点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1、基本功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解释裸BF程序&lt;/li&gt;
+&lt;li&gt;打印内存信息&lt;/li&gt;
+&lt;li&gt;分开输出以及集体输出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2、调试功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置断点&lt;/li&gt;
+&lt;li&gt;单步执行&lt;/li&gt;
+&lt;li&gt;查看内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3、playground功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;做命令行模式（加参数可选）&lt;/li&gt;
+&lt;li&gt;窗口分割&lt;/li&gt;
+&lt;li&gt;实时解释&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;基本功能实现&#34;&gt;基本功能实现&lt;/h2&gt;
+&lt;p&gt;Brainfuck基本解释使用class BF()来实现&lt;/p&gt;
+&lt;h3 id=&#34;数据部分&#34;&gt;数据部分&lt;/h3&gt;
+&lt;p&gt;class BF()中数据由两部分组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Brainfuck程序&lt;/li&gt;
+&lt;li&gt;内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BF直接对内存进行操作，所以这边可以很简单的用list模拟出来，这样我们就有了一个无限长的内存，并用&lt;em&gt;&lt;strong&gt;BF.position&lt;/strong&gt;&lt;/em&gt;来指明正在操作的内存，相当于一个指针（实际是list index）。另外一个就是代码存储区，代码由&lt;strong&gt;string&lt;/strong&gt;类型的&lt;em&gt;&lt;strong&gt;BF.code&lt;/strong&gt;&lt;/em&gt;保存，同样有个代码指针&lt;em&gt;&lt;strong&gt;BF.codePosition&lt;/strong&gt;&lt;/em&gt;指明目前正在解释的操作符.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def __init__(self):
+	self.codeInit()
+	self.ifRuntime = True
+	
+def memoryInit(self):
+	self.dirty = False     # if memory have been wroten
+	self.memory = [0]      # memory
+	self.position = 0      # pointer to memory which byte now operating
+	self.codePosition = 0  # pointer to code which operator now parsing
+	self.result = &#39;&#39;       # store whole program output
+	
+def codeInit(self, code = None):
+	if None == code:       # for object init without BF code
+	    self.code = &#39;&#39;
+	
+	self.code = code
+	self.memoryInit()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;操作符动作&#34;&gt;操作符动作&lt;/h3&gt;
+&lt;p&gt;操作符没有一点难度,按照wiki来解释。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def getChar(self):
+    return self.memory[self.position]
+
+&#39;&#39;&#39;operators&#39;&#39;&#39;
+def printChar(self):
+    print &amp;quot;echo: &amp;quot;,
+    print chr(self.memory[self.position])    # turn to ASCII char
+    self.result += chr(self.memory[self.position])  # store output
+def inputChar(self):
+    print &amp;quot;put in: &amp;quot;,
+    self.memory[self.position] = ord(sys.stdin.read(1))
+def increment(self):
+    self.memory[self.position] += 1
+def decrement(self):
+    self.memory[self.position] -= 1
+def next(self):
+    self.position += 1
+    if len(self.memory) &amp;lt;= self.position:
+        self.memory.append(0)
+def previous(self):
+    self.position -= 1
+    if 0 &amp;gt; self.position:
+        print &#39;error: position is %d&#39;%self.position
+        print printMemory()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;循环实现&#34;&gt;循环实现&lt;/h3&gt;
+&lt;p&gt;循环实现比较麻烦，本来只简单地想到一对括号的情况，后面发现了多对括号的问题，就先使用&lt;strong&gt;direction&lt;/strong&gt;来保存括号在代码中的位子。并且用&lt;strong&gt;stack&lt;/strong&gt;来先记录左括号。&lt;/p&gt;
+&lt;p&gt;首先在&lt;strong&gt;&lt;em&gt;loopParser()&lt;em&gt;&lt;strong&gt;中记录成对的括号位置，同时意味着循环开始结束地址也被记录了下来。在这个函数中，首先使用&lt;/strong&gt;stack&lt;/em&gt;&lt;/em&gt;来登记未配对左括号地址，并在出现右括号时，弹出一个左括号地址，与右括号地址配对，写入&lt;/strong&gt;&lt;em&gt;loopMap&lt;/em&gt;&lt;strong&gt;这个&lt;/strong&gt;direction**中，同样这个地址配对记录需要返回给主解析流程的。&lt;/p&gt;
+&lt;p&gt;在主流程中，通过&lt;em&gt;&lt;strong&gt;loopParser()&lt;em&gt;&lt;strong&gt;获得&lt;/strong&gt;&lt;/em&gt;loopMap&lt;/strong&gt;&lt;/em&gt;后,就开始对整个BF代码进行解释。此时根据wiki中的操作符作用，遇到**[**时检查当前指针内容是否为0，为0则不进入循环，直接跳到对应的**]**地址上，遇到**]**时，当前指针内容不为0，则跳回到对应**[**代码地址，继续循环。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def loopParser(self, code):
+    &#39;&#39;&#39;parse loop operator, recode the position of code&#39;&#39;&#39;
+    loopMap = {}
+    leftStack = []
+    codePosition = 0
+    leftNum = 0
+    rightNum = 0
+    for operator in code:
+        if operator == &#39;[&#39;:
+            leftStack.append(codePosition)
+            leftNum += 1
+        elif operator == &#39;]&#39;:
+            leftPosition = leftStack.pop()
+            rightPosition = codePosition
+            loopMap[leftPosition] = rightPosition
+            loopMap[rightPosition] = leftPosition
+            rightNum += 1
+        codePosition += 1
+
+    if 0 != len(leftStack):
+        print &amp;quot;error: there are %d &#39;[&#39; but %d &#39;]&#39;&amp;quot;
+        loopMap = None
+
+    return loopMap
+
+
+def parser(self, code = None):
+    &#39;&#39;&#39;parse code&#39;&#39;&#39;
+    if None == code:
+        code = self.code
+        self.memoryInit()
+
+    loopMap = self.loopParser(code)
+    if None == loopMap:
+        return
+
+    if None == code:
+        code = self.code
+
+    while self.codePosition &amp;lt; len(code):
+        operator = code[self.codePosition]
+        if operator == &amp;quot;&amp;gt;&amp;quot;:
+            self.next()
+        elif operator == &amp;quot;&amp;lt;&amp;quot;:
+            self.previous()
+        elif operator == &amp;quot;+&amp;quot;:
+            self.increment()
+        elif operator == &amp;quot;-&amp;quot;:
+            self.decrement()
+        elif operator == &amp;quot;.&amp;quot;:
+            self.printChar()
+        elif operator == &amp;quot;,&amp;quot;:
+            self.inputChar()
+        elif operator == &amp;quot;[&amp;quot; and self.getChar() == 0:
+            self.codePosition = loopMap[self.codePosition]
+        elif operator == &amp;quot;]&amp;quot; and self.getChar() != 0:
+            self.codePosition = loopMap[self.codePosition]
+        self.runtime()
+        self.codePosition += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;打印runtime&#34;&gt;打印runtime&lt;/h3&gt;
+&lt;p&gt;做这个解释器的主要原因就是，看不懂Brainfuck每一步为什么要这样做，所以解释器的重点就在于打印每一步的数据内存和代码内存，并且标出目前运行到哪里了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Global function:
+
+	def printChar(char, point = False):
+		if point:
+		    char = &#39;\033[31m%s\033[0m&#39; %char  # print red chars on Unix
+		
+		sys.stdout.write(char + &#39; &#39;)
+
+
+BF() method:
+
+    def printData(self, data, position):
+        &#39;&#39;&#39;print linear data and point the position now point&#39;&#39;&#39;
+        point = False
+        for nowPosition in xrange(0, len(data)):
+            if nowPosition == position:
+                point = True
+
+            printChar(str(data[nowPosition]), point)
+            point = False
+        print &amp;quot;&amp;quot;                 # printChar don&#39;t print &#39;\n&#39;
+
+    def runtime(self):
+        &#39;&#39;&#39;print runtime memory and code&#39;&#39;&#39;
+        if self.ifRuntime:
+            self.printData(self.code, self.codePosition)
+            self.printData(self.memory, self.position)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;基本功能运行结果&#34;&gt;基本功能运行结果&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://7xrczi.com1.z0.glb.clouddn.com/image/BFinterpreter/brainfuck_interpreter.jpg.tiff&#34; alt=&#34;BFinterpreter运行结果&#34;&gt;&lt;/p&gt;
+&lt;p&gt;未完待续。。。或者。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Install GHC on El Capitan</title>
+      <link>/post/install-ghc-on-mac/</link>
+      <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
+      <guid>/post/install-ghc-on-mac/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;最近因为在学Haskell，所以需要在电脑上安装GHC，然而遇到了一些困难，所以需要做一下记录。&lt;/p&gt;
+&lt;p&gt;##安装GHC##
+首先GHC安装，其实这并不需要从brew安装的，我们可以从
+&lt;a href=&#34;https://ghcformacosx.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官网&lt;/a&gt;找到OSX的app，下载就好.当然上面很坑爹的写了一句：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;br&gt;
+Only tested on 64-bit Mac OS X 10.10&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;好吧好吧，这个免责协议我认。。。&lt;/p&gt;
+&lt;p&gt;下载下来就按照官网上的提示安装就好，拖到 &lt;em&gt;&lt;strong&gt;/Application&lt;/strong&gt;&lt;/em&gt;&amp;hellip;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and unzip ghc-7.10.2-r0.zip (193MB)&lt;/li&gt;
+&lt;li&gt;Move it to a stable location such as /Applications&lt;/li&gt;
+&lt;li&gt;Double-click for instructions to install Xcode and add it to your Terminal&amp;rsquo;s $PATH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第一个坑爹的来了，app会说建立 &lt;em&gt;&lt;strong&gt;~/.zshenv&lt;/strong&gt;&lt;/em&gt; 并将环境变量脚本自动拷贝进去，然而在实际使用中似乎 &lt;em&gt;&lt;strong&gt;~/.zshenv&lt;/strong&gt;&lt;/em&gt; 并没有在使用，我并不是很了解zsh还有这个文件，并且实际操作无效，所以我还是将它放进了 &lt;em&gt;&lt;strong&gt;~/.zshrc&lt;/strong&gt;&lt;/em&gt; 中，当然是有效的。&lt;/p&gt;
+&lt;p&gt;##使用cabal##
+在El Capitan中使用&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;➜  Haskell git:(master) ✗ cabal install cabal-install&lt;br&gt;
+cabal: /usr/bin/ar: permission denied&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;会发现 &lt;em&gt;&lt;strong&gt;权限不够！！！！&lt;/strong&gt;&lt;/em&gt; WTF&lt;/p&gt;
+&lt;p&gt;好吧。。。找了半天。好吧我找的有错误。。。在
+&lt;a href=&#34;http://stackoverflow.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stack Overflow&lt;/a&gt;中找 &lt;em&gt;&lt;strong&gt;[haskell]el capitan&lt;/strong&gt;&lt;/em&gt; 才能完美的找到解决方案！！！（好吧，其实我也知道是El Capitan的Rootless模式，只是在寻找其他解决方案而已）
+在 
+&lt;a href=&#34;http://stackoverflow.com/questions/33452396/haskell-for-mac-el-capitan&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Haskell for Mac (El Capitan)&lt;/a&gt;中指出，需要关闭 &lt;em&gt;&lt;strong&gt;Rootless&lt;/strong&gt;&lt;/em&gt; ：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重启，使用 &lt;em&gt;&lt;strong&gt;CMD+R&lt;/strong&gt;&lt;/em&gt; 进入recover模式&lt;br&gt;
+在终端中输入 &lt;em&gt;&lt;strong&gt;csrutil disable&lt;/strong&gt;&lt;/em&gt; 关闭Rootless模式，并重启&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这样再使用cabal install就不会有权限问题了~&lt;/p&gt;
+&lt;p&gt;当然El Capitan的Rootless是新开发的强有力对抗入侵的方式，Rootless使能后，即使root用户也无权对核心文件进行修改和执行。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>关于haskell随便写点什么1</title>
       <link>/post/about-haskell-1/</link>
       <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>

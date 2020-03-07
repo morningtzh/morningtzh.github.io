@@ -601,279 +601,6 @@ $$&lt;/p&gt;
     </item>
     
     <item>
-      <title>C&#43;&#43; 开发环境指引</title>
-      <link>/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/</link>
-      <pubDate>Mon, 20 May 2019 10:10:54 +0000</pubDate>
-      <guid>/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/</guid>
-      <description>&lt;h1 id=&#34;c-开发环境指引&#34;&gt;C++ 开发环境指引&lt;/h1&gt;
-&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
-&lt;!-- code_chunk_output --&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;#c-%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e6%8c%87%e5%bc%95&#34;&gt;C++ 开发环境指引&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;#%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e5%bb%ba%e8%ae%ae&#34;&gt;操作系统建议&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#windows-subsystem-for-linux&#34;&gt;Windows Subsystem for Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%8e%af%e5%a2%83%e5%8f%82%e8%80%83&#34;&gt;命令行环境参考&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;#windows&#34;&gt;Windows&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;#powershell-%e6%8f%92%e4%bb%b6&#34;&gt;PowerShell 插件:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#windows%e4%b8%8b%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%bd%af%e4%bb%b6%e5%ae%89%e8%a3%85&#34;&gt;Windows下命令行软件安装:&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#linux&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%bd%af%e4%bb%b6&#34;&gt;命令行软件&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#c-%e4%bb%a3%e7%a0%81%e8%a7%84%e8%8c%83&#34;&gt;C++ 代码规范&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;#google-c-style-guide&#34;&gt;Google C++ Style Guide&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#lint&#34;&gt;Lint&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#%e7%bc%96%e8%be%91%e5%99%a8%e6%8c%87%e5%bc%95&#34;&gt;编辑器指引&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;#clion%e9%85%8d%e7%bd%ae&#34;&gt;Clion配置&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;#%e6%b3%a8%e5%86%8c%e7%a0%81&#34;&gt;注册码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#wsl%e8%bf%9e%e6%8e%a5&#34;&gt;WSL连接&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#google-c-style-guide-1&#34;&gt;Google C++ Style Guide&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#vscode%e9%85%8d%e7%bd%ae&#34;&gt;VSCode配置&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;#%e5%bc%ba%e7%83%88%e5%bb%ba%e8%ae%ae%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6&#34;&gt;强烈建议安装插件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#%e5%bb%ba%e8%ae%ae%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6&#34;&gt;建议安装插件:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#%e5%8f%af%e7%94%a8sync%e9%85%8d%e7%bd%ae&#34;&gt;可用Sync配置&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#%e6%97%a5%e6%8a%a5&#34;&gt;日报&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;#git%e6%8c%87%e5%bc%95&#34;&gt;Git指引&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- /code_chunk_output --&gt;
-&lt;h2 id=&#34;操作系统建议&#34;&gt;操作系统建议&lt;/h2&gt;
-&lt;p&gt;建议采用 Windows 10 作为工作的操作系统, 并安装WSL作为编译环境(详见下文).&lt;/p&gt;
-&lt;p&gt;服务器使用 Ubuntu 或 CentOS. 当前为同一WSL环境, 使用Ubuntu作为上线系统.&lt;/p&gt;
-&lt;h2 id=&#34;windows-subsystem-for-linux&#34;&gt;Windows Subsystem for Linux&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://docs.microsoft.com/zh-cn/windows/wsl/about&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Windows Subsystem for Linux（简称WSL）&lt;/a&gt;是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的 Ubuntu 映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。&lt;/p&gt;
-&lt;p&gt;安装指引请查看Microsoft官网:
-
-&lt;a href=&#34;https://docs.microsoft.com/zh-cn/windows/wsl/install-win10&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Linux 安装指南适用于 Windows 10 的 Windows 子系统&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;命令行环境参考&#34;&gt;命令行环境参考&lt;/h2&gt;
-&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
-&lt;p&gt;主要采用PowerShell, 详情参考
-&lt;a href=&#34;https://docs.microsoft.com/zh-cn/powershell/scripting/overview?view=powershell-6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PowerShell官网&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;powershell-插件&#34;&gt;PowerShell 插件:&lt;/h4&gt;
-&lt;p&gt;PowerShell插件主要位于
-&lt;a href=&#34;https://www.powershellgallery.com/packages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PowerShell Gallery&lt;/a&gt;, 可安装oh-my-posh, posh-git等插件&lt;/p&gt;
-&lt;h4 id=&#34;windows下命令行软件安装&#34;&gt;Windows下命令行软件安装:&lt;/h4&gt;
-&lt;p&gt;Windows下包管理器主要采用
-&lt;a href=&#34;https://chocolatey.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choco&lt;/a&gt;, 可像Linux下包管理器一样使用.&lt;/p&gt;
-&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
-&lt;p&gt;Linux下命令行建议采用zsh, 并加装
-&lt;a href=&#34;https://ohmyz.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Oh-my-zsh&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;以下为安利贴:
-
-&lt;a href=&#34;https://www.zhihu.com/question/21418449&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;为什么说 zsh 是 shell 中的极品？&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;命令行软件&#34;&gt;命令行软件&lt;/h3&gt;
-&lt;p&gt;Windows下命令行软件建议采用
-&lt;a href=&#34;https://github.com/felixse/FluentTerminal&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FluentTerminal&lt;/a&gt;, 使用Choco安装 &lt;code&gt;choco install fluent-terminal&lt;/code&gt;. 在设置中可选择WSL/PowerShell/CMD 作为默认命令行, 建议采用WSL.&lt;/p&gt;
-&lt;h2 id=&#34;c-代码规范&#34;&gt;C++ 代码规范&lt;/h2&gt;
-&lt;h3 id=&#34;google-c-style-guide&#34;&gt;Google C++ Style Guide&lt;/h3&gt;
-&lt;p&gt;C++代码规范目前采用
-&lt;a href=&#34;https://google.github.io/styleguide/cppguide.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google C++ Style Guide&lt;/a&gt; 也可参考
-&lt;a href=&#34;https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;此中文版教程&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;后续会有微调, 将会详细写出.&lt;/p&gt;
-&lt;h3 id=&#34;lint&#34;&gt;Lint&lt;/h3&gt;
-&lt;p&gt;Lint采用
-&lt;a href=&#34;http://clang.llvm.org/extra/clang-tidy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Clang-tidy&lt;/a&gt;做静态分析, 目前项目根目录有&lt;code&gt;clang-tidy.py&lt;/code&gt; 文件来做批量Lint. 可采用命令行 &lt;code&gt;./clang-tidy.py -checks &amp;quot;google-*&amp;quot; -fix  -p ./build ./src/*&lt;/code&gt; 做检查.&lt;/p&gt;
-&lt;h2 id=&#34;编辑器指引&#34;&gt;编辑器指引&lt;/h2&gt;
-&lt;p&gt;编辑器采用
-&lt;a href=&#34;https://www.jetbrains.com/clion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Clion&lt;/a&gt;作为C++开发编辑器, 
-&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Visual Studio Code&lt;/a&gt; 作为辅助编辑器使用.&lt;/p&gt;
-&lt;h3 id=&#34;clion配置&#34;&gt;Clion配置&lt;/h3&gt;
-&lt;h4 id=&#34;注册码&#34;&gt;注册码&lt;/h4&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://note.youdao.com/ynoteshare1/index.html?id=2e038d709a368b5d5c36c8f065aaecac&amp;amp;type=note&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Clion注册码&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;wsl连接&#34;&gt;WSL连接&lt;/h4&gt;
-&lt;p&gt;请参考Clion官方文档: 
-&lt;a href=&#34;https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-clion.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How to use wsl development environment in clion&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;google-c-style-guide-1&#34;&gt;Google C++ Style Guide&lt;/h4&gt;
-&lt;p&gt;请参考Clion官方文档: 
-&lt;a href=&#34;https://www.jetbrains.com/help/clion/code-style-c-c.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code Style. C/C++ #Set From&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在Set From 中选择 Google.&lt;/p&gt;
-&lt;h3 id=&#34;vscode配置&#34;&gt;VSCode配置&lt;/h3&gt;
-&lt;h4 id=&#34;强烈建议安装插件&#34;&gt;强烈建议安装插件&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;配置同步
-&lt;ul&gt;
-&lt;li&gt;settings sync&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Git相关
-&lt;ul&gt;
-&lt;li&gt;gitblame v2.7.0&lt;/li&gt;
-&lt;li&gt;githistory v0.4.6&lt;/li&gt;
-&lt;li&gt;gitlens v9.7.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;C++相关
-&lt;ul&gt;
-&lt;li&gt;cmake v0.0.17&lt;/li&gt;
-&lt;li&gt;cmake-tools v1.1.3&lt;/li&gt;
-&lt;li&gt;cpptools v0.23.1&lt;/li&gt;
-&lt;li&gt;include-autocomplete v0.0.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Markdown及UML相关
-&lt;ul&gt;
-&lt;li&gt;markdown-all-in-one v2.3.1&lt;/li&gt;
-&lt;li&gt;markdown-preview-enhanced v0.3.13&lt;/li&gt;
-&lt;li&gt;plantuml v2.11.0&lt;/li&gt;
-&lt;li&gt;vscode-markdownlint v0.26.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;方便编辑
-&lt;ul&gt;
-&lt;li&gt;beautify v1.5.0&lt;/li&gt;
-&lt;li&gt;indent-rainbow v7.4.0&lt;/li&gt;
-&lt;li&gt;output-colorizer v0.1.2&lt;/li&gt;
-&lt;li&gt;path-intellisense v1.4.2&lt;/li&gt;
-&lt;li&gt;rainbow-csv v1.0.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;建议安装插件&#34;&gt;建议安装插件:&lt;/h4&gt;
-&lt;p&gt;可能有点多&amp;hellip;可自行筛选, 覆盖了一些常用语言&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  auto-close-tag v0.5.6
-  auto-rename-tag v0.0.15
-  background v1.1.19
-  beautify v1.5.0
-  better-toml v0.3.2
-  bracket-pair-colorizer v1.0.61
-  change-case v1.0.0
-  cmake v0.0.17
-  cmake-tools v1.1.3
-  code-runner v0.9.9
-  code-settings-sync v3.2.9
-  code-spell-checker v1.7.10
-  copilot-vscode v1.3.0
-  cpptools v0.23.1
-  gc-excelviewer v2.1.32
-  gitblame v2.7.0
-  githistory v0.4.6
-  gitlens v9.7.4
-  Go v0.10.2
-  include-autocomplete v0.0.4
-  indent-rainbow v7.4.0
-  iris v0.0.4
-  JavaScriptSnippets v1.7.2
-  markdown-all-in-one v2.3.1
-  markdown-pdf v1.2.0
-  markdown-preview-enhanced v0.3.13
-  mssql v1.6.0
-  nbpreviewer v1.2.2
-  nodejs-docs v0.2.2
-  output-colorizer v0.1.2
-  path-intellisense v1.4.2
-  plantuml v2.11.0
-  powershell v1.12.1
-  pyqt-integration v0.2.0
-  python v2019.4.12954
-  quicktype v12.0.46
-  rainbow-csv v1.0.0
-  react-native-react-redux v2.0.3
-  rest-client v0.21.3
-  theme-dracula v2.18.0
-  tslint v1.0.43
-  vs-color-picker v1.0.0
-  vscode-babel-coloring v0.0.4
-  vscode-clang v0.2.3
-  vscode-database v2.1.5
-  vscode-eslint v1.9.0
-  vscode-filesize v2.1.2
-  vscode-hexdump v1.7.2
-  vscode-hexo v1.0.1
-  vscode-import-cost v2.12.0
-  vscode-insertdatestring v2.2.4
-  vscode-language-babel v0.0.22
-  vscode-language-pack-zh-hans v1.33.2
-  vscode-leetcode v0.14.3
-  vscode-markdownlint v0.26.0
-  vscode-mysql v0.4.0
-  vscode-power-mode v2.2.0
-  vscode-qt-for-python v0.3.0
-  vscode-styled-components v0.0.26
-  vscode-svgviewer v2.0.0
-  vscode-text-pastry v1.2.0
-  vscode-yaml v0.4.0
-  webpack v2.1.3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;可用sync配置&#34;&gt;可用Sync配置&lt;/h4&gt;
-&lt;p&gt;首先安装settings sync插件, 选择同步公开gist: &lt;code&gt;7b4026c4de4f3170fb1770945dbdf52e&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;日报&#34;&gt;日报&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;http://192.168.99.30:9999/rdc/dailyreport&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;研发部日报Git&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;git指引&#34;&gt;Git指引&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://github.com/521xueweihan/git-tips&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Git的奇技淫巧&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>vision详细设计</title>
-      <link>/post/vision%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1/</link>
-      <pubDate>Sat, 12 Jan 2019 12:52:23 +0000</pubDate>
-      <guid>/post/vision%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1/</guid>
-      <description>&lt;h1 id=&#34;vision详细设计&#34;&gt;vision详细设计&lt;/h1&gt;
-&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
-&lt;!-- code_chunk_output --&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;#vision%e8%af%a6%e7%bb%86%e8%ae%be%e8%ae%a1&#34;&gt;vision详细设计&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;#1-%e8%83%8c%e6%99%af%e4%bb%8b%e7%bb%8d&#34;&gt;1 背景介绍&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- /code_chunk_output --&gt;
-&lt;h2 id=&#34;1-背景介绍&#34;&gt;1 背景介绍&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;http://blogdata.morningtzh.com/image/other/head.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://blogdata.morningtzh.com/image/other/head.jpg?imageView2/1/w/200/h/200/interlace/1/q/75%7Cwatermark/2/text/TW9ybmluZ1RaSA==/font/YW5kYWx1cw==/fontsize/240/fill/I0NCRTFFOQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10%7Cimageslim&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://blogdata.morningtzh.com/image/other/head.jpg?imageView2/1/w/200/h/200/interlace/1/q/75%7Cwatermark/2/text/TW9ybmluZ1RaSA==/font/YW5kYWx1cw==/fontsize/240/fill/I0NCRTFFOQ==/dissolve/100/gravity/SouthEast/dx/10/dy/10&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>博客系统的需求在哪里</title>
       <link>/post/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9C%80%E6%B1%82%E5%9C%A8%E5%93%AA%E9%87%8C/</link>
       <pubDate>Fri, 12 Oct 2018 12:23:17 +0000</pubDate>
@@ -906,6 +633,368 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;这样的方案，写作流程就会变得更简单，对于 markdown 来说比较麻烦的图床也可以通过 mpe 中的图片管理来解决。&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>devstack安装镜像</title>
+      <link>/post/devstack-install-tips/</link>
+      <pubDate>Tue, 20 Sep 2016 19:30:14 +0000</pubDate>
+      <guid>/post/devstack-install-tips/</guid>
+      <description>&lt;h1 id=&#34;devstack安装镜像&#34;&gt;devstack安装镜像&lt;/h1&gt;
+&lt;h2 id=&#34;pip镜像&#34;&gt;pip镜像：&lt;/h2&gt;
+&lt;p&gt;pip 镜像我使用清华大学的，在可信列表（
+&lt;a href=&#34;www.douban.com&#34;&gt;豆瓣&lt;/a&gt;的可坑死啦，不在信任列表，安装会跳问题：豆瓣源『http://pypi.douban.com/simple』）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In file &amp;ldquo;~/.pip/pip.conf&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;[global] index-url = https://pypi.tuna.tsinghua.edu.cn/simple&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ubuntu-apt-镜像&#34;&gt;Ubuntu Apt 镜像&lt;/h2&gt;
+&lt;p&gt;apt镜像反正看你喜欢咯！！！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In file &amp;ldquo;/etc/apt/sources.list&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;openstack@openstack
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty main restricted universe multiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-security main restricted universe m
+ultiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-updates main restricted universe mu
+ltiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-proposed main restricted universe m
+ultiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-backports main restricted universe
+multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty main restricted universe multiv
+erse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-security main restricted univer
+se multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-updates main restricted univers
+e multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-proposed main restricted univer
+se multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-backports main restricted unive
+rse multiverse&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+## openstack git 镜像
+
+In file ?/local.conf (官网并没说丢在哪里。。。我就 devstack 文件夹和用户主目录都丢了个)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;[[local|localrc]]
+ADMIN_PASSWORD=openstack
+DATABASE_PASSWORD=$ADMIN_PASSWORD
+RABBIT_PASSWORD=$ADMIN_PASSWORD
+SERVICE_PASSWORD=$ADMIN_PASSWORD&lt;/p&gt;
+&lt;p&gt;# Define images to be automatically downloaded during the DevStack built process.
+DOWNLOAD_DEFAULT_IMAGES=False
+IMAGE_URLS=&amp;quot;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;#change github to trystack
+GIT_BASE=${GIT_BASE:-http://git.trystack.cn}
+NOVNC_REPO=${NOVNC_REPO:-http://git.trystack.cn/kanaka/noVNC.git}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+这个镜像下载速度我家 20M 水管，下载速度为600+kiB/s
+
+## 小问题
+pypi 包更新的时候（~/devstack/file/get-pip.py文件）很容易断，我直接手机[GoodReader](https://itunes.apple.com/us/app/goodreader/id777310222?mt=8)下载好后，再电脑用 GoodReader 上的地址下的，速度很快。
+
+虚拟机内存1G 不够！！！会报错！！！
+
+哇靠。。。我电脑反正玩不来了，虚拟机给了2g 交换空间1g 全部占满，难怪听说要4g 内存。我还是光看看代码吧
+
+其他的安装就按 devstack 官网就行了
+
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Brainfuck解释器[on python]</title>
+      <link>/post/brainfuck-interpreter/</link>
+      <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
+      <guid>/post/brainfuck-interpreter/</guid>
+      <description>&lt;p&gt;阿婆主脑容量不够，ぜんぜん不能在大脑中运行 &lt;strong&gt;Brainfuck&lt;/strong&gt; 程序，而且发现连运行过程都想不出来啊，
+然而就这么几个字符完全可以自己写解释器嘛，并且可以打印出运行过程，而且可以试试看做成playground
+的形式呢，想想还是挺有趣的。&lt;/p&gt;
+&lt;p&gt;项目地址：
+&lt;a href=&#34;https://code.csdn.net/u012822586/brainfuck_interpreter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code CSDN&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Git地址：
+&lt;a href=&#34;git://code.csdn.net/u012822586/brainfuck_interpreter.git&#34;&gt;Git on CSDN&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;brainfuck&#34;&gt;Brainfuck&lt;/h2&gt;
+&lt;p&gt;Brainfuck是一种图灵完备的语言，他可以做到任何事情，他的编译器是世界上最小的，他共有8个操作符：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Operator&lt;/th&gt;
+&lt;th&gt;Function&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;td&gt;increment the data pointer (to point to the next cell to the right).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;td&gt;decrement the data pointer (to point to the next cell to the left).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;+&lt;/td&gt;
+&lt;td&gt;increment (increase by one) the byte at the data pointer.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;-&lt;/td&gt;
+&lt;td&gt;decrement (decrease by one) the byte at the data pointer.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;.&lt;/td&gt;
+&lt;td&gt;output the byte at the data pointer.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;,&lt;/td&gt;
+&lt;td&gt;accept one byte of input, storing its value in the byte at the data pointer.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;[&lt;/td&gt;
+&lt;td&gt;if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching &lt;strong&gt;]&lt;/strong&gt; command.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;]&lt;/td&gt;
+&lt;td&gt;if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching &lt;strong&gt;[&lt;/strong&gt; command.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;基本就是对内存直接操作的语言，他的『Hello World!』是这样的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;++++++++[&amp;gt;++++[&amp;gt;++&amp;gt;+++&amp;gt;+++&amp;gt;+&amp;laquo;&amp;laquo;-]&amp;gt;+&amp;gt;+&amp;gt;-&amp;raquo;+[&amp;lt;]&amp;lt;-]&amp;raquo;.&amp;gt;&amp;mdash;.+++++++..+++.&amp;raquo;.&amp;lt;-.&amp;lt;.+++.&amp;mdash;&amp;mdash;.&amp;mdash;&amp;mdash;&amp;ndash;.&amp;raquo;+.&amp;gt;++.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;WTF!!!!!!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;需求点&#34;&gt;需求点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1、基本功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解释裸BF程序&lt;/li&gt;
+&lt;li&gt;打印内存信息&lt;/li&gt;
+&lt;li&gt;分开输出以及集体输出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2、调试功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置断点&lt;/li&gt;
+&lt;li&gt;单步执行&lt;/li&gt;
+&lt;li&gt;查看内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3、playground功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;做命令行模式（加参数可选）&lt;/li&gt;
+&lt;li&gt;窗口分割&lt;/li&gt;
+&lt;li&gt;实时解释&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;基本功能实现&#34;&gt;基本功能实现&lt;/h2&gt;
+&lt;p&gt;Brainfuck基本解释使用class BF()来实现&lt;/p&gt;
+&lt;h3 id=&#34;数据部分&#34;&gt;数据部分&lt;/h3&gt;
+&lt;p&gt;class BF()中数据由两部分组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Brainfuck程序&lt;/li&gt;
+&lt;li&gt;内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BF直接对内存进行操作，所以这边可以很简单的用list模拟出来，这样我们就有了一个无限长的内存，并用&lt;em&gt;&lt;strong&gt;BF.position&lt;/strong&gt;&lt;/em&gt;来指明正在操作的内存，相当于一个指针（实际是list index）。另外一个就是代码存储区，代码由&lt;strong&gt;string&lt;/strong&gt;类型的&lt;em&gt;&lt;strong&gt;BF.code&lt;/strong&gt;&lt;/em&gt;保存，同样有个代码指针&lt;em&gt;&lt;strong&gt;BF.codePosition&lt;/strong&gt;&lt;/em&gt;指明目前正在解释的操作符.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def __init__(self):
+	self.codeInit()
+	self.ifRuntime = True
+	
+def memoryInit(self):
+	self.dirty = False     # if memory have been wroten
+	self.memory = [0]      # memory
+	self.position = 0      # pointer to memory which byte now operating
+	self.codePosition = 0  # pointer to code which operator now parsing
+	self.result = &#39;&#39;       # store whole program output
+	
+def codeInit(self, code = None):
+	if None == code:       # for object init without BF code
+	    self.code = &#39;&#39;
+	
+	self.code = code
+	self.memoryInit()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;操作符动作&#34;&gt;操作符动作&lt;/h3&gt;
+&lt;p&gt;操作符没有一点难度,按照wiki来解释。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def getChar(self):
+    return self.memory[self.position]
+
+&#39;&#39;&#39;operators&#39;&#39;&#39;
+def printChar(self):
+    print &amp;quot;echo: &amp;quot;,
+    print chr(self.memory[self.position])    # turn to ASCII char
+    self.result += chr(self.memory[self.position])  # store output
+def inputChar(self):
+    print &amp;quot;put in: &amp;quot;,
+    self.memory[self.position] = ord(sys.stdin.read(1))
+def increment(self):
+    self.memory[self.position] += 1
+def decrement(self):
+    self.memory[self.position] -= 1
+def next(self):
+    self.position += 1
+    if len(self.memory) &amp;lt;= self.position:
+        self.memory.append(0)
+def previous(self):
+    self.position -= 1
+    if 0 &amp;gt; self.position:
+        print &#39;error: position is %d&#39;%self.position
+        print printMemory()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;循环实现&#34;&gt;循环实现&lt;/h3&gt;
+&lt;p&gt;循环实现比较麻烦，本来只简单地想到一对括号的情况，后面发现了多对括号的问题，就先使用&lt;strong&gt;direction&lt;/strong&gt;来保存括号在代码中的位子。并且用&lt;strong&gt;stack&lt;/strong&gt;来先记录左括号。&lt;/p&gt;
+&lt;p&gt;首先在&lt;strong&gt;&lt;em&gt;loopParser()&lt;em&gt;&lt;strong&gt;中记录成对的括号位置，同时意味着循环开始结束地址也被记录了下来。在这个函数中，首先使用&lt;/strong&gt;stack&lt;/em&gt;&lt;/em&gt;来登记未配对左括号地址，并在出现右括号时，弹出一个左括号地址，与右括号地址配对，写入&lt;/strong&gt;&lt;em&gt;loopMap&lt;/em&gt;&lt;strong&gt;这个&lt;/strong&gt;direction**中，同样这个地址配对记录需要返回给主解析流程的。&lt;/p&gt;
+&lt;p&gt;在主流程中，通过&lt;em&gt;&lt;strong&gt;loopParser()&lt;em&gt;&lt;strong&gt;获得&lt;/strong&gt;&lt;/em&gt;loopMap&lt;/strong&gt;&lt;/em&gt;后,就开始对整个BF代码进行解释。此时根据wiki中的操作符作用，遇到**[**时检查当前指针内容是否为0，为0则不进入循环，直接跳到对应的**]**地址上，遇到**]**时，当前指针内容不为0，则跳回到对应**[**代码地址，继续循环。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def loopParser(self, code):
+    &#39;&#39;&#39;parse loop operator, recode the position of code&#39;&#39;&#39;
+    loopMap = {}
+    leftStack = []
+    codePosition = 0
+    leftNum = 0
+    rightNum = 0
+    for operator in code:
+        if operator == &#39;[&#39;:
+            leftStack.append(codePosition)
+            leftNum += 1
+        elif operator == &#39;]&#39;:
+            leftPosition = leftStack.pop()
+            rightPosition = codePosition
+            loopMap[leftPosition] = rightPosition
+            loopMap[rightPosition] = leftPosition
+            rightNum += 1
+        codePosition += 1
+
+    if 0 != len(leftStack):
+        print &amp;quot;error: there are %d &#39;[&#39; but %d &#39;]&#39;&amp;quot;
+        loopMap = None
+
+    return loopMap
+
+
+def parser(self, code = None):
+    &#39;&#39;&#39;parse code&#39;&#39;&#39;
+    if None == code:
+        code = self.code
+        self.memoryInit()
+
+    loopMap = self.loopParser(code)
+    if None == loopMap:
+        return
+
+    if None == code:
+        code = self.code
+
+    while self.codePosition &amp;lt; len(code):
+        operator = code[self.codePosition]
+        if operator == &amp;quot;&amp;gt;&amp;quot;:
+            self.next()
+        elif operator == &amp;quot;&amp;lt;&amp;quot;:
+            self.previous()
+        elif operator == &amp;quot;+&amp;quot;:
+            self.increment()
+        elif operator == &amp;quot;-&amp;quot;:
+            self.decrement()
+        elif operator == &amp;quot;.&amp;quot;:
+            self.printChar()
+        elif operator == &amp;quot;,&amp;quot;:
+            self.inputChar()
+        elif operator == &amp;quot;[&amp;quot; and self.getChar() == 0:
+            self.codePosition = loopMap[self.codePosition]
+        elif operator == &amp;quot;]&amp;quot; and self.getChar() != 0:
+            self.codePosition = loopMap[self.codePosition]
+        self.runtime()
+        self.codePosition += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;打印runtime&#34;&gt;打印runtime&lt;/h3&gt;
+&lt;p&gt;做这个解释器的主要原因就是，看不懂Brainfuck每一步为什么要这样做，所以解释器的重点就在于打印每一步的数据内存和代码内存，并且标出目前运行到哪里了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Global function:
+
+	def printChar(char, point = False):
+		if point:
+		    char = &#39;\033[31m%s\033[0m&#39; %char  # print red chars on Unix
+		
+		sys.stdout.write(char + &#39; &#39;)
+
+
+BF() method:
+
+    def printData(self, data, position):
+        &#39;&#39;&#39;print linear data and point the position now point&#39;&#39;&#39;
+        point = False
+        for nowPosition in xrange(0, len(data)):
+            if nowPosition == position:
+                point = True
+
+            printChar(str(data[nowPosition]), point)
+            point = False
+        print &amp;quot;&amp;quot;                 # printChar don&#39;t print &#39;\n&#39;
+
+    def runtime(self):
+        &#39;&#39;&#39;print runtime memory and code&#39;&#39;&#39;
+        if self.ifRuntime:
+            self.printData(self.code, self.codePosition)
+            self.printData(self.memory, self.position)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;基本功能运行结果&#34;&gt;基本功能运行结果&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://7xrczi.com1.z0.glb.clouddn.com/image/BFinterpreter/brainfuck_interpreter.jpg.tiff&#34; alt=&#34;BFinterpreter运行结果&#34;&gt;&lt;/p&gt;
+&lt;p&gt;未完待续。。。或者。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Install GHC on El Capitan</title>
+      <link>/post/install-ghc-on-mac/</link>
+      <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
+      <guid>/post/install-ghc-on-mac/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;最近因为在学Haskell，所以需要在电脑上安装GHC，然而遇到了一些困难，所以需要做一下记录。&lt;/p&gt;
+&lt;p&gt;##安装GHC##
+首先GHC安装，其实这并不需要从brew安装的，我们可以从
+&lt;a href=&#34;https://ghcformacosx.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官网&lt;/a&gt;找到OSX的app，下载就好.当然上面很坑爹的写了一句：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;br&gt;
+Only tested on 64-bit Mac OS X 10.10&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;好吧好吧，这个免责协议我认。。。&lt;/p&gt;
+&lt;p&gt;下载下来就按照官网上的提示安装就好，拖到 &lt;em&gt;&lt;strong&gt;/Application&lt;/strong&gt;&lt;/em&gt;&amp;hellip;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and unzip ghc-7.10.2-r0.zip (193MB)&lt;/li&gt;
+&lt;li&gt;Move it to a stable location such as /Applications&lt;/li&gt;
+&lt;li&gt;Double-click for instructions to install Xcode and add it to your Terminal&amp;rsquo;s $PATH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第一个坑爹的来了，app会说建立 &lt;em&gt;&lt;strong&gt;~/.zshenv&lt;/strong&gt;&lt;/em&gt; 并将环境变量脚本自动拷贝进去，然而在实际使用中似乎 &lt;em&gt;&lt;strong&gt;~/.zshenv&lt;/strong&gt;&lt;/em&gt; 并没有在使用，我并不是很了解zsh还有这个文件，并且实际操作无效，所以我还是将它放进了 &lt;em&gt;&lt;strong&gt;~/.zshrc&lt;/strong&gt;&lt;/em&gt; 中，当然是有效的。&lt;/p&gt;
+&lt;p&gt;##使用cabal##
+在El Capitan中使用&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;➜  Haskell git:(master) ✗ cabal install cabal-install&lt;br&gt;
+cabal: /usr/bin/ar: permission denied&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;会发现 &lt;em&gt;&lt;strong&gt;权限不够！！！！&lt;/strong&gt;&lt;/em&gt; WTF&lt;/p&gt;
+&lt;p&gt;好吧。。。找了半天。好吧我找的有错误。。。在
+&lt;a href=&#34;http://stackoverflow.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stack Overflow&lt;/a&gt;中找 &lt;em&gt;&lt;strong&gt;[haskell]el capitan&lt;/strong&gt;&lt;/em&gt; 才能完美的找到解决方案！！！（好吧，其实我也知道是El Capitan的Rootless模式，只是在寻找其他解决方案而已）
+在 
+&lt;a href=&#34;http://stackoverflow.com/questions/33452396/haskell-for-mac-el-capitan&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Haskell for Mac (El Capitan)&lt;/a&gt;中指出，需要关闭 &lt;em&gt;&lt;strong&gt;Rootless&lt;/strong&gt;&lt;/em&gt; ：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重启，使用 &lt;em&gt;&lt;strong&gt;CMD+R&lt;/strong&gt;&lt;/em&gt; 进入recover模式&lt;br&gt;
+在终端中输入 &lt;em&gt;&lt;strong&gt;csrutil disable&lt;/strong&gt;&lt;/em&gt; 关闭Rootless模式，并重启&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这样再使用cabal install就不会有权限问题了~&lt;/p&gt;
+&lt;p&gt;当然El Capitan的Rootless是新开发的强有力对抗入侵的方式，Rootless使能后，即使root用户也无权对核心文件进行修改和执行。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1059,6 +1148,46 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
 ***&amp;ldquo;493-2928&amp;rdquo;***&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;就此结束吧，心血来潮谢谢，先打上个标签1，说不定还有2，3，4&amp;hellip;呢，也或许会太监了呢。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>三得利老牌和百龄坛特醇的对比</title>
+      <link>/post/suntoryballantines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/suntoryballantines/</guid>
+      <description>&lt;p&gt;三得利老牌快喝完了，打算醒一段时间再尝一下变化，正好家里有一套百龄坛特醇礼盒，就开了喝。&lt;/p&gt;
+&lt;p&gt;特醇刚入口，感觉和老牌没什么区别啊，没有像格兰菲迪那样和老牌有明显的区别。特醇显得有些辣了。特意倒了些老牌做了下比较。&lt;/p&gt;
+&lt;p&gt;三得利老牌更加顺口，因此感觉香气更加浓郁。百龄坛比较刺激，香气也少了些，也确实有区别的。两者对比格兰菲迪的话，差别很大，格兰菲迪入口有一种麦芽的味道？会留存很久。&lt;/p&gt;
+&lt;p&gt;老牌和百龄坛特醇都比较醇吧，特醇的评分我记得也特别高呢，而且价格便宜，某宝也只要半百就够，比约翰走路红牌更加便宜。老牌后味有巧克力奶油的味道，说实话，喝老牌的第一口我就开始怀念百利甜了，老牌的奶油味重，这一点特醇略差了点。&lt;/p&gt;
+&lt;p&gt;刚刚开始入门whisky，能感受到的差别挺小的，期待整瓶的单一麦芽能带来不同的体验。&lt;/p&gt;
+&lt;p&gt;本次试验清味道使用三得利无糖乌龙茶（说不定他帮了同品牌的老牌呢 哈哈&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://7xrczi.com1.z0.glb.clouddn.com/image/whisky/IMG_2516.JPG&#34; alt=&#34;suntory&amp;ballantines&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>最近的阅读方式</title>
+      <link>/post/reading-mode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/reading-mode/</guid>
+      <description>&lt;p&gt;以前一直在看各种技术相关的书籍或是信息，无聊中也点了django，go，cocos这些类似的技能点。也不知从哪一天开始，越来越厌倦这样技术性的阅读了，技能树越分散其实真正学到的也越少。那既然类似消遣的在学习着，倒也不如看看其他方面的书籍，无论陶冶情操还是看清世界都比技术书籍有用处吧。&lt;/p&gt;
+&lt;p&gt;还记得去年这时候也非常迷茫，不知道自己在社会上到底是在一个什么样的层次活着，买了本 
+&lt;a href=&#34;http://baike.baidu.com/view/1081693.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;戴维·波普诺&lt;/a&gt; 的
+&lt;a href=&#34;https://book.douban.com/subject/2310726/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《社会学》&lt;/a&gt;来看，看了版本，还是挺有意思的。但终究敌不过他的厚实，一本只能在家看的书，只看下去了版本。那今年依旧迷茫，就不再追求实体书了吧，能把人打晕的书就不能再买了，看看电子书吧。&lt;br&gt;
+电纸书其实也没什么兴趣，以前买过 &lt;em&gt;Barnes &amp;amp; Noble&lt;/em&gt; 的 &lt;em&gt;Nook2&lt;/em&gt;， 当然这个已经被我尘封在了书架上，由此也并不想再买一个 &lt;em&gt;kindle&lt;/em&gt; 了。&lt;br&gt;
+非常感动的是的我们在一个非常好的时机里面，在 &lt;em&gt;iBook&lt;/em&gt; 开始销售电子书后的半年，amazon开启了他在中国的 
+&lt;a href=&#34;https://www.amazon.cn/gp/kindle/ku/sign-up&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kindle unlimited&lt;/a&gt; 业务，每月固定月费可以免费看几万本&lt;del&gt;垃圾&lt;/del&gt;电子书, Holy Shit!!! 这项服务提供的书真是糟糕，更糟糕的是我脑子一热定了半年的。&lt;br&gt;
+于是我开启了 &lt;em&gt;kindle&lt;/em&gt; 软件的看书之旅，相较于 &lt;em&gt;iBook&lt;/em&gt; 不能同步pdf（ios9.3中已提供了同步），&lt;em&gt;kindle&lt;/em&gt; 软件更加好些，并且经过对比也是 &lt;em&gt;amazon&lt;/em&gt; 的书更加便宜和全面些。真想吐槽 &lt;em&gt;iBook&lt;/em&gt; 书籍的同步速度。这样的模式我也并没有看几本书，不过也好了很多，比起以前的阅读效率，现在更加有些提升了，我还真是阅读电子书更加能沉浸下去，以后书籍方面的投入就会更加倾向电子书了。&lt;br&gt;
+最近看了
+&lt;a href=&#34;https://book.douban.com/subject/3829245/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《城南旧事》&lt;/a&gt;、
+&lt;a href=&#34;https://book.douban.com/subject/1859755/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《婚姻的故事》&lt;/a&gt;、
+&lt;a href=&#34;https://book.douban.com/subject/24540864/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《第七天》&lt;/a&gt;、
+&lt;a href=&#34;https://book.douban.com/subject/25822105/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《无缘社会》&lt;/a&gt;和
+&lt;a href=&#34;https://book.douban.com/subject/3291111/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《富爸爸穷爸爸》&lt;/a&gt;前三本略有些压抑，而后两本则切切实实的带来了&lt;strong&gt;恐惧&lt;/strong&gt;，我从小就有强烈的危机感，这两本书简直又是当头棒喝，告诉了我『你的危机感是真实存在的，不早去控制可能存在的风险，将会活的生不如死』。我很感谢在刚刚踏入社会一年多的时间里看到了这两本书，不早也不晚。太早了就不会有感觉，太晚了就更难挽回局面了。&lt;br&gt;
+其实本来这一篇想写的就是阅读感悟，奈何废话过多变成了说最近的阅读方式了，那么阅读感悟自然需要另起一篇了。即将到来————&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;生不如死有多遥远-&#34;&gt;&lt;em&gt;&lt;strong&gt;《生不如死有多遥远》&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

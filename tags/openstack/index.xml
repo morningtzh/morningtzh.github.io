@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openstack | 瑟瑟和你说早安</title>
+    <link>/tags/openstack/</link>
+      <atom:link href="/tags/openstack/index.xml" rel="self" type="application/rss+xml" />
+    <description>openstack</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Tue, 20 Sep 2016 19:30:14 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>openstack</title>
+      <link>/tags/openstack/</link>
+    </image>
+    
+    <item>
+      <title>devstack安装镜像</title>
+      <link>/post/devstack-install-tips/</link>
+      <pubDate>Tue, 20 Sep 2016 19:30:14 +0000</pubDate>
+      <guid>/post/devstack-install-tips/</guid>
+      <description>&lt;h1 id=&#34;devstack安装镜像&#34;&gt;devstack安装镜像&lt;/h1&gt;
+&lt;h2 id=&#34;pip镜像&#34;&gt;pip镜像：&lt;/h2&gt;
+&lt;p&gt;pip 镜像我使用清华大学的，在可信列表（
+&lt;a href=&#34;www.douban.com&#34;&gt;豆瓣&lt;/a&gt;的可坑死啦，不在信任列表，安装会跳问题：豆瓣源『http://pypi.douban.com/simple』）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In file &amp;ldquo;~/.pip/pip.conf&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;[global] index-url = https://pypi.tuna.tsinghua.edu.cn/simple&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ubuntu-apt-镜像&#34;&gt;Ubuntu Apt 镜像&lt;/h2&gt;
+&lt;p&gt;apt镜像反正看你喜欢咯！！！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In file &amp;ldquo;/etc/apt/sources.list&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;openstack@openstack
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty main restricted universe multiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-security main restricted universe m
+ultiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-updates main restricted universe mu
+ltiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-proposed main restricted universe m
+ultiverse
+deb &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-backports main restricted universe
+multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty main restricted universe multiv
+erse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-security main restricted univer
+se multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-updates main restricted univers
+e multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-proposed main restricted univer
+se multiverse
+deb-src &lt;a href=&#34;http://mirrors.aliyun.com/ubuntu/&#34;&gt;http://mirrors.aliyun.com/ubuntu/&lt;/a&gt; trusty-backports main restricted unive
+rse multiverse&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+## openstack git 镜像
+
+In file ?/local.conf (官网并没说丢在哪里。。。我就 devstack 文件夹和用户主目录都丢了个)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;[[local|localrc]]
+ADMIN_PASSWORD=openstack
+DATABASE_PASSWORD=$ADMIN_PASSWORD
+RABBIT_PASSWORD=$ADMIN_PASSWORD
+SERVICE_PASSWORD=$ADMIN_PASSWORD&lt;/p&gt;
+&lt;p&gt;# Define images to be automatically downloaded during the DevStack built process.
+DOWNLOAD_DEFAULT_IMAGES=False
+IMAGE_URLS=&amp;quot;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;#change github to trystack
+GIT_BASE=${GIT_BASE:-http://git.trystack.cn}
+NOVNC_REPO=${NOVNC_REPO:-http://git.trystack.cn/kanaka/noVNC.git}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+这个镜像下载速度我家 20M 水管，下载速度为600+kiB/s
+
+## 小问题
+pypi 包更新的时候（~/devstack/file/get-pip.py文件）很容易断，我直接手机[GoodReader](https://itunes.apple.com/us/app/goodreader/id777310222?mt=8)下载好后，再电脑用 GoodReader 上的地址下的，速度很快。
+
+虚拟机内存1G 不够！！！会报错！！！
+
+哇靠。。。我电脑反正玩不来了，虚拟机给了2g 交换空间1g 全部占满，难怪听说要4g 内存。我还是光看看代码吧
+
+其他的安装就按 devstack 官网就行了
+
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -103,18 +103,53 @@
   </url>
   
   <url>
-    <loc>/post/c&#43;&#43;%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%8C%87%E5%BC%95/</loc>
-    <lastmod>2019-05-20T10:10:54+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/vision%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2019-01-12T12:52:23+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9C%80%E6%B1%82%E5%9C%A8%E5%93%AA%E9%87%8C/</loc>
     <lastmod>2018-10-12T12:23:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/devstack-install-tips/</loc>
+    <lastmod>2016-09-20T19:30:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/openstack/</loc>
+    <lastmod>2016-09-20T19:30:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/python/</loc>
+    <lastmod>2016-09-20T19:30:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/brainfuck/</loc>
+    <lastmod>2015-12-05T21:43:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/brainfuck-interpreter/</loc>
+    <lastmod>2015-12-05T21:43:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/cabal/</loc>
+    <lastmod>2015-12-05T21:43:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/el-capitan/</loc>
+    <lastmod>2015-12-05T21:43:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/haskell/</loc>
+    <lastmod>2015-12-05T21:43:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/install-ghc-on-mac/</loc>
+    <lastmod>2015-12-05T21:43:14+00:00</lastmod>
   </url>
   
   <url>
@@ -124,11 +159,6 @@
   
   <url>
     <loc>/tags/functional-programming/</loc>
-    <lastmod>2015-11-07T23:22:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/haskell/</loc>
     <lastmod>2015-11-07T23:22:35+08:00</lastmod>
   </url>
   
@@ -162,7 +192,31 @@
   </url>
   
   <url>
+    <loc>/categories/reading/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/reading/</loc>
+  </url>
+  
+  <url>
     <loc>/talk/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/whisky/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/wine/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/suntoryballantines/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/reading-mode/</loc>
   </url>
   
 </urlset>
