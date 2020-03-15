@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="MorningTZH">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="LYAH字典查询函数理解指南
+for what
+最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看
+《Learn You a Haskell for Great Good》恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。">
+
+  
+  <link rel="alternate" hreflang="zh-Hans" href="https://blog.morningtzh.com/post/about-haskell-1.html">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145734135-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-145734135-1', { 'anonymize_ip': true });
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu56606b72eae1823e5af44004a0b07113_957806_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu56606b72eae1823e5af44004a0b07113_957806_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://blog.morningtzh.com/post/about-haskell-1.html">
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="瑟瑟和你说早安">
+  <meta property="og:url" content="https://blog.morningtzh.com/post/about-haskell-1.html">
+  <meta property="og:title" content="关于haskell随便写点什么1 | 瑟瑟和你说早安">
+  <meta property="og:description" content="LYAH字典查询函数理解指南
+for what
+最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看
+《Learn You a Haskell for Great Good》恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。"><meta property="og:image" content="https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png">
+  <meta property="twitter:image" content="https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png"><meta property="og:locale" content="zh-Hans">
+  
+    
+      <meta property="article:published_time" content="2015-11-07T23:22:35&#43;08:00">
+    
+    <meta property="article:modified_time" content="2015-11-07T23:22:35&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.morningtzh.com/post/about-haskell-1.html"
+  },
+  "headline": "关于haskell随便写点什么1",
+  
+  "datePublished": "2015-11-07T23:22:35+08:00",
+  "dateModified": "2015-11-07T23:22:35+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "MorningTZH"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "瑟瑟和你说早安",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_192x192_fit_lanczos_2.png"
+    }
+  },
+  "description": "\u003ch1 id=\"lyah字典查询函数理解指南\"\u003eLYAH字典查询函数理解指南\u003c/h1\u003e\n\u003ch3 id=\"for-what-\"\u003efor what\u003c/h3\u003e\n\u003cp\u003e最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看\n\u003ca href=\"http://learnyouahaskell.com\" target=\"_blank\" rel=\"noopener\"\u003e《Learn You a Haskell for Great Good》\u003c/a\u003e恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+
+  
+  
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin="anonymous">
+  
+  <script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "hsl(339, 90%, 68%)",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "hsl(339, 90%, 68%)"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "本网站使用cookies来确保您在本网站上获得最佳体验。",
+        "dismiss": "知道了!",
+        "link": "了解更多",
+        "href": "https://www.cookiesandyou.com"
+      }
+    })});
+  </script>
+
+
+
+  
+
+
+
+
+
+  <title>关于haskell随便写点什么1 | 瑟瑟和你说早安</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>搜索</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_0x70_resize_lanczos_2.png" alt="瑟瑟和你说早安"></a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="切换导航">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_0x70_resize_lanczos_2.png" alt="瑟瑟和你说早安"></a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>关于haskell随便写点什么1</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Nov 7, 2015
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 分钟阅读时长
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/coding.html">coding</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="lyah字典查询函数理解指南">LYAH字典查询函数理解指南</h1>
+<h3 id="for-what-">for what</h3>
+<p>最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看
+<a href="http://learnyouahaskell.com" target="_blank" rel="noopener">《Learn You a Haskell for Great Good》</a>恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。</p>
+<h3 id="那个函数">那个函数</h3>
+<p>这是一个从字典中找值的函数</p>
+<blockquote>
+<p>findKey :: (Eq k) =&gt; k -&gt; [(k,v)] -&gt; v<br>
+findKey key xs = snd . head . filter (\(k,v) -&gt; key == k) $ xs</p>
+</blockquote>
+<h3 id="举个栗子">举个栗子</h3>
+<p>这个例子同样是从LYAH中搞出来的：</p>
+<blockquote>
+<p>phoneBook = [(&ldquo;betty&rdquo;,&ldquo;555-2938&rdquo;) ,
+      (&ldquo;bonnie&rdquo;,&ldquo;452-2928&rdquo;) , <br>
+      (&ldquo;patsy&rdquo;,&ldquo;493-2928&rdquo;) ,<br>
+      (&ldquo;lucille&rdquo;,&ldquo;205-2928&rdquo;) ,<br>
+      (&ldquo;wendy&rdquo;,&ldquo;939-8282&rdquo;) ,<br>
+      (&ldquo;penny&rdquo;,&ldquo;853-2492&rdquo;) ]</p>
+</blockquote>
+<h3 id="函数申明">函数申明</h3>
+<blockquote>
+<p>findKey :: (Eq k) =&gt; k -&gt; [(k,v)] -&gt; v</p>
+</blockquote>
+<p>在函数中，首先第一行是函数申明，他和其他语言一样表明了输入输出。<br>
+在haskell中函数仅支持一个返回值，支持多个入参。在上面的申明中 <strong>findKey</strong> 是函数名，以 &ldquo;<strong>::</strong>&ldquo;来标明函数，后面一共有四个东西，</p>
+<blockquote>
+<p>(Eq k) =&gt; k -&gt; [(k,v)] -&gt; v</p>
+</blockquote>
+<p>首先可以仅理解后三个：</p>
+<blockquote>
+<p>k -&gt; [(k,v)] -&gt; v</p>
+</blockquote>
+<p>这是函数参数和返回值，这个函数中一共有两个参数和一个返回值，函数申明中的最后一个箭头&rdquo;<strong>-&gt;</strong>&ldquo;是一定指向返回值的，当然&rdquo;<strong>k v</strong>&ldquo;这两个字母一定会让人觉得很疑惑，在haskell中函数声明中的字母其实只代表一个<del>变量类型</del>哦 sorry，haskell中没有变量，他只有常量，所有都是静态参数，所以这个字母代表了一种模糊的参数类型，这仅表示上面两个k需要是同样的类型，而两个v也需要是同样的类型，随便用abcd也可以。所以：</p>
+<blockquote>
+<p>&rdquo;<strong>k</strong>&rdquo; &ldquo;<strong>[(k,v)]</strong>&rdquo; 是两个入参，第一个参数是k类型的参数，第二个参数是一个list，list中是一个有两个类型为k v为成员的tuple</p>
+<p>&rdquo;<strong>v</strong>&rdquo; 是函数的返回值，它的类型需要和入参list中tuple第二个元素一样。</p>
+</blockquote>
+<p>然后我们来说一说&rdquo;<strong>(Eq k) =&gt;</strong>&quot;, &ldquo;<strong>=&gt;</strong>&ldquo;是对后面参数的约束条件，&quot;<strong>(Eq k)</strong>&ldquo;说明后面的 &ldquo;<strong>k</strong>&rdquo; 类型的参数必须是一个Eq的派生类型，这种类型是可以比较的，比如int，char。</p>
+<p>在事例中我们可以按照</p>
+<blockquote>
+<p><em><strong>findKey &ldquo;betty&rdquo; phoneBook</strong></em></p>
+</blockquote>
+<p>的方式进行调用，其中phoneBook可扩展成的[(&ldquo;betty&rdquo;,&ldquo;555-2938&rdquo;)&hellip;]，看起来形式就差不多了。</p>
+<h3 id="函数实体">函数实体</h3>
+<h4 id="函数调用">函数调用</h4>
+<blockquote>
+<p>findKey key xs = snd . head . filter (\(k,v) -&gt; key == k) $ xs</p>
+</blockquote>
+<p>这是函数体，在等号左边的是函数调用的方式，在这个函数中，调用方式是：</p>
+<blockquote>
+<p>findKey key xs<br>
+example:<em><strong>findKey &ldquo;betty&rdquo; phoneBook</strong></em></p>
+</blockquote>
+<p>当然也可以是中序，这个就另讲了。这个函数调用方式也是一种模式匹配，这边的&rdquo;<strong>key</strong>&quot;、&quot;<strong>xs</strong>&ldquo;匹配了函数的两个入参&rdquo;<strong>k</strong>&quot;、&quot;<strong>[(k,v)]</strong>&rdquo;</p>
+<h4 id="filter">filter</h4>
+<p>接下来对这两个入参进行操作(先忽略&rdquo;<strong>$</strong>&ldquo;符号)：</p>
+<blockquote>
+<p>filter (\(k,v) -&gt; key == k) xs</p>
+</blockquote>
+<p>首先是filter，这个是对一个list的过滤器，是&rdquo;<strong>filter <em>f</em> list</strong>&rdquo; 这样的模式，对list的每一个元素使用函数<em><strong>f</strong></em>进行匹配。在此例中</p>
+<blockquote>
+<p>(\(k,v) -&gt; key == k)</p>
+</blockquote>
+<p>就是filter中的 <em><strong>f</strong></em> ，haskell中使用 \做lambda，lambda就是一个隐式函数。<br>
+在lambda中&rdquo;<strong>-&gt;</strong>&ldquo;是用来区分参数和lambda函数本体的，在&rdquo;<strong>-&gt;</strong>&ldquo;左边是函数参数，可做模式匹配。在此lambda函数中，用&rdquo;<strong>(k,v)</strong>&ldquo;来匹配list成员tuple的成员。第一个&rdquo;<strong>(k,v)</strong>&ldquo;就是：</p>
+<blockquote>
+<p><em><strong>(&ldquo;betty&rdquo;,&ldquo;555-2938&rdquo;)</strong></em></p>
+</blockquote>
+<p>此lambda用来匹配 xs 这个list取出来的每一个元组，并且判断此元组中的键值 k 是否能匹配入参的 key。并且filter会将符合条件的元素==重新组合==成一个新的list，在此例中，filter结果就是</p>
+<blockquote>
+<p><em><strong>[(&ldquo;betty&rdquo;,&ldquo;555-2938&rdquo;)]</strong></em></p>
+</blockquote>
+<p>后面键值不为***&ldquo;betty&rdquo;***的元组就会被舍弃，这是仅有一个元素的list。</p>
+<h4 id="snd-head">snd head</h4>
+<p>接下来这个是head，这个函数用来取list的头部，取出来就是第一个元素，例如</p>
+<blockquote>
+<p>***head [3,2,5,3,6,3,4,3,7]***的结果就是3</p>
+</blockquote>
+<p>在此例中结果大致是：</p>
+<blockquote>
+<p><em><strong>(&ldquo;betty&rdquo;,&ldquo;555-2938&rdquo;)</strong></em></p>
+</blockquote>
+<p>是的，你会发现，这仅仅是去掉了中括号，这代表着这不再是一个list了。</p>
+<p>接下来snd用来取tuple中的第二个元素，就是字典中的value，也就是</p>
+<blockquote>
+<p><em><strong>&ldquo;555-2938&rdquo;</strong></em></p>
+</blockquote>
+<p>就能得出函数返回值了。这边需要注意的是，snd的参数只能是二元tuple。</p>
+<h4 id="函数组合">函数组合</h4>
+<p>snd . head . filter 这个是函数组合，相当于一下子调用了三个函数。这个可以用数学公式来表示：</p>
+<blockquote>
+<p>(f.g)(x) = f(g(x))</p>
+</blockquote>
+<p>在此处</p>
+<blockquote>
+<p>snd.head.filter f $ list = snd(head(filter f list)))</p>
+</blockquote>
+<p>在haskell中，函数组合是一个让代码简洁明了的手段，但是他也有它的局限性，就是说他的参数只能唯一，函数组合仅能包含一个参数。但是此处柯里化使得组合函数使用多参成为可能。</p>
+<h4 id="柯里化currying">柯里化（Currying）</h4>
+<p>柯里化是现代化语言中包含的一个非常有趣的特性之一，在js、swift中也支持柯里化（非常遗憾swift仅在Language Reference中提到了一点）。<br>
+Currying是指函数可以不完全调用，他可以将多参函数转化为单参函数来求解。例如&rdquo;<strong>+</strong>&ldquo;函数（对，在haskell中&rdquo;<strong>+</strong>&ldquo;也是一个函数）</p>
+<blockquote>
+<p><em><strong>5+4</strong></em>   =======&gt;  <em><strong>9</strong></em></p>
+</blockquote>
+<p>其可以转化为：</p>
+<blockquote>
+<p><em><strong>let plusFive = (+5)</strong></em></p>
+</blockquote>
+<p>这样一来我们就多了一个新的函数叫做<em><strong>plusFive</strong></em>，我们来调用它：</p>
+<blockquote>
+<p><em><strong>plusFive 4</strong></em>   =======&gt;   <em><strong>9</strong></em><br>
+<em><strong>plusFive 167</strong></em> =======&gt;   <em><strong>172</strong></em></p>
+</blockquote>
+<p>ok，Currying就是这样一个好玩的特性，我自己认为，这个和惰性有关，因为Curried Function切切实实要在有完整入参时才会调用。</p>
+<p>对于本例来说，我们将</p>
+<blockquote>
+<p><em><strong>filter (\(k,v) -&gt; key == k) xs</strong></em> Currying成
+***(filter (\(k,v) -&gt; key == k)) xs***</p>
+</blockquote>
+<p>在组合函数中其实是组合成了</p>
+<blockquote>
+<p>***(snd . head . filter (\(k,v) -&gt; key == k)) xs***</p>
+</blockquote>
+<p>在原函数中，少了&rdquo;<strong>()</strong>&quot;,多了&rdquo;<strong>$</strong>&quot;:</p>
+<blockquote>
+<p><em><strong>snd . head . filter (\(k,v) -&gt; key == k) $ xs</strong></em></p>
+</blockquote>
+<p>这边用到了的&rdquo;<strong>$</strong>&quot;,如果缺少&rdquo;<strong>$</strong>&rdquo;</p>
+<blockquote>
+<p><em><strong>snd . head . filter (\(k,v) -&gt; key == k) xs</strong></em> 会被理解成<br>
+<em><strong>snd . head . (filter (\(k,v) -&gt; key == k) xs)</strong></em></p>
+</blockquote>
+<p>而这绝对是会被编译器理解不能的句子，会报错，&quot;<strong>$</strong>&ldquo;改变了<em><strong>filter</strong></em>函数的匹配方式，在haskell中&rdquo;<strong>$</strong>&ldquo;是拥有最低优先级的函数调用符，相当于一个函数，所以会变成</p>
+<blockquote>
+<p><em><strong>snd . head . filter (\(k,v) -&gt; key == k) ($ xs)</strong></em></p>
+</blockquote>
+<p>函数组合的优先级大于<em><strong>$ xs</strong></em>的优先级，就会前面线组合起来。&quot;<strong>$</strong>&ldquo;是一个非常节约括号的函数调用符.</p>
+<h3 id="函数结论">函数结论</h3>
+<blockquote>
+<p><em><strong>findKey &ldquo;betty&rdquo; phoneBook</strong></em><br>
+***&ldquo;555-2938&rdquo;***<br>
+***findKey &ldquo;patsy&rdquo; phoneBook***<br>
+***&ldquo;493-2928&rdquo;***</p>
+</blockquote>
+<p>就此结束吧，心血来潮谢谢，先打上个标签1，说不定还有2，3，4&hellip;呢，也或许会太监了呢。</p>
+    </div>
+
+    
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/haskell.html">haskell</a>
+  
+  <a class="badge badge-light" href="/tags/currying.html">currying</a>
+  
+  <a class="badge badge-light" href="/tags/functional-programming.html">functional programming</a>
+  
+</div>
+
+
+<p style="color: darkgray;float: right; font-size: small;">
+  <span  id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> reads</span>
+</p>
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://blog.morningtzh.com/post/about-haskell-1.html&amp;text=%e5%85%b3%e4%ba%8ehaskell%e9%9a%8f%e4%be%bf%e5%86%99%e7%82%b9%e4%bb%80%e4%b9%881" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://blog.morningtzh.com/post/about-haskell-1.html&amp;t=%e5%85%b3%e4%ba%8ehaskell%e9%9a%8f%e4%be%bf%e5%86%99%e7%82%b9%e4%bb%80%e4%b9%881" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=%e5%85%b3%e4%ba%8ehaskell%e9%9a%8f%e4%be%bf%e5%86%99%e7%82%b9%e4%bb%80%e4%b9%881&amp;body=https://blog.morningtzh.com/post/about-haskell-1.html" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://blog.morningtzh.com/post/about-haskell-1.html&amp;title=%e5%85%b3%e4%ba%8ehaskell%e9%9a%8f%e4%be%bf%e5%86%99%e7%82%b9%e4%bb%80%e4%b9%881" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=%e5%85%b3%e4%ba%8ehaskell%e9%9a%8f%e4%be%bf%e5%86%99%e7%82%b9%e4%bb%80%e4%b9%881%20https://blog.morningtzh.com/post/about-haskell-1.html" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://telegram.me/share/url?url=https://blog.morningtzh.com/post/about-haskell-1.html&amp;text=%e5%85%b3%e4%ba%8ehaskell%e9%9a%8f%e4%be%bf%e5%86%99%e7%82%b9%e4%bb%80%e4%b9%881" target="_blank" rel="noopener" class="share-btn-telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="http://chart.apis.google.com/chart?cht=qr&amp;chs=104x104&amp;chld=L%7c0&amp;chl=https://blog.morningtzh.com/post/about-haskell-1.html" target="_blank" rel="noopener" class="share-btn-wechat">
+          <i class="fab fa-weixin"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://blog.morningtzh.com/post/about-haskell-1.html&amp;title=%e5%85%b3%e4%ba%8ehaskell%e9%9a%8f%e4%be%bf%e5%86%99%e7%82%b9%e4%bb%80%e4%b9%881" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/morningtzh/avatar_hu6d03ace990a63acb769e531abea584b3_407134_270x270_fill_q90_lanczos_center.jpeg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://blog.morningtzh.com/">MorningTZH</a></h5>
+      
+      <p class="card-text">喵？</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/morningtzh" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+<section id="comments">
+  
+    
+<script src="https://utteranc.es/client.js"
+        repo="morningtzh/blog_comments"
+        issue-term="title"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+</section>
+
+
+
+
+<div class="article-widget">
+  
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">下一页</div>
+    <a href="/post/install-ghc-on-mac.html" rel="next">Install GHC on El Capitan</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">上一页</div>
+    <a href="/post/suntoryballantines.html" rel="prev">三得利老牌和百龄坛特醇的对比</a>
+  </div>
+  
+</div>
+
+</div>
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" integrity="sha256-lyWCDMnMeZiXRi7Zl54sZGKYmgQs4izcT7+tKc+KUBk=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/cpp.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/javascript.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/go.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"没有找到结果","placeholder":"搜索...","results":"搜索结果"};
+      const content_type = {
+        'post': "文章",
+        'project': "项目",
+        'publication' : "出版物",
+        'talk' : "演讲"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.c816d323c3a55093dae0829b44ea1ca8.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<footer class="site-footer">
+  
+
+  <p style="color: darkgray;">
+    <span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span> views, </span>
+    <span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span> visitors.</span>
+  </p>
+  <p class="powered-by">
+    ©MorningTZH &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">引用</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> 复制
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> 下载
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

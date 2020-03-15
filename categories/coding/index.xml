@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>coding | 瑟瑟和你说早安</title>
-    <link>https://blog.morningtzh.com/categories/coding/</link>
+    <link>https://blog.morningtzh.com/categories/coding.html</link>
       <atom:link href="https://blog.morningtzh.com/categories/coding/index.xml" rel="self" type="application/rss+xml" />
     <description>coding</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Tue, 29 Oct 2019 15:50:50 +0800</lastBuildDate>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png</url>
       <title>coding</title>
-      <link>https://blog.morningtzh.com/categories/coding/</link>
+      <link>https://blog.morningtzh.com/categories/coding.html</link>
     </image>
     
     <item>
       <title>boost.asio核心浅析</title>
-      <link>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</link>
+      <link>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90.html</link>
       <pubDate>Tue, 29 Oct 2019 15:50:50 +0800</pubDate>
-      <guid>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</guid>
+      <guid>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90.html</guid>
       <description>&lt;h1 id=&#34;boostasio核心浅析&#34;&gt;boost.asio核心浅析&lt;/h1&gt;
 &lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
 </description>
@@ -24,9 +24,9 @@
     
     <item>
       <title>C&#43;&#43;公共模块回调函数实现方式</title>
-      <link>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</link>
+      <link>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F.html</link>
       <pubDate>Thu, 05 Sep 2019 11:40:07 +0800</pubDate>
-      <guid>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</guid>
+      <guid>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F.html</guid>
       <description>&lt;h1 id=&#34;c公共模块回调函数实现方式&#34;&gt;C++公共模块回调函数实现方式&lt;/h1&gt;
 &lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
 &lt;p&gt;在代码实现时，常常会遇到模块间函数调用的问题。对于一个公共模块，会有明确的public方法来作为接口，但是当需要发送消息（此处仅讨论回调函数）到外部业务模块的时候就很难去定义回调函数的类型。通常在命令式编程中会采用函数指针的方法，但在OO中调用者是一个类的话很难将类成员函数发给基础模块做回调函数。&lt;/p&gt;
@@ -37,9 +37,9 @@
     
     <item>
       <title>devstack安装镜像</title>
-      <link>https://blog.morningtzh.com/post/devstack-install-tips/</link>
+      <link>https://blog.morningtzh.com/post/devstack-install-tips.html</link>
       <pubDate>Tue, 20 Sep 2016 19:30:14 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/devstack-install-tips/</guid>
+      <guid>https://blog.morningtzh.com/post/devstack-install-tips.html</guid>
       <description>&lt;h1 id=&#34;devstack安装镜像&#34;&gt;devstack安装镜像&lt;/h1&gt;
 &lt;h2 id=&#34;pip镜像&#34;&gt;pip镜像：&lt;/h2&gt;
 &lt;p&gt;pip 镜像我使用清华大学的，在可信列表（
@@ -114,9 +114,9 @@ pypi 包更新的时候（~/devstack/file/get-pip.py文件）很容易断，我�
     
     <item>
       <title>Brainfuck解释器[on python]</title>
-      <link>https://blog.morningtzh.com/post/brainfuck-interpreter/</link>
+      <link>https://blog.morningtzh.com/post/brainfuck-interpreter.html</link>
       <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/brainfuck-interpreter/</guid>
+      <guid>https://blog.morningtzh.com/post/brainfuck-interpreter.html</guid>
       <description>&lt;p&gt;阿婆主脑容量不够，ぜんぜん不能在大脑中运行 &lt;strong&gt;Brainfuck&lt;/strong&gt; 程序，而且发现连运行过程都想不出来啊，
 然而就这么几个字符完全可以自己写解释器嘛，并且可以打印出运行过程，而且可以试试看做成playground
 的形式呢，想想还是挺有趣的。&lt;/p&gt;
@@ -356,9 +356,9 @@ BF() method:
     
     <item>
       <title>Install GHC on El Capitan</title>
-      <link>https://blog.morningtzh.com/post/install-ghc-on-mac/</link>
+      <link>https://blog.morningtzh.com/post/install-ghc-on-mac.html</link>
       <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/install-ghc-on-mac/</guid>
+      <guid>https://blog.morningtzh.com/post/install-ghc-on-mac.html</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;最近因为在学Haskell，所以需要在电脑上安装GHC，然而遇到了一些困难，所以需要做一下记录。&lt;/p&gt;
 &lt;p&gt;##安装GHC##
@@ -399,9 +399,9 @@ cabal: /usr/bin/ar: permission denied&lt;/p&gt;
     
     <item>
       <title>关于haskell随便写点什么1</title>
-      <link>https://blog.morningtzh.com/post/about-haskell-1/</link>
+      <link>https://blog.morningtzh.com/post/about-haskell-1.html</link>
       <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
-      <guid>https://blog.morningtzh.com/post/about-haskell-1/</guid>
+      <guid>https://blog.morningtzh.com/post/about-haskell-1.html</guid>
       <description>&lt;h1 id=&#34;lyah字典查询函数理解指南&#34;&gt;LYAH字典查询函数理解指南&lt;/h1&gt;
 &lt;h3 id=&#34;for-what-&#34;&gt;for what&lt;/h3&gt;
 &lt;p&gt;最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | 瑟瑟和你说早安</title>
-    <link>https://blog.morningtzh.com/authors/</link>
+    <link>https://blog.morningtzh.com/authors.html</link>
       <atom:link href="https://blog.morningtzh.com/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png</url>
       <title>Authors</title>
-      <link>https://blog.morningtzh.com/authors/</link>
+      <link>https://blog.morningtzh.com/authors.html</link>
     </image>
     
     <item>
       <title></title>
-      <link>https://blog.morningtzh.com/authors/morningtzh/</link>
+      <link>https://blog.morningtzh.com/authors/morningtzh.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/authors/morningtzh/</guid>
+      <guid>https://blog.morningtzh.com/authors/morningtzh.html</guid>
       <description>&lt;p&gt;叮！这是一个非常混乱的站点，全是 XJB 乱写的文章（没错！很多都只写了一半！&lt;/p&gt;
 &lt;p&gt;甚至连主题都还没设定好。哦！我太菜了！&lt;/p&gt;
 </description>
@@ -24,18 +24,18 @@
     
     <item>
       <title></title>
-      <link>https://blog.morningtzh.com/authors/tardis/</link>
+      <link>https://blog.morningtzh.com/authors/tardis.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/authors/tardis/</guid>
+      <guid>https://blog.morningtzh.com/authors/tardis.html</guid>
       <description>&lt;p&gt;Never give up!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://blog.morningtzh.com/authors/yunxia/</link>
+      <link>https://blog.morningtzh.com/authors/yunxia.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/authors/yunxia/</guid>
+      <guid>https://blog.morningtzh.com/authors/yunxia.html</guid>
       <description>&lt;p&gt;一个瞎折腾活在楚门世界的小菜鸡&lt;/p&gt;
 </description>
     </item>

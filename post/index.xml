@@ -2,21 +2,422 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | 瑟瑟和你说早安</title>
-    <link>https://blog.morningtzh.com/post/</link>
+    <link>https://blog.morningtzh.com/post.html</link>
       <atom:link href="https://blog.morningtzh.com/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Tue, 03 Dec 2019 18:30:07 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sun, 15 Mar 2020 09:56:07 +0800</lastBuildDate>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png</url>
       <title>Posts</title>
-      <link>https://blog.morningtzh.com/post/</link>
+      <link>https://blog.morningtzh.com/post.html</link>
     </image>
     
     <item>
+      <title>乐理笔记1--音程</title>
+      <link>https://blog.morningtzh.com/post/%E4%B9%90%E7%90%86/%E4%B9%90%E7%90%86%E7%AC%94%E8%AE%B01-%E9%9F%B3%E7%A8%8B.html</link>
+      <pubDate>Sun, 15 Mar 2020 09:56:07 +0800</pubDate>
+      <guid>https://blog.morningtzh.com/post/%E4%B9%90%E7%90%86/%E4%B9%90%E7%90%86%E7%AC%94%E8%AE%B01-%E9%9F%B3%E7%A8%8B.html</guid>
+      <description>&lt;h1 id=&#34;乐理笔记1--音程&#34;&gt;乐理笔记1&amp;ndash;音程&lt;/h1&gt;
+&lt;h2&gt;目录&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#1-音&#34;&gt;1. 音&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#2-泛音列与音色&#34;&gt;2. 泛音列与音色&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#3-音程&#34;&gt;3. 音程&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#31-一度和八度&#34;&gt;3.1 一度和八度&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#32-大小二度&#34;&gt;3.2 大小二度&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#33-大小三度&#34;&gt;3.3 大小三度&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#34-纯四度及增四度&#34;&gt;3.4 纯四度及增四度&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#35-纯五度及减五度&#34;&gt;3.5 纯五度及减五度&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#36-大小六度和大小七度&#34;&gt;3.6 大小六度和大小七度&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#37-音程总结&#34;&gt;3.7 音程总结&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;p&gt;本系列文章用于总结目前学习到的乐理知识。&lt;/p&gt;
+&lt;h2 id=&#34;1-音&#34;&gt;1. 音&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;声音&lt;/strong&gt;是振动产生的
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e8%81%b2%e6%b3%a2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;声波&lt;/a&gt;，通过
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e4%bb%8b%e8%b4%a8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;介质&lt;/a&gt;（
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e7%a9%ba%e6%b0%a3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;气体&lt;/a&gt;、
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e5%9b%ba%e9%ab%94&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;固体&lt;/a&gt;、
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e6%b6%b2%e9%ab%94&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;液体&lt;/a&gt;）传播并能被人或动物
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e5%90%ac%e8%a7%89&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;听觉&lt;/a&gt;
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e5%99%a8%e5%ae%98&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;器官&lt;/a&gt;所感知的
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e6%b3%a2%e5%8b%95&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;波动&lt;/a&gt;现象。&lt;/p&gt;
+&lt;p&gt;声音的频率一般会以
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e8%b5%ab%e5%85%b9&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;赫兹&lt;/a&gt;表示，记为Hz，指每秒钟周期性震动的次数。而
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e5%88%86%e8%b2%9d&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;分贝&lt;/a&gt;是用来表示声音强度的单位，记为dB。&lt;/p&gt;
+&lt;p&gt;—— wikipadia&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中&lt;strong&gt;标准音&lt;/strong&gt;为 440HZ，定义为 A，位于中央 C 之上第一个 A，在键盘上为 A4。&lt;/p&gt;
+&lt;h2 id=&#34;2-泛音列与音色&#34;&gt;2. 泛音列与音色&lt;/h2&gt;
+&lt;p&gt;假设某一个弦可以产生 100HZ的基波，那么他其实还会分段震动。由于驻波原理（两个
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e6%b3%a2%e9%95%b7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;波长&lt;/a&gt;、
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e9%80%b1%e6%9c%9f&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;周期&lt;/a&gt;、
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e9%a0%bb%e7%8e%87&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;频率&lt;/a&gt;和波速皆相同的
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e6%ad%a3%e5%bc%a6%e4%bf%a1%e5%8f%b7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;正弦波&lt;/a&gt;相向行进
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e5%b9%b2%e6%b6%89_%28%e7%89%a9%e7%90%86%e5%ad%a6%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;干涉&lt;/a&gt;而成的合成波）他们和基波的震动频率是倍数关系。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E4%B9%90%E7%90%86%E7%AC%94%E8%AE%B01--%E9%9F%B3%E7%A8%8B.assets/Moodswingerscale.svg&#34; alt=&#34;绳子抖动&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果某个弦的基波为 110HZ，那么他的泛音列为 220HZ、330HZ、440HZ。。。&lt;/p&gt;
+&lt;p&gt;不同音源的音色不同就是源于泛音列强弱的不同。
+我们可以听见某两样乐器的音高是相同的，那是因为基音是强度最强的音，而后音色是通过泛音列不同频率声波的强度特征来辨认的。&lt;/p&gt;
+&lt;h2 id=&#34;3-音程&#34;&gt;3. 音程&lt;/h2&gt;
+&lt;p&gt;两个音之间的距离叫音程。我们简单一点按照音乐键盘来说明，可以看到下图键盘上为 12 个键一组，其中五个黑键七个白键。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E4%B9%90%E7%90%86%E7%AC%94%E8%AE%B01--%E9%9F%B3%E7%A8%8B.assets/NoteNamesFrequenciesAndMidiNumbers.svg&#34; alt=&#34;音乐键盘&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;音度&lt;/strong&gt;：其中每两个白键之间相差一度，一组白键为 CDEFGAB，从意式唱名上看就是 do/re/mi/fa/sol/la/ti。是七个基本音（或者叫自然音）之间的度量单位。从 C 到 C 就相差了八度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;音数&lt;/strong&gt;：每两个按键之间就是一个半音，中间隔一个按键就是全音。在这里所有按键都算，因此 CDEFGAB 七个音之间两两的音数就是，全全半全全全半。&lt;/p&gt;
+&lt;p&gt;用以下一张表总结下&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;根音-&amp;gt;冠音&lt;/th&gt;
+&lt;th&gt;-&amp;gt; C&lt;/th&gt;
+&lt;th&gt;-&amp;gt; D&lt;/th&gt;
+&lt;th&gt;-&amp;gt; E&lt;/th&gt;
+&lt;th&gt;-&amp;gt; F&lt;/th&gt;
+&lt;th&gt;-&amp;gt; G&lt;/th&gt;
+&lt;th&gt;-&amp;gt; A&lt;/th&gt;
+&lt;th&gt;-&amp;gt; B&lt;/th&gt;
+&lt;th&gt;-&amp;gt; C&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;C -&amp;gt;&lt;/td&gt;
+&lt;td&gt;一度&lt;br&gt;0半音&lt;/td&gt;
+&lt;td&gt;二度&lt;br&gt;2半音&lt;/td&gt;
+&lt;td&gt;三度&lt;br&gt;4半音&lt;/td&gt;
+&lt;td&gt;四度&lt;br&gt;5半音&lt;/td&gt;
+&lt;td&gt;五度&lt;br&gt;7半音&lt;/td&gt;
+&lt;td&gt;六度&lt;br&gt;9半音&lt;/td&gt;
+&lt;td&gt;七度&lt;br&gt;11半音&lt;/td&gt;
+&lt;td&gt;八度&lt;br&gt;12半音&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;D -&amp;gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;一度&lt;br&gt;0半音&lt;/td&gt;
+&lt;td&gt;二度&lt;br&gt;2半音&lt;/td&gt;
+&lt;td&gt;三度&lt;br&gt;3半音&lt;/td&gt;
+&lt;td&gt;四度&lt;br&gt;5半音&lt;/td&gt;
+&lt;td&gt;五度&lt;br&gt;7半音&lt;/td&gt;
+&lt;td&gt;六度&lt;br&gt;9半音&lt;/td&gt;
+&lt;td&gt;七度&lt;br&gt;11半音&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;E -&amp;gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;一度&lt;br&gt;0半音&lt;/td&gt;
+&lt;td&gt;二度&lt;br&gt;1半音&lt;/td&gt;
+&lt;td&gt;三度&lt;br&gt;3半音&lt;/td&gt;
+&lt;td&gt;四度&lt;br&gt;5半音&lt;/td&gt;
+&lt;td&gt;五度&lt;br&gt;7半音&lt;/td&gt;
+&lt;td&gt;六度&lt;br&gt;9半音&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;F -&amp;gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;一度&lt;br&gt;0半音&lt;/td&gt;
+&lt;td&gt;二度&lt;br&gt;2半音&lt;/td&gt;
+&lt;td&gt;三度&lt;br&gt;4半音&lt;/td&gt;
+&lt;td&gt;四度&lt;br&gt;6半音&lt;/td&gt;
+&lt;td&gt;五度&lt;br&gt;7半音&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;G -&amp;gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;一度&lt;br&gt;0半音&lt;/td&gt;
+&lt;td&gt;二度&lt;br&gt;2半音&lt;/td&gt;
+&lt;td&gt;三度&lt;br&gt;4半音&lt;/td&gt;
+&lt;td&gt;四度&lt;br&gt;5半音&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;A -&amp;gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;一度&lt;br&gt;0半音&lt;/td&gt;
+&lt;td&gt;二度&lt;br&gt;2半音&lt;/td&gt;
+&lt;td&gt;三度&lt;br&gt;3半音&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;B -&amp;gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;一度&lt;br&gt;0半音&lt;/td&gt;
+&lt;td&gt;二度&lt;br&gt;1半音&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C -&amp;gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;一度&lt;br&gt;0半音&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;31-一度和八度&#34;&gt;3.1 一度和八度&lt;/h2&gt;
+&lt;p&gt;一度是自己和自己的音，八度是自己和下一组自己的音。均为纯一度或纯八度。都是完全音程。以下均以 C 大调和弦为例。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;C-&amp;gt;C&lt;/th&gt;
+&lt;th&gt;D-&amp;gt;D&lt;/th&gt;
+&lt;th&gt;E-&amp;gt;E&lt;/th&gt;
+&lt;th&gt;F-&amp;gt;F&lt;/th&gt;
+&lt;th&gt;G-&amp;gt;G&lt;/th&gt;
+&lt;th&gt;A-&amp;gt;A&lt;/th&gt;
+&lt;th&gt;B-&amp;gt;B&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;减五度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;C-&amp;gt;C&lt;sup&gt;8va&lt;/sup&gt;&lt;/th&gt;
+&lt;th&gt;D-&amp;gt;D&lt;sup&gt;8va&lt;/sup&gt;&lt;/th&gt;
+&lt;th&gt;E-&amp;gt;E&lt;sup&gt;8va&lt;/sup&gt;&lt;/th&gt;
+&lt;th&gt;F-&amp;gt;F&lt;sup&gt;8va&lt;/sup&gt;&lt;/th&gt;
+&lt;th&gt;G-&amp;gt;G&lt;sup&gt;8va&lt;/sup&gt;&lt;/th&gt;
+&lt;th&gt;A-&amp;gt;A&lt;sup&gt;8va&lt;/sup&gt;&lt;/th&gt;
+&lt;th&gt;B-&amp;gt;B&lt;sup&gt;8va&lt;/sup&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;减五度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;32-大小二度&#34;&gt;3.2 大小二度&lt;/h2&gt;
+&lt;p&gt;相邻的两个自然音为一个二度，但其音数不一定为 1，在 EF、BC 之间为半音。我们将有两个半音的二度称为大二度，只有一个半音的二度称为小二度。当然，小二度不等于半音。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;C-&amp;gt;D&lt;/th&gt;
+&lt;th&gt;D-&amp;gt;E&lt;/th&gt;
+&lt;th&gt;E-&amp;gt;F&lt;/th&gt;
+&lt;th&gt;F-&amp;gt;G&lt;/th&gt;
+&lt;th&gt;G-&amp;gt;A&lt;/th&gt;
+&lt;th&gt;A-&amp;gt;B&lt;/th&gt;
+&lt;th&gt;B-&amp;gt;C&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;二度&lt;/td&gt;
+&lt;td&gt;大二度&lt;/td&gt;
+&lt;td&gt;大二度&lt;/td&gt;
+&lt;td&gt;小二度&lt;/td&gt;
+&lt;td&gt;大二度&lt;/td&gt;
+&lt;td&gt;大二度&lt;/td&gt;
+&lt;td&gt;大二度&lt;/td&gt;
+&lt;td&gt;小二度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;33-大小三度&#34;&gt;3.3 大小三度&lt;/h2&gt;
+&lt;p&gt;三度是由中间间隔一个音的两个自然音组成，我们将有四个半音的三度称为大三度，只有三个半音的称为小三度。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;C-&amp;gt;E&lt;/th&gt;
+&lt;th&gt;D-&amp;gt;F&lt;/th&gt;
+&lt;th&gt;E-&amp;gt;G&lt;/th&gt;
+&lt;th&gt;F-&amp;gt;A&lt;/th&gt;
+&lt;th&gt;G-&amp;gt;B&lt;/th&gt;
+&lt;th&gt;A-&amp;gt;C&lt;/th&gt;
+&lt;th&gt;B-&amp;gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;三度&lt;/td&gt;
+&lt;td&gt;大三度&lt;/td&gt;
+&lt;td&gt;小三度&lt;/td&gt;
+&lt;td&gt;小三度&lt;/td&gt;
+&lt;td&gt;大三度&lt;/td&gt;
+&lt;td&gt;大三度&lt;/td&gt;
+&lt;td&gt;小三度&lt;/td&gt;
+&lt;td&gt;小三度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;34-纯四度及增四度&#34;&gt;3.4 纯四度及增四度&lt;/h2&gt;
+&lt;p&gt;四度由中间相隔两个按键的自然音组成。纯四度音由 5 个半音组成，而 F-&amp;gt;B 为六个半音，我们称之增四度，增四度为不协和音，听着会给人不安的感觉。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;C-&amp;gt;F&lt;/th&gt;
+&lt;th&gt;D-&amp;gt;G&lt;/th&gt;
+&lt;th&gt;E-&amp;gt;A&lt;/th&gt;
+&lt;th&gt;F-&amp;gt;B&lt;/th&gt;
+&lt;th&gt;G-&amp;gt;C&lt;/th&gt;
+&lt;th&gt;A-&amp;gt;D&lt;/th&gt;
+&lt;th&gt;B-&amp;gt;E&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;四度&lt;/td&gt;
+&lt;td&gt;纯四度&lt;/td&gt;
+&lt;td&gt;纯四度&lt;/td&gt;
+&lt;td&gt;纯四度&lt;/td&gt;
+&lt;td&gt;增四度&lt;/td&gt;
+&lt;td&gt;纯四度&lt;/td&gt;
+&lt;td&gt;纯四度&lt;/td&gt;
+&lt;td&gt;纯四度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;35-纯五度及减五度&#34;&gt;3.5 纯五度及减五度&lt;/h2&gt;
+&lt;p&gt;五度音中间相隔三个按键的自然音组成。纯五度音由 7 个半音组成，而 B-&amp;gt;F 为六个半音，我们称之减五度，减五度也为不协和音，听着会给人不安的感觉。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;C-&amp;gt;G&lt;/th&gt;
+&lt;th&gt;D-&amp;gt;A&lt;/th&gt;
+&lt;th&gt;E-&amp;gt;B&lt;/th&gt;
+&lt;th&gt;F-&amp;gt;C&lt;/th&gt;
+&lt;th&gt;G-&amp;gt;D&lt;/th&gt;
+&lt;th&gt;A-&amp;gt;E&lt;/th&gt;
+&lt;th&gt;B-&amp;gt;F&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;纯五度&lt;/td&gt;
+&lt;td&gt;减五度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;36-大小六度和大小七度&#34;&gt;3.6 大小六度和大小七度&lt;/h2&gt;
+&lt;p&gt;同二三度，大六度为 9 个半音，小六度为 8 个半音，大七度为 11 个半音，小七度为 10 个半音。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;C-&amp;gt;A&lt;/th&gt;
+&lt;th&gt;D-&amp;gt;B&lt;/th&gt;
+&lt;th&gt;E-&amp;gt;C&lt;/th&gt;
+&lt;th&gt;F-&amp;gt;D&lt;/th&gt;
+&lt;th&gt;G-&amp;gt;E&lt;/th&gt;
+&lt;th&gt;A-&amp;gt;F&lt;/th&gt;
+&lt;th&gt;B-&amp;gt;G&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;六度&lt;/td&gt;
+&lt;td&gt;大六度&lt;/td&gt;
+&lt;td&gt;大六度&lt;/td&gt;
+&lt;td&gt;小六度&lt;/td&gt;
+&lt;td&gt;大六度&lt;/td&gt;
+&lt;td&gt;大六度&lt;/td&gt;
+&lt;td&gt;小六度&lt;/td&gt;
+&lt;td&gt;小六度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;C-&amp;gt;B&lt;/th&gt;
+&lt;th&gt;D-&amp;gt;C&lt;/th&gt;
+&lt;th&gt;E-&amp;gt;D&lt;/th&gt;
+&lt;th&gt;F-&amp;gt;E&lt;/th&gt;
+&lt;th&gt;G-&amp;gt;F&lt;/th&gt;
+&lt;th&gt;A-&amp;gt;G&lt;/th&gt;
+&lt;th&gt;B-&amp;gt;A&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;七度&lt;/td&gt;
+&lt;td&gt;大七度&lt;/td&gt;
+&lt;td&gt;小七度&lt;/td&gt;
+&lt;td&gt;小七度&lt;/td&gt;
+&lt;td&gt;大七度&lt;/td&gt;
+&lt;td&gt;小七度&lt;/td&gt;
+&lt;td&gt;小七度&lt;/td&gt;
+&lt;td&gt;小七度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;37-音程总结&#34;&gt;3.7 音程总结&lt;/h2&gt;
+&lt;p&gt;音程分为大音程、小音程、纯音程（完全音程）、增音程、减音程，当然还有倍增和倍减。&lt;/p&gt;
+&lt;p&gt;方便的记忆就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;音高距离叫音程，&lt;br&gt;
+分为旋律与和声。&lt;br&gt;
+一四五八无大小，&lt;br&gt;
+二三六七没有纯。&lt;br&gt;
+大纯增减即增减，&lt;br&gt;
+小大相隔半音间。&lt;br&gt;
+增减半音倍加前，&lt;br&gt;
+一度要减不可能。&lt;br&gt;
+二到八度C根记，&lt;br&gt;
+大大纯纯大大纯。&lt;br&gt;
+记时结合平均律，&lt;br&gt;
+掌握规律记得深。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
       <title>创业公司经历</title>
-      <link>https://blog.morningtzh.com/post/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E7%BB%8F%E5%8E%86/</link>
+      <link>https://blog.morningtzh.com/post/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E7%BB%8F%E5%8E%86.html</link>
       <pubDate>Tue, 03 Dec 2019 18:30:07 +0800</pubDate>
-      <guid>https://blog.morningtzh.com/post/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E7%BB%8F%E5%8E%86/</guid>
+      <guid>https://blog.morningtzh.com/post/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E7%BB%8F%E5%8E%86.html</guid>
       <description>&lt;h1 id=&#34;创业公司经历&#34;&gt;创业公司经历&lt;/h1&gt;
 &lt;p&gt;[TOC]&lt;/p&gt;
 &lt;p&gt;在初创企业工作，是一件在职业道路中有正式规划的事情，也是一件意料之外的事情。没想到这段经历来的如此之快，但仔细一想这短短的经历几乎占据了我工龄的一半时间。&lt;/p&gt;
@@ -83,9 +484,9 @@
     
     <item>
       <title>线性回归及实现</title>
-      <link>https://blog.morningtzh.com/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://blog.morningtzh.com/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0.html</link>
       <pubDate>Sun, 01 Dec 2019 09:59:04 +0800</pubDate>
-      <guid>https://blog.morningtzh.com/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://blog.morningtzh.com/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0.html</guid>
       <description>&lt;h1 id=&#34;线性回归及实现&#34;&gt;线性回归及实现&lt;/h1&gt;
 &lt;p&gt;[TOC]&lt;/p&gt;
 &lt;p&gt;一年多前，《修真聊天群》更新看完了，在书荒引发的无聊情绪推动下学习了 Keras，用 LSTM 生成了大段无法看的《伪*修真聊天群》，没有耐心好好炼丹就没有再接触过深度学习的知识点，偶尔无聊看看聚宽上的文章也都是&lt;code&gt;随机森林&lt;/code&gt;和&lt;code&gt;隐马尔科夫模型&lt;/code&gt;等传统机器学习算法。
@@ -156,15 +557,15 @@ $$&lt;/p&gt;
     
     <item>
       <title>我这么大个io_service去哪里了</title>
-      <link>https://blog.morningtzh.com/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</link>
+      <link>https://blog.morningtzh.com/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86.html</link>
       <pubDate>Wed, 30 Oct 2019 09:50:48 +0800</pubDate>
-      <guid>https://blog.morningtzh.com/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/</guid>
+      <guid>https://blog.morningtzh.com/post/%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86.html</guid>
       <description>&lt;h1 id=&#34;我这么大个io_service去哪里了&#34;&gt;我这么大个io_service去哪里了&lt;/h1&gt;
 &lt;p&gt;[TOC]&lt;/p&gt;
 &lt;p&gt;最近稍微闲了下来，开始debug &lt;code&gt;Boost.Asio&lt;/code&gt; 析构时崩溃的问题。在目前代码中，使用到了&lt;code&gt;deadline_timer&lt;/code&gt;作定时器。&lt;/p&gt;
 &lt;p&gt;由于早期仅用简单的定时器，也就没多了解&lt;code&gt;io_service&lt;/code&gt;的用法，简单地在每个短周期业务实例中各开了一组&lt;code&gt;thread&lt;/code&gt;和&lt;code&gt;io_service&lt;/code&gt;来挂&lt;code&gt;deadline_timer&lt;/code&gt;。后来出现了一个问题，运行时发现在析构业务实例时delete &lt;code&gt;io_service&lt;/code&gt;偶尔会崩溃（具体定位过程就不在这边展开了），就去看了源代码和reference。&lt;/p&gt;
 &lt;p&gt;想着这么大的库api应该不会有太大的变化，点开boost最新版（1.71）reference，咦 O__O 我这么大个&lt;code&gt;io_service&lt;/code&gt;去哪里了？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;image-20191030105005556.png&#34; alt=&#34;image-20191030105005556&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./%E6%88%91%E8%BF%99%E4%B9%88%E5%A4%A7%E4%B8%AAio_service%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86/image-20191030105005556.png&#34; alt=&#34;image-20191030105005556&#34;&gt;&lt;/p&gt;
 &lt;div style=&#34;color:grey;text-alian:center&#34;&gt;Legend 1:Boost 1.71 Asio Reference&lt;/div&gt;
 接下来从1.71版本往回翻，在1.66更新信息里发现一句话：
 &lt;blockquote&gt;
@@ -309,9 +710,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>boost.asio核心浅析</title>
-      <link>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</link>
+      <link>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90.html</link>
       <pubDate>Tue, 29 Oct 2019 15:50:50 +0800</pubDate>
-      <guid>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90/</guid>
+      <guid>https://blog.morningtzh.com/post/boost.asio%E6%A0%B8%E5%BF%83%E6%B5%85%E6%9E%90.html</guid>
       <description>&lt;h1 id=&#34;boostasio核心浅析&#34;&gt;boost.asio核心浅析&lt;/h1&gt;
 &lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
 </description>
@@ -319,9 +720,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>C&#43;&#43;公共模块回调函数实现方式</title>
-      <link>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</link>
+      <link>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F.html</link>
       <pubDate>Thu, 05 Sep 2019 11:40:07 +0800</pubDate>
-      <guid>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</guid>
+      <guid>https://blog.morningtzh.com/post/c&#43;&#43;%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F.html</guid>
       <description>&lt;h1 id=&#34;c公共模块回调函数实现方式&#34;&gt;C++公共模块回调函数实现方式&lt;/h1&gt;
 &lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
 &lt;p&gt;在代码实现时，常常会遇到模块间函数调用的问题。对于一个公共模块，会有明确的public方法来作为接口，但是当需要发送消息（此处仅讨论回调函数）到外部业务模块的时候就很难去定义回调函数的类型。通常在命令式编程中会采用函数指针的方法，但在OO中调用者是一个类的话很难将类成员函数发给基础模块做回调函数。&lt;/p&gt;
@@ -332,9 +733,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>Git分支使用方法</title>
-      <link>https://blog.morningtzh.com/post/git%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <link>https://blog.morningtzh.com/post/git%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html</link>
       <pubDate>Fri, 05 Jul 2019 10:07:27 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/git%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://blog.morningtzh.com/post/git%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html</guid>
       <description>&lt;h1 id=&#34;git分支使用方法&#34;&gt;Git分支使用方法&lt;/h1&gt;
 &lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
 &lt;h2 id=&#34;分支概要&#34;&gt;分支概要&lt;/h2&gt;
@@ -359,9 +760,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>Windows 下 C&#43;&#43; 编程环境</title>
-      <link>https://blog.morningtzh.com/post/windows%E4%B8%8B-c&#43;&#43;-%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/</link>
+      <link>https://blog.morningtzh.com/post/windows%E4%B8%8B-c&#43;&#43;-%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83.html</link>
       <pubDate>Mon, 20 May 2019 15:52:09 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/windows%E4%B8%8B-c&#43;&#43;-%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/</guid>
+      <guid>https://blog.morningtzh.com/post/windows%E4%B8%8B-c&#43;&#43;-%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83.html</guid>
       <description>&lt;h1 id=&#34;windows-下-c-编程环境指导&#34;&gt;Windows 下 C++ 编程环境指导&lt;/h1&gt;
 &lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
 &lt;!-- code_chunk_output --&gt;
@@ -602,9 +1003,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>博客系统的需求在哪里</title>
-      <link>https://blog.morningtzh.com/post/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9C%80%E6%B1%82%E5%9C%A8%E5%93%AA%E9%87%8C/</link>
+      <link>https://blog.morningtzh.com/post/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9C%80%E6%B1%82%E5%9C%A8%E5%93%AA%E9%87%8C.html</link>
       <pubDate>Fri, 12 Oct 2018 12:23:17 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9C%80%E6%B1%82%E5%9C%A8%E5%93%AA%E9%87%8C/</guid>
+      <guid>https://blog.morningtzh.com/post/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9C%80%E6%B1%82%E5%9C%A8%E5%93%AA%E9%87%8C.html</guid>
       <description>&lt;h1 id=&#34;博客系统的需求在哪里&#34;&gt;博客系统的需求在哪里&lt;/h1&gt;
 &lt;p&gt;半年前，有了更多对前端的思考便打算将自研博客系统落地。这个想法由来已久，从大学时期的 wordpress、dokuwiki到毕业后搭建的 hexo 静态博客，折腾了系统、捣鼓了插件，最终写的文章寥寥，后来也兴致缺缺。渐渐就期望有一个亲手建立的博客系统，删减复杂的功能，保留最精要的功能即可。&lt;/p&gt;
 &lt;p&gt;差不多花了一个月时间写出了博客主要的功能，采用了 Twitter 的页面风格，前端架构主要使用 react + mobx + antd，后端使用 flask。Feature 包括了人脸识别登陆、markdown在线编辑、moment 和博客差异化显示、支持 hashtag 等等。&lt;/p&gt;
@@ -637,9 +1038,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>devstack安装镜像</title>
-      <link>https://blog.morningtzh.com/post/devstack-install-tips/</link>
+      <link>https://blog.morningtzh.com/post/devstack-install-tips.html</link>
       <pubDate>Tue, 20 Sep 2016 19:30:14 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/devstack-install-tips/</guid>
+      <guid>https://blog.morningtzh.com/post/devstack-install-tips.html</guid>
       <description>&lt;h1 id=&#34;devstack安装镜像&#34;&gt;devstack安装镜像&lt;/h1&gt;
 &lt;h2 id=&#34;pip镜像&#34;&gt;pip镜像：&lt;/h2&gt;
 &lt;p&gt;pip 镜像我使用清华大学的，在可信列表（
@@ -714,9 +1115,9 @@ pypi 包更新的时候（~/devstack/file/get-pip.py文件）很容易断，我�
     
     <item>
       <title>Brainfuck解释器[on python]</title>
-      <link>https://blog.morningtzh.com/post/brainfuck-interpreter/</link>
+      <link>https://blog.morningtzh.com/post/brainfuck-interpreter.html</link>
       <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/brainfuck-interpreter/</guid>
+      <guid>https://blog.morningtzh.com/post/brainfuck-interpreter.html</guid>
       <description>&lt;p&gt;阿婆主脑容量不够，ぜんぜん不能在大脑中运行 &lt;strong&gt;Brainfuck&lt;/strong&gt; 程序，而且发现连运行过程都想不出来啊，
 然而就这么几个字符完全可以自己写解释器嘛，并且可以打印出运行过程，而且可以试试看做成playground
 的形式呢，想想还是挺有趣的。&lt;/p&gt;
@@ -956,9 +1357,9 @@ BF() method:
     
     <item>
       <title>Install GHC on El Capitan</title>
-      <link>https://blog.morningtzh.com/post/install-ghc-on-mac/</link>
+      <link>https://blog.morningtzh.com/post/install-ghc-on-mac.html</link>
       <pubDate>Sat, 05 Dec 2015 21:43:14 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/install-ghc-on-mac/</guid>
+      <guid>https://blog.morningtzh.com/post/install-ghc-on-mac.html</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;最近因为在学Haskell，所以需要在电脑上安装GHC，然而遇到了一些困难，所以需要做一下记录。&lt;/p&gt;
 &lt;p&gt;##安装GHC##
@@ -999,9 +1400,9 @@ cabal: /usr/bin/ar: permission denied&lt;/p&gt;
     
     <item>
       <title>关于haskell随便写点什么1</title>
-      <link>https://blog.morningtzh.com/post/about-haskell-1/</link>
+      <link>https://blog.morningtzh.com/post/about-haskell-1.html</link>
       <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
-      <guid>https://blog.morningtzh.com/post/about-haskell-1/</guid>
+      <guid>https://blog.morningtzh.com/post/about-haskell-1.html</guid>
       <description>&lt;h1 id=&#34;lyah字典查询函数理解指南&#34;&gt;LYAH字典查询函数理解指南&lt;/h1&gt;
 &lt;h3 id=&#34;for-what-&#34;&gt;for what&lt;/h3&gt;
 &lt;p&gt;最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看
@@ -1152,9 +1553,9 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
     
     <item>
       <title>三得利老牌和百龄坛特醇的对比</title>
-      <link>https://blog.morningtzh.com/post/suntoryballantines/</link>
+      <link>https://blog.morningtzh.com/post/suntoryballantines.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/suntoryballantines/</guid>
+      <guid>https://blog.morningtzh.com/post/suntoryballantines.html</guid>
       <description>&lt;p&gt;三得利老牌快喝完了，打算醒一段时间再尝一下变化，正好家里有一套百龄坛特醇礼盒，就开了喝。&lt;/p&gt;
 &lt;p&gt;特醇刚入口，感觉和老牌没什么区别啊，没有像格兰菲迪那样和老牌有明显的区别。特醇显得有些辣了。特意倒了些老牌做了下比较。&lt;/p&gt;
 &lt;p&gt;三得利老牌更加顺口，因此感觉香气更加浓郁。百龄坛比较刺激，香气也少了些，也确实有区别的。两者对比格兰菲迪的话，差别很大，格兰菲迪入口有一种麦芽的味道？会留存很久。&lt;/p&gt;
@@ -1167,9 +1568,9 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
     
     <item>
       <title>最近的阅读方式</title>
-      <link>https://blog.morningtzh.com/post/reading-mode/</link>
+      <link>https://blog.morningtzh.com/post/reading-mode.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://blog.morningtzh.com/post/reading-mode/</guid>
+      <guid>https://blog.morningtzh.com/post/reading-mode.html</guid>
       <description>&lt;p&gt;以前一直在看各种技术相关的书籍或是信息，无聊中也点了django，go，cocos这些类似的技能点。也不知从哪一天开始，越来越厌倦这样技术性的阅读了，技能树越分散其实真正学到的也越少。那既然类似消遣的在学习着，倒也不如看看其他方面的书籍，无论陶冶情操还是看清世界都比技术书籍有用处吧。&lt;/p&gt;
 &lt;p&gt;还记得去年这时候也非常迷茫，不知道自己在社会上到底是在一个什么样的层次活着，买了本 
 &lt;a href=&#34;http://baike.baidu.com/view/1081693.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;戴维·波普诺&lt;/a&gt; 的
