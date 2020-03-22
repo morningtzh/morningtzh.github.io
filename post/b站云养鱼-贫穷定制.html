@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="MorningTZH">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="B站云养鱼&ndash;贫穷定制 目录 1. 我买了一个缸 2. 直播方案比较及限制条件 2.1 方案比较及场景限制 2.2 硬件限制条件分析 3. 整体方案设计 3.1 整体方案 3.2 视">
+
+  
+  <link rel="alternate" hreflang="zh-Hans" href="https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145734135-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-145734135-1', { 'anonymize_ip': true });
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu56606b72eae1823e5af44004a0b07113_957806_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu56606b72eae1823e5af44004a0b07113_957806_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html">
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="瑟瑟和你说早安">
+  <meta property="og:url" content="https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html">
+  <meta property="og:title" content="B站云养鱼--贫穷定制 | 瑟瑟和你说早安">
+  <meta property="og:description" content="B站云养鱼&ndash;贫穷定制 目录 1. 我买了一个缸 2. 直播方案比较及限制条件 2.1 方案比较及场景限制 2.2 硬件限制条件分析 3. 整体方案设计 3.1 整体方案 3.2 视"><meta property="og:image" content="https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png">
+  <meta property="twitter:image" content="https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png"><meta property="og:locale" content="zh-Hans">
+  
+    
+      <meta property="article:published_time" content="2020-03-21T09:49:46&#43;08:00">
+    
+    <meta property="article:modified_time" content="2020-03-21T09:49:46&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html"
+  },
+  "headline": "B站云养鱼--贫穷定制",
+  
+  "datePublished": "2020-03-21T09:49:46+08:00",
+  "dateModified": "2020-03-21T09:49:46+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "MorningTZH"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "瑟瑟和你说早安",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_192x192_fit_lanczos_2.png"
+    }
+  },
+  "description": "B站云养鱼\u0026ndash;贫穷定制 目录 1. 我买了一个缸 2. 直播方案比较及限制条件 2.1 方案比较及场景限制 2.2 硬件限制条件分析 3. 整体方案设计 3.1 整体方案 3.2 视"
+}
+</script>
+
+  
+
+  
+
+
+  
+  
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin="anonymous">
+  
+  <script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "hsl(339, 90%, 68%)",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "hsl(339, 90%, 68%)"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "本网站使用cookies来确保您在本网站上获得最佳体验。",
+        "dismiss": "知道了!",
+        "link": "了解更多",
+        "href": "https://www.cookiesandyou.com"
+      }
+    })});
+  </script>
+
+
+
+  
+
+
+
+
+
+  <title>B站云养鱼--贫穷定制 | 瑟瑟和你说早安</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>搜索</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_0x70_resize_lanczos_2.png" alt="瑟瑟和你说早安"></a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="切换导航">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_0x70_resize_lanczos_2.png" alt="瑟瑟和你说早安"></a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>B站云养鱼--贫穷定制</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 21, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    14 分钟阅读时长
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/project.html">project</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="b站云养鱼--贫穷定制">B站云养鱼&ndash;贫穷定制</h1>
+<h2>目录</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-我买了一个缸">1. 我买了一个缸</a></li>
+    <li><a href="#2-直播方案比较及限制条件">2. 直播方案比较及限制条件</a>
+      <ul>
+        <li><a href="#21-方案比较及场景限制">2.1 方案比较及场景限制</a></li>
+        <li><a href="#22-硬件限制条件分析">2.2 硬件限制条件分析</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-整体方案设计">3. 整体方案设计</a>
+      <ul>
+        <li><a href="#31-整体方案">3.1 整体方案</a></li>
+        <li><a href="#32-视频源">3.2 视频源</a></li>
+        <li><a href="#33-视频目的地">3.3 视频目的地</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-背景知识">4. 背景知识</a>
+      <ul>
+        <li><a href="#41-流媒体">4.1 流媒体</a></li>
+        <li><a href="#42-ffmpeg">4.2 ffmpeg</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-功能设计">5. 功能设计</a>
+      <ul>
+        <li><a href="#51-视频列表">5.1 视频列表</a></li>
+        <li><a href="#52-音乐播放列表">5.2 音乐播放列表</a></li>
+        <li><a href="#53-ffmpeg-命令生成">5.3 ffmpeg 命令生成</a></li>
+        <li><a href="#54-执行-ffmpeg-命令">5.4 执行 ffmpeg 命令</a></li>
+        <li><a href="#55-半夜回放机制">5.5 半夜回放机制</a></li>
+        <li><a href="#56-直播退出机制">5.6 直播退出机制</a></li>
+        <li><a href="#57-深夜直播暂停事件">5.7 深夜直播暂停事件</a></li>
+        <li><a href="#6-存在的问题">6. 存在的问题</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-可替代方案">7. 可替代方案</a>
+      <ul>
+        <li><a href="#72-网络摄像头支持-rtsp">7.2 网络摄像头支持 RTSP</a></li>
+        <li><a href="#73-手机">7.3 手机</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-关键决定因素">8. 关键决定因素</a></li>
+  </ul>
+</nav>
+<p>[TOC]</p>
+<h2 id="1-我买了一个缸">1. 我买了一个缸</h2>
+<p>过年前散步，正好路过花鸟市场。本来打算买些花草，走着走着就变看鱼了。心血来潮，赶紧研究了下养鱼入门知识，并开了个一个草缸。</p>
+<p><img src="B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/IMG_3639.JPG" alt="新手缸"></p>
+<p>新手的缸总是这么枯燥。</p>
+<p>缸还在路上的时候我就突然想开个直播，这么有趣的事情应该和大家分享。<del>顺便赚点饲料钱，说不定还能靠直播当上 CEO 迎娶白富美。</del></p>
+<p>如此一来原始需求就定下了，需要做一个 24H 鱼缸直播方案出来。</p>
+<h2 id="2-直播方案比较及限制条件">2. 直播方案比较及限制条件</h2>
+<h3 id="21-方案比较及场景限制">2.1 方案比较及场景限制</h3>
+<p>项目是为创造独特产品、服务或成果而进行的临时性工作。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 这个直播需求与真人 UP 主的直播由于工作方式不同，因此会导致环境差异较大。</p>
+<ul>
+<li>一般直播时，直播主体主播唯一受众为用户。无论是在线聊天、游戏还是云画画，直播的主机即为工作的主机，在一定时间段内，主播会面对主机进行工作，并通过这台主机直播出去，工作内容可以说就是直播内容；</li>
+<li>本次直播时，直播主体鱼缸有两个受众，一个是直播用户，另一个是现场观众<sup>我我我！！！</sup>。对鱼缸进行24H 直播时不能让主机在空间中明显可见，这会阻碍现场观众视线；同时当我需要在一台主机上做直播无关工作，甚至开关机时不能影响直播进行。因此需要在隐蔽角落放一个独立主机进行直播。</li>
+</ul>
+<p>Usecase:</p>
+<pre><code class="language-mermaid">graph LR
+	subgraph 工作室
+		主播 --do--&gt; 工作Process
+		主播 --被摄--&gt;直播Process
+		subgraph 主机
+			工作Process --被摄--&gt; 直播Process
+		end
+	end
+	直播Process --推流--&gt; B站
+ 
+</code></pre>
+<pre><code class="language-mermaid">graph LR
+	subgraph Home
+		鱼缸 --被摄--&gt; 直播主机
+		鱼缸 --观赏--&gt; 我
+		我--工作--&gt;工作主机
+	end
+	直播主机 --推流--&gt; B站
+ 
+</code></pre>
+<p>结合家里设备具体差异如下：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>一般 UP 主</th>
+<th>本次直播需求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时间</td>
+<td>限时直播</td>
+<td>24H 直播</td>
+</tr>
+<tr>
+<td>主机</td>
+<td>无需独立主机</td>
+<td>需要独立主机</td>
+</tr>
+<tr>
+<td>主机可见</td>
+<td>需操作，可见</td>
+<td>无需操作，不可见</td>
+</tr>
+<tr>
+<td>操作系统</td>
+<td>Windows</td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>摄像头</td>
+<td>USB 摄像头</td>
+<td>网络摄像头</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-硬件限制条件分析">2.2 硬件限制条件分析</h3>
+<p>由于穷，本次方案只能在家里现有设备基础上进行设计。</p>
+<p>目前可用设备：</p>
+<ol>
+<li><strong>蜗牛星际</strong></li>
+<li><strong>AreYouOK 智能摄像机</strong>（第三代）</li>
+<li><strong>Raspberry Pi Zero W</strong></li>
+</ol>
+<p><strong>蜗牛星际</strong>是咸鱼上 300 块买来的矿难机，4G 内存，搭载 J1900 CPU，四盘位机箱，真香 😙。被我装上了 manjaro 做NAS 用，用来做下载、时间胶囊、<del>物联网</del>、数据可视化等功能。蜗牛星际被我藏在鞋柜里，满足了本次直播方案主机隐蔽的需求。</p>
+<p><img src="B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/v2-b64e4e22b1ef466a7443965f5a150826_b.jpg" alt="蜗牛星际"></p>
+<p><strong>AreYouOK 智能摄像机</strong>（第三代）是半年前买的，也是在研究直播系统的时候才了解了他的版本。<strong>AreYouOK 智能摄像机</strong>第二代是绝对的香，可以修改固件增加 rtsp 功能，第三代就不行了，试了很长时间都没法打开 rtsp，同时第三代在图像质量上也比第二代下降了很多。由于不能用 rtsp，我会在下文讲解别的方法。</p>
+<p><strong>Raspberry Pi Zero W</strong>，做备选方案，这是我买来黑 USB 和 wifi玩的设备，他的优点在于蓝牙 wifi 都在一片上集成了，体积小，可以变成 USB 棒。</p>
+<p><img src="B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/91d73c36c55cc0e4cea3ba9fe128d992382b7a55_pi-zero-w-1-1620x1080.jpg" alt="Raspberry Pi Zero W"></p>
+<p>下图是我自己的**Raspberry Pi Zero W*，加上了E-ink 屏幕和 USB 转换头。玩法非常多，比如模拟成两个设备，一个优盘一个键盘，就可以在插入PC 后通过蓝牙或 wifi 输入相应指令了；也可以通上电连上 wifi，做中间人攻击；其他的由于体积小，作为嵌入式主控也是不错的选择。</p>
+<p><img src="B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/IMG_3750.jpg" alt=""></p>
+<h2 id="3-整体方案设计">3. 整体方案设计</h2>
+<h3 id="31-整体方案">3.1 整体方案</h3>
+<p>整体方案采用网络摄像机+NAS 推流的形式展开。OBS 获取 rtsp 流后，再通过 rtmp 丢到 B 站即可，轻松加愉快。</p>
+<p>不，事实并不是这样的。生活往往并没有这么容易😢 ，很容易接受现实的吊打。但我们还是先将我们的部署图画出来。</p>
+<pre><code class="language-mermaid">graph LR
+	subgraph 鞋柜
+		NAS
+	end
+	subgraph 客厅
+		鱼缸 -- 拍摄 --&gt; 摄像机
+		摄像机--传输视频--&gt;NAS
+	end
+	NAS --推流--&gt; B站
+</code></pre>
+<h3 id="32-视频源">3.2 视频源</h3>
+<p>视频来源由于贫穷，首先选择现有的<strong>AreYouOK 智能摄像机</strong>。他是没有 rtsp、onvif 的辣鸡摄像机，但我们在 App 设置里面可以看到它支持 NAS，可以实时将视频保存到 NAS 上。我本以为这是一个黑科技，但万万没想到&hellip;</p>
+<p><img src="B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/image-20200322110409969.png" alt="image-20200322110409969"></p>
+<p><img src="B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/96a7-ikyziqx7363878.jpg" alt="老爷爷地铁看手机"></p>
+<p>一定是我打开方式错误，我换个方式重新打开一下：</p>
+<pre><code class="language-shell">➜  xiaomi_camera_videos tree
+.
+├── 04cf8cfe7133
+│   ├── 2020031908
+│   │   ├── 16M12S_1584576972.mp4
+│   │   ├── 17M10S_1584577030.mp4
+│   │   ├── 18M10S_1584577090.mp4
+│   │   ├── 19M10S_1584577150.mp4
+│   │   ├── 20M10S_1584577210.mp4
+│   │   ├── 21M10S_1584577270.mp4
+│   │   ├── 22M10S_1584577330.mp4
+...
+</code></pre>
+<p>叮 本项目由于不可抗力终止。。。</p>
+<p>。</p>
+<p>。</p>
+<p>。</p>
+<p>。</p>
+<p>不 我当然是不会放弃的！不就是分钟级视频文件么。一定能解决！如果一些这么顺利，就没必要做脚本了。</p>
+<h4 id="321-视频播放obs">3.2.1 视频播放+OBS</h4>
+<p>通常主播在直播的时候会用到 OBS<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，一款开源直播软件，B 站直播姬就是基于 OBS 制作的。它支持 macOS、linux和windows三个平台，可以在单个窗口添加不同的源合成一个画面，同时支持多场景切换。</p>
+<p><img src="file:///Users/morningtzh/workplace/SeseSayHi/content/post/B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/OBSDemoApp2321.png?lastModify=1584848414" alt="OBS"></p>
+<p>OBS 在不同场景的直播中都能发挥很大作用。画面来源支持非常多，rtsp、窗口捕获、桌面捕获、图像、视频、浏览器、音频、文字等等。有兴趣的可以下载一个，并参考 
+<a href="https://obsproject.com/wiki/Sources-Guide" target="_blank" rel="noopener">WiKI</a>。</p>
+<p>OBS 是无法播放文件夹的，因此考虑采用视频播放器+OBS 的窗口捕获，获取视频流。</p>
+<p>最终由于 CPU 100% Good Game。</p>
+<p>同时也意识到了蜗牛星际 J1900 CPU 在视频编解码上的无力，无法使用 OBS 这样复杂的直播软件。</p>
+<h4 id="322-ffmpeg-合成视频">3.2.2 ffmpeg 合成视频</h4>
+<p>ffmpeg 是一个非常棒的软件，他可以将播放列表作为Input 使用。因此本方案最终使用了ffmpeg 作为视频合成及推流工具。</p>
+<h3 id="33-视频目的地">3.3 视频目的地</h3>
+<p>我们通过 ffmpeg 处理视频源，自然也通过 ffmpeg 来推流。</p>
+<h2 id="4-背景知识">4. 背景知识</h2>
+<p>为了后续更好理解整套方案，这边将对一些背景知识做一些简单的介绍</p>
+<h3 id="41-流媒体">4.1 流媒体</h3>
+<p>对于媒体编码、封装格式和传输协议本身其实和我们要做的方案关联较小，仅在定位一些问题时可能会用到比较深入的知识。</p>
+<p>在这里我们只需要简单的做些了解。</p>
+<h4 id="411-视频编码-h264">4.1.1 视频编码 H.264</h4>
+<blockquote>
+<p><strong>H.264</strong>，又称为<strong>MPEG-4第10部分，高级视频编码</strong>（英语：MPEG-4 Part 10, Advanced Video Coding，缩写为MPEG-4 AVC）是一种面向块，基于
+<a href="https://zh.wikipedia.org/wiki/%e8%bf%90%e5%8a%a8%e8%a1%a5%e5%81%bf" target="_blank" rel="noopener">运动补偿</a>的
+<a href="https://zh.wikipedia.org/w/index.php?title=%e8%a7%86%e9%a2%91%e7%bc%96%e7%a0%81%e6%a0%87%e5%87%86&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">视频编码标准</a> 。到2014年，它已经成为高精度视频录制、压缩和发布的最常用格式之一。第一版标准的最终草案于2003年5月完成。</p>
+<p>—— WikiPedia 
+<a href="https://zh.wikipedia.org/wiki/H.264/MPEG-4_AVC" target="_blank" rel="noopener">H.264</a></p>
+</blockquote>
+<p>H.264我们首先需要关注他是一种视频编码，他会对原始视频做大量压缩处理来减少视频的体积，其次是他有三种帧：</p>
+<ul>
+<li>I帧：关键帧，采用帧内压缩技术。</li>
+<li>P帧：向前参考帧，在压缩时，只参考前面已经处理的帧。采用帧音压缩技术。</li>
+<li>B帧：双向参考帧，在压缩时，它即参考前而的帧，又参考它后面的帧。采用帧间压缩技术。</li>
+</ul>
+<p>缺少某一 I 帧时，画面会变得非常诡异，大家在看D 版电影时也经常会看到各种灵异的现象就是缺帧导致的。</p>
+<h4 id="412-媒体封装格式-mp4">4.1.2 媒体封装格式 MP4</h4>
+<blockquote>
+<p><strong>MP4</strong>或称**
+<a href="https://zh.wikipedia.org/wiki/MPEG-4" target="_blank" rel="noopener">MPEG-4</a>第14部分**（英语：MPEG-4 Part 14）是一种标准的数字
+<a href="https://zh.wikipedia.org/wiki/%e5%a4%9a%e5%aa%92%e9%ab%94" target="_blank" rel="noopener">多媒体</a>容器格式。MPEG-4第14部分的扩展名为**.mp4**，以存储
+<a href="https://zh.wikipedia.org/wiki/%e6%95%b8%e4%bd%8d%e9%9f%b3%e8%a8%8a" target="_blank" rel="noopener">数字音频</a>及
+<a href="https://zh.wikipedia.org/wiki/%e6%95%b8%e4%bd%8d%e5%bd%b1%e7%89%87" target="_blank" rel="noopener">数字视频</a>为主，但也可以存储
+<a href="https://zh.wikipedia.org/wiki/%e5%ad%97%e5%b9%95" target="_blank" rel="noopener">字幕</a>和静止图像。因其可容纳支持
+<a href="https://zh.wikipedia.org/wiki/%e4%bd%8d%e5%85%83%e6%b5%81" target="_blank" rel="noopener">比特流</a>的视频流（如
+<a href="https://zh.wikipedia.org/wiki/H.264/MPEG-4_AVC" target="_blank" rel="noopener">高级视频编码</a>），MP4可以在网络传输时使用
+<a href="https://zh.wikipedia.org/wiki/%e4%b8%b2%e6%b5%81%e5%aa%92%e9%ab%94" target="_blank" rel="noopener">流式传输</a>。</p>
+<p>—— WikiPedia 
+<a href="https://zh.wikipedia.org/wiki/MP4" target="_blank" rel="noopener">MP4</a></p>
+</blockquote>
+<p>在上述 WikiPedia 的描述中，MP4 是一种容器，他会在里面存放音频、视频、字幕或图像，都是以通道来表示一路媒体的。</p>
+<h4 id="413-流媒体协议-rtmp">4.1.3 流媒体协议 RTMP</h4>
+<p>B 站采用 RTMP 方式推流，这是一种媒体传输协议。</p>
+<blockquote>
+<p><strong>实时消息协议</strong>（英语：Real-Time Messaging Protocol，缩写<strong>RTMP</strong>）也称<strong>实时消息传输协议</strong>，是最初由
+<a href="https://zh.wikipedia.org/wiki/Macromedia" target="_blank" rel="noopener">Macromedia</a>为通过
+<a href="https://zh.wikipedia.org/wiki/%e4%ba%92%e8%81%94%e7%bd%91" target="_blank" rel="noopener">互联网</a>在
+<a href="https://zh.wikipedia.org/wiki/Adobe_Flash" target="_blank" rel="noopener">Flash播放器</a>与一个
+<a href="https://zh.wikipedia.org/wiki/%e6%9c%8d%e5%8a%a1%e5%99%a8" target="_blank" rel="noopener">服务器</a>之间传输
+<a href="https://zh.wikipedia.org/wiki/%e6%b5%81%e5%aa%92%e4%bd%93" target="_blank" rel="noopener">流媒体</a>
+<a href="https://zh.wikipedia.org/wiki/%e9%9f%b3%e9%a2%91" target="_blank" rel="noopener">音频</a>、
+<a href="https://zh.wikipedia.org/wiki/%e8%a7%86%e9%a2%91" target="_blank" rel="noopener">视频</a>和数据而开发的一个
+<a href="https://zh.wikipedia.org/w/index.php?title=%e4%b8%93%e6%9c%89%e5%8d%8f%e8%ae%ae&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">专有协议</a>。Macromedia后被
+<a href="https://zh.wikipedia.org/wiki/Adobe_Systems" target="_blank" rel="noopener">Adobe Systems</a>收购，该协议也已发布了不完整的规范供公众使用。</p>
+<p>RTMP协议有许多变种：</p>
+<ol>
+<li>默认使用TCP端口1935的纯粹（plain）协议。</li>
+<li><strong>RTMPS</strong>，通过一个
+<a href="https://zh.wikipedia.org/%3ewiki/%e5%82%b3%e8%bc%b8%e5%b1%a4%e5%ae%89%e5%85%a8%e6%80%a7%e5%8d%94%e5%ae%9a" target="_blank" rel="noopener">TLS/SSL</a>连接传输RTMP。</li>
+<li><strong>RTMPE</strong>，使用Adobe自有安全机制加密的RTMP。虽然实现的细节为专&gt;有，但该机制使用行业标准的
+<a href="https://zh.wikipedia.org/%3ewiki/%e5%af%86%e7%a0%81%e5%ad%a6" target="_blank" rel="noopener">密码学</a>原函数。[
+<a href="https://zh.wikipedia.org/wiki/%e5%ae%9e%e6%97%b6%3e%e6%b6%88%e6%81%af%e5%8d%8f%e8%ae%ae#cite_note-RTMPE_overview-1" target="_blank" rel="noopener">1]</a></li>
+<li><strong>RTMPT</strong>，用
+<a href="https://zh.wikipedia.org/wiki/%e8%b6%85%e6%96%87%e6%9c%ac%3e%e4%bc%a0%e8%be%93%e5%8d%8f%e8%ae%ae" target="_blank" rel="noopener">HTTP</a>
+<a href="https://zh.wikipedia.org/wiki/%e5%b0%81%e8%a3%9d_%28%e7%b6%b2%e8%b7%af%29" target="_blank" rel="noopener">封装</a>以穿&gt;透防火墙。RTMPT通常在
+<a href="https://zh.wikipedia.org/wiki/%e4%bc%a0%e8%be%93%3e%e6%8e%a7%e5%88%b6%e5%8d%8f%e8%ae%ae" target="_blank" rel="noopener">TCP</a>
+<a href="https://zh.wikipedia.org/wiki/%e9%80%9a%e8%a8%8a%e5%9f%a0" target="_blank" rel="noopener">端口</a>80和443&gt;上使用明文请求来绕过大多数的公司流量过滤。封装的会话中可能携带纯粹的&gt;RTMP、RTMPS或RTMPE数据包。</li>
+<li><strong>RTMFP</strong>, 使用
+<a href="https://zh.wikipedia.org/wiki/%e7%94%a8%e6%88%b7%3e%e6%95%b0%e6%8d%ae%e6%8a%a5%e5%8d%8f%e8%ae%ae" target="_blank" rel="noopener">UDP</a>而非TCP的RTMP，取代RTMP Chunk Stream。Adobe Systems&gt;开发了安全的
+<a href="https://zh.wikipedia.org/w/index.%3ephp?title=%e5%ae%9e%e6%97%b6%e5%aa%92%e4%bd%93%e6%b5%81%e5%8d%8f%e8%ae%ae&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">实时媒体流协议</a>包，可以让最终用&gt;户直接地相互连接（P2P）。</li>
+</ol>
+<p>虽然RTMP的主要动机是成为一个播放Flash视频的协议，但它也用于其他一些应用程序，如
+<a href="https://zh.wikipedia.org/w/index.php?title=Adobe_LiveCycle_Data_Services_ES&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">Adobe LiveCycle Data Services ES</a>。</p>
+<p>—— WikiPedia 
+<a href="https://zh.wikipedia.org/wiki/%e5%ae%9e%e6%97%b6%e6%b6%88%e6%81%af%e5%8d%8f%e8%ae%ae" target="_blank" rel="noopener">实时消息协议</a></p>
+</blockquote>
+<h4 id="414-以上三者之间的关系">4.1.4 以上三者之间的关系</h4>
+<p>当我们有一段原始视频时，首先我们会将其转成 H.264编码，这会减少很多空间。其次我们会加上音轨，这样就组成了有一个视频通道，一个音频通道的多媒体组合。</p>
+<p>我们可以看一下原始的电影胶片，他包含了多条轨道，杜比左右声道及其他音轨就和视频轨道并列存放着，这和 MP4 中的封装是差不多的。</p>
+<p><img src="B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/th.jpeg" alt="th"></p>
+<p>对于流媒体传输协议，里面包含的也是 H.264编码，可以将其看成将影片切成一段段发送。</p>
+<h3 id="42-ffmpeg">4.2 ffmpeg</h3>
+<blockquote>
+<p>A complete, cross-platform solution to record, convert and stream audio and video.</p>
+<p>—— 
+<a href="http://ffmpeg.org" target="_blank" rel="noopener">FFmpeg</a></p>
+</blockquote>
+<p>它有两种使用方式：</p>
+<ul>
+<li>命令行：直接运行 ffmpeg 程序，并将命令作为运行参数传入即可；</li>
+<li>库：通过库来使用灵ongn</li>
+</ul>
+<p>我们在这个项目中主要采用命令行模式来调用 ffmpeg，这对一个小项目而言非常快速。</p>
+<h2 id="5-功能设计">5. 功能设计</h2>
+<h3 id="51-视频列表">5.1 视频列表</h3>
+<p>对于<strong>AreYouOK 智能摄像机</strong>输出到 NAS 上的文件来看，他是有规律的，每分钟保存一次。</p>
+<pre><code class="language-shell">➜  xiaomi_camera_videos tree
+.
+├── 04cf8cfe7133
+│   ├── 2020031908
+│   │   ├── 16M12S_1584576972.mp4
+│   │   ├── 17M10S_1584577030.mp4
+│   │   ├── 18M10S_1584577090.mp4
+│   │   ├── 19M10S_1584577150.mp4
+│   │   ├── 20M10S_1584577210.mp4
+│   │   ├── 21M10S_1584577270.mp4
+│   │   ├── 22M10S_1584577330.mp4
+...
+</code></pre>
+<p>他的格式为<code>/{年月日时}/{分M秒S_时间戳}.mp4</code>，根据文件名我们就能找到每个时刻的视频了。方案大致有两种：</p>
+<ul>
+<li>寻找上一分钟的文件名，并进行播放；</li>
+<li>寻找前几分钟的文件名，组合后进行播放。</li>
+</ul>
+<p>两种方式各有利弊，第一个在设备时间无法同步时会造成找不到视频的现象，第二种方式会产生非常大的延时。</p>
+<p>但实际上对于直播用户来说，直播主体并不会和用户进行互动，因此<strong>延时</strong>不会造成实质的影响。最终我采用的是第二种方式。</p>
+<p>生成播放列表函数入参有两个，一个是持续时间，第二个是列表结束时间。函数中首先过滤了文件夹名，然后通过文件名末尾的时间戳比对出需要播放的文件，排序后写入播放列表中。同时需返回播放个数。</p>
+<pre><code class="language-python">def make_video_list(during: int, endtime: datetime.datetime = datetime.datetime.now()):
+
+    starttime = endtime - datetime.timedelta(minutes=during)
+
+    print(&quot;======Make Video List======&quot;)
+
+    print(&quot;PlayList from {st} to {et}&quot;.format(st=starttime, et=endtime))
+
+    def dir_filter(dir: str) -&gt; bool:
+        try:
+            dir_time = int(dir)  # strptime(dir, &quot;%Y%m%d%H&quot;)
+            if dir_time &gt;= int(starttime.strftime(&quot;%Y%m%d%H&quot;)) and dir_time &lt;= int(
+                endtime.strftime(&quot;%Y%m%d%H&quot;)
+            ):
+                return True
+            else:
+                return False
+        except Exception as a:
+            print(&quot;make_video_list dir_filter Error &quot;, a)
+            return False
+
+    # filter play list
+    file_list = []
+    for dir in filter(dir_filter, os.listdir(CAMERA_PATH)):
+        for file in os.listdir(CAMERA_PATH + dir):
+            time = datetime.datetime.fromtimestamp(int(file[-14:-4]))
+            print(&quot;File : &quot;, dir, file, end=&quot;&quot;)
+            if time &gt;= starttime and time &lt;= endtime:
+                file_list.append(CAMERA_PATH + dir + &quot;/&quot; + file)
+                print(&quot; Will Play&quot;)
+            print(&quot; &quot;)
+
+
+    # write video playlist
+    with open(VIDEO_PLAYLIST, &quot;w&quot;) as f:
+        f.writelines(
+            map(
+                lambda path: &quot;file '&quot;
+                + path.replace(&quot;:&quot;, &quot;\\:&quot;).replace(&quot;'&quot;, &quot;\\\\\\\\\\\\'&quot;)
+                + &quot;'\n&quot;,
+                sorted(file_list),
+            )
+        )
+
+    print(&quot;======Make Video List End======&quot;)
+
+    return len(file_list)
+</code></pre>
+<h3 id="52-音乐播放列表">5.2 音乐播放列表</h3>
+<p>合成视频的同时我们得把声音给删了，不然直播出奇怪的声音是会被封号的！！！</p>
+<p>这边通过对音乐文件夹随机排序来生成，这个时间将远大于视频播放的时间，因此我们需要有音乐的时间记录，第二段视频播放时音乐从上次播放的位置插进去。</p>
+<pre><code class="language-python">def make_music_list() -&gt; int:
+    global g_music_play_time
+    if g_music_play_time &gt; MUSIC_MAX_TIME:
+        print(&quot;Will Create New Audio PlayList&quot;)
+        
+        g_music_play_time = 1
+
+        # remake music play list
+        music_list = list(
+            filter(
+                lambda file: file[-4:] == &quot;.mp3&quot;,
+                map(lambda filename: MUSIC_PATH + filename, os.listdir(MUSIC_PATH)),
+            )
+        )
+        random.shuffle(music_list)
+        with open(AUDIO_PLAYLIST, &quot;w&quot;) as f:
+            f.writelines(
+                map(
+                    lambda path: &quot;file '&quot;
+                    + path.replace(&quot;:&quot;, &quot;\\:&quot;).replace(&quot;'&quot;, &quot;\\\\\\\\\\\\'&quot;)
+                    + &quot;'\n&quot;,
+                    music_list,
+                )
+            )
+
+</code></pre>
+<p>这边由于音乐是从我的播放器里拷贝的，额外过滤了文件类型，只采用 mp3 文件。</p>
+<p>同样写入文件中，此处由于音乐名称的复杂性，额外做了 escape。</p>
+<h3 id="53-ffmpeg-命令生成">5.3 ffmpeg 命令生成</h3>
+<p>有了以上两个函数，基本功能基本完成，就差推流了。</p>
+<p>推流采用 ffmpeg，比较复杂，先上代码再慢慢讲解：</p>
+<pre><code class="language-python"># 生成命令行
+ffinput = 'ffmpeg -y -re -loglevel warning -f concat -safe 0 -i &quot;{VIDEO_PLAYLIST}&quot; -ss {MUSIC_START_TIME} -f concat -safe 0 -i &quot;{AUDIO_PLAYLIST}&quot; -c copy -shortest '.format(
+            VIDEO_PLAYLIST=VIDEO_PLAYLIST,
+            AUDIO_PLAYLIST=AUDIO_PLAYLIST,
+            MUSIC_START_TIME=get_music_start_time(),
+        )
+
+ffoutput = '-f flv &quot;{RTMP_ADDR}&quot;'.format(RTMP_ADDR=RTMP_ADDR)
+
+# ffoutput = &quot;re.mp4&quot;
+
+cmd = ffinput + ffoutput
+</code></pre>
+<p>这边采用了播放列表作为源，我们可以看<code>-f concat -safe 0 -i &quot;{VIDEO_PLAYLIST}&quot; </code>，</p>
+<ul>
+<li><em>-f</em>: fmt (input/output) 强制定义格式</li>
+<li><em>concat</em>： 连接，一种 demuxer，将源连接起来</li>
+<li><em>-safe 0</em>：concat 时不在意文件名</li>
+<li><em>-i</em>：input</li>
+</ul>
+<p>我们将播放列表作为 concat 的输入，最后 concat 作为一个完整输入存在。</p>
+<p>音频输入也同样，这边增加了一个 <code>-ss</code> 是seek到这个时间作为开始的意思，音频播放列表时间太长了，为了每次推流没有断层的感觉，会每次累计播放时间，然后通过<code>-ss</code>指定播放位置。<code>-ss</code>是需要特殊格式的，因此我们通过函数生成。</p>
+<pre><code class="language-python">def get_music_start_time():
+    global g_music_play_time
+
+    return &quot;{0:02}:{1:02}:{2:02}&quot;.format(
+        int(g_music_play_time // 3600),
+        int((g_music_play_time % 3600) // 60),
+        int(g_music_play_time % 60),
+    )
+</code></pre>
+<p>我们再来看看<code>ffinput</code>最前一段和最后一段：</p>
+<ul>
+<li>-y : 强制覆盖写入 output；</li>
+<li>-re : 读取input 按实际帧率来，直播需要用指令，不然会以最快速度处理数据；</li>
+<li>-loglevel warning：日志级别</li>
+<li>-c copy：不处理媒体编码，直接从 input 拷贝到 output，减少编解码的性能需求，当然这个同时我们没法对视频进行处理。</li>
+<li>-shortest: 输出时长按最短的轨道来。</li>
+</ul>
+<p>ffmpeg 在轨道重复时（例如视频音轨和音乐），会自动采用后输入的轨道。如果需要自定义就需要在指令上进行标示了。</p>
+<p>接下来我们看看<code>ffoutput</code>, 非常简单 <code>-f flv &quot;{RTMP_ADDR}&quot;</code> 制定了输出格式为 flv，并给了相应的 rtmp 地址。</p>
+<h3 id="54-执行-ffmpeg-命令">5.4 执行 ffmpeg 命令</h3>
+<p>ffmpeg 是系统二进制程序，因此我们需要在系统上调用它，通过 Popen在shell 环境下运行这条命令即可，同时等待结束，并接收输入输出。</p>
+<pre><code class="language-python"># 运行
+cmd_proc = subprocess.Popen(
+            cmd,
+            shell=True,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+
+ cmd_proc.wait()
+
+ outs, errs = cmd_proc.communicate(timeout=1)
+</code></pre>
+<p>到这边一次几分钟的推流就完成了，我们循环这个动作就能持续不断的将新录制的视频推出去。</p>
+<h3 id="55-半夜回放机制">5.5 半夜回放机制</h3>
+<p>除了白天鱼缸开灯期间的直播，我还期望在未开灯的时候也进行直播。当然我会关闭摄像头，防止在鱼缸背景较亮的情况下出现奇怪的反光，当然，半夜摄像头根本看不到什么，夜晚摄像头红外会被鱼缸玻璃反光形成强烈的光斑，无法观赏。</p>
+<p>我们需要在水草灯未工作期间进行直播就只能采用回放了，另外由于过年期间我个人的作息不定，只能通过软件自动检测是否工作了。</p>
+<p>这边的机制非常简单，当生成视频播放列表返回 0 时就可以进行回放了。此时我们将时间回退到 8~20 点之间，随机一个时间段，<code>播放时间=当前时间-（当前小时-随机小时数）</code> ，采用这个公式，当天关闭摄像头后可以播放指定时间段随机的时间点，但我们会发现超过半夜十二点后变为了<code> 1 点-16 点</code> 这样诡异的时间，反而变为了播放未来十五个小时后的视频。因此我们需要判断一旦过了半夜，相减的小时数就要多加 24h。</p>
+<pre><code class="language-python">tmp_endtime = play_endtime - datetime.timedelta(
+                    hours=(
+                        play_endtime.hour
+                        - random.randint(*CAMERA_WORKTIME)
+                        + (24 if play_endtime.hour &lt; 12 else 0)
+                    )
+                )
+</code></pre>
+<p>这样就能24H 进行播放了，每次播放一小时的视频（看之前的函数，可以传入时长）。</p>
+<p>但如果随机 20 次还没视频的话，就会直接播放当前时间前 24H 所有视频了。还是没有视频就 sleep 一小时，当然到了这地步 B 站早就自动关停直播室了。</p>
+<h3 id="56-直播退出机制">5.6 直播退出机制</h3>
+<p>在实际调试过程中会发现很恼火的一点是 Ctrl+C 完全没有反应。由于展示在 shell 上的是 ffmpeg 进程，Ctrl+C只会退出 ffmpeg，而不会退出 python 脚本，此时他会在人类无法反映的时间内重启 ffmpeg。除了关闭 Shell，没什么更快捷的办法了。</p>
+<p>另外在 kill 时也会有需要先 kill 脚本，再 kill ffmpeg。</p>
+<p>后面很无奈，只能做一个直播退出机制了。将之前简单的  <code>os.System</code> 函数替换为了现在可控的<code>subprocess.Popen</code> 并增加了信号捕获。</p>
+<pre><code class="language-python">def stop(signal, stack):
+    # TODO: 此处必然有时序问题，暂不处理
+    nonlocal run
+    run = False
+    cmd_proc.kill()
+
+signal.signal(signal.SIGTERM, stop)
+signal.signal(signal.SIGINT, stop)
+</code></pre>
+<p>收到信号，暂停循环，并杀死 ffmpeg。</p>
+<h3 id="57-深夜直播暂停事件">5.7 深夜直播暂停事件</h3>
+<p>过年时每天起来会发现我的直播停了。当然我也懒得看日志，因为这件事太迷了，看日志也得翻好久。</p>
+<p>同上，后面很无奈，还是慢慢翻了日志。发现 ffmpeg 在断网后会卡死很长一段时间，需要二十多分钟才会退出。这个时间足够 B 站把我踢下线了。而断网的原因是我在路由器上设定了每天半夜清理缓存。（这竟然会断网，辣鸡 tplink。）</p>
+<p>然后就新增了一个进程，用于检测网络是否正常，这个进程是每五秒执行系统命令 ping 一次114，记录flag，并在恢复时 kill一次ffmpeg。</p>
+<pre><code class="language-python">def ping():
+    nonlocal run
+    global cmd_proc
+
+    pre_state = True
+
+    while run:
+        state = True
+
+        outs = subprocess.Popen(
+            &quot;ping -c 1 -w 1 114.114.114.114&quot;,
+            shell=True,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding=&quot;utf8&quot;,
+        ).stdout.readlines()
+        state = 0 == outs[-1].find('rtt')
+
+        if not state:
+            print(&quot;Net broken!&quot;)
+
+        if False == pre_state and True == state:
+            print(&quot;Net resumed, kill cmd&quot;)
+            if None != cmd_proc:
+                print(&quot;Net resumed, kill cmd！！&quot;)
+                cmd_proc.kill()
+
+        pre_state = state
+
+        sys.stdout.flush()
+        time.sleep(5)
+
+multiprocessing.Value
+ping_subproc = multiprocessing.Process(target=ping)
+ping_subproc.start()
+</code></pre>
+<p>至于为什么上面写的是进程&hellip;那是 python 解释器的问题，由于GIL （全局解释器锁）的存在，多线程处理时非常低效，开了多线程也和没开一样，甚至更慢。</p>
+<h3 id="6-存在的问题">6. 存在的问题</h3>
+<h4 id="61-摄像机部署问题">6.1 摄像机部署问题</h4>
+<p>摄像机拜访存在很大问题，会遮挡视线。并且作为监控摄像头来拍摄鱼缸是非常糟糕的，首先它存在非常大的镜头畸变，在近距离非常明显，其次广角镜头在拍摄近距离物体时难以对焦，导致画面较为模糊。</p>
+<h4 id="62-时间戳问题">6.2 时间戳问题</h4>
+<p>推流的 RTMP 协议中会增加相对时间戳，此时几分钟的视频播放完毕重启 ffmpeg 播放下一段时会重新生成时间戳，导致用户接收到的数据时间戳突变，容易导致播放问题。</p>
+<p>在Bilibili App 上很少存在断流的问题，但在Safari 上很容易断流。</p>
+<p>当然应该是可以通过 ffmpeg 的时间戳来解决的，不过是一个巨大的坑。也可以通过增加延迟，播放前一个小时的视频规避这个问题。</p>
+<h4 id="63-视频重复问题">6.3 视频重复问题</h4>
+<p>视频重复在刚开始直播时会容易出现，一开始视频不足 10 分钟，会取前几分钟的，播放完后会重新获取，此时之前几分钟的依然会被获取到，重新播放。</p>
+<h2 id="7-可替代方案">7. 可替代方案</h2>
+<p>写了这段代码的主要原因在于<strong>AreYouOK 智能摄像机</strong>不支持 RTSP，一旦 RTSP 问题解决，代码就没有了存在意义。替代方案还是很多的</p>
+<p>7.1 PC+USB 摄像头</p>
+<p>购买一台冥王峡谷+罗技摄像头即可解决隐蔽性和以上所有问题。强大的 CPU 还能支持视频编解码，直接使用 OBS 玩更多直播内容。预计成本 10000.</p>
+<h3 id="72-网络摄像头支持-rtsp">7.2 网络摄像头支持 RTSP</h3>
+<p>有一个支持 RTSP 的网络摄像头，可以将 python 脚本简化为 shell 脚本一键运行。</p>
+<h3 id="73-手机">7.3 手机</h3>
+<p>买一个二手手机 Bilibili App 进行直播，预计费用 300~500。最方便的办法，但扩展性不高。</p>
+<h2 id="8-关键决定因素">8. 关键决定因素</h2>
+<p><em><strong>内容高于技术</strong></em>。无论是脚本、摄像头还是整套方案，最终都是为内容服务的。</p>
+<p><img src="B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/IMG_3777.jpg" alt="IMG_3777"></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="http://www.pmi.com">www.pmi.com</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://obsproject.com">https://obsproject.com</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+
+    
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="">云养鱼</a>
+  
+  <a class="badge badge-light" href="/tags/bilibili.html">Bilibili</a>
+  
+  <a class="badge badge-light" href="/tags/rtmp.html">rtmp</a>
+  
+  <a class="badge badge-light" href="/tags/ffmpeg.html">ffmpeg</a>
+  
+</div>
+
+
+<p style="color: darkgray;float: right; font-size: small;">
+  <span  id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> reads</span>
+</p>
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html&amp;text=B%e7%ab%99%e4%ba%91%e5%85%bb%e9%b1%bc--%e8%b4%ab%e7%a9%b7%e5%ae%9a%e5%88%b6" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html&amp;t=B%e7%ab%99%e4%ba%91%e5%85%bb%e9%b1%bc--%e8%b4%ab%e7%a9%b7%e5%ae%9a%e5%88%b6" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=B%e7%ab%99%e4%ba%91%e5%85%bb%e9%b1%bc--%e8%b4%ab%e7%a9%b7%e5%ae%9a%e5%88%b6&amp;body=https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html&amp;title=B%e7%ab%99%e4%ba%91%e5%85%bb%e9%b1%bc--%e8%b4%ab%e7%a9%b7%e5%ae%9a%e5%88%b6" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=B%e7%ab%99%e4%ba%91%e5%85%bb%e9%b1%bc--%e8%b4%ab%e7%a9%b7%e5%ae%9a%e5%88%b6%20https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://telegram.me/share/url?url=https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html&amp;text=B%e7%ab%99%e4%ba%91%e5%85%bb%e9%b1%bc--%e8%b4%ab%e7%a9%b7%e5%ae%9a%e5%88%b6" target="_blank" rel="noopener" class="share-btn-telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="http://chart.apis.google.com/chart?cht=qr&amp;chs=104x104&amp;chld=L%7c0&amp;chl=https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html" target="_blank" rel="noopener" class="share-btn-wechat">
+          <i class="fab fa-weixin"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html&amp;title=B%e7%ab%99%e4%ba%91%e5%85%bb%e9%b1%bc--%e8%b4%ab%e7%a9%b7%e5%ae%9a%e5%88%b6" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/morningtzh/avatar_hu6d03ace990a63acb769e531abea584b3_407134_270x270_fill_q90_lanczos_center.jpeg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://blog.morningtzh.com/">MorningTZH</a></h5>
+      
+      <p class="card-text">喵？</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/morningtzh" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+<section id="comments">
+  
+    
+<script src="https://utteranc.es/client.js"
+        repo="morningtzh/blog_comments"
+        issue-term="title"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+</section>
+
+
+
+
+<div class="article-widget">
+  
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">上一页</div>
+    <a href="/post/%E4%B9%90%E7%90%86/%E4%B9%90%E7%90%86%E7%AC%94%E8%AE%B01-%E9%9F%B3%E7%A8%8B.html" rel="prev">乐理笔记1--音程</a>
+  </div>
+  
+</div>
+
+</div>
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" integrity="sha256-lyWCDMnMeZiXRi7Zl54sZGKYmgQs4izcT7+tKc+KUBk=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/cpp.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/javascript.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/go.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"没有找到结果","placeholder":"搜索...","results":"搜索结果"};
+      const content_type = {
+        'post': "文章",
+        'project': "项目",
+        'publication' : "出版物",
+        'talk' : "演讲"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.c816d323c3a55093dae0829b44ea1ca8.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<footer class="site-footer">
+  
+
+  <p style="color: darkgray;">
+    <span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span> views, </span>
+    <span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span> visitors.</span>
+  </p>
+  <p class="powered-by">
+    ©MorningTZH &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">引用</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> 复制
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> 下载
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

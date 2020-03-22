@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>project | 瑟瑟和你说早安</title>
+    <link>https://blog.morningtzh.com/categories/project.html</link>
+      <atom:link href="https://blog.morningtzh.com/categories/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>project</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sat, 21 Mar 2020 09:49:46 +0800</lastBuildDate>
+    <image>
+      <url>https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png</url>
+      <title>project</title>
+      <link>https://blog.morningtzh.com/categories/project.html</link>
+    </image>
+    
+    <item>
+      <title>B站云养鱼--贫穷定制</title>
+      <link>https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html</link>
+      <pubDate>Sat, 21 Mar 2020 09:49:46 +0800</pubDate>
+      <guid>https://blog.morningtzh.com/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html</guid>
+      <description>&lt;h1 id=&#34;b站云养鱼--贫穷定制&#34;&gt;B站云养鱼&amp;ndash;贫穷定制&lt;/h1&gt;
+&lt;h2&gt;目录&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#1-我买了一个缸&#34;&gt;1. 我买了一个缸&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#2-直播方案比较及限制条件&#34;&gt;2. 直播方案比较及限制条件&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#21-方案比较及场景限制&#34;&gt;2.1 方案比较及场景限制&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#22-硬件限制条件分析&#34;&gt;2.2 硬件限制条件分析&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#3-整体方案设计&#34;&gt;3. 整体方案设计&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#31-整体方案&#34;&gt;3.1 整体方案&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#32-视频源&#34;&gt;3.2 视频源&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#33-视频目的地&#34;&gt;3.3 视频目的地&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#4-背景知识&#34;&gt;4. 背景知识&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#41-流媒体&#34;&gt;4.1 流媒体&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#42-ffmpeg&#34;&gt;4.2 ffmpeg&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#5-功能设计&#34;&gt;5. 功能设计&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#51-视频列表&#34;&gt;5.1 视频列表&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#52-音乐播放列表&#34;&gt;5.2 音乐播放列表&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#53-ffmpeg-命令生成&#34;&gt;5.3 ffmpeg 命令生成&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#54-执行-ffmpeg-命令&#34;&gt;5.4 执行 ffmpeg 命令&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#55-半夜回放机制&#34;&gt;5.5 半夜回放机制&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#56-直播退出机制&#34;&gt;5.6 直播退出机制&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#57-深夜直播暂停事件&#34;&gt;5.7 深夜直播暂停事件&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#6-存在的问题&#34;&gt;6. 存在的问题&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#7-可替代方案&#34;&gt;7. 可替代方案&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#72-网络摄像头支持-rtsp&#34;&gt;7.2 网络摄像头支持 RTSP&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#73-手机&#34;&gt;7.3 手机&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#8-关键决定因素&#34;&gt;8. 关键决定因素&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&#34;1-我买了一个缸&#34;&gt;1. 我买了一个缸&lt;/h2&gt;
+&lt;p&gt;过年前散步，正好路过花鸟市场。本来打算买些花草，走着走着就变看鱼了。心血来潮，赶紧研究了下养鱼入门知识，并开了个一个草缸。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/IMG_3639.JPG&#34; alt=&#34;新手缸&#34;&gt;&lt;/p&gt;
+&lt;p&gt;新手的缸总是这么枯燥。&lt;/p&gt;
+&lt;p&gt;缸还在路上的时候我就突然想开个直播，这么有趣的事情应该和大家分享。&lt;del&gt;顺便赚点饲料钱，说不定还能靠直播当上 CEO 迎娶白富美。&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;如此一来原始需求就定下了，需要做一个 24H 鱼缸直播方案出来。&lt;/p&gt;
+&lt;h2 id=&#34;2-直播方案比较及限制条件&#34;&gt;2. 直播方案比较及限制条件&lt;/h2&gt;
+&lt;h3 id=&#34;21-方案比较及场景限制&#34;&gt;2.1 方案比较及场景限制&lt;/h3&gt;
+&lt;p&gt;项目是为创造独特产品、服务或成果而进行的临时性工作。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 这个直播需求与真人 UP 主的直播由于工作方式不同，因此会导致环境差异较大。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一般直播时，直播主体主播唯一受众为用户。无论是在线聊天、游戏还是云画画，直播的主机即为工作的主机，在一定时间段内，主播会面对主机进行工作，并通过这台主机直播出去，工作内容可以说就是直播内容；&lt;/li&gt;
+&lt;li&gt;本次直播时，直播主体鱼缸有两个受众，一个是直播用户，另一个是现场观众&lt;sup&gt;我我我！！！&lt;/sup&gt;。对鱼缸进行24H 直播时不能让主机在空间中明显可见，这会阻碍现场观众视线；同时当我需要在一台主机上做直播无关工作，甚至开关机时不能影响直播进行。因此需要在隐蔽角落放一个独立主机进行直播。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usecase:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph LR
+	subgraph 工作室
+		主播 --do--&amp;gt; 工作Process
+		主播 --被摄--&amp;gt;直播Process
+		subgraph 主机
+			工作Process --被摄--&amp;gt; 直播Process
+		end
+	end
+	直播Process --推流--&amp;gt; B站
+ 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph LR
+	subgraph Home
+		鱼缸 --被摄--&amp;gt; 直播主机
+		鱼缸 --观赏--&amp;gt; 我
+		我--工作--&amp;gt;工作主机
+	end
+	直播主机 --推流--&amp;gt; B站
+ 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结合家里设备具体差异如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;一般 UP 主&lt;/th&gt;
+&lt;th&gt;本次直播需求&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;时间&lt;/td&gt;
+&lt;td&gt;限时直播&lt;/td&gt;
+&lt;td&gt;24H 直播&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主机&lt;/td&gt;
+&lt;td&gt;无需独立主机&lt;/td&gt;
+&lt;td&gt;需要独立主机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主机可见&lt;/td&gt;
+&lt;td&gt;需操作，可见&lt;/td&gt;
+&lt;td&gt;无需操作，不可见&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;操作系统&lt;/td&gt;
+&lt;td&gt;Windows&lt;/td&gt;
+&lt;td&gt;Linux&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;摄像头&lt;/td&gt;
+&lt;td&gt;USB 摄像头&lt;/td&gt;
+&lt;td&gt;网络摄像头&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;22-硬件限制条件分析&#34;&gt;2.2 硬件限制条件分析&lt;/h3&gt;
+&lt;p&gt;由于穷，本次方案只能在家里现有设备基础上进行设计。&lt;/p&gt;
+&lt;p&gt;目前可用设备：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;蜗牛星际&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AreYouOK 智能摄像机&lt;/strong&gt;（第三代）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Raspberry Pi Zero W&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;蜗牛星际&lt;/strong&gt;是咸鱼上 300 块买来的矿难机，4G 内存，搭载 J1900 CPU，四盘位机箱，真香 😙。被我装上了 manjaro 做NAS 用，用来做下载、时间胶囊、&lt;del&gt;物联网&lt;/del&gt;、数据可视化等功能。蜗牛星际被我藏在鞋柜里，满足了本次直播方案主机隐蔽的需求。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/v2-b64e4e22b1ef466a7443965f5a150826_b.jpg&#34; alt=&#34;蜗牛星际&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AreYouOK 智能摄像机&lt;/strong&gt;（第三代）是半年前买的，也是在研究直播系统的时候才了解了他的版本。&lt;strong&gt;AreYouOK 智能摄像机&lt;/strong&gt;第二代是绝对的香，可以修改固件增加 rtsp 功能，第三代就不行了，试了很长时间都没法打开 rtsp，同时第三代在图像质量上也比第二代下降了很多。由于不能用 rtsp，我会在下文讲解别的方法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Raspberry Pi Zero W&lt;/strong&gt;，做备选方案，这是我买来黑 USB 和 wifi玩的设备，他的优点在于蓝牙 wifi 都在一片上集成了，体积小，可以变成 USB 棒。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/91d73c36c55cc0e4cea3ba9fe128d992382b7a55_pi-zero-w-1-1620x1080.jpg&#34; alt=&#34;Raspberry Pi Zero W&#34;&gt;&lt;/p&gt;
+&lt;p&gt;下图是我自己的**Raspberry Pi Zero W*，加上了E-ink 屏幕和 USB 转换头。玩法非常多，比如模拟成两个设备，一个优盘一个键盘，就可以在插入PC 后通过蓝牙或 wifi 输入相应指令了；也可以通上电连上 wifi，做中间人攻击；其他的由于体积小，作为嵌入式主控也是不错的选择。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/IMG_3750.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3-整体方案设计&#34;&gt;3. 整体方案设计&lt;/h2&gt;
+&lt;h3 id=&#34;31-整体方案&#34;&gt;3.1 整体方案&lt;/h3&gt;
+&lt;p&gt;整体方案采用网络摄像机+NAS 推流的形式展开。OBS 获取 rtsp 流后，再通过 rtmp 丢到 B 站即可，轻松加愉快。&lt;/p&gt;
+&lt;p&gt;不，事实并不是这样的。生活往往并没有这么容易😢 ，很容易接受现实的吊打。但我们还是先将我们的部署图画出来。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph LR
+	subgraph 鞋柜
+		NAS
+	end
+	subgraph 客厅
+		鱼缸 -- 拍摄 --&amp;gt; 摄像机
+		摄像机--传输视频--&amp;gt;NAS
+	end
+	NAS --推流--&amp;gt; B站
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;32-视频源&#34;&gt;3.2 视频源&lt;/h3&gt;
+&lt;p&gt;视频来源由于贫穷，首先选择现有的&lt;strong&gt;AreYouOK 智能摄像机&lt;/strong&gt;。他是没有 rtsp、onvif 的辣鸡摄像机，但我们在 App 设置里面可以看到它支持 NAS，可以实时将视频保存到 NAS 上。我本以为这是一个黑科技，但万万没想到&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/image-20200322110409969.png&#34; alt=&#34;image-20200322110409969&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/96a7-ikyziqx7363878.jpg&#34; alt=&#34;老爷爷地铁看手机&#34;&gt;&lt;/p&gt;
+&lt;p&gt;一定是我打开方式错误，我换个方式重新打开一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;➜  xiaomi_camera_videos tree
+.
+├── 04cf8cfe7133
+│   ├── 2020031908
+│   │   ├── 16M12S_1584576972.mp4
+│   │   ├── 17M10S_1584577030.mp4
+│   │   ├── 18M10S_1584577090.mp4
+│   │   ├── 19M10S_1584577150.mp4
+│   │   ├── 20M10S_1584577210.mp4
+│   │   ├── 21M10S_1584577270.mp4
+│   │   ├── 22M10S_1584577330.mp4
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;叮 本项目由于不可抗力终止。。。&lt;/p&gt;
+&lt;p&gt;。&lt;/p&gt;
+&lt;p&gt;。&lt;/p&gt;
+&lt;p&gt;。&lt;/p&gt;
+&lt;p&gt;。&lt;/p&gt;
+&lt;p&gt;不 我当然是不会放弃的！不就是分钟级视频文件么。一定能解决！如果一些这么顺利，就没必要做脚本了。&lt;/p&gt;
+&lt;h4 id=&#34;321-视频播放obs&#34;&gt;3.2.1 视频播放+OBS&lt;/h4&gt;
+&lt;p&gt;通常主播在直播的时候会用到 OBS&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;，一款开源直播软件，B 站直播姬就是基于 OBS 制作的。它支持 macOS、linux和windows三个平台，可以在单个窗口添加不同的源合成一个画面，同时支持多场景切换。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;file:///Users/morningtzh/workplace/SeseSayHi/content/post/B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/OBSDemoApp2321.png?lastModify=1584848414&#34; alt=&#34;OBS&#34;&gt;&lt;/p&gt;
+&lt;p&gt;OBS 在不同场景的直播中都能发挥很大作用。画面来源支持非常多，rtsp、窗口捕获、桌面捕获、图像、视频、浏览器、音频、文字等等。有兴趣的可以下载一个，并参考 
+&lt;a href=&#34;https://obsproject.com/wiki/Sources-Guide&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WiKI&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;OBS 是无法播放文件夹的，因此考虑采用视频播放器+OBS 的窗口捕获，获取视频流。&lt;/p&gt;
+&lt;p&gt;最终由于 CPU 100% Good Game。&lt;/p&gt;
+&lt;p&gt;同时也意识到了蜗牛星际 J1900 CPU 在视频编解码上的无力，无法使用 OBS 这样复杂的直播软件。&lt;/p&gt;
+&lt;h4 id=&#34;322-ffmpeg-合成视频&#34;&gt;3.2.2 ffmpeg 合成视频&lt;/h4&gt;
+&lt;p&gt;ffmpeg 是一个非常棒的软件，他可以将播放列表作为Input 使用。因此本方案最终使用了ffmpeg 作为视频合成及推流工具。&lt;/p&gt;
+&lt;h3 id=&#34;33-视频目的地&#34;&gt;3.3 视频目的地&lt;/h3&gt;
+&lt;p&gt;我们通过 ffmpeg 处理视频源，自然也通过 ffmpeg 来推流。&lt;/p&gt;
+&lt;h2 id=&#34;4-背景知识&#34;&gt;4. 背景知识&lt;/h2&gt;
+&lt;p&gt;为了后续更好理解整套方案，这边将对一些背景知识做一些简单的介绍&lt;/p&gt;
+&lt;h3 id=&#34;41-流媒体&#34;&gt;4.1 流媒体&lt;/h3&gt;
+&lt;p&gt;对于媒体编码、封装格式和传输协议本身其实和我们要做的方案关联较小，仅在定位一些问题时可能会用到比较深入的知识。&lt;/p&gt;
+&lt;p&gt;在这里我们只需要简单的做些了解。&lt;/p&gt;
+&lt;h4 id=&#34;411-视频编码-h264&#34;&gt;4.1.1 视频编码 H.264&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;H.264&lt;/strong&gt;，又称为&lt;strong&gt;MPEG-4第10部分，高级视频编码&lt;/strong&gt;（英语：MPEG-4 Part 10, Advanced Video Coding，缩写为MPEG-4 AVC）是一种面向块，基于
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e8%bf%90%e5%8a%a8%e8%a1%a5%e5%81%bf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;运动补偿&lt;/a&gt;的
+&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=%e8%a7%86%e9%a2%91%e7%bc%96%e7%a0%81%e6%a0%87%e5%87%86&amp;amp;action=edit&amp;amp;redlink=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;视频编码标准&lt;/a&gt; 。到2014年，它已经成为高精度视频录制、压缩和发布的最常用格式之一。第一版标准的最终草案于2003年5月完成。&lt;/p&gt;
+&lt;p&gt;—— WikiPedia 
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/H.264/MPEG-4_AVC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;H.264&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;H.264我们首先需要关注他是一种视频编码，他会对原始视频做大量压缩处理来减少视频的体积，其次是他有三种帧：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I帧：关键帧，采用帧内压缩技术。&lt;/li&gt;
+&lt;li&gt;P帧：向前参考帧，在压缩时，只参考前面已经处理的帧。采用帧音压缩技术。&lt;/li&gt;
+&lt;li&gt;B帧：双向参考帧，在压缩时，它即参考前而的帧，又参考它后面的帧。采用帧间压缩技术。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;缺少某一 I 帧时，画面会变得非常诡异，大家在看D 版电影时也经常会看到各种灵异的现象就是缺帧导致的。&lt;/p&gt;
+&lt;h4 id=&#34;412-媒体封装格式-mp4&#34;&gt;4.1.2 媒体封装格式 MP4&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;MP4&lt;/strong&gt;或称**
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/MPEG-4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MPEG-4&lt;/a&gt;第14部分**（英语：MPEG-4 Part 14）是一种标准的数字
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e5%a4%9a%e5%aa%92%e9%ab%94&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;多媒体&lt;/a&gt;容器格式。MPEG-4第14部分的扩展名为**.mp4**，以存储
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e6%95%b8%e4%bd%8d%e9%9f%b3%e8%a8%8a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;数字音频&lt;/a&gt;及
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e6%95%b8%e4%bd%8d%e5%bd%b1%e7%89%87&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;数字视频&lt;/a&gt;为主，但也可以存储
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e5%ad%97%e5%b9%95&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;字幕&lt;/a&gt;和静止图像。因其可容纳支持
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e4%bd%8d%e5%85%83%e6%b5%81&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;比特流&lt;/a&gt;的视频流（如
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/H.264/MPEG-4_AVC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;高级视频编码&lt;/a&gt;），MP4可以在网络传输时使用
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e4%b8%b2%e6%b5%81%e5%aa%92%e9%ab%94&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;流式传输&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;—— WikiPedia 
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/MP4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MP4&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在上述 WikiPedia 的描述中，MP4 是一种容器，他会在里面存放音频、视频、字幕或图像，都是以通道来表示一路媒体的。&lt;/p&gt;
+&lt;h4 id=&#34;413-流媒体协议-rtmp&#34;&gt;4.1.3 流媒体协议 RTMP&lt;/h4&gt;
+&lt;p&gt;B 站采用 RTMP 方式推流，这是一种媒体传输协议。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;实时消息协议&lt;/strong&gt;（英语：Real-Time Messaging Protocol，缩写&lt;strong&gt;RTMP&lt;/strong&gt;）也称&lt;strong&gt;实时消息传输协议&lt;/strong&gt;，是最初由
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/Macromedia&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Macromedia&lt;/a&gt;为通过
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e4%ba%92%e8%81%94%e7%bd%91&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;互联网&lt;/a&gt;在
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/Adobe_Flash&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Flash播放器&lt;/a&gt;与一个
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e6%9c%8d%e5%8a%a1%e5%99%a8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;服务器&lt;/a&gt;之间传输
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e6%b5%81%e5%aa%92%e4%bd%93&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;流媒体&lt;/a&gt;
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e9%9f%b3%e9%a2%91&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;音频&lt;/a&gt;、
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e8%a7%86%e9%a2%91&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;视频&lt;/a&gt;和数据而开发的一个
+&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=%e4%b8%93%e6%9c%89%e5%8d%8f%e8%ae%ae&amp;amp;action=edit&amp;amp;redlink=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;专有协议&lt;/a&gt;。Macromedia后被
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/Adobe_Systems&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adobe Systems&lt;/a&gt;收购，该协议也已发布了不完整的规范供公众使用。&lt;/p&gt;
+&lt;p&gt;RTMP协议有许多变种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;默认使用TCP端口1935的纯粹（plain）协议。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RTMPS&lt;/strong&gt;，通过一个
+&lt;a href=&#34;https://zh.wikipedia.org/%3ewiki/%e5%82%b3%e8%bc%b8%e5%b1%a4%e5%ae%89%e5%85%a8%e6%80%a7%e5%8d%94%e5%ae%9a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TLS/SSL&lt;/a&gt;连接传输RTMP。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RTMPE&lt;/strong&gt;，使用Adobe自有安全机制加密的RTMP。虽然实现的细节为专&amp;gt;有，但该机制使用行业标准的
+&lt;a href=&#34;https://zh.wikipedia.org/%3ewiki/%e5%af%86%e7%a0%81%e5%ad%a6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;密码学&lt;/a&gt;原函数。[
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e5%ae%9e%e6%97%b6%3e%e6%b6%88%e6%81%af%e5%8d%8f%e8%ae%ae#cite_note-RTMPE_overview-1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RTMPT&lt;/strong&gt;，用
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e8%b6%85%e6%96%87%e6%9c%ac%3e%e4%bc%a0%e8%be%93%e5%8d%8f%e8%ae%ae&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HTTP&lt;/a&gt;
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e5%b0%81%e8%a3%9d_%28%e7%b6%b2%e8%b7%af%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;封装&lt;/a&gt;以穿&amp;gt;透防火墙。RTMPT通常在
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e4%bc%a0%e8%be%93%3e%e6%8e%a7%e5%88%b6%e5%8d%8f%e8%ae%ae&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TCP&lt;/a&gt;
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e9%80%9a%e8%a8%8a%e5%9f%a0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;端口&lt;/a&gt;80和443&amp;gt;上使用明文请求来绕过大多数的公司流量过滤。封装的会话中可能携带纯粹的&amp;gt;RTMP、RTMPS或RTMPE数据包。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RTMFP&lt;/strong&gt;, 使用
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e7%94%a8%e6%88%b7%3e%e6%95%b0%e6%8d%ae%e6%8a%a5%e5%8d%8f%e8%ae%ae&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UDP&lt;/a&gt;而非TCP的RTMP，取代RTMP Chunk Stream。Adobe Systems&amp;gt;开发了安全的
+&lt;a href=&#34;https://zh.wikipedia.org/w/index.%3ephp?title=%e5%ae%9e%e6%97%b6%e5%aa%92%e4%bd%93%e6%b5%81%e5%8d%8f%e8%ae%ae&amp;amp;action=edit&amp;amp;redlink=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;实时媒体流协议&lt;/a&gt;包，可以让最终用&amp;gt;户直接地相互连接（P2P）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;虽然RTMP的主要动机是成为一个播放Flash视频的协议，但它也用于其他一些应用程序，如
+&lt;a href=&#34;https://zh.wikipedia.org/w/index.php?title=Adobe_LiveCycle_Data_Services_ES&amp;amp;action=edit&amp;amp;redlink=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adobe LiveCycle Data Services ES&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;—— WikiPedia 
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/%e5%ae%9e%e6%97%b6%e6%b6%88%e6%81%af%e5%8d%8f%e8%ae%ae&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;实时消息协议&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;414-以上三者之间的关系&#34;&gt;4.1.4 以上三者之间的关系&lt;/h4&gt;
+&lt;p&gt;当我们有一段原始视频时，首先我们会将其转成 H.264编码，这会减少很多空间。其次我们会加上音轨，这样就组成了有一个视频通道，一个音频通道的多媒体组合。&lt;/p&gt;
+&lt;p&gt;我们可以看一下原始的电影胶片，他包含了多条轨道，杜比左右声道及其他音轨就和视频轨道并列存放着，这和 MP4 中的封装是差不多的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/th.jpeg&#34; alt=&#34;th&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对于流媒体传输协议，里面包含的也是 H.264编码，可以将其看成将影片切成一段段发送。&lt;/p&gt;
+&lt;h3 id=&#34;42-ffmpeg&#34;&gt;4.2 ffmpeg&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A complete, cross-platform solution to record, convert and stream audio and video.&lt;/p&gt;
+&lt;p&gt;—— 
+&lt;a href=&#34;http://ffmpeg.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FFmpeg&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;它有两种使用方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;命令行：直接运行 ffmpeg 程序，并将命令作为运行参数传入即可；&lt;/li&gt;
+&lt;li&gt;库：通过库来使用灵ongn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们在这个项目中主要采用命令行模式来调用 ffmpeg，这对一个小项目而言非常快速。&lt;/p&gt;
+&lt;h2 id=&#34;5-功能设计&#34;&gt;5. 功能设计&lt;/h2&gt;
+&lt;h3 id=&#34;51-视频列表&#34;&gt;5.1 视频列表&lt;/h3&gt;
+&lt;p&gt;对于&lt;strong&gt;AreYouOK 智能摄像机&lt;/strong&gt;输出到 NAS 上的文件来看，他是有规律的，每分钟保存一次。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;➜  xiaomi_camera_videos tree
+.
+├── 04cf8cfe7133
+│   ├── 2020031908
+│   │   ├── 16M12S_1584576972.mp4
+│   │   ├── 17M10S_1584577030.mp4
+│   │   ├── 18M10S_1584577090.mp4
+│   │   ├── 19M10S_1584577150.mp4
+│   │   ├── 20M10S_1584577210.mp4
+│   │   ├── 21M10S_1584577270.mp4
+│   │   ├── 22M10S_1584577330.mp4
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;他的格式为&lt;code&gt;/{年月日时}/{分M秒S_时间戳}.mp4&lt;/code&gt;，根据文件名我们就能找到每个时刻的视频了。方案大致有两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;寻找上一分钟的文件名，并进行播放；&lt;/li&gt;
+&lt;li&gt;寻找前几分钟的文件名，组合后进行播放。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两种方式各有利弊，第一个在设备时间无法同步时会造成找不到视频的现象，第二种方式会产生非常大的延时。&lt;/p&gt;
+&lt;p&gt;但实际上对于直播用户来说，直播主体并不会和用户进行互动，因此&lt;strong&gt;延时&lt;/strong&gt;不会造成实质的影响。最终我采用的是第二种方式。&lt;/p&gt;
+&lt;p&gt;生成播放列表函数入参有两个，一个是持续时间，第二个是列表结束时间。函数中首先过滤了文件夹名，然后通过文件名末尾的时间戳比对出需要播放的文件，排序后写入播放列表中。同时需返回播放个数。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def make_video_list(during: int, endtime: datetime.datetime = datetime.datetime.now()):
+
+    starttime = endtime - datetime.timedelta(minutes=during)
+
+    print(&amp;quot;======Make Video List======&amp;quot;)
+
+    print(&amp;quot;PlayList from {st} to {et}&amp;quot;.format(st=starttime, et=endtime))
+
+    def dir_filter(dir: str) -&amp;gt; bool:
+        try:
+            dir_time = int(dir)  # strptime(dir, &amp;quot;%Y%m%d%H&amp;quot;)
+            if dir_time &amp;gt;= int(starttime.strftime(&amp;quot;%Y%m%d%H&amp;quot;)) and dir_time &amp;lt;= int(
+                endtime.strftime(&amp;quot;%Y%m%d%H&amp;quot;)
+            ):
+                return True
+            else:
+                return False
+        except Exception as a:
+            print(&amp;quot;make_video_list dir_filter Error &amp;quot;, a)
+            return False
+
+    # filter play list
+    file_list = []
+    for dir in filter(dir_filter, os.listdir(CAMERA_PATH)):
+        for file in os.listdir(CAMERA_PATH + dir):
+            time = datetime.datetime.fromtimestamp(int(file[-14:-4]))
+            print(&amp;quot;File : &amp;quot;, dir, file, end=&amp;quot;&amp;quot;)
+            if time &amp;gt;= starttime and time &amp;lt;= endtime:
+                file_list.append(CAMERA_PATH + dir + &amp;quot;/&amp;quot; + file)
+                print(&amp;quot; Will Play&amp;quot;)
+            print(&amp;quot; &amp;quot;)
+
+
+    # write video playlist
+    with open(VIDEO_PLAYLIST, &amp;quot;w&amp;quot;) as f:
+        f.writelines(
+            map(
+                lambda path: &amp;quot;file &#39;&amp;quot;
+                + path.replace(&amp;quot;:&amp;quot;, &amp;quot;\\:&amp;quot;).replace(&amp;quot;&#39;&amp;quot;, &amp;quot;\\\\\\\\\\\\&#39;&amp;quot;)
+                + &amp;quot;&#39;\n&amp;quot;,
+                sorted(file_list),
+            )
+        )
+
+    print(&amp;quot;======Make Video List End======&amp;quot;)
+
+    return len(file_list)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;52-音乐播放列表&#34;&gt;5.2 音乐播放列表&lt;/h3&gt;
+&lt;p&gt;合成视频的同时我们得把声音给删了，不然直播出奇怪的声音是会被封号的！！！&lt;/p&gt;
+&lt;p&gt;这边通过对音乐文件夹随机排序来生成，这个时间将远大于视频播放的时间，因此我们需要有音乐的时间记录，第二段视频播放时音乐从上次播放的位置插进去。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def make_music_list() -&amp;gt; int:
+    global g_music_play_time
+    if g_music_play_time &amp;gt; MUSIC_MAX_TIME:
+        print(&amp;quot;Will Create New Audio PlayList&amp;quot;)
+        
+        g_music_play_time = 1
+
+        # remake music play list
+        music_list = list(
+            filter(
+                lambda file: file[-4:] == &amp;quot;.mp3&amp;quot;,
+                map(lambda filename: MUSIC_PATH + filename, os.listdir(MUSIC_PATH)),
+            )
+        )
+        random.shuffle(music_list)
+        with open(AUDIO_PLAYLIST, &amp;quot;w&amp;quot;) as f:
+            f.writelines(
+                map(
+                    lambda path: &amp;quot;file &#39;&amp;quot;
+                    + path.replace(&amp;quot;:&amp;quot;, &amp;quot;\\:&amp;quot;).replace(&amp;quot;&#39;&amp;quot;, &amp;quot;\\\\\\\\\\\\&#39;&amp;quot;)
+                    + &amp;quot;&#39;\n&amp;quot;,
+                    music_list,
+                )
+            )
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这边由于音乐是从我的播放器里拷贝的，额外过滤了文件类型，只采用 mp3 文件。&lt;/p&gt;
+&lt;p&gt;同样写入文件中，此处由于音乐名称的复杂性，额外做了 escape。&lt;/p&gt;
+&lt;h3 id=&#34;53-ffmpeg-命令生成&#34;&gt;5.3 ffmpeg 命令生成&lt;/h3&gt;
+&lt;p&gt;有了以上两个函数，基本功能基本完成，就差推流了。&lt;/p&gt;
+&lt;p&gt;推流采用 ffmpeg，比较复杂，先上代码再慢慢讲解：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# 生成命令行
+ffinput = &#39;ffmpeg -y -re -loglevel warning -f concat -safe 0 -i &amp;quot;{VIDEO_PLAYLIST}&amp;quot; -ss {MUSIC_START_TIME} -f concat -safe 0 -i &amp;quot;{AUDIO_PLAYLIST}&amp;quot; -c copy -shortest &#39;.format(
+            VIDEO_PLAYLIST=VIDEO_PLAYLIST,
+            AUDIO_PLAYLIST=AUDIO_PLAYLIST,
+            MUSIC_START_TIME=get_music_start_time(),
+        )
+
+ffoutput = &#39;-f flv &amp;quot;{RTMP_ADDR}&amp;quot;&#39;.format(RTMP_ADDR=RTMP_ADDR)
+
+# ffoutput = &amp;quot;re.mp4&amp;quot;
+
+cmd = ffinput + ffoutput
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这边采用了播放列表作为源，我们可以看&lt;code&gt;-f concat -safe 0 -i &amp;quot;{VIDEO_PLAYLIST}&amp;quot; &lt;/code&gt;，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;-f&lt;/em&gt;: fmt (input/output) 强制定义格式&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;concat&lt;/em&gt;： 连接，一种 demuxer，将源连接起来&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;-safe 0&lt;/em&gt;：concat 时不在意文件名&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;-i&lt;/em&gt;：input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们将播放列表作为 concat 的输入，最后 concat 作为一个完整输入存在。&lt;/p&gt;
+&lt;p&gt;音频输入也同样，这边增加了一个 &lt;code&gt;-ss&lt;/code&gt; 是seek到这个时间作为开始的意思，音频播放列表时间太长了，为了每次推流没有断层的感觉，会每次累计播放时间，然后通过&lt;code&gt;-ss&lt;/code&gt;指定播放位置。&lt;code&gt;-ss&lt;/code&gt;是需要特殊格式的，因此我们通过函数生成。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def get_music_start_time():
+    global g_music_play_time
+
+    return &amp;quot;{0:02}:{1:02}:{2:02}&amp;quot;.format(
+        int(g_music_play_time // 3600),
+        int((g_music_play_time % 3600) // 60),
+        int(g_music_play_time % 60),
+    )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们再来看看&lt;code&gt;ffinput&lt;/code&gt;最前一段和最后一段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-y : 强制覆盖写入 output；&lt;/li&gt;
+&lt;li&gt;-re : 读取input 按实际帧率来，直播需要用指令，不然会以最快速度处理数据；&lt;/li&gt;
+&lt;li&gt;-loglevel warning：日志级别&lt;/li&gt;
+&lt;li&gt;-c copy：不处理媒体编码，直接从 input 拷贝到 output，减少编解码的性能需求，当然这个同时我们没法对视频进行处理。&lt;/li&gt;
+&lt;li&gt;-shortest: 输出时长按最短的轨道来。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ffmpeg 在轨道重复时（例如视频音轨和音乐），会自动采用后输入的轨道。如果需要自定义就需要在指令上进行标示了。&lt;/p&gt;
+&lt;p&gt;接下来我们看看&lt;code&gt;ffoutput&lt;/code&gt;, 非常简单 &lt;code&gt;-f flv &amp;quot;{RTMP_ADDR}&amp;quot;&lt;/code&gt; 制定了输出格式为 flv，并给了相应的 rtmp 地址。&lt;/p&gt;
+&lt;h3 id=&#34;54-执行-ffmpeg-命令&#34;&gt;5.4 执行 ffmpeg 命令&lt;/h3&gt;
+&lt;p&gt;ffmpeg 是系统二进制程序，因此我们需要在系统上调用它，通过 Popen在shell 环境下运行这条命令即可，同时等待结束，并接收输入输出。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# 运行
+cmd_proc = subprocess.Popen(
+            cmd,
+            shell=True,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+
+ cmd_proc.wait()
+
+ outs, errs = cmd_proc.communicate(timeout=1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;到这边一次几分钟的推流就完成了，我们循环这个动作就能持续不断的将新录制的视频推出去。&lt;/p&gt;
+&lt;h3 id=&#34;55-半夜回放机制&#34;&gt;5.5 半夜回放机制&lt;/h3&gt;
+&lt;p&gt;除了白天鱼缸开灯期间的直播，我还期望在未开灯的时候也进行直播。当然我会关闭摄像头，防止在鱼缸背景较亮的情况下出现奇怪的反光，当然，半夜摄像头根本看不到什么，夜晚摄像头红外会被鱼缸玻璃反光形成强烈的光斑，无法观赏。&lt;/p&gt;
+&lt;p&gt;我们需要在水草灯未工作期间进行直播就只能采用回放了，另外由于过年期间我个人的作息不定，只能通过软件自动检测是否工作了。&lt;/p&gt;
+&lt;p&gt;这边的机制非常简单，当生成视频播放列表返回 0 时就可以进行回放了。此时我们将时间回退到 8~20 点之间，随机一个时间段，&lt;code&gt;播放时间=当前时间-（当前小时-随机小时数）&lt;/code&gt; ，采用这个公式，当天关闭摄像头后可以播放指定时间段随机的时间点，但我们会发现超过半夜十二点后变为了&lt;code&gt; 1 点-16 点&lt;/code&gt; 这样诡异的时间，反而变为了播放未来十五个小时后的视频。因此我们需要判断一旦过了半夜，相减的小时数就要多加 24h。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tmp_endtime = play_endtime - datetime.timedelta(
+                    hours=(
+                        play_endtime.hour
+                        - random.randint(*CAMERA_WORKTIME)
+                        + (24 if play_endtime.hour &amp;lt; 12 else 0)
+                    )
+                )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样就能24H 进行播放了，每次播放一小时的视频（看之前的函数，可以传入时长）。&lt;/p&gt;
+&lt;p&gt;但如果随机 20 次还没视频的话，就会直接播放当前时间前 24H 所有视频了。还是没有视频就 sleep 一小时，当然到了这地步 B 站早就自动关停直播室了。&lt;/p&gt;
+&lt;h3 id=&#34;56-直播退出机制&#34;&gt;5.6 直播退出机制&lt;/h3&gt;
+&lt;p&gt;在实际调试过程中会发现很恼火的一点是 Ctrl+C 完全没有反应。由于展示在 shell 上的是 ffmpeg 进程，Ctrl+C只会退出 ffmpeg，而不会退出 python 脚本，此时他会在人类无法反映的时间内重启 ffmpeg。除了关闭 Shell，没什么更快捷的办法了。&lt;/p&gt;
+&lt;p&gt;另外在 kill 时也会有需要先 kill 脚本，再 kill ffmpeg。&lt;/p&gt;
+&lt;p&gt;后面很无奈，只能做一个直播退出机制了。将之前简单的  &lt;code&gt;os.System&lt;/code&gt; 函数替换为了现在可控的&lt;code&gt;subprocess.Popen&lt;/code&gt; 并增加了信号捕获。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def stop(signal, stack):
+    # TODO: 此处必然有时序问题，暂不处理
+    nonlocal run
+    run = False
+    cmd_proc.kill()
+
+signal.signal(signal.SIGTERM, stop)
+signal.signal(signal.SIGINT, stop)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;收到信号，暂停循环，并杀死 ffmpeg。&lt;/p&gt;
+&lt;h3 id=&#34;57-深夜直播暂停事件&#34;&gt;5.7 深夜直播暂停事件&lt;/h3&gt;
+&lt;p&gt;过年时每天起来会发现我的直播停了。当然我也懒得看日志，因为这件事太迷了，看日志也得翻好久。&lt;/p&gt;
+&lt;p&gt;同上，后面很无奈，还是慢慢翻了日志。发现 ffmpeg 在断网后会卡死很长一段时间，需要二十多分钟才会退出。这个时间足够 B 站把我踢下线了。而断网的原因是我在路由器上设定了每天半夜清理缓存。（这竟然会断网，辣鸡 tplink。）&lt;/p&gt;
+&lt;p&gt;然后就新增了一个进程，用于检测网络是否正常，这个进程是每五秒执行系统命令 ping 一次114，记录flag，并在恢复时 kill一次ffmpeg。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def ping():
+    nonlocal run
+    global cmd_proc
+
+    pre_state = True
+
+    while run:
+        state = True
+
+        outs = subprocess.Popen(
+            &amp;quot;ping -c 1 -w 1 114.114.114.114&amp;quot;,
+            shell=True,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            encoding=&amp;quot;utf8&amp;quot;,
+        ).stdout.readlines()
+        state = 0 == outs[-1].find(&#39;rtt&#39;)
+
+        if not state:
+            print(&amp;quot;Net broken!&amp;quot;)
+
+        if False == pre_state and True == state:
+            print(&amp;quot;Net resumed, kill cmd&amp;quot;)
+            if None != cmd_proc:
+                print(&amp;quot;Net resumed, kill cmd！！&amp;quot;)
+                cmd_proc.kill()
+
+        pre_state = state
+
+        sys.stdout.flush()
+        time.sleep(5)
+
+multiprocessing.Value
+ping_subproc = multiprocessing.Process(target=ping)
+ping_subproc.start()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;至于为什么上面写的是进程&amp;hellip;那是 python 解释器的问题，由于GIL （全局解释器锁）的存在，多线程处理时非常低效，开了多线程也和没开一样，甚至更慢。&lt;/p&gt;
+&lt;h3 id=&#34;6-存在的问题&#34;&gt;6. 存在的问题&lt;/h3&gt;
+&lt;h4 id=&#34;61-摄像机部署问题&#34;&gt;6.1 摄像机部署问题&lt;/h4&gt;
+&lt;p&gt;摄像机拜访存在很大问题，会遮挡视线。并且作为监控摄像头来拍摄鱼缸是非常糟糕的，首先它存在非常大的镜头畸变，在近距离非常明显，其次广角镜头在拍摄近距离物体时难以对焦，导致画面较为模糊。&lt;/p&gt;
+&lt;h4 id=&#34;62-时间戳问题&#34;&gt;6.2 时间戳问题&lt;/h4&gt;
+&lt;p&gt;推流的 RTMP 协议中会增加相对时间戳，此时几分钟的视频播放完毕重启 ffmpeg 播放下一段时会重新生成时间戳，导致用户接收到的数据时间戳突变，容易导致播放问题。&lt;/p&gt;
+&lt;p&gt;在Bilibili App 上很少存在断流的问题，但在Safari 上很容易断流。&lt;/p&gt;
+&lt;p&gt;当然应该是可以通过 ffmpeg 的时间戳来解决的，不过是一个巨大的坑。也可以通过增加延迟，播放前一个小时的视频规避这个问题。&lt;/p&gt;
+&lt;h4 id=&#34;63-视频重复问题&#34;&gt;6.3 视频重复问题&lt;/h4&gt;
+&lt;p&gt;视频重复在刚开始直播时会容易出现，一开始视频不足 10 分钟，会取前几分钟的，播放完后会重新获取，此时之前几分钟的依然会被获取到，重新播放。&lt;/p&gt;
+&lt;h2 id=&#34;7-可替代方案&#34;&gt;7. 可替代方案&lt;/h2&gt;
+&lt;p&gt;写了这段代码的主要原因在于&lt;strong&gt;AreYouOK 智能摄像机&lt;/strong&gt;不支持 RTSP，一旦 RTSP 问题解决，代码就没有了存在意义。替代方案还是很多的&lt;/p&gt;
+&lt;p&gt;7.1 PC+USB 摄像头&lt;/p&gt;
+&lt;p&gt;购买一台冥王峡谷+罗技摄像头即可解决隐蔽性和以上所有问题。强大的 CPU 还能支持视频编解码，直接使用 OBS 玩更多直播内容。预计成本 10000.&lt;/p&gt;
+&lt;h3 id=&#34;72-网络摄像头支持-rtsp&#34;&gt;7.2 网络摄像头支持 RTSP&lt;/h3&gt;
+&lt;p&gt;有一个支持 RTSP 的网络摄像头，可以将 python 脚本简化为 shell 脚本一键运行。&lt;/p&gt;
+&lt;h3 id=&#34;73-手机&#34;&gt;7.3 手机&lt;/h3&gt;
+&lt;p&gt;买一个二手手机 Bilibili App 进行直播，预计费用 300~500。最方便的办法，但扩展性不高。&lt;/p&gt;
+&lt;h2 id=&#34;8-关键决定因素&#34;&gt;8. 关键决定因素&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;内容高于技术&lt;/strong&gt;&lt;/em&gt;。无论是脚本、摄像头还是整套方案，最终都是为内容服务的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;B%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC--%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.assets/IMG_3777.jpg&#34; alt=&#34;IMG_3777&#34;&gt;&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.pmi.com&#34;&gt;www.pmi.com&lt;/a&gt; &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://obsproject.com&#34;&gt;https://obsproject.com&lt;/a&gt; &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
