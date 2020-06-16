@@ -692,10 +692,10 @@ findKey key xs = snd . head . filter (\(k,v) -&gt; key == k) $ xs</p>
 </blockquote>
 <p>这是函数参数和返回值，这个函数中一共有两个参数和一个返回值，函数申明中的最后一个箭头&rdquo;<strong>-&gt;</strong>&ldquo;是一定指向返回值的，当然&rdquo;<strong>k v</strong>&ldquo;这两个字母一定会让人觉得很疑惑，在haskell中函数声明中的字母其实只代表一个<del>变量类型</del>哦 sorry，haskell中没有变量，他只有常量，所有都是静态参数，所以这个字母代表了一种模糊的参数类型，这仅表示上面两个k需要是同样的类型，而两个v也需要是同样的类型，随便用abcd也可以。所以：</p>
 <blockquote>
-<p>&rdquo;<strong>k</strong>&rdquo; &ldquo;<strong>[(k,v)]</strong>&rdquo; 是两个入参，第一个参数是k类型的参数，第二个参数是一个list，list中是一个有两个类型为k v为成员的tuple</p>
-<p>&rdquo;<strong>v</strong>&rdquo; 是函数的返回值，它的类型需要和入参list中tuple第二个元素一样。</p>
+<p>&ldquo;<strong>k</strong>&rdquo; &ldquo;<strong>[(k,v)]</strong>&rdquo; 是两个入参，第一个参数是k类型的参数，第二个参数是一个list，list中是一个有两个类型为k v为成员的tuple</p>
+<p>&ldquo;<strong>v</strong>&rdquo; 是函数的返回值，它的类型需要和入参list中tuple第二个元素一样。</p>
 </blockquote>
-<p>然后我们来说一说&rdquo;<strong>(Eq k) =&gt;</strong>&quot;, &ldquo;<strong>=&gt;</strong>&ldquo;是对后面参数的约束条件，&quot;<strong>(Eq k)</strong>&ldquo;说明后面的 &ldquo;<strong>k</strong>&rdquo; 类型的参数必须是一个Eq的派生类型，这种类型是可以比较的，比如int，char。</p>
+<p>然后我们来说一说&rdquo;<strong>(Eq k) =&gt;</strong>&rdquo;, &ldquo;<strong>=&gt;</strong>&ldquo;是对后面参数的约束条件，&quot;<strong>(Eq k)</strong>&ldquo;说明后面的 &ldquo;<strong>k</strong>&rdquo; 类型的参数必须是一个Eq的派生类型，这种类型是可以比较的，比如int，char。</p>
 <p>在事例中我们可以按照</p>
 <blockquote>
 <p><em><strong>findKey &ldquo;betty&rdquo; phoneBook</strong></em></p>
@@ -779,7 +779,7 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
 </blockquote>
 <p>在组合函数中其实是组合成了</p>
 <blockquote>
-<p>***(snd . head . filter (\(k,v) -&gt; key == k)) xs***</p>
+<p><em><strong>(snd . head . filter (\(k,v) -&gt; key == k)) xs</strong></em></p>
 </blockquote>
 <p>在原函数中，少了&rdquo;<strong>()</strong>&quot;,多了&rdquo;<strong>$</strong>&quot;:</p>
 <blockquote>
