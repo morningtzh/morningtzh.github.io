@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-Hans">
+<!DOCTYPE html><html lang="zh-Hans" >
 
 <head>
 
@@ -21,7 +20,7 @@
   
   
 
-  <meta name="author" content="MorningTZH">
+  
 
   
   
@@ -195,7 +194,11 @@
   
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
   
 
   
@@ -251,6 +254,11 @@
 
 
   
+  
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+
+  
   <link rel="alternate" href="/index.xml" type="application/rss+xml" title="瑟瑟和你说早安">
   
 
@@ -260,6 +268,8 @@
 
   <link rel="canonical" href="https://blog.morningtzh.com/">
 
+  
+  
   
   
   
@@ -341,7 +351,6 @@
   <title>瑟瑟和你说早安</title>
 
 </head>
-
 <body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="dark">
 
   <aside class="search-results" id="search">
@@ -360,7 +369,7 @@
       <div id="search-box">
         
         <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
         
       </div>
 
@@ -377,6 +386,8 @@
 
 
   
+
+
 
 
 
@@ -512,13 +523,26 @@
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
       
       <li class="nav-item">
-        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        <a class="nav-link js-search" href="#" aria-label="搜索"><i class="fas fa-search" aria-hidden="true"></i></a>
       </li>
       
 
       
-      <li class="nav-item">
-        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
       </li>
       
 
@@ -545,14 +569,15 @@
 
 
 
+
+  
+  
+  
   
 
 
 
 
-
-
-
   
   
   
@@ -563,6 +588,9 @@
 
   
 
+  
+
+  
   
 
   
@@ -607,11 +635,11 @@
 
       
       
-      <img class="avatar avatar-circle" src="/authors/morningtzh/avatar_hu6d03ace990a63acb769e531abea584b3_407134_270x270_fill_q90_lanczos_center.jpeg" alt="Avatar">
+      <img class="avatar avatar-circle" src="/authors/morningtzh/avatar_hu6d03ace990a63acb769e531abea584b3_407134_270x270_fill_q90_lanczos_center.jpeg" alt="">
       
 
       <div class="portrait-title">
-        <h2>MorningTZH</h2>
+        <h2></h2>
         
 
         
@@ -672,6 +700,9 @@
 
   
 
+  
+
+  
   
 
   
@@ -772,9 +803,11 @@
     </h3>
 
     
-    <div class="article-style">
-      GTD 大纲 第一章结构梳理 |《GTD》 问题：增长的需求，匮乏的资源 工作不再有清楚的界限 工作（生活）不断变化 旧的模式和习惯已让人力不从心 『大局』和事
-    </div>
+    <a href="/post/gtd-%E5%A4%A7%E7%BA%B2.html" class="summary-link">
+      <div class="article-style">
+        GTD 大纲 第一章结构梳理 |《GTD》 问题：增长的需求，匮乏的资源 工作不再有清楚的界限 工作（生活）不断变化 旧的模式和习惯已让人力不从心 『大局』和事
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -817,7 +850,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="">读书</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/categories/%E8%AF%BB%E4%B9%A6.html">读书</a></span>
   
 
 </div>
@@ -861,9 +894,11 @@
     </h3>
 
     
-    <div class="article-style">
-      B站云养鱼&ndash;贫穷定制 目录 1. 我买了一个缸 2. 直播方案比较及限制条件 2.1 方案比较及场景限制 2.2 硬件限制条件分析 3. 整体方案设计 3.1 整体方案 3.2 视
-    </div>
+    <a href="/post/b%E7%AB%99%E4%BA%91%E5%85%BB%E9%B1%BC-%E8%B4%AB%E7%A9%B7%E5%AE%9A%E5%88%B6.html" class="summary-link">
+      <div class="article-style">
+        B站云养鱼&ndash;贫穷定制 目录 1. 我买了一个缸 2. 直播方案比较及限制条件 2.1 方案比较及场景限制 2.2 硬件限制条件分析 3. 整体方案设计 3.1 整体方案 3.2 视
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -950,9 +985,11 @@
     </h3>
 
     
-    <div class="article-style">
-      乐理笔记1&ndash;音程 目录 1. 音 2. 泛音列与音色 3. 音程 3.1 一度和八度 3.2 大小二度 3.3 大小三度 3.4 纯四度及增四度 3.5 纯五度及减五度 3.6 大小六度和大小七度
-    </div>
+    <a href="/post/%E4%B9%90%E7%90%86/%E4%B9%90%E7%90%86%E7%AC%94%E8%AE%B01-%E9%9F%B3%E7%A8%8B.html" class="summary-link">
+      <div class="article-style">
+        乐理笔记1&ndash;音程 目录 1. 音 2. 泛音列与音色 3. 音程 3.1 一度和八度 3.2 大小二度 3.3 大小三度 3.4 纯四度及增四度 3.5 纯五度及减五度 3.6 大小六度和大小七度
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -995,7 +1032,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="">乐理</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/categories/%E4%B9%90%E7%90%86.html">乐理</a></span>
   
 
 </div>
@@ -1039,9 +1076,11 @@
     </h3>
 
     
-    <div class="article-style">
-      创业公司经历 [TOC] 在初创企业工作，是一件在职业道路中有正式规划的事情，也是一件意料之外的事情。没想到这段经历来的如此之快，但仔细一想这短短的经历
-    </div>
+    <a href="/post/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8%E7%BB%8F%E5%8E%86.html" class="summary-link">
+      <div class="article-style">
+        创业公司经历 [TOC] 在初创企业工作，是一件在职业道路中有正式规划的事情，也是一件意料之外的事情。没想到这段经历来的如此之快，但仔细一想这短短的经历
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -1084,7 +1123,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="">职场</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/categories/%E8%81%8C%E5%9C%BA.html">职场</a></span>
   
 
 </div>
@@ -1128,9 +1167,11 @@
     </h3>
 
     
-    <div class="article-style">
-      线性回归及实现 [TOC] 一年多前，《修真聊天群》更新看完了，在书荒引发的无聊情绪推动下学习了 Keras，用 LSTM 生成了大段无法看的《伪*修真聊天群》，没
-    </div>
+    <a href="/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%AE%9E%E7%8E%B0.html" class="summary-link">
+      <div class="article-style">
+        线性回归及实现 [TOC] 一年多前，《修真聊天群》更新看完了，在书荒引发的无聊情绪推动下学习了 Keras，用 LSTM 生成了大段无法看的《伪*修真聊天群》，没
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -1173,7 +1214,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="">深度学习</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0.html">深度学习</a></span>
   
 
 </div>
@@ -1218,6 +1259,9 @@
 
   
 
+  
+
+  
   
 
   
@@ -1399,6 +1443,9 @@
   
 
   
+  
+
+  
 
   
   
@@ -1464,7 +1511,7 @@
     
 
     <div class="portrait-title">
-      <h2><a href="/authors/tardis.html">Eric</a></h2>
+      <h2><a href="/authors/tardis.html"></a></h2>
       
       <ul class="network-icon" aria-hidden="true">
   
@@ -1509,7 +1556,7 @@
     
 
     <div class="portrait-title">
-      <h2><a href="/authors/yunxia.html">404 Not Found</a></h2>
+      <h2><a href="/authors/yunxia.html"></a></h2>
       
       <ul class="network-icon" aria-hidden="true">
   
@@ -1552,6 +1599,9 @@
 
   
 
+  
+
+  
   
 
   
@@ -1630,7 +1680,7 @@
     
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
@@ -1685,7 +1735,8 @@
         'post': "文章",
         'project': "项目",
         'publication' : "出版物",
-        'talk' : "演讲"
+        'talk' : "演讲",
+        'slides' : "演示文稿"
         };
     </script>
     
@@ -1719,6 +1770,21 @@
 
     
     
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    
+
+    
+    
 
     
     
@@ -1734,7 +1800,7 @@
     
     
     
-    <script src="/js/academic.min.c816d323c3a55093dae0829b44ea1ca8.js"></script>
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
 
     
 
