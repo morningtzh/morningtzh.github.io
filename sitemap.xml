@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.morningtzh.com/categories.html</loc>
+    <lastmod>2020-07-15T21:57:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.morningtzh.com/tags/gtd.html</loc>
+    <lastmod>2020-07-15T21:57:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.morningtzh.com/post/gtd-%E5%A4%A7%E7%BA%B2.html</loc>
+    <lastmod>2020-07-15T21:57:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.morningtzh.com/post.html</loc>
+    <lastmod>2020-07-15T21:57:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.morningtzh.com/tags.html</loc>
+    <lastmod>2020-07-15T21:57:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.morningtzh.com/</loc>
+    <lastmod>2020-07-15T21:57:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.morningtzh.com/categories/%E8%AF%BB%E4%B9%A6.html</loc>
+    <lastmod>2020-07-15T21:57:46+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.morningtzh.com/tags/bilibili.html</loc>
     <lastmod>2020-03-21T09:49:46+08:00</lastmod>
   </url>
@@ -13,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://blog.morningtzh.com/categories.html</loc>
-    <lastmod>2020-03-21T09:49:46+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.morningtzh.com/tags/ffmpeg.html</loc>
-    <lastmod>2020-03-21T09:49:46+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.morningtzh.com/post.html</loc>
     <lastmod>2020-03-21T09:49:46+08:00</lastmod>
   </url>
   
@@ -38,17 +63,7 @@
   </url>
   
   <url>
-    <loc>https://blog.morningtzh.com/tags.html</loc>
-    <lastmod>2020-03-21T09:49:46+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.morningtzh.com/tags/%E4%BA%91%E5%85%BB%E9%B1%BC.html</loc>
-    <lastmod>2020-03-21T09:49:46+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.morningtzh.com/</loc>
     <lastmod>2020-03-21T09:49:46+08:00</lastmod>
   </url>
   
