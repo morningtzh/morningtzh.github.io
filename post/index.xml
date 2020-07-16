@@ -5,12 +5,64 @@
     <link>https://blog.morningtzh.com/post.html</link>
       <atom:link href="https://blog.morningtzh.com/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Wed, 15 Jul 2020 21:57:46 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Thu, 16 Jul 2020 22:45:33 +0800</lastBuildDate>
     <image>
       <url>https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png</url>
       <title>Posts</title>
       <link>https://blog.morningtzh.com/post.html</link>
     </image>
+    
+    <item>
+      <title>一单愚蠢的交易</title>
+      <link>https://blog.morningtzh.com/post/%E4%B8%80%E5%8D%95%E6%84%9A%E8%A0%A2%E7%9A%84%E4%BA%A4%E6%98%93.html</link>
+      <pubDate>Thu, 16 Jul 2020 22:45:33 +0800</pubDate>
+      <guid>https://blog.morningtzh.com/post/%E4%B8%80%E5%8D%95%E6%84%9A%E8%A0%A2%E7%9A%84%E4%BA%A4%E6%98%93.html</guid>
+      <description>&lt;h1 id=&#34;一单愚蠢的交易&#34;&gt;一单愚蠢的交易&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2&gt;目录&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#交易日记&#34;&gt;交易日记&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#复盘&#34;&gt;复盘&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#总结&#34;&gt;总结&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;p&gt;近两年我也一直在投资 ETF，半年多前重新建仓，疫情期间也略微有些收益，最近更是收获颇多。最近在聊天群看别人在港美股收获颇多，特斯拉、阿里巴巴、中芯等股票都在翻倍，看的心痒痒。毕竟半年多25%的收益和半个月100%给人的感觉是天差地别的。&lt;/p&gt;
+&lt;h2 id=&#34;交易日记&#34;&gt;交易日记&lt;/h2&gt;
+&lt;p&gt;2020.7.13 中芯国际收盘于 41.95 港币；
+2020.7.14 开盘于 42 元，紧接着略微下跌了一点，当时主要想着先尝试成交一笔吧，在边上震荡卖出也不会亏很多，在 40.6 的时候挂单了一手 40。看着盘，下方挂单数在 40 有 2~3M 之多，突然觉得有些不对，如果这么多单子都被吃掉那肯定会继续下行啊。但等我准备撤单的时候已经来不及了。出现了一个小 v 型后最终收盘在了 41.8。当时并不太了解港股的特性以及他的交易时间，也并没有想太多。第一天就盈利了 900+ 块基本上冲昏了头脑。
+2020.7.15 高开在44 的位置，不过等我去看的时候已经降到了 41 元附近。当时也没想跑，在 40 徘徊时竟然还想着融资再买一手尝试做 T。吸收了前一日经验，关注了单子数量，39.3 的位置上 M 了，便挂在了 39.35 的位子上，最后在震荡中成交了。当天的走势一直在震荡，想到第二天会是 A 股中芯国际上市科创板的日子，也就先放着看情况了。最终收盘在 38.45，亏损了 2300。略微有些难过。
+2020.7.16 中芯开盘在 38.35 躺尸，A 股集合竞价开始102，涨到 110，最后到了 90 的位置结束。H股跟着集合竞价慢慢走到了 39 的位置。A股开盘后跌落到了 85，而 H 股狂泻，第一波达到了 32.65，反弹到 35 后开始第二波下降，融资开始提醒需要增加保证金，我也随手市价卖了一手，出在 32.1 自有资金先再放一会儿。到了下午继续震荡下挫，太可怕了，在 30 的位置卖掉了另外一手。当天亏损 8600+港币。&lt;/p&gt;
+&lt;h2 id=&#34;复盘&#34;&gt;复盘&lt;/h2&gt;
+&lt;p&gt;中芯国际复盘还算是个简单的活，首先从技术层面来讲一讲。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E4%B8%80%E5%8D%95%E6%84%9A%E8%A0%A2%E7%9A%84%E4%BA%A4%E6%98%93.assets/image-20200717002538952.png&#34; alt=&#34;中芯国际蜡烛图&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在这个 K 线图里可以看到我买的前一天是个绿色的倒 T 型，我买的那天是个T 型。顶部倒 T 预示着多头力量较为疲软，尤其是下方又多出了一点，最终以绿色收盘。我买的第一单 T 行有较长的尾巴，多头力量较前一天更加疲软，我再长影线上买进虽然赚了，但依然预示着多头已经耗尽，力量已经被空头压过。&lt;/p&gt;
+&lt;p&gt;15 日的爆发我无法去分析，但应该是机构在逃顶了。&lt;/p&gt;
+&lt;p&gt;从 RSI 来看，7.6、7.7，我打箭头的地方已经开始呈现力量减弱的现象，向上未到前面两峰的连线，向下突破了三个RSI6低谷的连线。后续几天三条 RSI 交叠在一起已无力支撑。&lt;/p&gt;
+&lt;p&gt;消息面的利好在 7.7基本也消耗完毕，基本面从历史分析看来也是不佳。唯一的优势在于国家大力推动。这两方面比较复杂，我也不转述其他文章意见了。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;就好像一个单身二十几年第一次交往异性似的热血上涌，抛开了—— 著作的训诫、蜡烛图技术、指标、量化模型——一切的外物，站到了哥斯拉面前，大吼到『我秃了』，送上了拳头。&lt;/p&gt;
+&lt;p&gt;不知道为什么在那一刻我如此愚蠢，不带一丝恐惧的下单了。做 ETF 时的谨慎，策略的研究就像废物一样被我丢弃了。这次的交易在经济上的打击并不大，主要打击在于自己在市场前做出了毫无理智的行动，这非常可怕。&lt;/p&gt;
+&lt;p&gt;投资需理性，任何的行动必须建立在策略的基础上。为什么买？为什么卖？买了什么时候补仓？卖了什么时候买回来？抛开理性，即使第一次好运赚到了钱，也会在后面亏得更多。&lt;/p&gt;
+&lt;p&gt;接下来，重读经典，并做好笔记。甚至最近想考个 CFA 试试。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你永远赚不到&lt;/p&gt;
+&lt;p&gt;超出你认知范围外的钱&lt;/p&gt;
+&lt;p&gt;除非你靠运气&lt;/p&gt;
+&lt;p&gt;但是靠运气赚到的钱&lt;/p&gt;
+&lt;p&gt;最后往往又会靠实力亏掉&lt;/p&gt;
+&lt;p&gt;这是一种必然&lt;/p&gt;
+&lt;p&gt;你所赚的每一分钱&lt;/p&gt;
+&lt;p&gt;都是你对这个世界认知的变现&lt;/p&gt;
+&lt;p&gt;你所亏的每一分钱&lt;/p&gt;
+&lt;p&gt;都是因为对这个世界认知有缺陷&lt;/p&gt;
+&lt;p&gt;这个世界最大的公平在于：&lt;/p&gt;
+&lt;p&gt;当一个人的财富大于自己认知的时候&lt;/p&gt;
+&lt;p&gt;这个社会有100种方法收割你&lt;/p&gt;
+&lt;p&gt;直到你的认知和财富相匹配为止&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
     
     <item>
       <title>GTD 大纲</title>
