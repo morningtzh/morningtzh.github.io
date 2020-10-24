@@ -5,12 +5,75 @@
     <link>https://blog.morningtzh.com/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91.html</link>
       <atom:link href="https://blog.morningtzh.com/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <description>游戏开发</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sat, 24 Oct 2020 09:17:44 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sat, 24 Oct 2020 11:11:56 +0800</lastBuildDate>
     <image>
       <url>https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png</url>
       <title>游戏开发</title>
       <link>https://blog.morningtzh.com/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91.html</link>
     </image>
+    
+    <item>
+      <title>【Unity是个好游戏】随机地形生成</title>
+      <link>https://blog.morningtzh.com/post/unity%E6%98%AF%E4%B8%AA%E5%A5%BD%E6%B8%B8%E6%88%8F%E9%9A%8F%E6%9C%BA%E5%9C%B0%E5%BD%A2%E7%94%9F%E6%88%90.html</link>
+      <pubDate>Sat, 24 Oct 2020 11:11:56 +0800</pubDate>
+      <guid>https://blog.morningtzh.com/post/unity%E6%98%AF%E4%B8%AA%E5%A5%BD%E6%B8%B8%E6%88%8F%E9%9A%8F%E6%9C%BA%E5%9C%B0%E5%BD%A2%E7%94%9F%E6%88%90.html</guid>
+      <description>&lt;h1 id=&#34;unity是个好游戏随机地形生成&#34;&gt;【Unity是个好游戏】随机地形生成&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2&gt;目录&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#前文提要&#34;&gt;前文提要&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#1高度图&#34;&gt;1.高度图&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#2高度图随机生成&#34;&gt;2.高度图随机生成&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#3地块生成&#34;&gt;3.地块生成&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#4结果预览&#34;&gt;4.结果预览&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;前文提要&#34;&gt;前文提要&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;./unity%e6%98%af%e4%b8%aa%e5%a5%bd%e6%b8%b8%e6%88%8f%e6%88%91%e6%83%b3%e7%8e%a9%e4%bb%80%e4%b9%88.html&#34;&gt;【Unity是个好游戏】我想玩什么&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1高度图&#34;&gt;1.高度图&lt;/h2&gt;
+&lt;p&gt;首先我们需要了解地形数据的表示方法。一般我们会用高度图来表示，高度图即一张每个像素点为高度的 bitmap。可以看到下面这张图是全球的高度图，他的位深为 8bit。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Srtm_ramp2.world.21600x10800.jpg/1920px-Srtm_ramp2.world.21600x10800.jpg&#34; alt=&#34;Heightmap of Earth&amp;rsquo;s surface&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果有兴趣可以从 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Srtm_ramp2.world.21600x10800.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wikipedia&lt;/a&gt; 上下载原图，$21600*10800$ 大小的高度图仅 5.89M。对于这么大一张 Heightmap，我们是无法直接用的，需要对他进行切割，分块加载。每个像素点之间的距离是&lt;/p&gt;
+&lt;p&gt;本次随机地形生成，高度图也会随机生成出来使用，当然随机生成的小模块也能替换为加载已有地形。&lt;/p&gt;
+&lt;p&gt;高度图的渲染效果，下图为生成的 mesh：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/5/57/Heightmap.png&#34; alt=&#34;Heightmap&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/2/2f/Heightmap_rendered.png&#34; alt=&#34;Heightmap&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2高度图随机生成&#34;&gt;2.高度图随机生成&lt;/h2&gt;
+&lt;p&gt;随机生成在一般的单值用法里，各个语言的Random库就有很好的支持。但对于地形图，他需要一个在2D 平面上连续的值。最简单的我们可以通过 $h=x+y$ 来遍历像素点生成高度图，这样简单地函数有利于我们在地形区块拼接不上时快速找到问题，当然也可以换成更单调的$h = x$ 或$h = y$ 来查看两轴上的拼接问题。&lt;/p&gt;
+&lt;p&gt;在 Minecraft 地图采用 
+&lt;a href=&#34;https://zh.wikipedia.org/wiki/Perlin%e5%99%aa%e5%a3%b0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Perlin 噪声&lt;/a&gt; 生成。他会生成类似于以下的图像：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/5/54/SimplexNoise2D.png&#34; alt=&#34;Perlin Noise&#34;&gt;&lt;/p&gt;
+&lt;p&gt;将此图渲染成 mesh 就能得到我们想要的随机地形。&lt;/p&gt;
+&lt;p&gt;Perlin 噪声较为连续，单一使用它会导致地形过于贫乏，因此在实际生成时会多层噪声叠加。&lt;/p&gt;
+&lt;p&gt;接下来讲解的图来源于YouTube 大佬的地图生成教程 —— 
+&lt;a href=&#34;https://www.youtube.com/watch?v=wbpMiKiSKm8&amp;amp;list=PLFt_AvWsXl0eBW2EiBtl_sxmDtSgZBxB3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Procedural Terrain Generation&lt;/a&gt; 。这里简单的采用三层噪声进行讲解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大地形：通过对噪声密集采样，获取较为平缓的波形；&lt;/li&gt;
+&lt;li&gt;巨石：通过对噪声的中等密度采样，获取一般的波形；&lt;/li&gt;
+&lt;li&gt;小石块：通过对噪声的大跨度采样，获取波动幅度最剧烈的波形；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最终将这三个波形进行叠加，就是一个不再单调的波形了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Unity%E6%98%AF%E4%B8%AA%E5%A5%BD%E6%B8%B8%E6%88%8F.assets/PerlinNoise1.png&#34; alt=&#34;PerlinNoise1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;同时对这三种波形振幅进行一个加权，减少小石块对大地形的影响，就能得到一个比较合适的地形。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Unity%E6%98%AF%E4%B8%AA%E5%A5%BD%E6%B8%B8%E6%88%8F.assets/PerlinNoise2.png&#34; alt=&#34;PerlinNoise2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这个教程我没看完，review 了他最终的代码，大致理解他生成地形的方法。这个教程中自建 mesh 创造地形，比我使用 Unity3D 自带的 Terrain 更为复杂和底层。&lt;/p&gt;
+&lt;h2 id=&#34;3地块生成&#34;&gt;3.地块生成&lt;/h2&gt;
+&lt;p&gt;上图的波形其实也挺单调的，我并不想跑了一个小时之后还是类似的地形，因此需要作出一些差别。&lt;/p&gt;
+&lt;p&gt;我们会发现在现实世界中其实是有地块划分的，平原、高原、丘陵等等。我们在游戏里也自然可以划分地块，对于不同的地块配置不同的地形参数。在划分地块的时候我们需要用到另外一个噪声—— 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Worley_noise&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Worley noise&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;这种噪声会形成类似昆虫翅膀、细胞壁等形状。同时也广泛用于水波生成。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/0/00/Worley.jpg&#34; alt=&#34;WorleyNoise&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对这种噪声的转换，可以生成我想要的地块划分。以下使用
+&lt;a href=&#34;https://github.com/Auburn/FastNoise&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FastNoise&lt;/a&gt;生成~&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Unity%E6%98%AF%E4%B8%AA%E5%A5%BD%E6%B8%B8%E6%88%8F.assets/FastNoise.png&#34; alt=&#34;地块划分&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4结果预览&#34;&gt;4.结果预览&lt;/h2&gt;
+&lt;p&gt;后续的代码，将会融合以上的地形生成和地块生成。最终在不同区域上的地形差距可以非常大。可以看到带湖泊的平原后面是多重的高山，在这张图中间的山上有一处小 bug，会在后续详细介绍。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Unity%E6%98%AF%E4%B8%AA%E5%A5%BD%E6%B8%B8%E6%88%8F.assets/%E5%9C%B0%E5%BD%A2%E5%9C%B0%E5%9D%97over.jpeg&#34; alt=&#34;中秋快乐&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>【Unity是个好游戏】我想玩什么</title>
