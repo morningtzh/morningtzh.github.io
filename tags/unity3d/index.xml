@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unity3D | 瑟瑟和你说早安</title>
+    <link>https://blog.morningtzh.com/tags/unity3d.html</link>
+      <atom:link href="https://blog.morningtzh.com/tags/unity3d/index.xml" rel="self" type="application/rss+xml" />
+    <description>Unity3D</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sat, 24 Oct 2020 09:17:44 +0800</lastBuildDate>
+    <image>
+      <url>https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png</url>
+      <title>Unity3D</title>
+      <link>https://blog.morningtzh.com/tags/unity3d.html</link>
+    </image>
+    
+    <item>
+      <title>【Unity是个好游戏】我想玩什么</title>
+      <link>https://blog.morningtzh.com/post/unity%E6%98%AF%E4%B8%AA%E5%A5%BD%E6%B8%B8%E6%88%8F%E6%88%91%E6%83%B3%E7%8E%A9%E4%BB%80%E4%B9%88.html</link>
+      <pubDate>Sat, 24 Oct 2020 09:17:44 +0800</pubDate>
+      <guid>https://blog.morningtzh.com/post/unity%E6%98%AF%E4%B8%AA%E5%A5%BD%E6%B8%B8%E6%88%8F%E6%88%91%E6%83%B3%E7%8E%A9%E4%BB%80%E4%B9%88.html</guid>
+      <description>&lt;h1 id=&#34;unity是个好游戏我想玩什么&#34;&gt;【Unity是个好游戏】我想玩什么&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2&gt;目录&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#之前玩了什么&#34;&gt;之前玩了什么&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#那这次玩什么&#34;&gt;那这次玩什么&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#选型&#34;&gt;选型&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;之前玩了什么&#34;&gt;之前玩了什么&lt;/h2&gt;
+&lt;p&gt;游戏制作，是一个一直想尝试的领域，毕业后几年一直有阶段性的尝试。&lt;/p&gt;
+&lt;p&gt;刚毕业的时候比较喜欢 python。网上搜了 python 的游戏引擎，发现有pycocos2d、pygame，就选择了 pycocos2d 作为入门。这是最古老的 cocos2d 版本，基于pyglet，估计很少有人知道 cocos2d 最早竟然是仅支持 python 的。基于 pycocos2d，我用做了一个小场景，是一个小幽灵被一群大幽灵群殴。当时是用冒险岛素材做的，我小时候很喜欢冒险岛。由于当时编码能力非常弱鸡，理解能力也不足，后面就没继续了。&lt;/p&gt;
+&lt;!-- 
+![冒险岛场景截图](./Unity是个好游戏.assets/Map.png) --&gt;
+&lt;video id=&#34;video&#34; width=100% controls autoplay preload=&#34;none&#34;&gt;
+    &lt;source id=&#34;mp4&#34; src=&#34;./Unity是个好游戏.assets/冒险岛场景视频.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;p&gt;后面大概是两年之后了，玩着 Minecraft，突然想自己实现一下。那就先做个 2D 的吧，当时Cocos Creator是主推编辑器，正好那时候做 blog 用了 javascript，技术栈可以匹配，兄弟们用它！&lt;/p&gt;
+&lt;p&gt;试图实现Minecraft 上的方块地图，用了四叉树和大量方块来做地图。从一开始的卡死到后面四叉树碰撞体融合，这次的游戏制作使用了柏林噪声生成二维地图。&lt;/p&gt;
+&lt;video id=&#34;video&#34; controls autoplay preload=&#34;none&#34;&gt;
+    &lt;source id=&#34;mp4&#34; src=&#34;./Unity是个好游戏.assets/cocos随机地图.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;h2 id=&#34;那这次玩什么&#34;&gt;那这次玩什么&lt;/h2&gt;
+&lt;p&gt;这次又是一个两年后，得益于现工作认识了游戏开发大佬——在大学的时候就已经上线过一款游戏了，又燃起了游戏之魂。&lt;/p&gt;
+&lt;p&gt;我玩游戏应该归在休闲党的行列。高中每周鲜有的游戏时间，大多数被我浪费在暴风城里，开着公会频道闲聊；在玩众多单机游戏时，我是挂逼，找不到挂就尝试修改存档；Minecraft 里面造造房子，飞到天上看看风景。&lt;/p&gt;
+&lt;p&gt;所以这次玩什么？首先是他能给我带来什么。我期望的是一个开放自由的世界，有很多地方可供游览。&lt;/p&gt;
+&lt;p&gt;游戏的丰富性至关重要，但我同样无法耗费大量时间来写剧本，另一方面自己写的剧本自己玩起来也缺乏新意。那丰富性只能通过随机值来获取了。&lt;/p&gt;
+&lt;p&gt;这次玩的应该是一个随机世界，或者是一个RogueLike 游戏。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;丰富的地形&lt;/li&gt;
+&lt;li&gt;建造系统&lt;/li&gt;
+&lt;li&gt;基础 RPG 系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然自己玩的乐趣主要在于游戏开发，游戏内的乐趣需要在开发的过程中慢慢丰富。从第三人的角度看起来，做出来的游戏一定会非常乏味。&lt;/p&gt;
+&lt;h2 id=&#34;选型&#34;&gt;选型&lt;/h2&gt;
+&lt;p&gt;在尝试过 cocos 系列的平台后，期望尝试一下3D 类型的游戏，这在制作过程中将会有更丰富体验。Unreal对我来说会太过沉重，同时我也没有很好的设备来支撑 Unreal 的开发。因此这次选择了 Unity3D 作为制作平台，抛开中国区的恶心运营来说，他是一个入门好平台。&lt;/p&gt;
+&lt;p&gt;在 Unity3D 中，有一个自带的地形模块 Terrain，可以在上面方便的做出各种想要的地形。在初期的开发中也会主要围绕 Terrain 进行地形生成的开发。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
