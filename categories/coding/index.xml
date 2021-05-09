@@ -91,7 +91,7 @@ RABBIT_PASSWORD=$ADMIN_PASSWORD
 SERVICE_PASSWORD=$ADMIN_PASSWORD&lt;/p&gt;
 &lt;p&gt;# Define images to be automatically downloaded during the DevStack built process.
 DOWNLOAD_DEFAULT_IMAGES=False
-IMAGE_URLS=&amp;quot;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;rdquo;&lt;/p&gt;
+IMAGE_URLS=&amp;ldquo;&lt;a href=&#34;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img%22&#34;&gt;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;quot;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;#change github to trystack
 GIT_BASE=${GIT_BASE:-http://git.trystack.cn}
 NOVNC_REPO=${NOVNC_REPO:-http://git.trystack.cn/kanaka/noVNC.git}&lt;/p&gt;
@@ -129,41 +129,41 @@ pypi 包更新的时候（~/devstack/file/get-pip.py文件）很容易断，我�
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;Operator&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Operator&lt;/th&gt;
 &lt;th&gt;Function&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&lt;/td&gt;
 &lt;td&gt;increment the data pointer (to point to the next cell to the right).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;&lt;/td&gt;
 &lt;td&gt;decrement the data pointer (to point to the next cell to the left).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;+&lt;/td&gt;
 &lt;td&gt;increment (increase by one) the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
 &lt;td&gt;decrement (decrease by one) the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;.&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.&lt;/td&gt;
 &lt;td&gt;output the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;,&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;,&lt;/td&gt;
 &lt;td&gt;accept one byte of input, storing its value in the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;[&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[&lt;/td&gt;
 &lt;td&gt;if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching &lt;strong&gt;]&lt;/strong&gt; command.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;]&lt;/td&gt;
 &lt;td&gt;if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching &lt;strong&gt;[&lt;/strong&gt; command.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -403,7 +403,7 @@ cabal: /usr/bin/ar: permission denied&lt;/p&gt;
       <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
       <guid>https://blog.morningtzh.com/post/about-haskell-1.html</guid>
       <description>&lt;h1 id=&#34;lyah字典查询函数理解指南&#34;&gt;LYAH字典查询函数理解指南&lt;/h1&gt;
-&lt;h3 id=&#34;for-what-&#34;&gt;for what&lt;/h3&gt;
+&lt;h3 id=&#34;for-what&#34;&gt;for what&lt;/h3&gt;
 &lt;p&gt;最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看
 &lt;a href=&#34;http://learnyouahaskell.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《Learn You a Haskell for Great Good》&lt;/a&gt;恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。&lt;/p&gt;
 &lt;h3 id=&#34;那个函数&#34;&gt;那个函数&lt;/h3&gt;
@@ -462,12 +462,12 @@ example:&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;betty&amp;rdquo; phoneBook&lt
 &lt;blockquote&gt;
 &lt;p&gt;filter (\(k,v) -&amp;gt; key == k) xs&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;首先是filter，这个是对一个list的过滤器，是&amp;rdquo;&lt;strong&gt;filter &lt;em&gt;f&lt;/em&gt; list&lt;/strong&gt;&amp;rdquo; 这样的模式，对list的每一个元素使用函数&lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/em&gt;进行匹配。在此例中&lt;/p&gt;
+&lt;p&gt;首先是filter，这个是对一个list的过滤器，是&amp;rdquo;&lt;strong&gt;filter &lt;em&gt;f&lt;/em&gt; list&lt;/strong&gt;&amp;quot; 这样的模式，对list的每一个元素使用函数&lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/em&gt;进行匹配。在此例中&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;(\(k,v) -&amp;gt; key == k)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;就是filter中的 &lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/em&gt; ，haskell中使用 \做lambda，lambda就是一个隐式函数。&lt;br&gt;
-在lambda中&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;是用来区分参数和lambda函数本体的，在&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;左边是函数参数，可做模式匹配。在此lambda函数中，用&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;来匹配list成员tuple的成员。第一个&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;就是：&lt;/p&gt;
+在lambda中&amp;quot;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;是用来区分参数和lambda函数本体的，在&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;左边是函数参数，可做模式匹配。在此lambda函数中，用&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;来匹配list成员tuple的成员。第一个&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;就是：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -520,17 +520,17 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
 &lt;p&gt;对于本例来说，我们将&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;filter (\(k,v) -&amp;gt; key == k) xs&lt;/strong&gt;&lt;/em&gt; Currying成
-***(filter (\(k,v) -&amp;gt; key == k)) xs***&lt;/p&gt;
+&lt;em&gt;&lt;strong&gt;(filter (\(k,v) -&amp;gt; key == k)) xs&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在组合函数中其实是组合成了&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;(snd . head . filter (\(k,v) -&amp;gt; key == k)) xs&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;在原函数中，少了&amp;rdquo;&lt;strong&gt;()&lt;/strong&gt;&amp;quot;,多了&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;:&lt;/p&gt;
+&lt;p&gt;在原函数中，少了&amp;rdquo;&lt;strong&gt;()&lt;/strong&gt;&amp;quot;,多了&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) $ xs&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;这边用到了的&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;,如果缺少&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;这边用到了的&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;,如果缺少&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) xs&lt;/strong&gt;&lt;/em&gt; 会被理解成&lt;br&gt;
 &lt;em&gt;&lt;strong&gt;snd . head . (filter (\(k,v) -&amp;gt; key == k) xs)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -539,13 +539,13 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) ($ xs)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;函数组合的优先级大于&lt;em&gt;&lt;strong&gt;$ xs&lt;/strong&gt;&lt;/em&gt;的优先级，就会前面线组合起来。&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;ldquo;是一个非常节约括号的函数调用符.&lt;/p&gt;
+&lt;p&gt;函数组合的优先级大于***$ xs***的优先级，就会前面线组合起来。&amp;quot;**$**&amp;ldquo;是一个非常节约括号的函数调用符.&lt;/p&gt;
 &lt;h3 id=&#34;函数结论&#34;&gt;函数结论&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;betty&amp;rdquo; phoneBook&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
-***&amp;ldquo;555-2938&amp;rdquo;***&lt;br&gt;
-***findKey &amp;ldquo;patsy&amp;rdquo; phoneBook***&lt;br&gt;
-***&amp;ldquo;493-2928&amp;rdquo;***&lt;/p&gt;
+&lt;em&gt;&lt;strong&gt;&amp;ldquo;555-2938&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;patsy&amp;rdquo; phoneBook&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;&amp;ldquo;493-2928&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;就此结束吧，心血来潮谢谢，先打上个标签1，说不定还有2，3，4&amp;hellip;呢，也或许会太监了呢。&lt;/p&gt;</description>
     </item>

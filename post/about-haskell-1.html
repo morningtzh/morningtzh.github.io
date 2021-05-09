@@ -331,7 +331,7 @@ for what
       "url": "https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_192x192_fit_lanczos_2.png"
     }
   },
-  "description": "\u003ch1 id=\"lyah字典查询函数理解指南\"\u003eLYAH字典查询函数理解指南\u003c/h1\u003e\n\u003ch3 id=\"for-what-\"\u003efor what\u003c/h3\u003e\n\u003cp\u003e最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看\n\u003ca href=\"http://learnyouahaskell.com\" target=\"_blank\" rel=\"noopener\"\u003e《Learn You a Haskell for Great Good》\u003c/a\u003e恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。\u003c/p\u003e"
+  "description": "\u003ch1 id=\"lyah字典查询函数理解指南\"\u003eLYAH字典查询函数理解指南\u003c/h1\u003e\n\u003ch3 id=\"for-what\"\u003efor what\u003c/h3\u003e\n\u003cp\u003e最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看\n\u003ca href=\"http://learnyouahaskell.com\" target=\"_blank\" rel=\"noopener\"\u003e《Learn You a Haskell for Great Good》\u003c/a\u003e恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。\u003c/p\u003e"
 }
 </script>
 
@@ -675,7 +675,7 @@ for what
 
     <div class="article-style">
       <h1 id="lyah字典查询函数理解指南">LYAH字典查询函数理解指南</h1>
-<h3 id="for-what-">for what</h3>
+<h3 id="for-what">for what</h3>
 <p>最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看
 <a href="http://learnyouahaskell.com" target="_blank" rel="noopener">《Learn You a Haskell for Great Good》</a>恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。</p>
 <h3 id="那个函数">那个函数</h3>
@@ -734,12 +734,12 @@ example:<em><strong>findKey &ldquo;betty&rdquo; phoneBook</strong></em></p>
 <blockquote>
 <p>filter (\(k,v) -&gt; key == k) xs</p>
 </blockquote>
-<p>首先是filter，这个是对一个list的过滤器，是&rdquo;<strong>filter <em>f</em> list</strong>&rdquo; 这样的模式，对list的每一个元素使用函数<em><strong>f</strong></em>进行匹配。在此例中</p>
+<p>首先是filter，这个是对一个list的过滤器，是&rdquo;<strong>filter <em>f</em> list</strong>&quot; 这样的模式，对list的每一个元素使用函数<em><strong>f</strong></em>进行匹配。在此例中</p>
 <blockquote>
 <p>(\(k,v) -&gt; key == k)</p>
 </blockquote>
 <p>就是filter中的 <em><strong>f</strong></em> ，haskell中使用 \做lambda，lambda就是一个隐式函数。<br>
-在lambda中&rdquo;<strong>-&gt;</strong>&ldquo;是用来区分参数和lambda函数本体的，在&rdquo;<strong>-&gt;</strong>&ldquo;左边是函数参数，可做模式匹配。在此lambda函数中，用&rdquo;<strong>(k,v)</strong>&ldquo;来匹配list成员tuple的成员。第一个&rdquo;<strong>(k,v)</strong>&ldquo;就是：</p>
+在lambda中&quot;<strong>-&gt;</strong>&ldquo;是用来区分参数和lambda函数本体的，在&rdquo;<strong>-&gt;</strong>&ldquo;左边是函数参数，可做模式匹配。在此lambda函数中，用&rdquo;<strong>(k,v)</strong>&ldquo;来匹配list成员tuple的成员。第一个&rdquo;<strong>(k,v)</strong>&ldquo;就是：</p>
 <blockquote>
 <p><em><strong>(&ldquo;betty&rdquo;,&ldquo;555-2938&rdquo;)</strong></em></p>
 </blockquote>
@@ -792,17 +792,17 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
 <p>对于本例来说，我们将</p>
 <blockquote>
 <p><em><strong>filter (\(k,v) -&gt; key == k) xs</strong></em> Currying成
-***(filter (\(k,v) -&gt; key == k)) xs***</p>
+<em><strong>(filter (\(k,v) -&gt; key == k)) xs</strong></em></p>
 </blockquote>
 <p>在组合函数中其实是组合成了</p>
 <blockquote>
 <p><em><strong>(snd . head . filter (\(k,v) -&gt; key == k)) xs</strong></em></p>
 </blockquote>
-<p>在原函数中，少了&rdquo;<strong>()</strong>&quot;,多了&rdquo;<strong>$</strong>&quot;:</p>
+<p>在原函数中，少了&rdquo;<strong>()</strong>&quot;,多了&quot;<strong>$</strong>&quot;:</p>
 <blockquote>
 <p><em><strong>snd . head . filter (\(k,v) -&gt; key == k) $ xs</strong></em></p>
 </blockquote>
-<p>这边用到了的&rdquo;<strong>$</strong>&quot;,如果缺少&rdquo;<strong>$</strong>&rdquo;</p>
+<p>这边用到了的&quot;<strong>$</strong>&quot;,如果缺少&quot;<strong>$</strong>&quot;</p>
 <blockquote>
 <p><em><strong>snd . head . filter (\(k,v) -&gt; key == k) xs</strong></em> 会被理解成<br>
 <em><strong>snd . head . (filter (\(k,v) -&gt; key == k) xs)</strong></em></p>
@@ -811,13 +811,13 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
 <blockquote>
 <p><em><strong>snd . head . filter (\(k,v) -&gt; key == k) ($ xs)</strong></em></p>
 </blockquote>
-<p>函数组合的优先级大于<em><strong>$ xs</strong></em>的优先级，就会前面线组合起来。&quot;<strong>$</strong>&ldquo;是一个非常节约括号的函数调用符.</p>
+<p>函数组合的优先级大于***$ xs***的优先级，就会前面线组合起来。&quot;**$**&ldquo;是一个非常节约括号的函数调用符.</p>
 <h3 id="函数结论">函数结论</h3>
 <blockquote>
 <p><em><strong>findKey &ldquo;betty&rdquo; phoneBook</strong></em><br>
-***&ldquo;555-2938&rdquo;***<br>
-***findKey &ldquo;patsy&rdquo; phoneBook***<br>
-***&ldquo;493-2928&rdquo;***</p>
+<em><strong>&ldquo;555-2938&rdquo;</strong></em><br>
+<em><strong>findKey &ldquo;patsy&rdquo; phoneBook</strong></em><br>
+<em><strong>&ldquo;493-2928&rdquo;</strong></em></p>
 </blockquote>
 <p>就此结束吧，心血来潮谢谢，先打上个标签1，说不定还有2，3，4&hellip;呢，也或许会太监了呢。</p>
     </div>
@@ -1130,7 +1130,7 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
         'project': "项目",
         'publication' : "出版物",
         'talk' : "演讲",
-        'slides' : "演示文稿"
+        'slides' : "Slides"
         };
     </script>
     
@@ -1182,7 +1182,7 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
     
     
     
-    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
+    <script src="/js/academic.min.72756512af279b10e3e4b09540ed6e9f.js"></script>
 
     
 

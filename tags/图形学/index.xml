@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图形学 | 瑟瑟和你说早安</title>
+    <link>https://blog.morningtzh.com/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6.html</link>
+      <atom:link href="https://blog.morningtzh.com/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <description>图形学</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sun, 09 May 2021 10:07:36 +0800</lastBuildDate>
+    <image>
+      <url>https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png</url>
+      <title>图形学</title>
+      <link>https://blog.morningtzh.com/tags/%E5%9B%BE%E5%BD%A2%E5%AD%A6.html</link>
+    </image>
+    
+    <item>
+      <title>图形学入门--变换</title>
+      <link>https://blog.morningtzh.com/post/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8-%E5%8F%98%E6%8D%A2.html</link>
+      <pubDate>Sun, 09 May 2021 10:07:36 +0800</pubDate>
+      <guid>https://blog.morningtzh.com/post/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8-%E5%8F%98%E6%8D%A2.html</guid>
+      <description>&lt;h1 id=&#34;图形学入门--变换&#34;&gt;图形学入门&amp;ndash;变换&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2&gt;目录&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#向量变换&#34;&gt;向量变换&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#齐次坐标&#34;&gt;齐次坐标&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#齐次坐标下的变换&#34;&gt;齐次坐标下的变换&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#三维变换&#34;&gt;三维变换&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;p&gt;最近在学图形学，并顺手学个rust，用rust来做一个shader，实践之前需要在课后再深入复习一下。
+图形学我看的是
+&lt;a href=&#34;https://sites.cs.ucsb.edu/~lingqi/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;闫令琪&lt;/a&gt;大神的
+&lt;a href=&#34;https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GAMES101: 现代计算机图形学入门&lt;/a&gt;,想要学习的话可以看看,视频在B站上也很方便.&lt;/p&gt;
+&lt;p&gt;由于我是个初学者, 一年前开始接触unity3D和blender这些软件, 对三维世界有大致的了解, 因此会在我之前的理解上进行复盘. 同时一些示例图片会通过blender生成.&lt;/p&gt;
+&lt;h2 id=&#34;向量变换&#34;&gt;向量变换&lt;/h2&gt;
+&lt;p&gt;区别于图片的像素矩阵, 图形学的世界更类似于数学方程式. 对一个模型的描述, 通常使用由无数个三角形组成的面来表示, 将三角形分解, 就是三个点.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8--%E5%8F%98%E6%8D%A2.assets/image-20210509101259239.png&#34; alt=&#34;image-20210509101259239&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对于点的描述可以表示成 $[x,y]^T$​ , 上面的转置是由于在图形学中一般&lt;em&gt;点&lt;/em&gt;和&lt;em&gt;向量&lt;/em&gt;习惯竖着写$\left[
+\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right]$&lt;/p&gt;
+&lt;p&gt;以下为四个点围成的正方形, 其中x和y都为1, $\left[\begin{matrix}
+1\&lt;br&gt;
+1
+\end{matrix}
+\right]$ ,并将其放到笛卡尔坐标系中.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8--%E5%8F%98%E6%8D%A2.assets/image-20210509103739566.png&#34; alt=&#34;image-20210509103739566&#34;&gt;&lt;/p&gt;
+&lt;p&gt;此时我们可以对做以下操作:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线性变换
+&lt;ul&gt;
+&lt;li&gt;基于原点的缩放 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;
+\end{matrix}
+\right] = S_{(x,y)}\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right] = \left[\begin{matrix}
+s_x &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; s_y
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;基于原点的旋转 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;
+\end{matrix}
+\right] = R_\theta\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right] = \left[\begin{matrix}
+\cos\theta &amp;amp; -\sin\theta \&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;平移变换
+&lt;ul&gt;
+&lt;li&gt;平移$\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;
+\end{matrix}
+\right] = T_{(x,y)}+\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right] = \left[\begin{matrix}
+t_x\&lt;br&gt;
+t_y
+\end{matrix}
+\right]+\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个点的所有变换在笛卡尔坐标系下无法通过线性变换来表示,只能通过仿射变换来表示,就会产生一些麻烦,因此我们引入齐次坐标来将平移变换也转换为线性变换.&lt;/p&gt;
+&lt;h2 id=&#34;齐次坐标&#34;&gt;齐次坐标&lt;/h2&gt;
+&lt;p&gt;齐次坐标就是通过高维来表示地维的坐标.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;二维点: $\left[\begin{matrix}
+x \&lt;br&gt;
+y \&lt;br&gt;
+1
+​    \end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;二维向量: $\left[\begin{matrix}
+x \&lt;br&gt;
+y \&lt;br&gt;
+0
+​    \end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们可以看出,点和向量的唯一区别在于$z$是否为0，当$z$为0的时候是向量，为1的时候是点。&lt;/p&gt;
+&lt;h2 id=&#34;齐次坐标下的变换&#34;&gt;齐次坐标下的变换&lt;/h2&gt;
+&lt;p&gt;我们同样可以在齐次坐标下进行变换&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于原点的缩放 $\left
+[\begin{matrix}
+x&#39; \&lt;br&gt;
+y&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = S_{(x,y)}\cdot\left[\begin{matrix}
+x \&lt;br&gt;
+y
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+s_x &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; s_y &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;基于原点的旋转 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+1
+\end{matrix}
+\right] = R_\theta\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+\cos\theta &amp;amp; -\sin\theta &amp;amp; 0\&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;平移$\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+1
+\end{matrix}
+\right] = T_{(x,y)}+\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+1 &amp;amp; 0 &amp;amp; t_x\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; t_y\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样一来，我们就能把这些变换都通过线性变换来表示了，可以通过连乘的方法来表示一些列变换。&lt;/p&gt;
+&lt;p&gt;比如我们对为处于原点的方块进行以下操作。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;图形学入门--变换.assets/image-20210509111554749.png&#34; alt=&#34;image-20210509111554749&#34; style=&#34;zoom:30%;&#34; /&gt; $\Longrightarrow$ &lt;img src=&#34;图形学入门--变换.assets/image-20210509112235061.png&#34; alt=&#34;image-20210509112235061&#34; style=&#34;zoom: 33%;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;对其进行分析我们可以发现这个变换包含了旋转和缩放，但由于我们上面讲到旋转和缩放都是基于原点的变换，我们无法直接套用上述公式，需要先将其平移至原点做处理后再平移回来。&lt;/p&gt;
+&lt;p&gt;这需要我们做这样一串操作：&lt;/p&gt;
+&lt;p&gt;$$T_{(-t_x, -t_y)} \Rightarrow S_{(s_x, s_y)} \Rightarrow R_\theta \Rightarrow T_{(t_x, t_y)}$$&lt;/p&gt;
+&lt;p&gt;写成公式就是(从右往左运算)
+$$
+p&#39; = T_{(t_x, t_y)} \cdot R_\theta \cdot S_{(s_x, s_y)} \cdot T_{(-t_x, -t_y)} \cdot p \&lt;br&gt;
+\&lt;br&gt;
+\Downarrow
+\&lt;br&gt;
+\left[
+\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+1
+\end{matrix}
+\right] =
+\left[\begin{matrix}
+1 &amp;amp; 0 &amp;amp; t_x\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; t_y\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+\cos\theta &amp;amp; -\sin\theta &amp;amp; 0\&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+s_x &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; s_y &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+1 &amp;amp; 0 &amp;amp; -t_x\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; -t_y\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right]
+$$&lt;/p&gt;
+&lt;p&gt;根据矩阵运算的结合律，我们可以先求 $T_{(t_x, t_y)} \cdot R_\theta \cdot S_{(s_x, s_y)} \cdot T_{(-t_x, -t_y)}$, 减少运算。&lt;/p&gt;
+&lt;p&gt;此处要注意的是，矩阵运算不符合交换律。&lt;/p&gt;
+&lt;h2 id=&#34;三维变换&#34;&gt;三维变换&lt;/h2&gt;
+&lt;p&gt;三维变换与二维变换类似。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于原点的缩放 $\left
+[\begin{matrix}
+x&#39; \&lt;br&gt;
+y&#39; \&lt;br&gt;
+z&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = S_{(x,y,z)}\cdot\left[\begin{matrix}
+x \&lt;br&gt;
+y \&lt;br&gt;
+z \&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+s_x &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; s_y &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; s_z\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;平移$\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+z&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = T_{(x,y,z)}+\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+1 &amp;amp; 0 &amp;amp; 0 &amp;amp; t_x\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; 0 &amp;amp; t_y\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1 &amp;amp; t_z\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但在三维空间中，旋转是特殊的，因为它有三个轴，对每个轴的旋转我们只要忽略这一轴即可：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;X轴旋转 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+z&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = R_x\theta\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z \&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; \cos\theta &amp;amp; -\sin\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; \sin\theta &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;Y轴旋转 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+z&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = R_y\theta\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+\cos\theta &amp;amp; 0 &amp;amp; \sin\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
+-\sin\theta &amp;amp; 0 &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;Z轴旋转 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+z&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = R_z\theta\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z \&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+\cos\theta &amp;amp; -\sin\theta &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在这里会发现其中Y轴的变换是特殊的，这是由于根据右手螺旋定则，XY可以推出Z，YZ可以推出X，但是XZ推出的是-Y，因此Y相反。&lt;/p&gt;
+&lt;p&gt;同样我们这边也可以结合三轴旋转变换为：
+$$R_{xyz}(\alpha\beta\gamma)=R_x(\alpha)R_y(\beta)R_z(\gamma)$$&lt;/p&gt;
+&lt;p&gt;更复杂一点可以通过罗格里格斯旋转公式求出基于任意从原点出发向量旋转后的点，此处不做展开。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

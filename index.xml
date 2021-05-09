@@ -5,12 +5,396 @@
     <link>https://blog.morningtzh.com/</link>
       <atom:link href="https://blog.morningtzh.com/index.xml" rel="self" type="application/rss+xml" />
     <description>瑟瑟和你说早安</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sat, 24 Oct 2020 11:11:56 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>zh-Hans</language><copyright>©MorningTZH</copyright><lastBuildDate>Sun, 09 May 2021 10:07:36 +0800</lastBuildDate>
     <image>
       <url>https://blog.morningtzh.com/images/logo_hu56606b72eae1823e5af44004a0b07113_957806_300x300_fit_lanczos_2.png</url>
       <title>瑟瑟和你说早安</title>
       <link>https://blog.morningtzh.com/</link>
     </image>
+    
+    <item>
+      <title>图形学入门--变换</title>
+      <link>https://blog.morningtzh.com/post/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8-%E5%8F%98%E6%8D%A2.html</link>
+      <pubDate>Sun, 09 May 2021 10:07:36 +0800</pubDate>
+      <guid>https://blog.morningtzh.com/post/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8-%E5%8F%98%E6%8D%A2.html</guid>
+      <description>&lt;h1 id=&#34;图形学入门--变换&#34;&gt;图形学入门&amp;ndash;变换&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2&gt;目录&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#向量变换&#34;&gt;向量变换&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#齐次坐标&#34;&gt;齐次坐标&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#齐次坐标下的变换&#34;&gt;齐次坐标下的变换&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#三维变换&#34;&gt;三维变换&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;p&gt;最近在学图形学，并顺手学个rust，用rust来做一个shader，实践之前需要在课后再深入复习一下。
+图形学我看的是
+&lt;a href=&#34;https://sites.cs.ucsb.edu/~lingqi/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;闫令琪&lt;/a&gt;大神的
+&lt;a href=&#34;https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GAMES101: 现代计算机图形学入门&lt;/a&gt;,想要学习的话可以看看,视频在B站上也很方便.&lt;/p&gt;
+&lt;p&gt;由于我是个初学者, 一年前开始接触unity3D和blender这些软件, 对三维世界有大致的了解, 因此会在我之前的理解上进行复盘. 同时一些示例图片会通过blender生成.&lt;/p&gt;
+&lt;h2 id=&#34;向量变换&#34;&gt;向量变换&lt;/h2&gt;
+&lt;p&gt;区别于图片的像素矩阵, 图形学的世界更类似于数学方程式. 对一个模型的描述, 通常使用由无数个三角形组成的面来表示, 将三角形分解, 就是三个点.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8--%E5%8F%98%E6%8D%A2.assets/image-20210509101259239.png&#34; alt=&#34;image-20210509101259239&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对于点的描述可以表示成 $[x,y]^T$​ , 上面的转置是由于在图形学中一般&lt;em&gt;点&lt;/em&gt;和&lt;em&gt;向量&lt;/em&gt;习惯竖着写$\left[
+\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right]$&lt;/p&gt;
+&lt;p&gt;以下为四个点围成的正方形, 其中x和y都为1, $\left[\begin{matrix}
+1\&lt;br&gt;
+1
+\end{matrix}
+\right]$ ,并将其放到笛卡尔坐标系中.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8--%E5%8F%98%E6%8D%A2.assets/image-20210509103739566.png&#34; alt=&#34;image-20210509103739566&#34;&gt;&lt;/p&gt;
+&lt;p&gt;此时我们可以对做以下操作:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线性变换
+&lt;ul&gt;
+&lt;li&gt;基于原点的缩放 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;
+\end{matrix}
+\right] = S_{(x,y)}\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right] = \left[\begin{matrix}
+s_x &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; s_y
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;基于原点的旋转 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;
+\end{matrix}
+\right] = R_\theta\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right] = \left[\begin{matrix}
+\cos\theta &amp;amp; -\sin\theta \&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;平移变换
+&lt;ul&gt;
+&lt;li&gt;平移$\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;
+\end{matrix}
+\right] = T_{(x,y)}+\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right] = \left[\begin{matrix}
+t_x\&lt;br&gt;
+t_y
+\end{matrix}
+\right]+\left[\begin{matrix}
+x\&lt;br&gt;
+y
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个点的所有变换在笛卡尔坐标系下无法通过线性变换来表示,只能通过仿射变换来表示,就会产生一些麻烦,因此我们引入齐次坐标来将平移变换也转换为线性变换.&lt;/p&gt;
+&lt;h2 id=&#34;齐次坐标&#34;&gt;齐次坐标&lt;/h2&gt;
+&lt;p&gt;齐次坐标就是通过高维来表示地维的坐标.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;二维点: $\left[\begin{matrix}
+x \&lt;br&gt;
+y \&lt;br&gt;
+1
+​    \end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;二维向量: $\left[\begin{matrix}
+x \&lt;br&gt;
+y \&lt;br&gt;
+0
+​    \end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们可以看出,点和向量的唯一区别在于$z$是否为0，当$z$为0的时候是向量，为1的时候是点。&lt;/p&gt;
+&lt;h2 id=&#34;齐次坐标下的变换&#34;&gt;齐次坐标下的变换&lt;/h2&gt;
+&lt;p&gt;我们同样可以在齐次坐标下进行变换&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于原点的缩放 $\left
+[\begin{matrix}
+x&#39; \&lt;br&gt;
+y&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = S_{(x,y)}\cdot\left[\begin{matrix}
+x \&lt;br&gt;
+y
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+s_x &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; s_y &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;基于原点的旋转 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+1
+\end{matrix}
+\right] = R_\theta\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+\cos\theta &amp;amp; -\sin\theta &amp;amp; 0\&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;平移$\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+1
+\end{matrix}
+\right] = T_{(x,y)}+\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+1 &amp;amp; 0 &amp;amp; t_x\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; t_y\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样一来，我们就能把这些变换都通过线性变换来表示了，可以通过连乘的方法来表示一些列变换。&lt;/p&gt;
+&lt;p&gt;比如我们对为处于原点的方块进行以下操作。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;图形学入门--变换.assets/image-20210509111554749.png&#34; alt=&#34;image-20210509111554749&#34; style=&#34;zoom:30%;&#34; /&gt; $\Longrightarrow$ &lt;img src=&#34;图形学入门--变换.assets/image-20210509112235061.png&#34; alt=&#34;image-20210509112235061&#34; style=&#34;zoom: 33%;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;对其进行分析我们可以发现这个变换包含了旋转和缩放，但由于我们上面讲到旋转和缩放都是基于原点的变换，我们无法直接套用上述公式，需要先将其平移至原点做处理后再平移回来。&lt;/p&gt;
+&lt;p&gt;这需要我们做这样一串操作：&lt;/p&gt;
+&lt;p&gt;$$T_{(-t_x, -t_y)} \Rightarrow S_{(s_x, s_y)} \Rightarrow R_\theta \Rightarrow T_{(t_x, t_y)}$$&lt;/p&gt;
+&lt;p&gt;写成公式就是(从右往左运算)
+$$
+p&#39; = T_{(t_x, t_y)} \cdot R_\theta \cdot S_{(s_x, s_y)} \cdot T_{(-t_x, -t_y)} \cdot p \&lt;br&gt;
+\&lt;br&gt;
+\Downarrow
+\&lt;br&gt;
+\left[
+\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+1
+\end{matrix}
+\right] =
+\left[\begin{matrix}
+1 &amp;amp; 0 &amp;amp; t_x\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; t_y\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+\cos\theta &amp;amp; -\sin\theta &amp;amp; 0\&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+s_x &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; s_y &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+1 &amp;amp; 0 &amp;amp; -t_x\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; -t_y\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+1
+\end{matrix}
+\right]
+$$&lt;/p&gt;
+&lt;p&gt;根据矩阵运算的结合律，我们可以先求 $T_{(t_x, t_y)} \cdot R_\theta \cdot S_{(s_x, s_y)} \cdot T_{(-t_x, -t_y)}$, 减少运算。&lt;/p&gt;
+&lt;p&gt;此处要注意的是，矩阵运算不符合交换律。&lt;/p&gt;
+&lt;h2 id=&#34;三维变换&#34;&gt;三维变换&lt;/h2&gt;
+&lt;p&gt;三维变换与二维变换类似。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于原点的缩放 $\left
+[\begin{matrix}
+x&#39; \&lt;br&gt;
+y&#39; \&lt;br&gt;
+z&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = S_{(x,y,z)}\cdot\left[\begin{matrix}
+x \&lt;br&gt;
+y \&lt;br&gt;
+z \&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+s_x &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; s_y &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; s_z\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;平移$\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+z&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = T_{(x,y,z)}+\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+1 &amp;amp; 0 &amp;amp; 0 &amp;amp; t_x\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; 0 &amp;amp; t_y\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1 &amp;amp; t_z\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]
+\cdot
+\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但在三维空间中，旋转是特殊的，因为它有三个轴，对每个轴的旋转我们只要忽略这一轴即可：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;X轴旋转 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+z&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = R_x\theta\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z \&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; \cos\theta &amp;amp; -\sin\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; \sin\theta &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;Y轴旋转 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+z&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = R_y\theta\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+\cos\theta &amp;amp; 0 &amp;amp; \sin\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
+-\sin\theta &amp;amp; 0 &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;li&gt;Z轴旋转 $\left[\begin{matrix}
+x&#39;\&lt;br&gt;
+y&#39;\&lt;br&gt;
+z&#39; \&lt;br&gt;
+1
+\end{matrix}
+\right] = R_z\theta\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z \&lt;br&gt;
+1
+\end{matrix}
+\right] = \left[\begin{matrix}
+\cos\theta &amp;amp; -\sin\theta &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right]\cdot\left[\begin{matrix}
+x\&lt;br&gt;
+y\&lt;br&gt;
+z\&lt;br&gt;
+1
+\end{matrix}
+\right]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在这里会发现其中Y轴的变换是特殊的，这是由于根据右手螺旋定则，XY可以推出Z，YZ可以推出X，但是XZ推出的是-Y，因此Y相反。&lt;/p&gt;
+&lt;p&gt;同样我们这边也可以结合三轴旋转变换为：
+$$R_{xyz}(\alpha\beta\gamma)=R_x(\alpha)R_y(\beta)R_z(\gamma)$$&lt;/p&gt;
+&lt;p&gt;更复杂一点可以通过罗格里格斯旋转公式求出基于任意从原点出发向量旋转后的点，此处不做展开。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>【Unity是个好游戏】随机地形生成</title>
@@ -1964,10 +2348,10 @@ ping_subproc.start()
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.pmi.com&#34;&gt;www.pmi.com&lt;/a&gt; &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.pmi.com&#34;&gt;www.pmi.com&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://obsproject.com&#34;&gt;https://obsproject.com&lt;/a&gt; &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://obsproject.com&#34;&gt;https://obsproject.com&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -3054,7 +3438,7 @@ RABBIT_PASSWORD=$ADMIN_PASSWORD
 SERVICE_PASSWORD=$ADMIN_PASSWORD&lt;/p&gt;
 &lt;p&gt;# Define images to be automatically downloaded during the DevStack built process.
 DOWNLOAD_DEFAULT_IMAGES=False
-IMAGE_URLS=&amp;quot;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;rdquo;&lt;/p&gt;
+IMAGE_URLS=&amp;ldquo;&lt;a href=&#34;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img%22&#34;&gt;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;quot;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;#change github to trystack
 GIT_BASE=${GIT_BASE:-http://git.trystack.cn}
 NOVNC_REPO=${NOVNC_REPO:-http://git.trystack.cn/kanaka/noVNC.git}&lt;/p&gt;
@@ -3092,41 +3476,41 @@ pypi 包更新的时候（~/devstack/file/get-pip.py文件）很容易断，我�
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;Operator&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Operator&lt;/th&gt;
 &lt;th&gt;Function&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&lt;/td&gt;
 &lt;td&gt;increment the data pointer (to point to the next cell to the right).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;&lt;/td&gt;
 &lt;td&gt;decrement the data pointer (to point to the next cell to the left).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;+&lt;/td&gt;
 &lt;td&gt;increment (increase by one) the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
 &lt;td&gt;decrement (decrease by one) the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;.&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.&lt;/td&gt;
 &lt;td&gt;output the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;,&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;,&lt;/td&gt;
 &lt;td&gt;accept one byte of input, storing its value in the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;[&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[&lt;/td&gt;
 &lt;td&gt;if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching &lt;strong&gt;]&lt;/strong&gt; command.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;]&lt;/td&gt;
 &lt;td&gt;if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching &lt;strong&gt;[&lt;/strong&gt; command.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -3366,7 +3750,7 @@ cabal: /usr/bin/ar: permission denied&lt;/p&gt;
       <pubDate>Sat, 07 Nov 2015 23:22:35 +0800</pubDate>
       <guid>https://blog.morningtzh.com/post/about-haskell-1.html</guid>
       <description>&lt;h1 id=&#34;lyah字典查询函数理解指南&#34;&gt;LYAH字典查询函数理解指南&lt;/h1&gt;
-&lt;h3 id=&#34;for-what-&#34;&gt;for what&lt;/h3&gt;
+&lt;h3 id=&#34;for-what&#34;&gt;for what&lt;/h3&gt;
 &lt;p&gt;最近在看Haskell，并且极度想要给好基友安利这一个语言。So，今天看
 &lt;a href=&#34;http://learnyouahaskell.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《Learn You a Haskell for Great Good》&lt;/a&gt;恰巧基友被我安利烦了，问我haskell有什么好的，我刚看到§7.4 Data.Map这章，就发了看到的第一个函数给他，不过感觉他会看不懂，就想写个讲解给他，写长了之后就想成文了。&lt;/p&gt;
 &lt;h3 id=&#34;那个函数&#34;&gt;那个函数&lt;/h3&gt;
@@ -3425,12 +3809,12 @@ example:&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;betty&amp;rdquo; phoneBook&lt
 &lt;blockquote&gt;
 &lt;p&gt;filter (\(k,v) -&amp;gt; key == k) xs&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;首先是filter，这个是对一个list的过滤器，是&amp;rdquo;&lt;strong&gt;filter &lt;em&gt;f&lt;/em&gt; list&lt;/strong&gt;&amp;rdquo; 这样的模式，对list的每一个元素使用函数&lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/em&gt;进行匹配。在此例中&lt;/p&gt;
+&lt;p&gt;首先是filter，这个是对一个list的过滤器，是&amp;rdquo;&lt;strong&gt;filter &lt;em&gt;f&lt;/em&gt; list&lt;/strong&gt;&amp;quot; 这样的模式，对list的每一个元素使用函数&lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/em&gt;进行匹配。在此例中&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;(\(k,v) -&amp;gt; key == k)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;就是filter中的 &lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;&lt;/em&gt; ，haskell中使用 \做lambda，lambda就是一个隐式函数。&lt;br&gt;
-在lambda中&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;是用来区分参数和lambda函数本体的，在&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;左边是函数参数，可做模式匹配。在此lambda函数中，用&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;来匹配list成员tuple的成员。第一个&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;就是：&lt;/p&gt;
+在lambda中&amp;quot;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;是用来区分参数和lambda函数本体的，在&amp;rdquo;&lt;strong&gt;-&amp;gt;&lt;/strong&gt;&amp;ldquo;左边是函数参数，可做模式匹配。在此lambda函数中，用&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;来匹配list成员tuple的成员。第一个&amp;rdquo;&lt;strong&gt;(k,v)&lt;/strong&gt;&amp;ldquo;就是：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;(&amp;ldquo;betty&amp;rdquo;,&amp;ldquo;555-2938&amp;rdquo;)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -3483,17 +3867,17 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
 &lt;p&gt;对于本例来说，我们将&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;filter (\(k,v) -&amp;gt; key == k) xs&lt;/strong&gt;&lt;/em&gt; Currying成
-***(filter (\(k,v) -&amp;gt; key == k)) xs***&lt;/p&gt;
+&lt;em&gt;&lt;strong&gt;(filter (\(k,v) -&amp;gt; key == k)) xs&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在组合函数中其实是组合成了&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;(snd . head . filter (\(k,v) -&amp;gt; key == k)) xs&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;在原函数中，少了&amp;rdquo;&lt;strong&gt;()&lt;/strong&gt;&amp;quot;,多了&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;:&lt;/p&gt;
+&lt;p&gt;在原函数中，少了&amp;rdquo;&lt;strong&gt;()&lt;/strong&gt;&amp;quot;,多了&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) $ xs&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;这边用到了的&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;,如果缺少&amp;rdquo;&lt;strong&gt;$&lt;/strong&gt;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;这边用到了的&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;,如果缺少&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;quot;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) xs&lt;/strong&gt;&lt;/em&gt; 会被理解成&lt;br&gt;
 &lt;em&gt;&lt;strong&gt;snd . head . (filter (\(k,v) -&amp;gt; key == k) xs)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -3502,13 +3886,13 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;snd . head . filter (\(k,v) -&amp;gt; key == k) ($ xs)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;函数组合的优先级大于&lt;em&gt;&lt;strong&gt;$ xs&lt;/strong&gt;&lt;/em&gt;的优先级，就会前面线组合起来。&amp;quot;&lt;strong&gt;$&lt;/strong&gt;&amp;ldquo;是一个非常节约括号的函数调用符.&lt;/p&gt;
+&lt;p&gt;函数组合的优先级大于***$ xs***的优先级，就会前面线组合起来。&amp;quot;**$**&amp;ldquo;是一个非常节约括号的函数调用符.&lt;/p&gt;
 &lt;h3 id=&#34;函数结论&#34;&gt;函数结论&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;betty&amp;rdquo; phoneBook&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
-***&amp;ldquo;555-2938&amp;rdquo;***&lt;br&gt;
-***findKey &amp;ldquo;patsy&amp;rdquo; phoneBook***&lt;br&gt;
-***&amp;ldquo;493-2928&amp;rdquo;***&lt;/p&gt;
+&lt;em&gt;&lt;strong&gt;&amp;ldquo;555-2938&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;findKey &amp;ldquo;patsy&amp;rdquo; phoneBook&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;&lt;strong&gt;&amp;ldquo;493-2928&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;就此结束吧，心血来潮谢谢，先打上个标签1，说不定还有2，3，4&amp;hellip;呢，也或许会太监了呢。&lt;/p&gt;</description>
     </item>
@@ -3549,7 +3933,7 @@ Currying是指函数可以不完全调用，他可以将多参函数转化为单
 &lt;a href=&#34;https://book.douban.com/subject/3291111/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《富爸爸穷爸爸》&lt;/a&gt;前三本略有些压抑，而后两本则切切实实的带来了&lt;strong&gt;恐惧&lt;/strong&gt;，我从小就有强烈的危机感，这两本书简直又是当头棒喝，告诉了我『你的危机感是真实存在的，不早去控制可能存在的风险，将会活的生不如死』。我很感谢在刚刚踏入社会一年多的时间里看到了这两本书，不早也不晚。太早了就不会有感觉，太晚了就更难挽回局面了。&lt;br&gt;
 其实本来这一篇想写的就是阅读感悟，奈何废话过多变成了说最近的阅读方式了，那么阅读感悟自然需要另起一篇了。即将到来————&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;h3 id=&#34;生不如死有多遥远-&#34;&gt;&lt;em&gt;&lt;strong&gt;《生不如死有多遥远》&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;生不如死有多遥远&#34;&gt;&lt;em&gt;&lt;strong&gt;《生不如死有多遥远》&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
 &lt;/blockquote&gt;</description>
     </item>
     

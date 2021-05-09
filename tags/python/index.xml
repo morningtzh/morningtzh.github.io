@@ -68,7 +68,7 @@ RABBIT_PASSWORD=$ADMIN_PASSWORD
 SERVICE_PASSWORD=$ADMIN_PASSWORD&lt;/p&gt;
 &lt;p&gt;# Define images to be automatically downloaded during the DevStack built process.
 DOWNLOAD_DEFAULT_IMAGES=False
-IMAGE_URLS=&amp;quot;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;rdquo;&lt;/p&gt;
+IMAGE_URLS=&amp;ldquo;&lt;a href=&#34;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img%22&#34;&gt;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;quot;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;#change github to trystack
 GIT_BASE=${GIT_BASE:-http://git.trystack.cn}
 NOVNC_REPO=${NOVNC_REPO:-http://git.trystack.cn/kanaka/noVNC.git}&lt;/p&gt;
@@ -106,41 +106,41 @@ pypi 包更新的时候（~/devstack/file/get-pip.py文件）很容易断，我�
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;center&#34;&gt;Operator&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Operator&lt;/th&gt;
 &lt;th&gt;Function&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&lt;/td&gt;
 &lt;td&gt;increment the data pointer (to point to the next cell to the right).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;&lt;/td&gt;
 &lt;td&gt;decrement the data pointer (to point to the next cell to the left).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;+&lt;/td&gt;
 &lt;td&gt;increment (increase by one) the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
 &lt;td&gt;decrement (decrease by one) the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;.&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.&lt;/td&gt;
 &lt;td&gt;output the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;,&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;,&lt;/td&gt;
 &lt;td&gt;accept one byte of input, storing its value in the byte at the data pointer.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;[&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[&lt;/td&gt;
 &lt;td&gt;if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching &lt;strong&gt;]&lt;/strong&gt; command.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;center&#34;&gt;]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;]&lt;/td&gt;
 &lt;td&gt;if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching &lt;strong&gt;[&lt;/strong&gt; command.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;

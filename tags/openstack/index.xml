@@ -68,7 +68,7 @@ RABBIT_PASSWORD=$ADMIN_PASSWORD
 SERVICE_PASSWORD=$ADMIN_PASSWORD&lt;/p&gt;
 &lt;p&gt;# Define images to be automatically downloaded during the DevStack built process.
 DOWNLOAD_DEFAULT_IMAGES=False
-IMAGE_URLS=&amp;quot;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;rdquo;&lt;/p&gt;
+IMAGE_URLS=&amp;ldquo;&lt;a href=&#34;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img%22&#34;&gt;http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img&amp;quot;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;#change github to trystack
 GIT_BASE=${GIT_BASE:-http://git.trystack.cn}
 NOVNC_REPO=${NOVNC_REPO:-http://git.trystack.cn/kanaka/noVNC.git}&lt;/p&gt;
