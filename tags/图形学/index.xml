@@ -52,7 +52,8 @@ y
 &lt;ul&gt;
 &lt;li&gt;线性变换
 &lt;ul&gt;
-&lt;li&gt;基于原点的缩放 $$\left[\begin{matrix}
+&lt;li&gt;基于原点的缩放
+$$\left[\begin{matrix}
 x&#39;\\&lt;br&gt;
 y&#39;
 \end{matrix}
@@ -69,7 +70,8 @@ x\\&lt;br&gt;
 y
 \end{matrix}
 \right]$$&lt;/li&gt;
-&lt;li&gt;基于原点的旋转 $$\left[\begin{matrix}
+&lt;li&gt;基于原点的旋转
+$$\left[\begin{matrix}
 x&#39;\\&lt;br&gt;
 y&#39;
 \end{matrix}
@@ -90,7 +92,8 @@ y
 &lt;/li&gt;
 &lt;li&gt;平移变换
 &lt;ul&gt;
-&lt;li&gt;平移$$\left[\begin{matrix}
+&lt;li&gt;平移
+$$\left[\begin{matrix}
 x&#39;\\&lt;br&gt;
 y&#39;
 \end{matrix}
@@ -156,7 +159,8 @@ $$
 &lt;h2 id=&#34;齐次坐标下的变换&#34;&gt;齐次坐标下的变换&lt;/h2&gt;
 &lt;p&gt;我们同样可以在齐次坐标下进行变换&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;基于原点的缩放 $$\left
+&lt;li&gt;基于原点的缩放
+$$\left
 [\begin{matrix}
 x&#39; \\&lt;br&gt;
 y&#39; \\&lt;br&gt;
@@ -178,7 +182,8 @@ y\\&lt;br&gt;
 1
 \end{matrix}
 \right]$$&lt;/li&gt;
-&lt;li&gt;基于原点的旋转 $$\left[\begin{matrix}
+&lt;li&gt;基于原点的旋转
+$$\left[\begin{matrix}
 x&#39;\\&lt;br&gt;
 y&#39;\\&lt;br&gt;
 1
@@ -199,7 +204,8 @@ y\\&lt;br&gt;
 1
 \end{matrix}
 \right]$$&lt;/li&gt;
-&lt;li&gt;平移$$\left[\begin{matrix}
+&lt;li&gt;平移
+$$\left[\begin{matrix}
 x&#39;\\&lt;br&gt;
 y&#39;\\&lt;br&gt;
 1
@@ -284,7 +290,8 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;三维变换&#34;&gt;三维变换&lt;/h2&gt;
 &lt;p&gt;三维变换与二维变换类似。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;基于原点的缩放 $$\left
+&lt;li&gt;基于原点的缩放
+$$\left
 [\begin{matrix}
 x&#39; \\&lt;br&gt;
 y&#39; \\&lt;br&gt;
@@ -310,7 +317,8 @@ z\\&lt;br&gt;
 1
 \end{matrix}
 \right]$$&lt;/li&gt;
-&lt;li&gt;平移$$\left[\begin{matrix}
+&lt;li&gt;平移
+$$\left[\begin{matrix}
 x&#39;\\&lt;br&gt;
 y&#39;\\&lt;br&gt;
 z&#39; \\&lt;br&gt;
@@ -340,7 +348,8 @@ z\\&lt;br&gt;
 &lt;/ul&gt;
 &lt;p&gt;但在三维空间中，旋转是特殊的，因为它有三个轴，对每个轴的旋转我们只要忽略这一轴即可：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;X轴旋转 $$\left[\begin{matrix}
+&lt;li&gt;X轴旋转
+$$\left[\begin{matrix}
 x&#39;\\&lt;br&gt;
 y&#39;\\&lt;br&gt;
 z&#39; \\&lt;br&gt;
@@ -365,7 +374,8 @@ z\\&lt;br&gt;
 1
 \end{matrix}
 \right]$$&lt;/li&gt;
-&lt;li&gt;Y轴旋转 $$\left[\begin{matrix}
+&lt;li&gt;Y轴旋转
+$$\left[\begin{matrix}
 x&#39;\\&lt;br&gt;
 y&#39;\\&lt;br&gt;
 z&#39; \\&lt;br&gt;
@@ -390,7 +400,8 @@ z\\&lt;br&gt;
 1
 \end{matrix}
 \right]$$&lt;/li&gt;
-&lt;li&gt;Z轴旋转 $$\left[\begin{matrix}
+&lt;li&gt;Z轴旋转
+$$\left[\begin{matrix}
 x&#39;\\&lt;br&gt;
 y&#39;\\&lt;br&gt;
 z&#39; \\&lt;br&gt;
