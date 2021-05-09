@@ -689,12 +689,12 @@
 <p><img src="%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8--%E5%8F%98%E6%8D%A2.assets/image-20210509101259239.png" alt="image-20210509101259239"></p>
 <p>对于点的描述可以表示成 $[x,y]^T$​ , 上面的转置是由于在图形学中一般<em>点</em>和<em>向量</em>习惯竖着写$\left[
 \begin{matrix}
-x\<br>
+x\\<br>
 y
 \end{matrix}
 \right]$</p>
 <p>以下为四个点围成的正方形, 其中x和y都为1, $\left[\begin{matrix}
-1\<br>
+1\\<br>
 1
 \end{matrix}
 \right]$ ,并将其放到笛卡尔坐标系中.</p>
@@ -703,61 +703,61 @@ y
 <ul>
 <li>线性变换
 <ul>
-<li>基于原点的缩放 $\left[\begin{matrix}
-x'\<br>
+<li>基于原点的缩放 $$\left[\begin{matrix}
+x'\\<br>
 y'
 \end{matrix}
 \right] = S_{(x,y)}\cdot\left[\begin{matrix}
-x\<br>
+x\\<br>
 y
 \end{matrix}
 \right] = \left[\begin{matrix}
-s_x &amp; 0\<br>
+s_x &amp; 0\\<br>
 0 &amp; s_y
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\<br>
+x\\<br>
 y
 \end{matrix}
-\right]$</li>
-<li>基于原点的旋转 $\left[\begin{matrix}
-x'\<br>
+\right]$$</li>
+<li>基于原点的旋转 $$\left[\begin{matrix}
+x'\\<br>
 y'
 \end{matrix}
 \right] = R_\theta\cdot\left[\begin{matrix}
-x\<br>
+x\\<br>
 y
 \end{matrix}
 \right] = \left[\begin{matrix}
-\cos\theta &amp; -\sin\theta \<br>
+\cos\theta &amp; -\sin\theta \\<br>
 \sin\theta &amp; \cos\theta
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\<br>
+x\\<br>
 y
 \end{matrix}
-\right]$</li>
+\right]$$</li>
 </ul>
 </li>
 <li>平移变换
 <ul>
-<li>平移$\left[\begin{matrix}
-x'\<br>
+<li>平移$$\left[\begin{matrix}
+x'\\<br>
 y'
 \end{matrix}
 \right] = T_{(x,y)}+\left[\begin{matrix}
-x\<br>
+x\\<br>
 y
 \end{matrix}
 \right] = \left[\begin{matrix}
-t_x\<br>
+t_x\\<br>
 t_y
 \end{matrix}
 \right]+\left[\begin{matrix}
-x\<br>
+x\\<br>
 y
 \end{matrix}
-\right]$</li>
+\right]$$</li>
 </ul>
 </li>
 </ul>
@@ -766,88 +766,113 @@ y
 <p>齐次坐标就是通过高维来表示地维的坐标.</p>
 <ul>
 <li>二维点: $\left[\begin{matrix}
-x \<br>
-y \<br>
+x \\<br>
+y \\<br>
 1
 ​    \end{matrix}
 \right]$</li>
 <li>二维向量: $\left[\begin{matrix}
-x \<br>
-y \<br>
+x \\<br>
+y \\<br>
 0
 ​    \end{matrix}
 \right]$</li>
 </ul>
 <p>我们可以看出,点和向量的唯一区别在于$z$是否为0，当$z$为0的时候是向量，为1的时候是点。</p>
+<p>可以简单验证一下：</p>
+<ul>
+<li>vector + vector = vector</li>
+<li>point - point = point</li>
+<li>point + vector = point</li>
+</ul>
+<p>而 point + point 相加会发现最后一维变成了2，但这个问题不大，在图形学中齐次坐标的点有以下定义：</p>
+<p>$$
+\left(
+\begin{matrix}
+x \\<br>
+y \\<br>
+\omega
+\end{matrix}
+\right)
+=
+\left(
+\begin{matrix}
+x/\omega \\<br>
+y/\omega \\<br>
+1
+\end{matrix}
+\right), \omega\not=0
+$$
+因此 point + point = point 也成立。</p>
 <h2 id="齐次坐标下的变换">齐次坐标下的变换</h2>
 <p>我们同样可以在齐次坐标下进行变换</p>
 <ul>
-<li>基于原点的缩放 $\left
+<li>基于原点的缩放 $$\left
 [\begin{matrix}
-x' \<br>
-y' \<br>
+x' \\<br>
+y' \\<br>
 1
 \end{matrix}
 \right] = S_{(x,y)}\cdot\left[\begin{matrix}
-x \<br>
-y
+x \\<br>
+y \\<br>
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-s_x &amp; 0 &amp; 0\<br>
-0 &amp; s_y &amp; 0\<br>
+s_x &amp; 0 &amp; 0\\<br>
+0 &amp; s_y &amp; 0\\<br>
 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\<br>
-y\<br>
+x\\<br>
+y\\<br>
 1
 \end{matrix}
-\right]$</li>
-<li>基于原点的旋转 $\left[\begin{matrix}
-x'\<br>
-y'\<br>
+\right]$$</li>
+<li>基于原点的旋转 $$\left[\begin{matrix}
+x'\\<br>
+y'\\<br>
 1
 \end{matrix}
 \right] = R_\theta\cdot\left[\begin{matrix}
-x\<br>
-y\<br>
+x\\<br>
+y\\<br>
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-\cos\theta &amp; -\sin\theta &amp; 0\<br>
-\sin\theta &amp; \cos\theta &amp; 0\<br>
+\cos\theta &amp; -\sin\theta &amp; 0\\<br>
+\sin\theta &amp; \cos\theta &amp; 0\\<br>
 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\<br>
-y\<br>
+x\\<br>
+y\\<br>
 1
 \end{matrix}
-\right]$</li>
-<li>平移$\left[\begin{matrix}
-x'\<br>
-y'\<br>
+\right]$$</li>
+<li>平移$$\left[\begin{matrix}
+x'\\<br>
+y'\\<br>
 1
 \end{matrix}
 \right] = T_{(x,y)}+\left[\begin{matrix}
-x\<br>
-y\<br>
+x\\<br>
+y\\<br>
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-1 &amp; 0 &amp; t_x\<br>
-0 &amp; 1 &amp; t_y\<br>
+1 &amp; 0 &amp; t_x\\<br>
+0 &amp; 1 &amp; t_y\\<br>
 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-x\<br>
-y\<br>
+x\\<br>
+y\\<br>
 1
 \end{matrix}
-\right]$</li>
+\right]$$</li>
 </ul>
 <p>这样一来，我们就能把这些变换都通过线性变换来表示了，可以通过连乘的方法来表示一些列变换。</p>
 <p>比如我们对为处于原点的方块进行以下操作。</p>
@@ -857,48 +882,50 @@ y\<br>
 <p>$$T_{(-t_x, -t_y)} \Rightarrow S_{(s_x, s_y)} \Rightarrow R_\theta \Rightarrow T_{(t_x, t_y)}$$</p>
 <p>写成公式就是(从右往左运算)
 $$
-p' = T_{(t_x, t_y)} \cdot R_\theta \cdot S_{(s_x, s_y)} \cdot T_{(-t_x, -t_y)} \cdot p \<br>
-\<br>
-\Downarrow
-\<br>
+p' = T_{(t_x, t_y)} \cdot R_\theta \cdot S_{(s_x, s_y)} \cdot T_{(-t_x, -t_y)} \cdot p
+$$
+$$
+\downarrow
+$$
+$$
 \left[
 \begin{matrix}
-x'\<br>
-y'\<br>
+x'\\<br>
+y'\\<br>
 1
 \end{matrix}
 \right] =
 \left[\begin{matrix}
-1 &amp; 0 &amp; t_x\<br>
-0 &amp; 1 &amp; t_y\<br>
+1 &amp; 0 &amp; t_x\\<br>
+0 &amp; 1 &amp; t_y\\<br>
 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-\cos\theta &amp; -\sin\theta &amp; 0\<br>
-\sin\theta &amp; \cos\theta &amp; 0\<br>
+\cos\theta &amp; -\sin\theta &amp; 0\\<br>
+\sin\theta &amp; \cos\theta &amp; 0\\<br>
 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-s_x &amp; 0 &amp; 0\<br>
-0 &amp; s_y &amp; 0\<br>
+s_x &amp; 0 &amp; 0\\<br>
+0 &amp; s_y &amp; 0\\<br>
 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-1 &amp; 0 &amp; -t_x\<br>
-0 &amp; 1 &amp; -t_y\<br>
+1 &amp; 0 &amp; -t_x\\<br>
+0 &amp; 1 &amp; -t_y\\<br>
 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-x\<br>
-y\<br>
+x\\<br>
+y\\<br>
 1
 \end{matrix}
 \right]
@@ -908,137 +935,137 @@ $$</p>
 <h2 id="三维变换">三维变换</h2>
 <p>三维变换与二维变换类似。</p>
 <ul>
-<li>基于原点的缩放 $\left
+<li>基于原点的缩放 $$\left
 [\begin{matrix}
-x' \<br>
-y' \<br>
-z' \<br>
+x' \\<br>
+y' \\<br>
+z' \\<br>
 1
 \end{matrix}
 \right] = S_{(x,y,z)}\cdot\left[\begin{matrix}
-x \<br>
-y \<br>
-z \<br>
+x \\<br>
+y \\<br>
+z \\<br>
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-s_x &amp; 0 &amp; 0\<br>
-0 &amp; s_y &amp; 0\<br>
-0 &amp; 0 &amp; s_z\<br>
+s_x &amp; 0 &amp; 0\\<br>
+0 &amp; s_y &amp; 0\\<br>
+0 &amp; 0 &amp; s_z\\<br>
 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\<br>
-y\<br>
-z\<br>
+x\\<br>
+y\\<br>
+z\\<br>
 1
 \end{matrix}
-\right]$</li>
-<li>平移$\left[\begin{matrix}
-x'\<br>
-y'\<br>
-z' \<br>
+\right]$$</li>
+<li>平移$$\left[\begin{matrix}
+x'\\<br>
+y'\\<br>
+z' \\<br>
 1
 \end{matrix}
 \right] = T_{(x,y,z)}+\left[\begin{matrix}
-x\<br>
-y\<br>
-z\<br>
+x\\<br>
+y\\<br>
+z\\<br>
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-1 &amp; 0 &amp; 0 &amp; t_x\<br>
-0 &amp; 1 &amp; 0 &amp; t_y\<br>
-0 &amp; 0 &amp; 1 &amp; t_z\<br>
+1 &amp; 0 &amp; 0 &amp; t_x\\<br>
+0 &amp; 1 &amp; 0 &amp; t_y\\<br>
+0 &amp; 0 &amp; 1 &amp; t_z\\<br>
 0 &amp; 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-x\<br>
-y\<br>
-z\<br>
+x\\<br>
+y\\<br>
+z\\<br>
 1
 \end{matrix}
-\right]$</li>
+\right]$$</li>
 </ul>
 <p>但在三维空间中，旋转是特殊的，因为它有三个轴，对每个轴的旋转我们只要忽略这一轴即可：</p>
 <ul>
-<li>X轴旋转 $\left[\begin{matrix}
-x'\<br>
-y'\<br>
-z' \<br>
+<li>X轴旋转 $$\left[\begin{matrix}
+x'\\<br>
+y'\\<br>
+z' \\<br>
 1
 \end{matrix}
 \right] = R_x\theta\cdot\left[\begin{matrix}
-x\<br>
-y\<br>
-z \<br>
+x\\<br>
+y\\<br>
+z \\<br>
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-1 &amp; 0 &amp; 0 &amp; 0 \<br>
-0 &amp; \cos\theta &amp; -\sin\theta &amp; 0\<br>
-0 &amp; \sin\theta &amp; \cos\theta &amp; 0\<br>
+1 &amp; 0 &amp; 0 &amp; 0 \\<br>
+0 &amp; \cos\theta &amp; -\sin\theta &amp; 0\\<br>
+0 &amp; \sin\theta &amp; \cos\theta &amp; 0\\<br>
 0 &amp; 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\<br>
-y\<br>
-z\<br>
+x\\<br>
+y\\<br>
+z\\<br>
 1
 \end{matrix}
-\right]$</li>
-<li>Y轴旋转 $\left[\begin{matrix}
-x'\<br>
-y'\<br>
-z' \<br>
+\right]$$</li>
+<li>Y轴旋转 $$\left[\begin{matrix}
+x'\\<br>
+y'\\<br>
+z' \\<br>
 1
 \end{matrix}
 \right] = R_y\theta\cdot\left[\begin{matrix}
-x\<br>
-y\<br>
-z\<br>
+x\\<br>
+y\\<br>
+z\\<br>
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-\cos\theta &amp; 0 &amp; \sin\theta &amp; 0\<br>
-0 &amp; 1 &amp; 0 &amp; 0 \<br>
--\sin\theta &amp; 0 &amp; \cos\theta &amp; 0\<br>
+\cos\theta &amp; 0 &amp; \sin\theta &amp; 0\\<br>
+0 &amp; 1 &amp; 0 &amp; 0 \\<br>
+-\sin\theta &amp; 0 &amp; \cos\theta &amp; 0\\<br>
 0 &amp; 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\<br>
-y\<br>
-z\<br>
+x\\<br>
+y\\<br>
+z\\<br>
 1
 \end{matrix}
-\right]$</li>
-<li>Z轴旋转 $\left[\begin{matrix}
-x'\<br>
-y'\<br>
-z' \<br>
+\right]$$</li>
+<li>Z轴旋转 $$\left[\begin{matrix}
+x'\\<br>
+y'\\<br>
+z' \\<br>
 1
 \end{matrix}
 \right] = R_z\theta\cdot\left[\begin{matrix}
-x\<br>
-y\<br>
-z \<br>
+x\\<br>
+y\\<br>
+z \\<br>
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-\cos\theta &amp; -\sin\theta &amp; 0 &amp; 0\<br>
-\sin\theta &amp; \cos\theta &amp; 0 &amp; 0\<br>
-0 &amp; 0 &amp; 1 &amp; 0 \<br>
+\cos\theta &amp; -\sin\theta &amp; 0 &amp; 0\\<br>
+\sin\theta &amp; \cos\theta &amp; 0 &amp; 0\\<br>
+0 &amp; 0 &amp; 1 &amp; 0 \\<br>
 0 &amp; 0 &amp; 0 &amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\<br>
-y\<br>
-z\<br>
+x\\<br>
+y\\<br>
+z\\<br>
 1
 \end{matrix}
-\right]$</li>
+\right]$$</li>
 </ul>
 <p>在这里会发现其中Y轴的变换是特殊的，这是由于根据右手螺旋定则，XY可以推出Z，YZ可以推出X，但是XZ推出的是-Y，因此Y相反。</p>
 <p>同样我们这边也可以结合三轴旋转变换为：

@@ -38,12 +38,12 @@
 &lt;p&gt;&lt;img src=&#34;%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8--%E5%8F%98%E6%8D%A2.assets/image-20210509101259239.png&#34; alt=&#34;image-20210509101259239&#34;&gt;&lt;/p&gt;
 &lt;p&gt;对于点的描述可以表示成 $[x,y]^T$​ , 上面的转置是由于在图形学中一般&lt;em&gt;点&lt;/em&gt;和&lt;em&gt;向量&lt;/em&gt;习惯竖着写$\left[
 \begin{matrix}
-x\&lt;br&gt;
+x\\&lt;br&gt;
 y
 \end{matrix}
 \right]$&lt;/p&gt;
 &lt;p&gt;以下为四个点围成的正方形, 其中x和y都为1, $\left[\begin{matrix}
-1\&lt;br&gt;
+1\\&lt;br&gt;
 1
 \end{matrix}
 \right]$ ,并将其放到笛卡尔坐标系中.&lt;/p&gt;
@@ -52,61 +52,61 @@ y
 &lt;ul&gt;
 &lt;li&gt;线性变换
 &lt;ul&gt;
-&lt;li&gt;基于原点的缩放 $\left[\begin{matrix}
-x&#39;\&lt;br&gt;
+&lt;li&gt;基于原点的缩放 $$\left[\begin{matrix}
+x&#39;\\&lt;br&gt;
 y&#39;
 \end{matrix}
 \right] = S_{(x,y)}\cdot\left[\begin{matrix}
-x\&lt;br&gt;
+x\\&lt;br&gt;
 y
 \end{matrix}
 \right] = \left[\begin{matrix}
-s_x &amp;amp; 0\&lt;br&gt;
+s_x &amp;amp; 0\\&lt;br&gt;
 0 &amp;amp; s_y
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\&lt;br&gt;
+x\\&lt;br&gt;
 y
 \end{matrix}
-\right]$&lt;/li&gt;
-&lt;li&gt;基于原点的旋转 $\left[\begin{matrix}
-x&#39;\&lt;br&gt;
+\right]$$&lt;/li&gt;
+&lt;li&gt;基于原点的旋转 $$\left[\begin{matrix}
+x&#39;\\&lt;br&gt;
 y&#39;
 \end{matrix}
 \right] = R_\theta\cdot\left[\begin{matrix}
-x\&lt;br&gt;
+x\\&lt;br&gt;
 y
 \end{matrix}
 \right] = \left[\begin{matrix}
-\cos\theta &amp;amp; -\sin\theta \&lt;br&gt;
+\cos\theta &amp;amp; -\sin\theta \\&lt;br&gt;
 \sin\theta &amp;amp; \cos\theta
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\&lt;br&gt;
+x\\&lt;br&gt;
 y
 \end{matrix}
-\right]$&lt;/li&gt;
+\right]$$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;平移变换
 &lt;ul&gt;
-&lt;li&gt;平移$\left[\begin{matrix}
-x&#39;\&lt;br&gt;
+&lt;li&gt;平移$$\left[\begin{matrix}
+x&#39;\\&lt;br&gt;
 y&#39;
 \end{matrix}
 \right] = T_{(x,y)}+\left[\begin{matrix}
-x\&lt;br&gt;
+x\\&lt;br&gt;
 y
 \end{matrix}
 \right] = \left[\begin{matrix}
-t_x\&lt;br&gt;
+t_x\\&lt;br&gt;
 t_y
 \end{matrix}
 \right]+\left[\begin{matrix}
-x\&lt;br&gt;
+x\\&lt;br&gt;
 y
 \end{matrix}
-\right]$&lt;/li&gt;
+\right]$$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -115,88 +115,113 @@ y
 &lt;p&gt;齐次坐标就是通过高维来表示地维的坐标.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;二维点: $\left[\begin{matrix}
-x \&lt;br&gt;
-y \&lt;br&gt;
+x \\&lt;br&gt;
+y \\&lt;br&gt;
 1
 ​    \end{matrix}
 \right]$&lt;/li&gt;
 &lt;li&gt;二维向量: $\left[\begin{matrix}
-x \&lt;br&gt;
-y \&lt;br&gt;
+x \\&lt;br&gt;
+y \\&lt;br&gt;
 0
 ​    \end{matrix}
 \right]$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;我们可以看出,点和向量的唯一区别在于$z$是否为0，当$z$为0的时候是向量，为1的时候是点。&lt;/p&gt;
+&lt;p&gt;可以简单验证一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vector + vector = vector&lt;/li&gt;
+&lt;li&gt;point - point = point&lt;/li&gt;
+&lt;li&gt;point + vector = point&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;而 point + point 相加会发现最后一维变成了2，但这个问题不大，在图形学中齐次坐标的点有以下定义：&lt;/p&gt;
+&lt;p&gt;$$
+\left(
+\begin{matrix}
+x \\&lt;br&gt;
+y \\&lt;br&gt;
+\omega
+\end{matrix}
+\right)
+=
+\left(
+\begin{matrix}
+x/\omega \\&lt;br&gt;
+y/\omega \\&lt;br&gt;
+1
+\end{matrix}
+\right), \omega\not=0
+$$
+因此 point + point = point 也成立。&lt;/p&gt;
 &lt;h2 id=&#34;齐次坐标下的变换&#34;&gt;齐次坐标下的变换&lt;/h2&gt;
 &lt;p&gt;我们同样可以在齐次坐标下进行变换&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;基于原点的缩放 $\left
+&lt;li&gt;基于原点的缩放 $$\left
 [\begin{matrix}
-x&#39; \&lt;br&gt;
-y&#39; \&lt;br&gt;
+x&#39; \\&lt;br&gt;
+y&#39; \\&lt;br&gt;
 1
 \end{matrix}
 \right] = S_{(x,y)}\cdot\left[\begin{matrix}
-x \&lt;br&gt;
-y
+x \\&lt;br&gt;
+y \\&lt;br&gt;
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-s_x &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
-0 &amp;amp; s_y &amp;amp; 0\&lt;br&gt;
+s_x &amp;amp; 0 &amp;amp; 0\\&lt;br&gt;
+0 &amp;amp; s_y &amp;amp; 0\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
 1
 \end{matrix}
-\right]$&lt;/li&gt;
-&lt;li&gt;基于原点的旋转 $\left[\begin{matrix}
-x&#39;\&lt;br&gt;
-y&#39;\&lt;br&gt;
+\right]$$&lt;/li&gt;
+&lt;li&gt;基于原点的旋转 $$\left[\begin{matrix}
+x&#39;\\&lt;br&gt;
+y&#39;\\&lt;br&gt;
 1
 \end{matrix}
 \right] = R_\theta\cdot\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-\cos\theta &amp;amp; -\sin\theta &amp;amp; 0\&lt;br&gt;
-\sin\theta &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+\cos\theta &amp;amp; -\sin\theta &amp;amp; 0\\&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta &amp;amp; 0\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
 1
 \end{matrix}
-\right]$&lt;/li&gt;
-&lt;li&gt;平移$\left[\begin{matrix}
-x&#39;\&lt;br&gt;
-y&#39;\&lt;br&gt;
+\right]$$&lt;/li&gt;
+&lt;li&gt;平移$$\left[\begin{matrix}
+x&#39;\\&lt;br&gt;
+y&#39;\\&lt;br&gt;
 1
 \end{matrix}
 \right] = T_{(x,y)}+\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-1 &amp;amp; 0 &amp;amp; t_x\&lt;br&gt;
-0 &amp;amp; 1 &amp;amp; t_y\&lt;br&gt;
+1 &amp;amp; 0 &amp;amp; t_x\\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; t_y\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
 1
 \end{matrix}
-\right]$&lt;/li&gt;
+\right]$$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这样一来，我们就能把这些变换都通过线性变换来表示了，可以通过连乘的方法来表示一些列变换。&lt;/p&gt;
 &lt;p&gt;比如我们对为处于原点的方块进行以下操作。&lt;/p&gt;
@@ -206,48 +231,50 @@ y\&lt;br&gt;
 &lt;p&gt;$$T_{(-t_x, -t_y)} \Rightarrow S_{(s_x, s_y)} \Rightarrow R_\theta \Rightarrow T_{(t_x, t_y)}$$&lt;/p&gt;
 &lt;p&gt;写成公式就是(从右往左运算)
 $$
-p&#39; = T_{(t_x, t_y)} \cdot R_\theta \cdot S_{(s_x, s_y)} \cdot T_{(-t_x, -t_y)} \cdot p \&lt;br&gt;
-\&lt;br&gt;
-\Downarrow
-\&lt;br&gt;
+p&#39; = T_{(t_x, t_y)} \cdot R_\theta \cdot S_{(s_x, s_y)} \cdot T_{(-t_x, -t_y)} \cdot p
+$$
+$$
+\downarrow
+$$
+$$
 \left[
 \begin{matrix}
-x&#39;\&lt;br&gt;
-y&#39;\&lt;br&gt;
+x&#39;\\&lt;br&gt;
+y&#39;\\&lt;br&gt;
 1
 \end{matrix}
 \right] =
 \left[\begin{matrix}
-1 &amp;amp; 0 &amp;amp; t_x\&lt;br&gt;
-0 &amp;amp; 1 &amp;amp; t_y\&lt;br&gt;
+1 &amp;amp; 0 &amp;amp; t_x\\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; t_y\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-\cos\theta &amp;amp; -\sin\theta &amp;amp; 0\&lt;br&gt;
-\sin\theta &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+\cos\theta &amp;amp; -\sin\theta &amp;amp; 0\\&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta &amp;amp; 0\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-s_x &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
-0 &amp;amp; s_y &amp;amp; 0\&lt;br&gt;
+s_x &amp;amp; 0 &amp;amp; 0\\&lt;br&gt;
+0 &amp;amp; s_y &amp;amp; 0\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-1 &amp;amp; 0 &amp;amp; -t_x\&lt;br&gt;
-0 &amp;amp; 1 &amp;amp; -t_y\&lt;br&gt;
+1 &amp;amp; 0 &amp;amp; -t_x\\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; -t_y\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
 1
 \end{matrix}
 \right]
@@ -257,137 +284,137 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;三维变换&#34;&gt;三维变换&lt;/h2&gt;
 &lt;p&gt;三维变换与二维变换类似。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;基于原点的缩放 $\left
+&lt;li&gt;基于原点的缩放 $$\left
 [\begin{matrix}
-x&#39; \&lt;br&gt;
-y&#39; \&lt;br&gt;
-z&#39; \&lt;br&gt;
+x&#39; \\&lt;br&gt;
+y&#39; \\&lt;br&gt;
+z&#39; \\&lt;br&gt;
 1
 \end{matrix}
 \right] = S_{(x,y,z)}\cdot\left[\begin{matrix}
-x \&lt;br&gt;
-y \&lt;br&gt;
-z \&lt;br&gt;
+x \\&lt;br&gt;
+y \\&lt;br&gt;
+z \\&lt;br&gt;
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-s_x &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
-0 &amp;amp; s_y &amp;amp; 0\&lt;br&gt;
-0 &amp;amp; 0 &amp;amp; s_z\&lt;br&gt;
+s_x &amp;amp; 0 &amp;amp; 0\\&lt;br&gt;
+0 &amp;amp; s_y &amp;amp; 0\\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; s_z\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
-z\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
+z\\&lt;br&gt;
 1
 \end{matrix}
-\right]$&lt;/li&gt;
-&lt;li&gt;平移$\left[\begin{matrix}
-x&#39;\&lt;br&gt;
-y&#39;\&lt;br&gt;
-z&#39; \&lt;br&gt;
+\right]$$&lt;/li&gt;
+&lt;li&gt;平移$$\left[\begin{matrix}
+x&#39;\\&lt;br&gt;
+y&#39;\\&lt;br&gt;
+z&#39; \\&lt;br&gt;
 1
 \end{matrix}
 \right] = T_{(x,y,z)}+\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
-z\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
+z\\&lt;br&gt;
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-1 &amp;amp; 0 &amp;amp; 0 &amp;amp; t_x\&lt;br&gt;
-0 &amp;amp; 1 &amp;amp; 0 &amp;amp; t_y\&lt;br&gt;
-0 &amp;amp; 0 &amp;amp; 1 &amp;amp; t_z\&lt;br&gt;
+1 &amp;amp; 0 &amp;amp; 0 &amp;amp; t_x\\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; 0 &amp;amp; t_y\\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1 &amp;amp; t_z\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]
 \cdot
 \left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
-z\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
+z\\&lt;br&gt;
 1
 \end{matrix}
-\right]$&lt;/li&gt;
+\right]$$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;但在三维空间中，旋转是特殊的，因为它有三个轴，对每个轴的旋转我们只要忽略这一轴即可：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;X轴旋转 $\left[\begin{matrix}
-x&#39;\&lt;br&gt;
-y&#39;\&lt;br&gt;
-z&#39; \&lt;br&gt;
+&lt;li&gt;X轴旋转 $$\left[\begin{matrix}
+x&#39;\\&lt;br&gt;
+y&#39;\\&lt;br&gt;
+z&#39; \\&lt;br&gt;
 1
 \end{matrix}
 \right] = R_x\theta\cdot\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
-z \&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
+z \\&lt;br&gt;
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
-0 &amp;amp; \cos\theta &amp;amp; -\sin\theta &amp;amp; 0\&lt;br&gt;
-0 &amp;amp; \sin\theta &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\&lt;br&gt;
+0 &amp;amp; \cos\theta &amp;amp; -\sin\theta &amp;amp; 0\\&lt;br&gt;
+0 &amp;amp; \sin\theta &amp;amp; \cos\theta &amp;amp; 0\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
-z\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
+z\\&lt;br&gt;
 1
 \end{matrix}
-\right]$&lt;/li&gt;
-&lt;li&gt;Y轴旋转 $\left[\begin{matrix}
-x&#39;\&lt;br&gt;
-y&#39;\&lt;br&gt;
-z&#39; \&lt;br&gt;
+\right]$$&lt;/li&gt;
+&lt;li&gt;Y轴旋转 $$\left[\begin{matrix}
+x&#39;\\&lt;br&gt;
+y&#39;\\&lt;br&gt;
+z&#39; \\&lt;br&gt;
 1
 \end{matrix}
 \right] = R_y\theta\cdot\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
-z\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
+z\\&lt;br&gt;
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-\cos\theta &amp;amp; 0 &amp;amp; \sin\theta &amp;amp; 0\&lt;br&gt;
-0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
--\sin\theta &amp;amp; 0 &amp;amp; \cos\theta &amp;amp; 0\&lt;br&gt;
+\cos\theta &amp;amp; 0 &amp;amp; \sin\theta &amp;amp; 0\\&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\&lt;br&gt;
+-\sin\theta &amp;amp; 0 &amp;amp; \cos\theta &amp;amp; 0\\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
-z\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
+z\\&lt;br&gt;
 1
 \end{matrix}
-\right]$&lt;/li&gt;
-&lt;li&gt;Z轴旋转 $\left[\begin{matrix}
-x&#39;\&lt;br&gt;
-y&#39;\&lt;br&gt;
-z&#39; \&lt;br&gt;
+\right]$$&lt;/li&gt;
+&lt;li&gt;Z轴旋转 $$\left[\begin{matrix}
+x&#39;\\&lt;br&gt;
+y&#39;\\&lt;br&gt;
+z&#39; \\&lt;br&gt;
 1
 \end{matrix}
 \right] = R_z\theta\cdot\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
-z \&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
+z \\&lt;br&gt;
 1
 \end{matrix}
 \right] = \left[\begin{matrix}
-\cos\theta &amp;amp; -\sin\theta &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
-\sin\theta &amp;amp; \cos\theta &amp;amp; 0 &amp;amp; 0\&lt;br&gt;
-0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \&lt;br&gt;
+\cos\theta &amp;amp; -\sin\theta &amp;amp; 0 &amp;amp; 0\\&lt;br&gt;
+\sin\theta &amp;amp; \cos\theta &amp;amp; 0 &amp;amp; 0\\&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\&lt;br&gt;
 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1
 \end{matrix}
 \right]\cdot\left[\begin{matrix}
-x\&lt;br&gt;
-y\&lt;br&gt;
-z\&lt;br&gt;
+x\\&lt;br&gt;
+y\\&lt;br&gt;
+z\\&lt;br&gt;
 1
 \end{matrix}
-\right]$&lt;/li&gt;
+\right]$$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;在这里会发现其中Y轴的变换是特殊的，这是由于根据右手螺旋定则，XY可以推出Z，YZ可以推出X，但是XZ推出的是-Y，因此Y相反。&lt;/p&gt;
 &lt;p&gt;同样我们这边也可以结合三轴旋转变换为：
